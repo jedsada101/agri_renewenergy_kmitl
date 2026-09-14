@@ -317,4 +317,59 @@
     });
     render();
   })();
+
+  /* ============================================================
+     6. Demo E — excess air and stack temperature  (chapter 2)
+
+     A deliberately simple dry-flue-gas-loss model for a rice husk
+     furnace. It shows the two operator-controllable levers; it is not
+     a boiler design tool (radiation, unburned carbon and the moisture
+     term are all left out, and the chapter says so).
+     ============================================================ */
+  (function excessAirDemo() {
+    var root = document.querySelector('[data-demo="excess-air"]');
+    if (!root) return;
+
+    var AF_ST = 4.60;     // kg air per kg fuel, stoichiometric (rice husk)
+    var LHV = 12.4;       // MJ/kg as received
+    var CP_FG = 1.1;      // kJ/kg-K, flue gas
+    var T_AMBIENT = 30;   // °C
+
+    var sLambda = root.querySelector('[data-ea-lambda-slider]');
+    var sTemp = root.querySelector('[data-ea-temp-slider]');
+    var segUseful = root.querySelector('[data-ea-seg="useful"]');
+    var segLoss = root.querySelector('[data-ea-seg="loss"]');
+    var outLambda = root.querySelector('[data-ea-lambda]');
+    var outO2 = root.querySelector('[data-ea-o2]');
+    var outAir = root.querySelector('[data-ea-air]');
+    var outEff = root.querySelector('[data-ea-eff]');
+    var warn = root.querySelector('[data-ea-warn]');
+
+    function render() {
+      var lambda = parseFloat(sLambda.value);
+      var tStack = parseFloat(sTemp.value);
+
+      var air = lambda * AF_ST;                       // kg air per kg fuel
+      var o2 = 21 * (1 - 1 / lambda);                 // % in dry flue gas
+      var mFlue = 1 + air;                            // kg flue gas per kg fuel
+      var lossMJ = mFlue * CP_FG * (tStack - T_AMBIENT) / 1000;
+      var useful = Math.max(0, LHV - lossMJ);
+      var eff = useful / LHV * 100;
+
+      segUseful.style.width = (useful / LHV * 100) + '%';
+      segLoss.style.width = Math.min(100, lossMJ / LHV * 100) + '%';
+      segUseful.textContent = eff > 18 ? fmt(useful, 1) + ' MJ' : '';
+
+      outLambda.textContent = fmt(lambda, 2);
+      outO2.textContent = fmt(o2, 1);
+      outAir.textContent = fmt(air, 1);
+      outEff.textContent = fmt(eff, 0);
+
+      warn.hidden = lambda >= 1.2;
+    }
+
+    sLambda.addEventListener('input', render);
+    sTemp.addEventListener('input', render);
+    render();
+  })();
 })();

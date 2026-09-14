@@ -321,6 +321,7 @@ section { scroll-margin-top: calc(var(--bar-h) + var(--sp-5)); }
 }
 
 h3 { margin-top: var(--sp-6); }
+h4 { margin-top: var(--sp-5); }
 
 /* ---------- 8. Footer ---------- */
 .footer {
