@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="th" data-lang="th" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>บทที่ 1 · บทนำสู่พลังงานหมุนเวียน</title>
+<meta name="description" content="พลังงานคืออะไร หน่วยที่ต้องรู้ ความแตกต่างระหว่างพลังงานหมุนเวียนกับเชื้อเพลิงฟอสซิล และตัวชี้วัดที่ใช้เปรียบเทียบเทคโนโลยีพลังงาน">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Thai+Looped:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/anim.css">
+<script src="../assets/js/boot.js"></script>
+</head>
+<body data-chapter="01">
+
+<a class="skip" href="#main"><span class="th">ข้ามไปเนื้อหาหลัก</span><span class="en">Skip to main content</span></a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="topbar__brand" href="../index.html">
+    <span class="mark">RE</span>
+    <span class="name">
+      <span class="th">พลังงานหมุนเวียน</span>
+      <span class="en">Renewable Energy</span>
+    </span>
+  </a>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__crumb">
+    <span class="th">บทที่ 1 · บทนำสู่พลังงานหมุนเวียน</span>
+    <span class="en">Chapter 1 · Introduction to Renewable Energy</span>
+  </span>
+  <button class="btn-toggle" data-lang-btn="th" aria-pressed="true">ไทย</button>
+  <button class="btn-toggle" data-lang-btn="en" aria-pressed="false">EN</button>
+  <button class="btn-toggle" data-theme-toggle aria-label="Switch theme"><span class="icon">☀</span></button>
+</header>
+
+<div class="wrap">
+  <div class="layout">
+
+    <!-- ============ sidebar ============ -->
+    <aside class="sidebar">
+      <h2><span class="th">ในบทนี้</span><span class="en">In this chapter</span></h2>
+      <ol>
+        <li><a href="#pretest"><span class="th">แบบทดสอบก่อนเรียน</span><span class="en">Pre-test</span></a></li>
+        <li><a href="#s1"><span class="th">1.1 พลังงานและกำลัง</span><span class="en">1.1 Energy and power</span></a></li>
+        <li><a href="#s2"><span class="th">1.2 อะไรคือ “หมุนเวียน”</span><span class="en">1.2 What makes energy renewable</span></a></li>
+        <li><a href="#s3"><span class="th">1.3 ทำไมต้องสนใจ</span><span class="en">1.3 Why it matters</span></a></li>
+        <li><a href="#s4"><span class="th">1.4 ภาพรวม 8 แหล่งพลังงาน</span><span class="en">1.4 The eight sources</span></a></li>
+        <li><a href="#s5"><span class="th">1.5 ตัวชี้วัดที่ใช้เปรียบเทียบ</span><span class="en">1.5 Metrics for comparison</span></a></li>
+        <li><a href="#s6"><span class="th">1.6 ความหนาแน่นพลังงานและที่ดิน</span><span class="en">1.6 Energy density and land</span></a></li>
+        <li><a href="#s7"><span class="th">1.7 บริบทไทยและภาคเกษตร</span><span class="en">1.7 Thailand and agriculture</span></a></li>
+        <li><a href="#summary"><span class="th">สรุปและคำศัพท์</span><span class="en">Summary and glossary</span></a></li>
+        <li><a href="#references"><span class="th">เอกสารอ้างอิง</span><span class="en">References</span></a></li>
+        <li><a href="#posttest"><span class="th">แบบทดสอบหลังเรียน</span><span class="en">Post-test</span></a></li>
+      </ol>
+    </aside>
+
+    <!-- ============ main ============ -->
+    <main id="main">
+
+      <header class="chapter-head">
+        <span class="chapter-head__num">
+          <span class="th">บทที่ 1</span><span class="en">Chapter 1</span>
+        </span>
+        <h1>
+          <span class="th">บทนำสู่พลังงานหมุนเวียน</span>
+          <span class="en">Introduction to Renewable Energy</span>
+        </h1>
+        <p class="lead">
+          <span class="th">ก่อนจะพูดถึงชีวมวล พลังงานน้ำ แสงอาทิตย์ หรือลมได้อย่างมีความหมาย เราต้องพูดภาษาเดียวกันก่อน — พลังงานวัดด้วยอะไร ต่างจากกำลังอย่างไร คำว่า “หมุนเวียน” หมายความว่าอะไรกันแน่ และเราจะเปรียบเทียบเทคโนโลยีที่ต่างกันโดยสิ้นเชิงได้ด้วยตัวเลขชุดไหน</span>
+          <span class="en">Before biomass, solar or wind mean anything, we need a shared language: how energy is measured, how it differs from power, what “renewable” actually claims, and which numbers let us compare technologies that have nothing else in common.</span>
+        </p>
+        <div class="chapter-head__facts">
+          <span class="chip"><span class="th">เวลาเรียน ~60 นาที</span><span class="en">~60 min</span></span>
+          <span class="chip"><span class="th">7 หัวข้อ</span><span class="en">7 sections</span></span>
+          <span class="chip"><span class="th">ตัวอย่างคำนวณ 3 ข้อ</span><span class="en">3 worked examples</span></span>
+          <span class="chip chip--accent"><span class="th">Pre-test 5 ข้อ · Post-test 8 ข้อ</span><span class="en">Pre-test 5 · Post-test 8</span></span>
+        </div>
+      </header>
+
+      <div class="objectives">
+        <h2><span class="th">จุดประสงค์การเรียนรู้</span><span class="en">Learning objectives</span></h2>
+        <ul>
+          <li>
+            <span class="th">แยกแยะ <strong>พลังงาน</strong> (kWh, MJ) ออกจาก <strong>กำลัง</strong> (kW) และแปลงหน่วยระหว่างกันได้</span>
+            <span class="en">Distinguish <strong>energy</strong> (kWh, MJ) from <strong>power</strong> (kW) and convert between the common units.</span>
+          </li>
+          <li>
+            <span class="th">อธิบายเกณฑ์ที่ทำให้แหล่งพลังงานหนึ่งถูกเรียกว่า “หมุนเวียน” และบอกได้ว่าเหตุใดหมุนเวียนจึงไม่เท่ากับยั่งยืนเสมอไป</span>
+            <span class="en">State the criterion that makes a source “renewable”, and explain why renewable does not automatically mean sustainable.</span>
+          </li>
+          <li>
+            <span class="th">สืบย้อนแหล่งพลังงานหมุนเวียนแต่ละชนิดกลับไปยังต้นกำเนิดพลังงานทั้งสามของโลก</span>
+            <span class="en">Trace each renewable source back to one of the planet’s three primary energy origins.</span>
+          </li>
+          <li>
+            <span class="th">คำนวณ <strong>ตัวประกอบกำลังผลิต (capacity factor)</strong> และใช้ค่านี้อธิบายความต่างระหว่างกำลังติดตั้งกับพลังงานที่ผลิตได้จริง</span>
+            <span class="en">Compute a <strong>capacity factor</strong> and use it to explain the gap between installed capacity and delivered energy.</span>
+          </li>
+          <li>
+            <span class="th">เปรียบเทียบเทคโนโลยีด้วย LCOE, EROI, ความหนาแน่นพลังงาน และความหนาแน่นกำลังต่อพื้นที่ พร้อมระบุนัยต่องานวิศวกรรมเกษตร</span>
+            <span class="en">Compare technologies using LCOE, EROI, energy density and power density per unit land — and say what each implies for agricultural engineering.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ============ PRE-TEST ============ -->
+      <section class="quiz quiz--pre" id="pretest" data-quiz="pre" data-pass="0.6">
+        <script type="application/json" class="quiz-data">
+{
+  "questions": [
+    {
+      "q": { "th": "ข้อใดคือหน่วยของ “กำลัง” (power)", "en": "Which of these is a unit of power?" },
+      "choices": [
+        { "th": "กิโลวัตต์-ชั่วโมง (kWh)", "en": "Kilowatt-hour (kWh)" },
+        { "th": "กิโลวัตต์ (kW)", "en": "Kilowatt (kW)" },
+        { "th": "เมกะจูล (MJ)", "en": "Megajoule (MJ)" },
+        { "th": "ตันเทียบเท่าน้ำมันดิบ (toe)", "en": "Tonne of oil equivalent (toe)" }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "วัตต์คืออัตราการใช้พลังงานต่อวินาที (1 W = 1 J/s) จึงเป็นหน่วยของกำลัง ส่วน kWh, MJ และ toe ล้วนเป็นหน่วยของปริมาณพลังงาน",
+        "en": "A watt is a rate of energy flow (1 W = 1 J/s), so it measures power. kWh, MJ and toe all measure a quantity of energy."
+      }
+    },
+    {
+      "q": { "th": "แผงโซลาร์เซลล์ขนาดติดตั้ง 100 kWp ในประเทศไทย ผลิตพลังงานได้จริงประมาณเท่าใดใน 1 ปี", "en": "A 100 kWp solar array in Thailand delivers roughly how much energy in one year?" },
+      "choices": [
+        { "th": "ประมาณ 876,000 kWh (เท่ากับเดินเต็มกำลังตลอดปี)", "en": "About 876,000 kWh (full power all year)" },
+        { "th": "ประมาณ 140,000 kWh", "en": "About 140,000 kWh" },
+        { "th": "ประมาณ 14,000 kWh", "en": "About 14,000 kWh" },
+        { "th": "ประมาณ 438,000 kWh (ครึ่งหนึ่งของปี)", "en": "About 438,000 kWh (half the year)" }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "โซลาร์เซลล์ในไทยมีตัวประกอบกำลังผลิตราว 15–17% ดังนั้น 100 kW × 8,760 ชม. × 0.16 ≈ 140,000 kWh ต่อปี",
+        "en": "Solar PV in Thailand runs at a capacity factor of roughly 15–17%: 100 kW × 8,760 h × 0.16 ≈ 140,000 kWh per year."
+      }
+    },
+    {
+      "q": { "th": "แหล่งพลังงานหมุนเวียนใดที่ไม่ได้มีต้นกำเนิดมาจากดวงอาทิตย์", "en": "Which renewable source does NOT originate from the Sun?" },
+      "choices": [
+        { "th": "พลังงานลม", "en": "Wind energy" },
+        { "th": "ชีวมวล", "en": "Biomass" },
+        { "th": "พลังงานน้ำขึ้นน้ำลง", "en": "Tidal energy" },
+        { "th": "พลังงานคลื่น", "en": "Wave energy" }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "น้ำขึ้นน้ำลงเกิดจากแรงโน้มถ่วงของดวงจันทร์ (และดวงอาทิตย์บางส่วน) ร่วมกับการหมุนของโลก ไม่ใช่จากรังสีดวงอาทิตย์ ส่วนลม ชีวมวล และคลื่น ล้วนสืบย้อนกลับไปที่พลังงานแสงอาทิตย์ทั้งสิ้น",
+        "en": "Tides come from the Moon’s gravity (plus a smaller solar component) acting with the Earth’s rotation — not from solar radiation. Wind, biomass and waves all trace back to sunlight."
+      }
+    },
+    {
+      "q": { "th": "ข้อความใดถูกต้องเกี่ยวกับคำว่า “หมุนเวียน” (renewable)", "en": "Which statement about the word “renewable” is correct?" },
+      "choices": [
+        { "th": "หมุนเวียนหมายถึงไม่ปล่อยคาร์บอนไดออกไซด์เลยในทุกขั้นตอน", "en": "Renewable means zero carbon dioxide at every stage" },
+        { "th": "หมุนเวียนหมายถึงเติมกลับได้ในช่วงเวลาระดับชีวิตมนุษย์ แต่ไม่ได้แปลว่ายั่งยืนเสมอไป", "en": "Renewable means replenished on a human timescale, but it does not automatically mean sustainable" },
+        { "th": "หมุนเวียนหมายถึงมีให้ใช้ตลอด 24 ชั่วโมงโดยไม่ขาดช่วง", "en": "Renewable means available 24 hours a day without interruption" },
+        { "th": "หมุนเวียนหมายถึงต้นทุนต่อหน่วยถูกที่สุดเสมอ", "en": "Renewable means always the cheapest per unit of energy" }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "เกณฑ์คืออัตราการเติมกลับตามธรรมชาติเทียบกับอัตราการใช้ ชีวมวลที่ตัดเร็วกว่าที่ปลูกทดแทนได้ก็ยังเรียกว่าหมุนเวียน แต่ไม่ยั่งยืน",
+        "en": "The test is the natural replenishment rate versus the rate of use. Biomass harvested faster than it regrows is still “renewable” but not sustainable."
+      }
+    },
+    {
+      "q": { "th": "เหตุใดโรงไฟฟ้าชีวมวลจึงมีตัวประกอบกำลังผลิตสูงกว่าโซลาร์ฟาร์มมาก", "en": "Why does a biomass power plant have a much higher capacity factor than a solar farm?" },
+      "choices": [
+        { "th": "เพราะเชื้อเพลิงชีวมวลให้พลังงานต่อกิโลกรัมสูงกว่าน้ำมันดีเซล", "en": "Because biomass fuel carries more energy per kilogram than diesel" },
+        { "th": "เพราะเชื้อเพลิงถูกเก็บไว้ได้ จึงสั่งเดินเครื่องเมื่อใดก็ได้ ไม่ต้องรอแหล่งพลังงานจากธรรมชาติ", "en": "Because the fuel is stored, so the plant can be dispatched at will instead of waiting for the resource" },
+        { "th": "เพราะโรงไฟฟ้าชีวมวลมีประสิทธิภาพการแปลงพลังงานสูงกว่าแผงโซลาร์เซลล์", "en": "Because biomass plants convert energy more efficiently than PV panels" },
+        { "th": "เพราะชีวมวลไม่ต้องใช้พื้นที่ในการผลิตเชื้อเพลิง", "en": "Because biomass needs no land to produce its fuel" }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "ชีวมวลเป็นพลังงานที่ “สั่งได้” (dispatchable) เพราะเชื้อเพลิงถูกกักเก็บไว้ในตัวมันเอง ขณะที่โซลาร์ต้องรอแดด จึงเดินได้เฉพาะช่วงกลางวัน",
+        "en": "Biomass is dispatchable — the energy is stored in the fuel itself — whereas solar can only run when the sun is up."
+      }
+    }
+  ]
+}
+        </script>
+      </section>
+
+      <!-- ============ 1.1 ============ -->
+      <section class="section" id="s1">
+        <h2><span class="num">1.1</span>
+          <span><span class="th">พลังงานและกำลัง: สองคำที่มักสับสน</span>
+          <span class="en">Energy and power: the two words everyone mixes up</span></span>
+        </h2>
+
+        <p>
+          <span class="th"><strong>พลังงาน (energy)</strong> คือความสามารถในการทำงาน เป็นปริมาณสะสม มีหน่วยพื้นฐานเป็นจูล (J) ส่วน <strong>กำลัง (power)</strong> คืออัตราการถ่ายเทพลังงานต่อหน่วยเวลา มีหน่วยเป็นวัตต์ (W) โดยที่ 1 W = 1 J/s</span>
+          <span class="en"><strong>Energy</strong> is the capacity to do work — a quantity that accumulates, measured in joules (J). <strong>Power</strong> is the rate at which energy is transferred, measured in watts (W), where 1 W = 1 J/s.</span>
+        </p>
+
+        <p>
+          <span class="th">การเปรียบเทียบที่ตรงกับงานเกษตรที่สุดคือระบบชลประทาน: <em>กำลัง</em> คืออัตราการไหลของน้ำจากปั๊ม (ลิตรต่อวินาที) ส่วน <em>พลังงาน</em> คือปริมาตรน้ำทั้งหมดที่ไหลลงแปลงในหนึ่งวัน (ลิตร) ปั๊มตัวใหญ่ที่เดินเพียงห้านาทีอาจให้น้ำน้อยกว่าปั๊มตัวเล็กที่เดินทั้งวัน</span>
+          <span class="en">The closest analogy in agriculture is irrigation: <em>power</em> is the flow rate from the pump (litres per second); <em>energy</em> is the total volume that reached the field in a day (litres). A large pump running five minutes delivers less water than a small pump running all day.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ E = P \times t \]</div>
+            <span class="formula__num">(1.1)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(E\) = พลังงาน (kWh หรือ J) · \(P\) = กำลัง (kW หรือ W) · \(t\) = เวลา (ชั่วโมง หรือ วินาที)</span>
+            <span class="en">\(E\) = energy (kWh or J) · \(P\) = power (kW or W) · \(t\) = time (hours or seconds)</span>
+          </div>
+        </div>
+
+        <div class="demo" data-demo="power-energy" data-reveal>
+          <div class="demo__head">
+            <span class="demo__label">
+              <span class="th">ลองเล่นดู</span><span class="en">Try it</span>
+            </span>
+            <span class="demo__title">
+              <span class="th">ปั๊มกับถังเก็บน้ำ: กำลังคืออัตรา พลังงานคือสิ่งที่สะสม</span>
+              <span class="en">The pump and the tank: power is a rate, energy is what accumulates</span>
+            </span>
+            <span class="demo__sub">
+              <span class="th">เลื่อนแถบเพื่อเปลี่ยนขนาดปั๊ม แล้วกดเริ่ม สังเกตว่า “กำลัง” คงที่ตลอดเวลา แต่ “พลังงาน” ไต่ขึ้นเรื่อย ๆ (1 วินาทีจริง = 1 ชั่วโมงจำลอง)</span>
+              <span class="en">Move the slider to resize the pump, then press start. Watch how “power” stays constant while “energy” keeps climbing. One real second = one simulated hour.</span>
+            </span>
+          </div>
+
+          <div class="demo__stage">
+            <svg viewBox="0 0 640 240" width="640" role="img" aria-labelledby="peA-title peA-desc">
+              <title id="peA-title">Pump and tank analogy for power and energy</title>
+              <desc id="peA-desc">A pump drives water through a pipe into a tank. The flow rate in the pipe represents power in kilowatts; the water collected in the tank represents energy in kilowatt-hours.</desc>
+
+              <!-- pump -->
+              <rect x="16" y="84" width="104" height="66" rx="3" class="dg-fill dg-accent-s" stroke-width="2"/>
+              <circle class="pe-pump dg-accent" cx="68" cy="117" r="16"/>
+              <path class="pe-pump" d="M68 105 L78 117 L68 129 Z" fill="var(--paper-2)"/>
+              <text x="68" y="170" text-anchor="middle" class="dg-text th">ปั๊ม</text>
+              <text x="68" y="170" text-anchor="middle" class="dg-text en">Pump</text>
+
+              <!-- pipe -->
+              <line x1="120" y1="117" x2="352" y2="117" class="dg-rule" stroke-width="18" stroke-linecap="round"/>
+              <line x1="120" y1="117" x2="352" y2="117" class="pe-pipe-flow dg-accent-s" stroke-width="8"/>
+
+              <text x="236" y="86" text-anchor="middle" class="dg-label th">อัตราการไหล = กำลัง (kW)</text>
+              <text x="236" y="86" text-anchor="middle" class="dg-label en">FLOW RATE = POWER (kW)</text>
+
+              <!-- tank -->
+              <rect x="360" y="40" width="264" height="156" rx="3" class="dg-fill-2 dg-rule" stroke-width="2"/>
+              <rect data-pe-fill x="362" y="194" width="260" height="0" class="pe-fill dg-accent" opacity="0.75"/>
+              <rect x="360" y="40" width="264" height="156" rx="3" fill="none" class="dg-rule" stroke-width="2"/>
+
+              <!-- tank gradations -->
+              <g class="dg-rule" stroke-width="1" stroke-dasharray="3 5">
+                <line x1="360" y1="79"  x2="624" y2="79"/>
+                <line x1="360" y1="118" x2="624" y2="118"/>
+                <line x1="360" y1="157" x2="624" y2="157"/>
+              </g>
+              <text x="492" y="222" text-anchor="middle" class="dg-label th">ปริมาตรที่สะสม = พลังงาน (kWh)</text>
+              <text x="492" y="222" text-anchor="middle" class="dg-label en">VOLUME COLLECTED = ENERGY (kWh)</text>
+            </svg>
+          </div>
+
+          <div class="readouts">
+            <div class="readout">
+              <span class="readout__label">
+                <span class="th">กำลัง (อัตรา)</span><span class="en">Power (a rate)</span>
+              </span>
+              <span class="readout__value"><span data-pe-power>5.5</span><span class="readout__unit">kW</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label">
+                <span class="th">เวลาที่เดินเครื่อง</span><span class="en">Time running</span>
+              </span>
+              <span class="readout__value"><span data-pe-time>0.0</span><span class="readout__unit">h</span></span>
+            </div>
+            <div class="readout readout--accent">
+              <span class="readout__label">
+                <span class="th">พลังงานสะสม = P × t</span><span class="en">Energy so far = P × t</span>
+              </span>
+              <span class="readout__value"><span data-pe-energy>0.0</span><span class="readout__unit">kWh</span></span>
+            </div>
+          </div>
+
+          <div class="demo__controls">
+            <label class="demo__field">
+              <span class="th">ขนาดปั๊ม</span><span class="en">Pump size</span>
+              <input type="range" min="1" max="10" step="0.5" value="5.5" data-pe-slider
+                     aria-label="Pump power in kilowatts">
+            </label>
+            <button type="button" class="btn" data-pe-play>
+              <span class="th" data-pe-play-th>เริ่มเดินปั๊ม</span>
+              <span class="en" data-pe-play-en>Start the pump</span>
+            </button>
+            <button type="button" class="btn btn--ghost" data-pe-reset>
+              <span class="th">รีเซ็ต</span><span class="en">Reset</span>
+            </button>
+          </div>
+
+          <div class="demo__note">
+            <p>
+              <span class="th">ลองตั้งปั๊ม 2 kW เดินจนครบ 8 ชั่วโมง แล้วเทียบกับปั๊ม 8 kW ที่เดินเพียง 2 ชั่วโมง — ทั้งสองกรณีได้น้ำในถังเท่ากันคือ 16 kWh ทั้งที่ “กำลัง” ต่างกันสี่เท่า นี่คือเหตุผลที่การบอกแต่ขนาด kW ไม่เคยพอ</span>
+              <span class="en">Set the pump to 2 kW and run the full 8 hours, then compare a 8 kW pump run for just 2 hours. Both put 16 kWh in the tank although their power differs fourfold — which is why a kW rating alone never tells you enough.</span>
+            </p>
+          </div>
+        </div>
+
+        <h3><span class="th">หน่วยที่ต้องคุ้นเคย</span><span class="en">Units you must be fluent in</span></h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">หน่วย</span><span class="en">Unit</span></th>
+                <th><span class="th">ปริมาณ</span><span class="en">Measures</span></th>
+                <th><span class="th">ค่าเทียบเท่า</span><span class="en">Equivalent</span></th>
+                <th><span class="th">ใช้เมื่อไร</span><span class="en">Where you meet it</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="num">J</td>
+                <td><span class="th">พลังงาน</span><span class="en">Energy</span></td>
+                <td class="num">1 J = 1 N·m = 1 W·s</td>
+                <td><span class="th">หน่วยฐาน SI ใช้ในสมการฟิสิกส์</span><span class="en">SI base unit, used in physics equations</span></td>
+              </tr>
+              <tr>
+                <td class="num">kWh</td>
+                <td><span class="th">พลังงาน</span><span class="en">Energy</span></td>
+                <td class="num">1 kWh = 3.6 MJ</td>
+                <td><span class="th">บิลค่าไฟ มิเตอร์ไฟฟ้า</span><span class="en">Electricity bills and meters</span></td>
+              </tr>
+              <tr>
+                <td class="num">MJ</td>
+                <td><span class="th">พลังงาน</span><span class="en">Energy</span></td>
+                <td class="num">1 MJ = 0.2778 kWh</td>
+                <td><span class="th">ค่าความร้อนของเชื้อเพลิง (MJ/kg)</span><span class="en">Fuel heating values (MJ/kg)</span></td>
+              </tr>
+              <tr>
+                <td class="num">toe</td>
+                <td><span class="th">พลังงาน</span><span class="en">Energy</span></td>
+                <td class="num">1 toe ≈ 41.87 GJ ≈ 11,630 kWh</td>
+                <td><span class="th">สถิติพลังงานระดับประเทศ</span><span class="en">National energy statistics</span></td>
+              </tr>
+              <tr>
+                <td class="num">BTU</td>
+                <td><span class="th">พลังงาน</span><span class="en">Energy</span></td>
+                <td class="num">1 BTU ≈ 1.055 kJ</td>
+                <td><span class="th">เครื่องปรับอากาศ อุปกรณ์ความร้อน</span><span class="en">Air conditioners and heating equipment</span></td>
+              </tr>
+              <tr>
+                <td class="num">W, kW, MW</td>
+                <td><span class="th">กำลัง</span><span class="en">Power</span></td>
+                <td class="num">1 MW = 1,000 kW</td>
+                <td><span class="th">ขนาดมอเตอร์ ปั๊ม โรงไฟฟ้า</span><span class="en">Motor, pump and plant ratings</span></td>
+              </tr>
+              <tr>
+                <td class="num">kWp</td>
+                <td><span class="th">กำลัง</span><span class="en">Power</span></td>
+                <td class="num">kW<sub>peak</sub></td>
+                <td><span class="th">กำลังของแผงโซลาร์ที่สภาวะทดสอบมาตรฐาน</span><span class="en">PV rating at standard test conditions</span></td>
+              </tr>
+              <tr>
+                <td class="num">hp</td>
+                <td><span class="th">กำลัง</span><span class="en">Power</span></td>
+                <td class="num">1 hp ≈ 0.746 kW</td>
+                <td><span class="th">เครื่องยนต์ แทรกเตอร์ ปั๊มน้ำ</span><span class="en">Engines, tractors, pumps</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout--warn">
+          <div class="callout__title">
+            <span class="th">ข้อผิดพลาดที่พบบ่อย</span><span class="en">Common mistake</span>
+          </div>
+          <p>
+            <span class="th">“โรงไฟฟ้าขนาด 50 MW” ไม่ได้บอกว่าผลิตไฟได้เท่าไร บอกเพียงว่า <em>เร็วที่สุด</em> ที่ผลิตได้คือเท่าไร ส่วน “ผลิตไฟได้ 50 MWh” จึงจะเป็นปริมาณพลังงาน สังเกตตัว “h” ให้ดี — มันเปลี่ยนความหมายทั้งประโยค</span>
+            <span class="en">“A 50 MW plant” says nothing about how much electricity it produces — only how fast it <em>can</em> produce it. “50 MWh” is a quantity. Watch for that “h”: it changes the meaning of the whole sentence.</span>
+          </p>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 1.1 · ปั๊มน้ำเพื่อการเกษตร</span>
+            <span class="en">Worked example 1.1 · An irrigation pump</span>
+          </div>
+          <p>
+            <span class="th">ปั๊มน้ำไฟฟ้าขนาด 5.5 kW เดินวันละ 6 ชั่วโมง เป็นเวลา 120 วันต่อฤดูกาลเพาะปลูก จงหาพลังงานที่ใช้และค่าไฟฟ้า เมื่อค่าไฟเฉลี่ย 4.20 บาท/kWh</span>
+            <span class="en">A 5.5 kW electric pump runs 6 hours a day for 120 days per growing season. Find the energy consumed and the electricity cost at an average tariff of 4.20 THB/kWh.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">พลังงานต่อวัน: \(E = 5.5\ \mathrm{kW} \times 6\ \mathrm{h} = \mathbf{33\ kWh}\) ต่อวัน</span>
+              <span class="en">Daily energy: \(E = 5.5\ \mathrm{kW} \times 6\ \mathrm{h} = \mathbf{33\ kWh}\)</span>
+            </li>
+            <li>
+              <span class="th">พลังงานต่อฤดูกาล: \(33 \times 120 = \mathbf{3{,}960\ kWh}\)</span>
+              <span class="en">Seasonal energy: \(33 \times 120 = \mathbf{3{,}960\ kWh}\)</span>
+            </li>
+            <li>
+              <span class="th">คิดเป็นหน่วย SI: \(3{,}960 \times 3.6 = 14{,}256\ \mathrm{MJ} \approx \mathbf{14.3\ GJ}\)</span>
+              <span class="en">In SI units: \(3{,}960 \times 3.6 = 14{,}256\ \mathrm{MJ} \approx \mathbf{14.3\ GJ}\)</span>
+            </li>
+            <li>
+              <span class="th">ค่าไฟ: \(3{,}960 \times 4.20 = \mathbf{16{,}632}\) บาทต่อฤดูกาล</span>
+              <span class="en">Cost: \(3{,}960 \times 4.20 = \mathbf{16{,}632}\) THB per season</span>
+            </li>
+          </ol>
+          <p class="small muted">
+            <span class="th">เก็บตัวเลข 3,960 kWh นี้ไว้ — ในบทที่ 7 เราจะคำนวณว่าต้องติดตั้งโซลาร์กี่กิโลวัตต์จึงจะทดแทนพลังงานก้อนนี้ได้</span>
+            <span class="en">Hold on to that 3,960 kWh — in Chapter 7 we will size the solar array that replaces it.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 1.2 ============ -->
+      <section class="section" id="s2">
+        <h2><span class="num">1.2</span>
+          <span><span class="th">อะไรทำให้แหล่งพลังงานหนึ่งเป็น “หมุนเวียน”</span>
+          <span class="en">What makes an energy source “renewable”</span></span>
+        </h2>
+
+        <p>
+          <span class="th">นิยามที่ใช้ได้จริงมีเพียงข้อเดียว: <strong>แหล่งพลังงานหมุนเวียนคือแหล่งที่ธรรมชาติเติมกลับได้เร็วเท่ากับหรือเร็วกว่าอัตราที่มนุษย์ใช้ ในช่วงเวลาระดับชีวิตมนุษย์</strong> ไม่ใช่เรื่องของคาร์บอน ไม่ใช่เรื่องของราคา และไม่ใช่เรื่องของความสะอาด — เป็นเรื่องของ <em>อัตราการเติมกลับ</em> เท่านั้น</span>
+          <span class="en">There is only one working definition: <strong>a renewable source is one that nature replenishes at least as fast as we consume it, on a human timescale.</strong> Not a claim about carbon, not about price, not about cleanliness — purely about the <em>rate of replenishment</em>.</span>
+        </p>
+
+        <p>
+          <span class="th">ถ่านหินและน้ำมันก็คือชีวมวลโบราณที่ถูกความร้อนและความดันแปรสภาพมาหลายร้อยล้านปี ในทางเทคนิคมันยัง “เกิดใหม่” อยู่ในขณะนี้ แต่ช้ากว่าที่เราเผามันหลายล้านเท่า จึงจัดเป็นพลังงานใช้แล้วหมด</span>
+          <span class="en">Coal and oil are simply ancient biomass cooked for hundreds of millions of years. They are technically still forming today — millions of times slower than we burn them, which is why they count as non-renewable.</span>
+        </p>
+
+        <h3><span class="th">ต้นกำเนิดพลังงานทั้งสามของโลก</span><span class="en">The planet’s three energy origins</span></h3>
+
+        <p>
+          <span class="th">ทุกแหล่งพลังงานหมุนเวียนที่เราจะเรียนในวิชานี้สืบย้อนกลับไปได้เพียงสามต้นทาง การเห็นแผนภาพนี้ครั้งเดียวช่วยให้จำโครงสร้างทั้งวิชาได้</span>
+          <span class="en">Every renewable source in this course traces back to just three origins. Seeing this once gives you the skeleton of the whole syllabus.</span>
+        </p>
+
+        <figure class="figure" data-reveal>
+          <div class="figure__body">
+            <svg viewBox="0 0 780 470" width="780" role="img" aria-labelledby="fig1-title">
+              <title id="fig1-title">Origins of renewable energy sources</title>
+              <defs>
+                <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M 0 1 L 9 5 L 0 9" fill="none" class="dg-line" stroke-width="1.4"/>
+                </marker>
+              </defs>
+
+              <!-- column headers -->
+              <text x="8" y="20" class="dg-label th">ต้นกำเนิด</text>
+              <text x="8" y="20" class="dg-label en">ORIGIN</text>
+              <text x="210" y="20" class="dg-label th">กระบวนการ</text>
+              <text x="210" y="20" class="dg-label en">PROCESS</text>
+              <text x="500" y="20" class="dg-label th">เทคโนโลยี</text>
+              <text x="500" y="20" class="dg-label en">TECHNOLOGY</text>
+              <line x1="8" y1="30" x2="772" y2="30" class="dg-rule" stroke-width="1"/>
+
+              <!-- origin boxes -->
+              <rect x="8" y="54" width="136" height="248" rx="3" class="dg-fill dg-accent-s" stroke-width="2"/>
+              <text x="76" y="172" text-anchor="middle" class="dg-text th" font-weight="600">ดวงอาทิตย์</text>
+              <text x="76" y="172" text-anchor="middle" class="dg-text en" font-weight="600">THE SUN</text>
+              <text x="76" y="194" text-anchor="middle" class="dg-label">~1,361 W/m²</text>
+
+              <rect x="8" y="314" width="136" height="40" rx="3" class="dg-fill dg-rule" stroke-width="1.5"/>
+              <text x="76" y="339" text-anchor="middle" class="dg-text th" font-weight="600">ดวงจันทร์ + โลก</text>
+              <text x="76" y="339" text-anchor="middle" class="dg-text en" font-weight="600">MOON + EARTH</text>
+
+              <rect x="8" y="394" width="136" height="40" rx="3" class="dg-fill dg-rule" stroke-width="1.5"/>
+              <text x="76" y="419" text-anchor="middle" class="dg-text th" font-weight="600">แก่นโลก</text>
+              <text x="76" y="419" text-anchor="middle" class="dg-text en" font-weight="600">EARTH’S CORE</text>
+
+              <!-- process boxes -->
+              <g class="dg-line">
+                <rect x="210" y="54"  width="210" height="40" rx="3" class="dg-fill-2 dg-rule" stroke-width="1"/>
+                <rect x="210" y="106" width="210" height="40" rx="3" class="dg-fill-2 dg-rule" stroke-width="1"/>
+                <rect x="210" y="158" width="210" height="40" rx="3" class="dg-fill-2 dg-rule" stroke-width="1"/>
+                <rect x="210" y="210" width="210" height="40" rx="3" class="dg-fill-2 dg-rule" stroke-width="1"/>
+                <rect x="210" y="262" width="210" height="40" rx="3" class="dg-fill-2 dg-rule" stroke-width="1"/>
+                <rect x="210" y="314" width="210" height="40" rx="3" class="dg-fill-2 dg-rule" stroke-width="1"/>
+                <rect x="210" y="394" width="210" height="40" rx="3" class="dg-fill-2 dg-rule" stroke-width="1"/>
+              </g>
+              <text x="315" y="79"  text-anchor="middle" class="dg-text th">รังสีตกกระทบพื้นผิว</text>
+              <text x="315" y="79"  text-anchor="middle" class="dg-text en">Radiation reaching the ground</text>
+              <text x="315" y="131" text-anchor="middle" class="dg-text th">อากาศร้อนไม่เท่ากัน</text>
+              <text x="315" y="131" text-anchor="middle" class="dg-text en">Uneven heating of the air</text>
+              <text x="315" y="183" text-anchor="middle" class="dg-text th">ลมพัดผ่านผิวทะเล</text>
+              <text x="315" y="183" text-anchor="middle" class="dg-text en">Wind blowing over the sea</text>
+              <text x="315" y="235" text-anchor="middle" class="dg-text th">การสังเคราะห์ด้วยแสง</text>
+              <text x="315" y="235" text-anchor="middle" class="dg-text en">Photosynthesis</text>
+              <text x="315" y="287" text-anchor="middle" class="dg-text th">วัฏจักรน้ำ (ระเหย–ฝน)</text>
+              <text x="315" y="287" text-anchor="middle" class="dg-text en">The water cycle</text>
+              <text x="315" y="339" text-anchor="middle" class="dg-text th">แรงโน้มถ่วง + การหมุนของโลก</text>
+              <text x="315" y="339" text-anchor="middle" class="dg-text en">Gravity + Earth’s rotation</text>
+              <text x="315" y="419" text-anchor="middle" class="dg-text th">การสลายตัวของธาตุกัมมันตรังสี</text>
+              <text x="315" y="419" text-anchor="middle" class="dg-text en">Radioactive decay in the mantle</text>
+
+              <!-- technology boxes -->
+              <g>
+                <rect x="500" y="54"  width="272" height="40" rx="3" class="dg-fill dg-accent-s" stroke-width="1.5"/>
+                <rect x="500" y="106" width="272" height="40" rx="3" class="dg-fill dg-accent-s" stroke-width="1.5"/>
+                <rect x="500" y="158" width="272" height="40" rx="3" class="dg-fill dg-accent-s" stroke-width="1.5"/>
+                <rect x="500" y="210" width="272" height="40" rx="3" class="dg-fill dg-accent-s" stroke-width="1.5"/>
+                <rect x="500" y="262" width="272" height="40" rx="3" class="dg-fill dg-accent-s" stroke-width="1.5"/>
+                <rect x="500" y="314" width="272" height="40" rx="3" class="dg-fill dg-accent-s" stroke-width="1.5"/>
+                <rect x="500" y="394" width="272" height="40" rx="3" class="dg-fill dg-accent-s" stroke-width="1.5"/>
+              </g>
+              <text x="516" y="79"  class="dg-text th" font-weight="600">พลังงานแสงอาทิตย์</text>
+              <text x="516" y="79"  class="dg-text en" font-weight="600">Solar</text>
+              <text x="516" y="131" class="dg-text th" font-weight="600">พลังงานลม</text>
+              <text x="516" y="131" class="dg-text en" font-weight="600">Wind</text>
+              <text x="516" y="183" class="dg-text th" font-weight="600">พลังงานคลื่น</text>
+              <text x="516" y="183" class="dg-text en" font-weight="600">Wave</text>
+              <text x="516" y="235" class="dg-text th" font-weight="600">ชีวมวล</text>
+              <text x="516" y="235" class="dg-text en" font-weight="600">Biomass</text>
+              <text x="516" y="287" class="dg-text th" font-weight="600">พลังงานน้ำ</text>
+              <text x="516" y="287" class="dg-text en" font-weight="600">Hydro</text>
+              <text x="516" y="339" class="dg-text th" font-weight="600">พลังงานน้ำขึ้นน้ำลง</text>
+              <text x="516" y="339" class="dg-text en" font-weight="600">Tidal</text>
+              <text x="516" y="419" class="dg-text th" font-weight="600">ความร้อนใต้พิภพ</text>
+              <text x="516" y="419" class="dg-text en" font-weight="600">Geothermal</text>
+
+              <text x="756" y="79"  text-anchor="end" class="dg-label th">บทที่ 8</text>
+              <text x="756" y="79"  text-anchor="end" class="dg-label en">CH 8</text>
+              <text x="756" y="131" text-anchor="end" class="dg-label th">บทที่ 9</text>
+              <text x="756" y="131" text-anchor="end" class="dg-label en">CH 9</text>
+              <text x="756" y="183" text-anchor="end" class="dg-label th">บทที่ 6</text>
+              <text x="756" y="183" text-anchor="end" class="dg-label en">CH 6</text>
+              <text x="756" y="235" text-anchor="end" class="dg-label th">บทที่ 2–3</text>
+              <text x="756" y="235" text-anchor="end" class="dg-label en">CH 2–3</text>
+              <text x="756" y="287" text-anchor="end" class="dg-label th">บทที่ 5</text>
+              <text x="756" y="287" text-anchor="end" class="dg-label en">CH 5</text>
+              <text x="756" y="339" text-anchor="end" class="dg-label th">บทที่ 7</text>
+              <text x="756" y="339" text-anchor="end" class="dg-label en">CH 7</text>
+              <text x="756" y="419" text-anchor="end" class="dg-label th">บทที่ 4</text>
+              <text x="756" y="419" text-anchor="end" class="dg-label en">CH 4</text>
+
+              <!-- connectors: the dashes drift left to right, showing which way energy travels -->
+              <g class="dg-line dg-flow" stroke-width="1.4" fill="none" marker-end="url(#arw)">
+                <line x1="144" y1="74"  x2="204" y2="74"/>
+                <line x1="144" y1="126" x2="204" y2="126"/>
+                <line x1="144" y1="178" x2="204" y2="178"/>
+                <line x1="144" y1="230" x2="204" y2="230"/>
+                <line x1="144" y1="282" x2="204" y2="282"/>
+                <line x1="144" y1="334" x2="204" y2="334"/>
+                <line x1="144" y1="414" x2="204" y2="414"/>
+                <line x1="420" y1="74"  x2="494" y2="74"/>
+                <line x1="420" y1="126" x2="494" y2="126"/>
+                <line x1="420" y1="178" x2="494" y2="178"/>
+                <line x1="420" y1="230" x2="494" y2="230"/>
+                <line x1="420" y1="282" x2="494" y2="282"/>
+                <line x1="420" y1="334" x2="494" y2="334"/>
+                <line x1="420" y1="414" x2="494" y2="414"/>
+              </g>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label">
+              <span class="th">รูปที่ 1.1</span><span class="en">Figure 1.1</span>
+            </span>
+            <span class="th">พลังงานหมุนเวียนเกือบทั้งหมดคือพลังงานแสงอาทิตย์ที่ถูกแปลงรูปมาแล้วหนึ่งทอดหรือมากกว่า มีเพียงน้ำขึ้นน้ำลง (แรงโน้มถ่วงของดวงจันทร์) และความร้อนใต้พิภพ (ความร้อนในโลก) เท่านั้นที่มีต้นกำเนิดอื่น สังเกตว่าพลังงานน้ำก็เป็นพลังงานแสงอาทิตย์เช่นกัน เพราะดวงอาทิตย์เป็นตัวยกน้ำขึ้นไปบนที่สูงผ่านการระเหย</span>
+            <span class="en">Nearly all renewable energy is sunlight that has been converted once or more. Only tidal (lunar gravity) and geothermal (the Earth’s own heat) have a different origin. Note that hydro is solar too: it is the Sun that lifts the water to altitude in the first place, through evaporation.</span>
+          </figcaption>
+        </figure>
+
+        <div class="callout callout--note">
+          <div class="callout__title">
+            <span class="th">หมุนเวียน ≠ ยั่งยืน ≠ ปลอดคาร์บอน</span>
+            <span class="en">Renewable ≠ sustainable ≠ carbon-free</span>
+          </div>
+          <ul>
+            <li>
+              <span class="th"><strong>ป่าที่ถูกตัดเร็วกว่าที่ปลูกทดแทน</strong> ยังนับเป็นชีวมวลหมุนเวียน แต่ไม่ยั่งยืน และปล่อยคาร์บอนสุทธิเป็นบวก</span>
+              <span class="en"><strong>A forest cut faster than it regrows</strong> is still renewable biomass — but not sustainable, and its net carbon is positive.</span>
+            </li>
+            <li>
+              <span class="th"><strong>นิวเคลียร์ฟิชชัน</strong> ปล่อยคาร์บอนต่ำมาก แต่ยูเรเนียมเป็นแร่ที่ใช้แล้วหมด จึงไม่ใช่พลังงานหมุนเวียน</span>
+              <span class="en"><strong>Nuclear fission</strong> is very low-carbon, but uranium is a finite ore — so it is not renewable.</span>
+            </li>
+            <li>
+              <span class="th"><strong>แผงโซลาร์เซลล์</strong> ผลิตไฟฟ้าโดยไม่ปล่อยคาร์บอน แต่การผลิตแผงใช้พลังงานและปล่อยคาร์บอน จึงต้องดูตลอดวัฏจักรชีวิต</span>
+              <span class="en"><strong>A solar panel</strong> emits nothing while generating, but manufacturing it does — which is why we judge over the full life cycle.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ 1.3 ============ -->
+      <section class="section" id="s3">
+        <h2><span class="num">1.3</span>
+          <span><span class="th">ทำไมวิศวกรเกษตรต้องสนใจเรื่องนี้</span>
+          <span class="en">Why this matters to an agricultural engineer</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ภาคเกษตรไม่ได้เป็นเพียงผู้ใช้พลังงาน แต่เป็นทั้ง <strong>ผู้ใช้ ผู้ผลิต และเจ้าของพื้นที่</strong> พร้อมกัน ซึ่งเป็นสถานะที่อุตสาหกรรมอื่นแทบไม่มี</span>
+          <span class="en">Agriculture is not merely an energy consumer. It is simultaneously a <strong>consumer, a producer, and a landowner</strong> — a position almost no other sector holds.</span>
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">แรงผลักดัน</span><span class="en">Driver</span></th>
+                <th><span class="th">สาระสำคัญ</span><span class="en">What it means</span></th>
+                <th><span class="th">ผลต่อภาคเกษตร</span><span class="en">Consequence for farming</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th">สภาพภูมิอากาศ</span><span class="en">Climate</span></td>
+                <td><span class="th">การเผาเชื้อเพลิงฟอสซิลปล่อย CO₂ ไทยตั้งเป้าความเป็นกลางทางคาร์บอนปี ค.ศ. 2050 และปล่อยสุทธิเป็นศูนย์ปี ค.ศ. 2065</span><span class="en">Burning fossil fuels releases CO₂. Thailand targets carbon neutrality by 2050 and net-zero emissions by 2065.</span></td>
+                <td><span class="th">เกษตรเป็นทั้งผู้ปล่อย (มีเทนจากนาข้าว การเผาตอซัง) และผู้รับผลกระทบ (ภัยแล้ง น้ำท่วม)</span><span class="en">Farming both emits (paddy methane, residue burning) and suffers (drought, flooding).</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ความมั่นคงทางพลังงาน</span><span class="en">Energy security</span></td>
+                <td><span class="th">ไทยนำเข้าน้ำมันดิบเป็นสัดส่วนสูงมาก ราคาจึงผันผวนตามตลาดโลก</span><span class="en">Thailand imports the large majority of its crude oil, so prices track world markets.</span></td>
+                <td><span class="th">ต้นทุนดีเซลสำหรับแทรกเตอร์และเครื่องสูบน้ำกระทบกำไรต่อไร่โดยตรง</span><span class="en">Diesel for tractors and pumps hits margin per rai directly.</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ต้นทุนที่ลดลง</span><span class="en">Falling cost</span></td>
+                <td><span class="th">ต้นทุนไฟฟ้าจากโซลาร์ระดับโรงไฟฟ้าลดลงราว 85–90% ในช่วงปี ค.ศ. 2010–2023</span><span class="en">Utility-scale solar electricity costs fell roughly 85–90% between 2010 and 2023.</span></td>
+                <td><span class="th">ระบบสูบน้ำพลังงานแสงอาทิตย์คุ้มทุนในหลายพื้นที่โดยไม่ต้องพึ่งเงินอุดหนุน</span><span class="en">Solar pumping now pays back on its own in many locations, without subsidy.</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">พื้นที่ห่างไกลสายส่ง</span><span class="en">Off-grid land</span></td>
+                <td><span class="th">การลากสายส่งไปแปลงเกษตรห่างไกลมีต้นทุนสูงมากต่อกิโลเมตร</span><span class="en">Extending a grid line to a remote plot costs a great deal per kilometre.</span></td>
+                <td><span class="th">ระบบผลิตไฟ ณ จุดใช้งานมักถูกกว่าการต่อสายส่ง</span><span class="en">Generating at the point of use is often cheaper than connecting.</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">วัสดุเหลือทิ้ง</span><span class="en">Residues</span></td>
+                <td><span class="th">แกลบ ฟาง ชานอ้อย ทะลายปาล์ม ซังข้าวโพด คือเชื้อเพลิงที่มีอยู่แล้วในระบบ</span><span class="en">Husk, straw, bagasse, palm bunches and corn cobs are fuel already inside the system.</span></td>
+                <td><span class="th">เปลี่ยนของเสียที่ต้องจ่ายเงินกำจัดให้กลายเป็นพลังงานและรายได้</span><span class="en">Turns a disposal cost into energy and income.</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout--key">
+          <div class="callout__title">
+            <span class="th">มุมที่ต่างจากวิศวกรรมสาขาอื่น</span>
+            <span class="en">The angle that is unique to this field</span>
+          </div>
+          <p>
+            <span class="th">วิศวกรไฟฟ้ามองพลังงานหมุนเวียนเป็นเรื่องของกริด วิศวกรเครื่องกลมองเป็นเรื่องของกังหันและวัฏจักรความร้อน แต่วิศวกรเกษตรต้องมองทั้งสองด้าน <em>บวกกับ</em> คำถามที่คนอื่นไม่ต้องตอบ: พลังงานนี้แย่งพื้นที่ปลูกอาหารหรือไม่ แย่งน้ำหรือไม่ และวัสดุเหลือทิ้งที่เอาไปเผา ควรกลับคืนดินเป็นอินทรียวัตถุมากน้อยเพียงใด</span>
+            <span class="en">Electrical engineers see renewables as a grid problem; mechanical engineers see turbines and thermal cycles. Agricultural engineers must see both, <em>plus</em> a question nobody else has to answer: does this energy compete with food for land, does it compete for water, and how much of the residue we are about to burn should have gone back into the soil as organic matter?</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 1.4 ============ -->
+      <section class="section" id="s4">
+        <h2><span class="num">1.4</span>
+          <span><span class="th">ภาพรวมแปดแหล่งพลังงานในวิชานี้</span>
+          <span class="en">The eight sources covered in this course</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ตารางนี้คือแผนที่ของทั้งวิชา ยังไม่ต้องจำรายละเอียด แต่ให้สังเกตคอลัมน์ “สั่งได้หรือไม่” ให้ดี เพราะนั่นคือเส้นแบ่งสำคัญที่สุดในการออกแบบระบบพลังงาน</span>
+          <span class="en">This table is the map of the whole course. Do not memorise the details yet, but look hard at the “dispatchable?” column — it is the single most important dividing line in energy system design.</span>
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">แหล่ง</span><span class="en">Source</span></th>
+                <th><span class="th">ต้นกำเนิด</span><span class="en">Origin</span></th>
+                <th><span class="th">ผลผลิตหลัก</span><span class="en">Main output</span></th>
+                <th><span class="th">สั่งได้หรือไม่</span><span class="en">Dispatchable?</span></th>
+                <th><span class="th">บท</span><span class="en">Ch.</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th">ชีวมวล</span><span class="en">Biomass</span></td>
+                <td><span class="th">แสงอาทิตย์ (สังเคราะห์แสง)</span><span class="en">Sun (photosynthesis)</span></td>
+                <td><span class="th">ความร้อน ไฟฟ้า เชื้อเพลิง</span><span class="en">Heat, electricity, fuel</span></td>
+                <td><span class="th"><strong>สั่งได้</strong> — เก็บเชื้อเพลิงไว้ได้</span><span class="en"><strong>Yes</strong> — the fuel stores</span></td>
+                <td class="num">2</td>
+              </tr>
+              <tr>
+                <td><span class="th">การแปรรูปด้วยความร้อน</span><span class="en">Thermal conversion</span></td>
+                <td><span class="th">ชีวมวล</span><span class="en">Biomass</span></td>
+                <td><span class="th">แก๊สเชื้อเพลิง น้ำมันชีวภาพ ถ่านชีวภาพ</span><span class="en">Syngas, bio-oil, biochar</span></td>
+                <td><span class="th"><strong>สั่งได้</strong></span><span class="en"><strong>Yes</strong></span></td>
+                <td class="num">3</td>
+              </tr>
+              <tr>
+                <td><span class="th">ความร้อนใต้พิภพ</span><span class="en">Geothermal</span></td>
+                <td><span class="th">ความร้อนในโลก</span><span class="en">Earth’s heat</span></td>
+                <td><span class="th">ความร้อน ไฟฟ้า</span><span class="en">Heat, electricity</span></td>
+                <td><span class="th"><strong>สั่งได้</strong> — เดินได้ต่อเนื่อง</span><span class="en"><strong>Yes</strong> — runs continuously</span></td>
+                <td class="num">4</td>
+              </tr>
+              <tr>
+                <td><span class="th">พลังงานน้ำ</span><span class="en">Hydro</span></td>
+                <td><span class="th">แสงอาทิตย์ (วัฏจักรน้ำ)</span><span class="en">Sun (the water cycle)</span></td>
+                <td><span class="th">ไฟฟ้า งานกล</span><span class="en">Electricity, mechanical work</span></td>
+                <td><span class="th"><strong>สั่งได้</strong> ถ้ามีอ่างเก็บน้ำ · แบบน้ำไหลผ่านสั่งไม่ได้</span><span class="en"><strong>Yes</strong> with a reservoir · run-of-river is not</span></td>
+                <td class="num">5</td>
+              </tr>
+              <tr>
+                <td><span class="th">คลื่น</span><span class="en">Wave</span></td>
+                <td><span class="th">แสงอาทิตย์ → ลม → คลื่น</span><span class="en">Sun → wind → waves</span></td>
+                <td><span class="th">ไฟฟ้า</span><span class="en">Electricity</span></td>
+                <td><span class="th">ไม่ได้ แต่พยากรณ์ล่วงหน้าได้ดี</span><span class="en">No, but forecasts well</span></td>
+                <td class="num">6</td>
+              </tr>
+              <tr>
+                <td><span class="th">น้ำขึ้นน้ำลง</span><span class="en">Tidal</span></td>
+                <td><span class="th">แรงโน้มถ่วงดวงจันทร์</span><span class="en">Lunar gravity</span></td>
+                <td><span class="th">ไฟฟ้า</span><span class="en">Electricity</span></td>
+                <td><span class="th">ไม่ได้ แต่ <em>ทำนายได้แม่นยำที่สุด</em></span><span class="en">No, but <em>perfectly predictable</em></span></td>
+                <td class="num">7</td>
+              </tr>
+              <tr>
+                <td><span class="th">แสงอาทิตย์</span><span class="en">Solar</span></td>
+                <td><span class="th">รังสีดวงอาทิตย์</span><span class="en">Solar radiation</span></td>
+                <td><span class="th">ไฟฟ้า ความร้อน</span><span class="en">Electricity, heat</span></td>
+                <td><span class="th">ไม่ได้ — ต้องมีระบบกักเก็บ</span><span class="en">No — needs storage</span></td>
+                <td class="num">8</td>
+              </tr>
+              <tr>
+                <td><span class="th">ลม</span><span class="en">Wind</span></td>
+                <td><span class="th">แสงอาทิตย์ (ความร้อนไม่สม่ำเสมอ)</span><span class="en">Sun (uneven heating)</span></td>
+                <td><span class="th">ไฟฟ้า งานกล</span><span class="en">Electricity, mechanical work</span></td>
+                <td><span class="th">ไม่ได้ — ผันผวนสูง</span><span class="en">No — highly variable</span></td>
+                <td class="num">9</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          <span class="th">สังเกตว่าสี่แหล่งแรก (ชีวมวล การแปรรูปด้วยความร้อน ความร้อนใต้พิภพ และพลังงานน้ำแบบมีอ่างเก็บน้ำ) ล้วนเป็นพลังงานที่ <strong>สั่งเดินเครื่องได้</strong> และถูกจัดไว้เป็นบทต้น ๆ ของวิชานี้โดยตั้งใจ — เพราะเป็นกลุ่มที่เกี่ยวข้องกับภาคเกษตรไทยมากที่สุดและใช้งานได้จริงในระดับฟาร์ม</span>
+          <span class="en">Notice that the first four — biomass, thermal conversion, geothermal and reservoir hydro — are all <strong>dispatchable</strong>, and that they come early in the course on purpose: they are the group most connected to Thai agriculture and the most deployable at farm scale.</span>
+        </p>
+
+        <div class="callout callout--note">
+          <div class="callout__title">
+            <span class="th">พลังงานน้ำหนึ่งชื่อ แต่สองพฤติกรรม</span>
+            <span class="en">One name, two behaviours</span>
+          </div>
+          <p>
+            <span class="th">พลังงานน้ำเป็นแหล่งเดียวในตารางที่อยู่ได้ทั้งสองฝั่งของเส้นแบ่ง <strong>แบบมีอ่างเก็บน้ำ (reservoir)</strong> กักพลังงานศักย์ไว้ได้ จึงเปิด-ปิดตามความต้องการได้ และเป็นระบบกักเก็บพลังงานที่ใหญ่ที่สุดในโลกในปัจจุบัน ส่วน <strong>แบบน้ำไหลผ่าน (run-of-river)</strong> ผลิตตามอัตราการไหลของแม่น้ำในขณะนั้น จึงผันแปรตามฤดูกาลเช่นเดียวกับลมและแสงแดด สำหรับงานเกษตร ระบบขนาดเล็กมาก (micro-hydro / pico-hydro) ในลำน้ำหรือคลองส่งน้ำมักเป็นแบบหลัง</span>
+            <span class="en">Hydro is the only source in the table that sits on both sides of the line. A <strong>reservoir</strong> plant stores potential energy and can be switched on and off on demand — it is still the largest form of energy storage in the world. A <strong>run-of-river</strong> plant takes whatever the river is carrying at that moment, so it varies seasonally like wind or sunlight. At farm scale, micro- and pico-hydro on a stream or an irrigation canal are usually the latter.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 1.5 ============ -->
+      <section class="section" id="s5">
+        <h2><span class="num">1.5</span>
+          <span><span class="th">ตัวชี้วัดสี่ตัวที่ใช้เปรียบเทียบทุกเทคโนโลยี</span>
+          <span class="en">Four metrics that compare any two technologies</span></span>
+        </h2>
+
+        <p>
+          <span class="th">กังหันลมกับเตาเผาชีวมวลไม่มีอะไรเหมือนกันเลยในเชิงกลไก แต่เราเปรียบเทียบมันได้ด้วยตัวเลขสี่ตัวนี้ ซึ่งจะปรากฏซ้ำในทุกบทที่เหลือ</span>
+          <span class="en">A wind turbine and a biomass boiler share no mechanism at all, yet these four numbers let us compare them — and they recur in every remaining chapter.</span>
+        </p>
+
+        <h3><span class="th">ก. ตัวประกอบกำลังผลิต (Capacity factor)</span><span class="en">A. Capacity factor</span></h3>
+
+        <p>
+          <span class="th">อัตราส่วนระหว่างพลังงานที่ผลิตได้จริงในหนึ่งปี กับพลังงานที่ <em>จะ</em> ผลิตได้ถ้าเดินเต็มกำลังตลอด 8,760 ชั่วโมง เป็นตัวเลขที่ตอบคำถามว่า “ติดตั้งไป 1 MW แล้วได้ไฟจริงเท่าไร”</span>
+          <span class="en">The ratio of the energy actually delivered in a year to the energy that <em>would</em> be delivered at full rated power for all 8,760 hours. It answers the question: “I installed 1 MW — how much electricity did I actually get?”</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ \mathrm{CF} = \frac{E_{\mathrm{actual}}}{P_{\mathrm{rated}} \times 8760\ \mathrm{h}} \times 100\% \]</div>
+            <span class="formula__num">(1.2)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(E_{\mathrm{actual}}\) = พลังงานที่ผลิตได้จริงทั้งปี (kWh) · \(P_{\mathrm{rated}}\) = กำลังติดตั้ง (kW) · \(8760\) = จำนวนชั่วโมงใน 1 ปี</span>
+            <span class="en">\(E_{\mathrm{actual}}\) = annual energy delivered (kWh) · \(P_{\mathrm{rated}}\) = installed capacity (kW) · \(8760\) = hours in a year</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 1.2 · โซลาร์รูฟท็อปโรงเรือน</span>
+            <span class="en">Worked example 1.2 · A greenhouse rooftop array</span>
+          </div>
+          <p>
+            <span class="th">โซลาร์รูฟท็อปขนาด 100 kWp บนหลังคาโรงเรือน ผลิตไฟได้ 141,000 kWh ในปีแรก จงหาตัวประกอบกำลังผลิต</span>
+            <span class="en">A 100 kWp rooftop array on a greenhouse delivers 141,000 kWh in its first year. Find the capacity factor.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">พลังงานสูงสุดตามทฤษฎี: \(100\ \mathrm{kW} \times 8760\ \mathrm{h} = 876{,}000\ \mathrm{kWh}\)</span>
+              <span class="en">Theoretical maximum: \(100\ \mathrm{kW} \times 8760\ \mathrm{h} = 876{,}000\ \mathrm{kWh}\)</span>
+            </li>
+            <li>
+              <span class="th">\(\mathrm{CF} = \dfrac{141{,}000}{876{,}000} = 0.161 = \mathbf{16.1\%}\)</span>
+              <span class="en">\(\mathrm{CF} = \dfrac{141{,}000}{876{,}000} = 0.161 = \mathbf{16.1\%}\)</span>
+            </li>
+            <li>
+              <span class="th">ตีความ: แผงนี้เสมือนเดินเต็มกำลังเพียง 1,410 ชั่วโมงต่อปี หรือราว 3.9 ชั่วโมงต่อวัน ซึ่งตรงกับค่า “ชั่วโมงแดดเต็มที่” ของประเทศไทย</span>
+              <span class="en">Interpretation: the array behaved as if running at full power for 1,410 hours a year — about 3.9 h/day, which matches Thailand’s typical peak-sun-hours.</span>
+            </li>
+          </ol>
+          <p class="small muted">
+            <span class="th">ค่า CF ต่ำไม่ได้แปลว่าเทคโนโลยีแย่ มันเป็นคุณสมบัติของ <em>แหล่งพลังงาน</em> ไม่ใช่ของอุปกรณ์ — ดวงอาทิตย์ตกทุกคืนไม่ว่าแผงจะดีแค่ไหน</span>
+            <span class="en">A low CF does not mean a bad technology. It is a property of the <em>resource</em>, not the hardware — the sun sets every night no matter how good the panel is.</span>
+          </p>
+        </div>
+
+        <div class="demo" data-demo="capacity-factor" data-reveal>
+          <div class="demo__head">
+            <span class="demo__label">
+              <span class="th">ลองเล่นดู</span><span class="en">Try it</span>
+            </span>
+            <span class="demo__title">
+              <span class="th">ตัวประกอบกำลังผลิตแปลง kW ให้เป็น kWh อย่างไร</span>
+              <span class="en">How capacity factor turns kW into kWh</span>
+            </span>
+            <span class="demo__sub">
+              <span class="th">โรงไฟฟ้าขนาด 1 MW เท่ากันทุกประการ เปลี่ยนเฉพาะตัวประกอบกำลังผลิต แล้วดูว่าพลังงานต่อปีต่างกันแค่ไหน — กดปุ่มด้านล่างเพื่อกระโดดไปยังค่าจริงของแต่ละเทคโนโลยี</span>
+              <span class="en">The same 1 MW plant every time; only the capacity factor changes. Watch how much the annual energy moves — press a button below to jump to a real technology.</span>
+            </span>
+          </div>
+
+          <div class="demo__stage" style="min-width:0">
+            <div class="cf-row">
+              <div class="cf-caption">
+                <span class="muted">
+                  <span class="th">ถ้าเดินเต็มกำลังตลอดปี (8,760 ชั่วโมง)</span>
+                  <span class="en">If it ran at full power all year (8,760 hours)</span>
+                </span>
+                <span class="val">8,760 MWh</span>
+              </div>
+              <div class="cf-track">
+                <div class="cf-fill cf-fill--ghost" style="width:100%"></div>
+                <div class="cf-ticks">
+                  <span></span><span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cf-row">
+              <div class="cf-caption">
+                <span>
+                  <span class="th">พลังงานที่ผลิตได้จริง</span>
+                  <span class="en">Energy actually delivered</span>
+                </span>
+                <span class="val"><span data-cf-energy>1.40</span> GWh</span>
+              </div>
+              <div class="cf-track">
+                <div class="cf-fill" data-cf-fill style="width:16%"></div>
+                <div class="cf-ticks">
+                  <span></span><span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="readouts">
+            <div class="readout readout--accent">
+              <span class="readout__label">
+                <span class="th">ตัวประกอบกำลังผลิต</span><span class="en">Capacity factor</span>
+              </span>
+              <span class="readout__value"><span data-cf-value>16</span><span class="readout__unit">%</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label">
+                <span class="th">เทียบเท่าเดินเต็มกำลัง</span><span class="en">Equivalent full-load hours</span>
+              </span>
+              <span class="readout__value"><span data-cf-hours>1,402</span><span class="readout__unit">h/yr</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label">
+                <span class="th">กำลังติดตั้ง (คงที่)</span><span class="en">Installed capacity (fixed)</span>
+              </span>
+              <span class="readout__value">1<span class="readout__unit">MW</span></span>
+            </div>
+          </div>
+
+          <div class="demo__controls">
+            <label class="demo__field">
+              <span class="th">ปรับค่า</span><span class="en">Adjust</span>
+              <input type="range" min="5" max="95" step="1" value="16" data-cf-slider
+                     aria-label="Capacity factor in percent">
+            </label>
+            <div class="preset-row">
+              <button type="button" class="preset" data-cf-preset="16">
+                <span class="th">แสงอาทิตย์ 16%</span><span class="en">Solar 16%</span>
+              </button>
+              <button type="button" class="preset" data-cf-preset="30">
+                <span class="th">ลม 30%</span><span class="en">Wind 30%</span>
+              </button>
+              <button type="button" class="preset" data-cf-preset="70">
+                <span class="th">ชีวมวล 70%</span><span class="en">Biomass 70%</span>
+              </button>
+              <button type="button" class="preset" data-cf-preset="85">
+                <span class="th">ใต้พิภพ 85%</span><span class="en">Geothermal 85%</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="demo__note">
+            <p>
+              <span class="th">ข้อสังเกตสำคัญ: การจะได้พลังงานเท่ากับโรงไฟฟ้าชีวมวล 1 MW ต้องติดตั้งโซลาร์ราว 4–5 MW ตัวเลข “เมกะวัตต์” จากสองเทคโนโลยีจึงเทียบกันตรง ๆ ไม่ได้เลย</span>
+              <span class="en">The point to take away: matching a 1 MW biomass plant takes roughly 4–5 MW of solar. A “megawatt” from two different technologies is simply not the same thing.</span>
+            </p>
+          </div>
+        </div>
+
+        <figure class="figure" data-reveal>
+          <div class="figure__body">
+            <svg viewBox="0 0 720 420" width="720" role="img" aria-labelledby="fig2-title fig2-desc">
+              <title id="fig2-title">Typical annual capacity factors by technology</title>
+              <desc id="fig2-desc">Horizontal range bars showing typical annual capacity factor bands: geothermal 70 to 90 percent, biomass 60 to 85, offshore wind 40 to 55, hydro 35 to 55, onshore wind 25 to 40, tidal 20 to 35, wave 20 to 30, solar PV in Thailand 14 to 18, with natural gas combined cycle 40 to 60 shown as a fossil reference.</desc>
+
+              <!-- gridlines -->
+              <g class="dg-rule" stroke-width="1" stroke-dasharray="2 4">
+                <line x1="200" y1="46" x2="200" y2="356"/>
+                <line x1="302" y1="46" x2="302" y2="356"/>
+                <line x1="404" y1="46" x2="404" y2="356"/>
+                <line x1="506" y1="46" x2="506" y2="356"/>
+                <line x1="608" y1="46" x2="608" y2="356"/>
+              </g>
+              <line x1="200" y1="356" x2="710" y2="356" class="dg-rule" stroke-width="1.5" stroke-dasharray="0"/>
+
+              <!-- x axis labels -->
+              <g class="dg-label" text-anchor="middle">
+                <text x="200" y="378">0%</text>
+                <text x="302" y="378">20%</text>
+                <text x="404" y="378">40%</text>
+                <text x="506" y="378">60%</text>
+                <text x="608" y="378">80%</text>
+                <text x="710" y="378">100%</text>
+              </g>
+
+              <!-- rows: bar top y = 56 + i*34, height 14, label baseline = y + 12 -->
+              <!-- 1 geothermal 70-90 -->
+              <text x="188" y="68" text-anchor="end" class="dg-text th">ความร้อนใต้พิภพ</text>
+              <text x="188" y="68" text-anchor="end" class="dg-text en">Geothermal</text>
+              <rect x="557" y="56" width="102" height="14" rx="4" class="dg-accent"/>
+              <text x="667" y="68" class="dg-label">70–90%</text>
+
+              <!-- 2 biomass 60-85 -->
+              <text x="188" y="102" text-anchor="end" class="dg-text th">ชีวมวล</text>
+              <text x="188" y="102" text-anchor="end" class="dg-text en">Biomass</text>
+              <rect x="506" y="90" width="128" height="14" rx="4" class="dg-accent"/>
+              <text x="642" y="102" class="dg-label">60–85%</text>
+
+              <!-- 3 gas CCGT 40-60 (fossil reference) -->
+              <text x="188" y="136" text-anchor="end" class="dg-text th">ก๊าซธรรมชาติ</text>
+              <text x="188" y="136" text-anchor="end" class="dg-text en">Natural gas</text>
+              <rect x="404" y="124" width="102" height="14" rx="4" fill="var(--ink-3)"/>
+              <text x="514" y="136" class="dg-label">40–60%</text>
+
+              <!-- 4 offshore wind 40-55 -->
+              <text x="188" y="170" text-anchor="end" class="dg-text th">ลมนอกชายฝั่ง</text>
+              <text x="188" y="170" text-anchor="end" class="dg-text en">Wind, offshore</text>
+              <rect x="404" y="158" width="77" height="14" rx="4" class="dg-accent"/>
+              <text x="489" y="170" class="dg-label">40–55%</text>
+
+              <!-- 5 hydro 35-55 -->
+              <text x="188" y="204" text-anchor="end" class="dg-text th">พลังงานน้ำ</text>
+              <text x="188" y="204" text-anchor="end" class="dg-text en">Hydro</text>
+              <rect x="378" y="192" width="103" height="14" rx="4" class="dg-accent"/>
+              <text x="489" y="204" class="dg-label">35–55%</text>
+
+              <!-- 6 onshore wind 25-40 -->
+              <text x="188" y="238" text-anchor="end" class="dg-text th">ลมบนบก</text>
+              <text x="188" y="238" text-anchor="end" class="dg-text en">Wind, onshore</text>
+              <rect x="328" y="226" width="76" height="14" rx="4" class="dg-accent"/>
+              <text x="412" y="238" class="dg-label">25–40%</text>
+
+              <!-- 7 tidal 20-35 -->
+              <text x="188" y="272" text-anchor="end" class="dg-text th">น้ำขึ้นน้ำลง</text>
+              <text x="188" y="272" text-anchor="end" class="dg-text en">Tidal</text>
+              <rect x="302" y="260" width="77" height="14" rx="4" class="dg-accent"/>
+              <text x="387" y="272" class="dg-label">20–35%</text>
+
+              <!-- 8 wave 20-30 -->
+              <text x="188" y="306" text-anchor="end" class="dg-text th">คลื่น</text>
+              <text x="188" y="306" text-anchor="end" class="dg-text en">Wave</text>
+              <rect x="302" y="294" width="51" height="14" rx="4" class="dg-accent"/>
+              <text x="361" y="306" class="dg-label">20–30%</text>
+
+              <!-- 9 solar 14-18 -->
+              <text x="188" y="340" text-anchor="end" class="dg-text th">แสงอาทิตย์ (ไทย)</text>
+              <text x="188" y="340" text-anchor="end" class="dg-text en">Solar PV (Thailand)</text>
+              <rect x="271" y="328" width="21" height="14" rx="4" class="dg-accent"/>
+              <text x="300" y="340" class="dg-label">14–18%</text>
+
+              <!-- legend -->
+              <g>
+                <rect x="200" y="400" width="14" height="10" rx="3" class="dg-accent"/>
+                <text x="222" y="409" class="dg-label th">พลังงานหมุนเวียน</text>
+                <text x="222" y="409" class="dg-label en">RENEWABLE</text>
+                <rect x="380" y="400" width="14" height="10" rx="3" fill="var(--ink-3)"/>
+                <text x="402" y="409" class="dg-label th">ฟอสซิล (ไว้เทียบ)</text>
+                <text x="402" y="409" class="dg-label en">FOSSIL (REFERENCE)</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label">
+              <span class="th">รูปที่ 1.2</span><span class="en">Figure 1.2</span>
+            </span>
+            <span class="th">ช่วงตัวประกอบกำลังผลิตต่อปีโดยทั่วไป แถบแสดงช่วงค่าที่พบได้บ่อย ไม่ใช่ค่าเดียวตายตัว สังเกตว่าชีวมวลและความร้อนใต้พิภพสูงกว่าโรงไฟฟ้าก๊าซธรรมชาติ ขณะที่แสงอาทิตย์ต่ำที่สุด — ความต่างนี้มาจากธรรมชาติของแหล่งพลังงาน ไม่ใช่คุณภาพของอุปกรณ์</span>
+            <span class="en">Typical annual capacity-factor bands. Each bar is a common range, not a single fixed value. Biomass and geothermal exceed a gas plant, while solar sits lowest — a difference that comes from the resource, not from equipment quality.</span>
+          </figcaption>
+        </figure>
+
+        <h3><span class="th">ข. ต้นทุนพลังงานตลอดอายุโครงการ (LCOE)</span><span class="en">B. Levelised cost of energy (LCOE)</span></h3>
+
+        <p>
+          <span class="th">LCOE คือต้นทุนทั้งหมดตลอดอายุโครงการ หารด้วยพลังงานทั้งหมดที่ผลิตได้ตลอดอายุโครงการ เป็นวิธีเดียวที่เปรียบเทียบโครงการที่มีต้นทุนก่อสร้างสูงแต่ค่าเชื้อเพลิงเป็นศูนย์ (โซลาร์ ลม) กับโครงการที่ต้นทุนก่อสร้างต่ำแต่ต้องซื้อเชื้อเพลิงตลอด (ดีเซล) ได้อย่างเป็นธรรม</span>
+          <span class="en">LCOE is the total lifetime cost divided by the total lifetime energy produced. It is the only fair way to compare a project with high capital cost and zero fuel cost (solar, wind) against one with low capital cost and a permanent fuel bill (diesel).</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ \mathrm{LCOE} = \frac{\mathrm{CAPEX} + \displaystyle\sum_{t=1}^{n}\left( \mathrm{OPEX}_{t} + \mathrm{Fuel}_{t} \right)}{\displaystyle\sum_{t=1}^{n} E_{t}} \]</div>
+            <span class="formula__num">(1.3)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(n\) = อายุโครงการ (ปี) · \(E_{t}\) = พลังงานที่ผลิตได้ในปีที่ \(t\) · ในการคำนวณจริงต้องคิดลดทั้งกระแสเงินสดและพลังงานด้วยอัตราคิดลด \(r\) เช่น \(\sum \mathrm{OPEX}_{t}/(1+r)^{t}\) แต่ในบทนี้เราใช้รูปแบบอย่างง่ายก่อน หน่วยที่ได้คือ บาท/kWh</span>
+            <span class="en">\(n\) = project lifetime in years · \(E_{t}\) = energy produced in year \(t\) · A real calculation discounts both cash flows and energy at a rate \(r\), e.g. \(\sum \mathrm{OPEX}_{t}/(1+r)^{t}\); here we use the simplified form. The result is in THB per kWh.</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 1.3 · โซลาร์สูบน้ำ เทียบกับ เครื่องยนต์ดีเซล</span>
+            <span class="en">Worked example 1.3 · Solar pumping versus a diesel engine</span>
+          </div>
+          <p>
+            <span class="th">ระบบสูบน้ำโซลาร์ขนาด 3 kWp ราคา 150,000 บาท อายุใช้งาน 20 ปี ค่าบำรุงรักษา 2,000 บาท/ปี ผลิตพลังงานได้ 4,200 kWh/ปี</span>
+            <span class="en">A 3 kWp solar pumping system costs 150,000 THB, lasts 20 years, needs 2,000 THB/year of maintenance and delivers 4,200 kWh/year.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">พลังงานตลอดอายุ: \(4{,}200 \times 20 = 84{,}000\ \mathrm{kWh}\)</span>
+              <span class="en">Lifetime energy: \(4{,}200 \times 20 = 84{,}000\ \mathrm{kWh}\)</span>
+            </li>
+            <li>
+              <span class="th">ต้นทุนรวม: \(150{,}000 + (2{,}000 \times 20) = 190{,}000\) บาท</span>
+              <span class="en">Total cost: \(150{,}000 + (2{,}000 \times 20) = 190{,}000\) THB</span>
+            </li>
+            <li>
+              <span class="th">\(\mathrm{LCOE} = \dfrac{190{,}000}{84{,}000} = \mathbf{2.26}\) บาท/kWh</span>
+              <span class="en">\(\mathrm{LCOE} = \dfrac{190{,}000}{84{,}000} = \mathbf{2.26}\) THB/kWh</span>
+            </li>
+            <li>
+              <span class="th">เทียบกับไฟจากสายส่งที่ราว 4.20 บาท/kWh และดีเซลที่มักสูงกว่า 8 บาท/kWh (เมื่อคิดค่าเชื้อเพลิงและบำรุงรักษา) ระบบโซลาร์จึงถูกกว่าอย่างมีนัยสำคัญ</span>
+              <span class="en">Against grid electricity at about 4.20 THB/kWh and diesel typically above 8 THB/kWh once fuel and maintenance are counted, the solar system is substantially cheaper.</span>
+            </li>
+          </ol>
+          <p class="small muted">
+            <span class="th">ข้อควรระวัง: LCOE ไม่ได้บอกว่าพลังงานนั้นมาถูก <em>เวลา</em> หรือไม่ ปั๊มโซลาร์สูบน้ำได้เฉพาะกลางวัน ถ้าพืชต้องการน้ำตอนกลางคืน ต้องบวกต้นทุนถังเก็บน้ำหรือแบตเตอรี่เข้าไปด้วย</span>
+            <span class="en">A caution: LCOE says nothing about whether the energy arrives at the right <em>time</em>. A solar pump only runs in daylight; if the crop needs water at night, add the cost of a storage tank or battery.</span>
+          </p>
+        </div>
+
+        <h3><span class="th">ค. ผลตอบแทนพลังงานต่อพลังงานที่ลงทุน (EROI)</span><span class="en">C. Energy return on energy invested (EROI)</span></h3>
+
+        <p>
+          <span class="th">EROI ถามคำถามที่เงินตอบไม่ได้: ตลอดอายุของระบบนี้ มันคืนพลังงานกลับมากี่เท่าของพลังงานที่ใช้สร้างมันขึ้นมา ถ้า EROI ≤ 1 แปลว่าระบบนั้นเป็นเพียงเครื่องแปลงรูปพลังงาน ไม่ใช่แหล่งพลังงาน</span>
+          <span class="en">EROI asks a question money cannot answer: over its lifetime, how many times does this system return the energy used to build it? If EROI ≤ 1, it is an energy converter, not an energy source.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ \mathrm{EROI} = \frac{E_{\mathrm{returned}}}{E_{\mathrm{invested}}} \]</div>
+            <span class="formula__num">(1.4)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">ค่าโดยประมาณ: พลังงานน้ำ \(\approx 40\text{–}100\) · ลม \(\approx 20\text{–}50\) · โซลาร์ PV \(\approx 10\text{–}30\) · ชีวมวล \(\approx 3\text{–}10\) · เอทานอลจากข้าวโพด \(\approx 1\text{–}2\) (ต่ำมาก จึงเป็นที่ถกเถียง)</span>
+            <span class="en">Approximate values: hydro \(\approx 40\text{–}100\) · wind \(\approx 20\text{–}50\) · solar PV \(\approx 10\text{–}30\) · biomass \(\approx 3\text{–}10\) · corn ethanol \(\approx 1\text{–}2\) (very low, and therefore contested).</span>
+          </div>
+        </div>
+
+        <h3><span class="th">ง. ความหนาแน่นพลังงานของเชื้อเพลิง</span><span class="en">D. Energy density of a fuel</span></h3>
+
+        <p>
+          <span class="th">พลังงานต่อมวลหนึ่งหน่วย (MJ/kg) เป็นตัวเลขที่กำหนดว่าต้องขนเชื้อเพลิงมากแค่ไหน และเป็นหัวใจของบทที่ 2–3</span>
+          <span class="en">Energy per unit mass (MJ/kg) determines how much fuel you must haul, and it is the heart of Chapters 2–3.</span>
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">เชื้อเพลิง</span><span class="en">Fuel</span></th>
+                <th class="num"><span class="th">ค่าความร้อน (MJ/kg)</span><span class="en">Heating value (MJ/kg)</span></th>
+                <th><span class="th">หมายเหตุ</span><span class="en">Note</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th">ไฮโดรเจน</span><span class="en">Hydrogen</span></td>
+                <td class="num">~120</td>
+                <td><span class="th">สูงที่สุดต่อมวล แต่ต่ำมากต่อปริมาตร</span><span class="en">Highest by mass, very low by volume</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ดีเซล</span><span class="en">Diesel</span></td>
+                <td class="num">~42–46</td>
+                <td><span class="th">มาตรฐานเปรียบเทียบของเครื่องจักรกลเกษตร</span><span class="en">The benchmark for farm machinery</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ถ่านหิน (บิทูมินัส)</span><span class="en">Coal (bituminous)</span></td>
+                <td class="num">~24–30</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><span class="th">ไม้สับ (แห้งสนิท)</span><span class="en">Wood chips (oven-dry)</span></td>
+                <td class="num">~18–19</td>
+                <td><span class="th">ค่าจะลดลงมากเมื่อมีความชื้น</span><span class="en">Falls sharply with moisture</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">แกลบ</span><span class="en">Rice husk</span></td>
+                <td class="num">~13–15</td>
+                <td><span class="th">เถ้าสูง ~20% ทำให้เกิดปัญหาการสึกหรอ</span><span class="en">High ash (~20%) causes abrasion problems</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ชานอ้อย (ความชื้น 50%)</span><span class="en">Bagasse (50% moisture)</span></td>
+                <td class="num">~7–9</td>
+                <td><span class="th">น้ำในเชื้อเพลิงกินพลังงานไปกับการระเหย</span><span class="en">Water in the fuel consumes energy as it evaporates</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">แบตเตอรี่ลิเทียมไอออน</span><span class="en">Lithium-ion battery</span></td>
+                <td class="num">~0.5–0.9</td>
+                <td><span class="th">ต่ำกว่าดีเซลราว 50 เท่า — เหตุผลที่แทรกเตอร์ไฟฟ้ายังยาก</span><span class="en">~50× below diesel — why electric tractors remain hard</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout--tip">
+          <div class="callout__title">
+            <span class="th">ตัวเลขที่ควรจำให้ขึ้นใจ</span><span class="en">The number to memorise</span>
+          </div>
+          <p>
+            <span class="th">ดีเซล ≈ 45 MJ/kg เทียบกับ แบตเตอรี่ลิเทียมไอออน ≈ 0.7 MJ/kg — ต่างกันประมาณ 60 เท่า เมื่อใดที่ต้องอธิบายว่าทำไมแทรกเตอร์ไฟฟ้าจึงหนักและทำงานได้สั้นกว่า ให้กลับมาที่ตัวเลขคู่นี้</span>
+            <span class="en">Diesel ≈ 45 MJ/kg versus lithium-ion ≈ 0.7 MJ/kg — a factor of roughly 60. Whenever you need to explain why an electric tractor is heavy and short-legged, start from this pair.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 1.6 ============ -->
+      <section class="section" id="s6">
+        <h2><span class="num">1.6</span>
+          <span><span class="th">ความหนาแน่นกำลังต่อพื้นที่: ตัวเลขที่ภาคเกษตรต้องสนใจที่สุด</span>
+          <span class="en">Power density per unit land: the number agriculture cares about most</span></span>
+        </h2>
+
+        <p>
+          <span class="th">พลังงานฟอสซิลถูกอัดแน่นอยู่ใต้ดินมาแล้วหลายร้อยล้านปี ส่วนพลังงานหมุนเวียนมาถึงเราแบบกระจายบางทั่วพื้นผิว การเก็บเกี่ยวจึงต้องใช้ <em>พื้นที่</em> และพื้นที่คือทรัพยากรเดียวกับที่ใช้ปลูกอาหาร</span>
+          <span class="en">Fossil energy was concentrated underground over hundreds of millions of years. Renewable energy arrives spread thinly across the surface, so harvesting it takes <em>area</em> — the same resource we grow food on.</span>
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">เทคโนโลยี</span><span class="en">Technology</span></th>
+                <th class="num"><span class="th">กำลังเฉลี่ยต่อพื้นที่ (W/m²)</span><span class="en">Average power density (W/m²)</span></th>
+                <th><span class="th">นัยต่อการใช้ที่ดิน</span><span class="en">Land-use implication</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th">โซลาร์ฟาร์ม</span><span class="en">Solar farm</span></td>
+                <td class="num">~5–20</td>
+                <td><span class="th">ใช้พื้นที่ต่อเนื่อง แต่ทำเกษตรร่วมได้ (agrivoltaics)</span><span class="en">Continuous footprint, but can share with crops (agrivoltaics)</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ฟาร์มกังหันลม</span><span class="en">Wind farm</span></td>
+                <td class="num">~1–3</td>
+                <td><span class="th">ฐานกังหันกินพื้นที่จริงน้อยมาก เพาะปลูกใต้กังหันได้เกือบทั้งหมด</span><span class="en">The towers occupy very little ground; almost all the land can still be farmed</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ชีวมวลจากพืชพลังงาน</span><span class="en">Biomass from energy crops</span></td>
+                <td class="num">~0.2–0.6</td>
+                <td><span class="th">ต่ำที่สุด แย่งพื้นที่ปลูกอาหารโดยตรง</span><span class="en">The lowest — competes directly with food production</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ชีวมวลจากเศษวัสดุเหลือทิ้ง</span><span class="en">Biomass from residues</span></td>
+                <td class="num">—</td>
+                <td><span class="th"><strong>ไม่ใช้พื้นที่เพิ่ม</strong> เพราะใช้พื้นที่เดียวกับที่ปลูกอาหารอยู่แล้ว</span><span class="en"><strong>No additional land</strong> — it rides on ground already growing food</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout--key">
+          <div class="callout__title">
+            <span class="th">ข้อสรุปสำคัญของบทนี้</span><span class="en">The key conclusion of this chapter</span>
+          </div>
+          <p>
+            <span class="th">แถวสุดท้ายของตารางคือเหตุผลที่ชีวมวลจากวัสดุเหลือทิ้งทางการเกษตรมีความสำคัญเป็นพิเศษสำหรับประเทศไทย มันเป็นพลังงานหมุนเวียนชนิดเดียวที่ <em>ไม่ต้องแลกด้วยพื้นที่ปลูกอาหารเลย</em> เพราะแกลบ ฟาง และชานอ้อยเกิดขึ้นอยู่แล้วจากการผลิตอาหาร คำถามจึงไม่ใช่ “จะหาที่ดินจากไหน” แต่เป็น “จะเก็บรวบรวมและแปรรูปอย่างไรให้คุ้ม” ซึ่งคือหัวข้อของบทที่ 2 และ 3</span>
+            <span class="en">That last row is why agricultural residue biomass matters so much in Thailand. It is the one renewable that costs <em>no additional food-growing land at all</em>, because husk, straw and bagasse already exist as a by-product of producing food. The question is therefore not “where do we find land” but “how do we collect and convert it economically” — which is exactly what Chapters 2 and 3 are about.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 1.7 ============ -->
+      <section class="section" id="s7">
+        <h2><span class="num">1.7</span>
+          <span><span class="th">บริบทประเทศไทยและภาคเกษตร</span>
+          <span class="en">The Thai and agricultural context</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ประเทศไทยมีลักษณะเฉพาะที่กำหนดว่าพลังงานหมุนเวียนชนิดใดสมเหตุสมผล และชนิดใดเป็นเพียงเรื่องน่าสนใจทางวิชาการ</span>
+          <span class="en">Thailand has a specific profile that decides which renewables make sense here and which remain academically interesting only.</span>
+        </p>
+
+        <ul>
+          <li>
+            <span class="th"><strong>แสงอาทิตย์ดีสม่ำเสมอทั้งปี</strong> — รังสีรวมเฉลี่ยราว 4.5–5.5 kWh/m²/วัน ทั่วประเทศ ไม่มีฤดูหนาวที่แดดหายไปเหมือนเขตอบอุ่น</span>
+            <span class="en"><strong>Consistently good sunlight</strong> — around 4.5–5.5 kWh/m²/day nationwide, with no winter collapse as in temperate countries.</span>
+          </li>
+          <li>
+            <span class="th"><strong>ลมค่อนข้างอ่อน</strong> — ความเร็วลมเฉลี่ยในพื้นที่ส่วนใหญ่ต่ำกว่าประเทศที่เป็นผู้นำด้านพลังงานลม ทำให้ทำเลที่คุ้มค่าจำกัดอยู่บางบริเวณ</span>
+            <span class="en"><strong>A modest wind resource</strong> — average wind speeds across most of the country sit below those of leading wind nations, so viable sites are limited.</span>
+          </li>
+          <li>
+            <span class="th"><strong>ชีวมวลมหาศาล</strong> — ในฐานะผู้ผลิตข้าว อ้อย ปาล์มน้ำมัน และมันสำปะหลังรายใหญ่ ไทยมีเศษวัสดุเหลือทิ้งทางการเกษตรปริมาณมากทุกปี และชีวมวลก็เป็นแหล่งพลังงานหมุนเวียนที่ใหญ่ที่สุดของประเทศมาอย่างยาวนาน</span>
+            <span class="en"><strong>Enormous biomass</strong> — as a major producer of rice, sugarcane, oil palm and cassava, Thailand generates large residue volumes every year, and biomass has long been the country’s largest renewable source.</span>
+          </li>
+          <li>
+            <span class="th"><strong>ศักยภาพความร้อนใต้พิภพจำกัด</strong> — มีแหล่งน้ำพุร้อนอุณหภูมิปานกลาง เช่น ที่ฝาง จังหวัดเชียงใหม่ เหมาะกับการใช้ความร้อนโดยตรงมากกว่าการผลิตไฟฟ้าขนาดใหญ่</span>
+            <span class="en"><strong>Limited geothermal</strong> — moderate-temperature hot springs such as Fang in Chiang Mai suit direct heat use better than large-scale power generation.</span>
+          </li>
+          <li>
+            <span class="th"><strong>พลังงานน้ำขนาดใหญ่ถูกพัฒนาไปมากแล้ว</strong> — เขื่อนหลักของประเทศ เช่น ภูมิพลและสิริกิติ์ สร้างมานานและทำหน้าที่หลายอย่างพร้อมกัน ทั้งชลประทาน ป้องกันน้ำท่วม และผลิตไฟฟ้า ทำเลสำหรับเขื่อนใหญ่แห่งใหม่จึงเหลือน้อยและมีข้อจำกัดด้านสิ่งแวดล้อมสูง สิ่งที่ยังมีศักยภาพคือ <em>ระบบขนาดเล็กมาก</em> ในลำน้ำภาคเหนือ คลองส่งน้ำ และท้ายเขื่อนชลประทานที่มีอยู่เดิม ซึ่งเกี่ยวข้องกับงานวิศวกรรมเกษตรโดยตรง</span>
+            <span class="en"><strong>Large hydro is largely built out</strong> — the major dams such as Bhumibol and Sirikit are decades old and serve several duties at once: irrigation, flood control and power. Sites for new large dams are scarce and environmentally constrained. What remains promising is <em>very small</em> schemes on northern streams, irrigation canals and the outlets of existing irrigation dams — squarely agricultural engineering territory.</span>
+          </li>
+          <li>
+            <span class="th"><strong>คลื่นและน้ำขึ้นน้ำลงอ่อน</strong> — อ่าวไทยเป็นทะเลกึ่งปิด คลื่นเล็กและพิสัยน้ำขึ้นน้ำลงต่ำ จึงเรียนไว้เพื่อความเข้าใจเชิงหลักการและบริบทโลก มากกว่าเพื่อนำไปติดตั้งในไทย</span>
+            <span class="en"><strong>Weak waves and tides</strong> — the Gulf of Thailand is semi-enclosed, with small waves and a low tidal range. We study them for the principles and the global picture rather than for deployment here.</span>
+          </li>
+        </ul>
+
+        <div class="callout callout--note">
+          <div class="callout__title">
+            <span class="th">เรื่องตัวเลขและการอ้างอิง</span><span class="en">About the numbers</span>
+          </div>
+          <p>
+            <span class="th">ตัวเลขนโยบายและสถิติกำลังผลิตติดตั้งเปลี่ยนแปลงทุกปี ในรายงานหรือโครงงานของนักศึกษา ให้อ้างอิงแหล่งข้อมูลปฐมภูมิที่เป็นปัจจุบันเสมอ เช่น กรมพัฒนาพลังงานทดแทนและอนุรักษ์พลังงาน (พพ.) สำนักงานนโยบายและแผนพลังงาน (สนพ.) แผน PDP/AEDP ฉบับล่าสุด รายงานต้นทุนของ IRENA และสถิติของ IEA — อย่าอ้างอิงจากเอกสารประกอบการสอนฉบับนี้</span>
+            <span class="en">Policy targets and installed-capacity statistics change every year. In your reports and projects, always cite current primary sources — Thailand’s DEDE and EPPO, the latest PDP/AEDP, IRENA cost reports and IEA statistics — not this teaching document.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ SUMMARY ============ -->
+      <section class="section" id="summary">
+        <h2><span class="num">✦</span>
+          <span><span class="th">สรุปและคำศัพท์</span><span class="en">Summary and glossary</span></span>
+        </h2>
+
+        <div class="takeaways" data-reveal>
+          <h2><span class="th">ประเด็นสำคัญที่ต้องจำ</span><span class="en">Key takeaways</span></h2>
+          <ol data-reveal-stagger>
+            <li>
+              <span class="th"><strong>กำลัง (kW) คืออัตรา พลังงาน (kWh) คือปริมาณ</strong> สังเกตตัว “h” ให้ดีทุกครั้งที่อ่านตัวเลขทางพลังงาน</span>
+              <span class="en"><strong>Power (kW) is a rate; energy (kWh) is a quantity.</strong> Watch for the “h” every time you read an energy figure.</span>
+            </li>
+            <li>
+              <span class="th"><strong>หมุนเวียนวัดที่อัตราการเติมกลับ</strong> ไม่ใช่ที่คาร์บอน ราคา หรือความสะอาด หมุนเวียนจึงไม่ได้แปลว่ายั่งยืนโดยอัตโนมัติ</span>
+              <span class="en"><strong>Renewable is a claim about replenishment rate</strong> — not about carbon, cost or cleanliness. It does not imply sustainable.</span>
+            </li>
+            <li>
+              <span class="th"><strong>พลังงานหมุนเวียนเกือบทั้งหมดคือพลังงานแสงอาทิตย์แปลงรูป</strong> ยกเว้นน้ำขึ้นน้ำลง (ดวงจันทร์) และความร้อนใต้พิภพ (แก่นโลก)</span>
+              <span class="en"><strong>Almost all renewables are converted sunlight</strong> — except tidal (the Moon) and geothermal (the Earth’s interior).</span>
+            </li>
+            <li>
+              <span class="th"><strong>ตัวประกอบกำลังผลิตเชื่อมกำลังติดตั้งเข้ากับพลังงานจริง</strong> โซลาร์ในไทยอยู่ที่ราว 15–17% ขณะที่ชีวมวลและความร้อนใต้พิภพสูงกว่า 60% เพราะเป็นพลังงานที่สั่งเดินเครื่องได้</span>
+              <span class="en"><strong>Capacity factor links installed capacity to real energy.</strong> Thai solar sits near 15–17%; biomass and geothermal exceed 60% because they are dispatchable.</span>
+            </li>
+            <li>
+              <span class="th"><strong>LCOE เปรียบเทียบต้นทุนได้อย่างเป็นธรรม แต่ไม่บอกเรื่องเวลา</strong> พลังงานที่ถูกแต่มาผิดเวลา ยังต้องจ่ายค่ากักเก็บเพิ่ม</span>
+              <span class="en"><strong>LCOE compares cost fairly but ignores timing.</strong> Cheap energy at the wrong hour still has to buy storage.</span>
+            </li>
+            <li>
+              <span class="th"><strong>พลังงานหมุนเวียนต้องแลกด้วยพื้นที่</strong> ยกเว้นชีวมวลจากวัสดุเหลือทิ้งทางการเกษตร ซึ่งไม่ต้องใช้ที่ดินเพิ่ม — นี่คือเหตุผลที่มันสำคัญเป็นพิเศษกับประเทศไทย</span>
+              <span class="en"><strong>Renewables trade energy for land</strong> — except agricultural residue biomass, which needs no extra land. That is precisely why it matters so much in Thailand.</span>
+            </li>
+          </ol>
+        </div>
+
+        <h3><span class="th">คำศัพท์ประจำบท</span><span class="en">Glossary</span></h3>
+
+        <dl class="glossary">
+          <dt><span class="th">พลังงาน</span><span class="en">Energy</span> <span class="term-en">J, kWh, MJ</span></dt>
+          <dd>
+            <span class="th">ความสามารถในการทำงาน เป็นปริมาณสะสมที่ถ่ายเทได้</span>
+            <span class="en">The capacity to do work; an accumulated quantity that can be transferred.</span>
+          </dd>
+
+          <dt><span class="th">กำลัง</span><span class="en">Power</span> <span class="term-en">W, kW, MW</span></dt>
+          <dd>
+            <span class="th">อัตราการถ่ายเทพลังงานต่อหน่วยเวลา 1 W = 1 J/s</span>
+            <span class="en">The rate of energy transfer; 1 W = 1 J/s.</span>
+          </dd>
+
+          <dt><span class="th">ตัวประกอบกำลังผลิต</span><span class="en">Capacity factor</span> <span class="term-en">CF</span></dt>
+          <dd>
+            <span class="th">สัดส่วนพลังงานที่ผลิตได้จริง ต่อพลังงานสูงสุดตามทฤษฎีในหนึ่งปี</span>
+            <span class="en">Energy actually delivered divided by the theoretical maximum over a year.</span>
+          </dd>
+
+          <dt><span class="th">พลังงานที่สั่งได้</span><span class="en">Dispatchable</span></dt>
+          <dd>
+            <span class="th">แหล่งพลังงานที่สั่งเดินเครื่องเพิ่มหรือลดได้ตามต้องการ เช่น ชีวมวลและความร้อนใต้พิภพ</span>
+            <span class="en">A source whose output can be raised or lowered on command — such as biomass or geothermal.</span>
+          </dd>
+
+          <dt><span class="th">พลังงานผันแปร</span><span class="en">Variable / intermittent</span></dt>
+          <dd>
+            <span class="th">แหล่งพลังงานที่ผลผลิตขึ้นกับสภาพธรรมชาติ ควบคุมไม่ได้ เช่น แสงอาทิตย์และลม</span>
+            <span class="en">A source whose output follows nature and cannot be commanded — such as solar and wind.</span>
+          </dd>
+
+          <dt><span class="th">ต้นทุนพลังงานตลอดอายุโครงการ</span><span class="en">Levelised cost of energy</span> <span class="term-en">LCOE</span></dt>
+          <dd>
+            <span class="th">ต้นทุนรวมตลอดอายุโครงการหารด้วยพลังงานรวมที่ผลิตได้ หน่วยเป็นบาทต่อ kWh</span>
+            <span class="en">Lifetime cost divided by lifetime energy produced, in currency per kWh.</span>
+          </dd>
+
+          <dt><span class="th">ผลตอบแทนพลังงาน</span><span class="en">Energy return on investment</span> <span class="term-en">EROI</span></dt>
+          <dd>
+            <span class="th">พลังงานที่ได้คืนตลอดอายุ หารด้วยพลังงานที่ใช้สร้างระบบ</span>
+            <span class="en">Lifetime energy returned divided by the energy invested to build the system.</span>
+          </dd>
+
+          <dt><span class="th">ความหนาแน่นพลังงาน</span><span class="en">Energy density</span> <span class="term-en">MJ/kg</span></dt>
+          <dd>
+            <span class="th">พลังงานที่เก็บอยู่ต่อมวลหนึ่งหน่วยของเชื้อเพลิง</span>
+            <span class="en">Energy stored per unit mass of a fuel.</span>
+          </dd>
+
+          <dt><span class="th">ความหนาแน่นกำลังต่อพื้นที่</span><span class="en">Power density</span> <span class="term-en">W/m²</span></dt>
+          <dd>
+            <span class="th">กำลังเฉลี่ยที่เก็บเกี่ยวได้ต่อพื้นที่หนึ่งตารางเมตร ตัวเลขที่ชี้ว่าต้องใช้ที่ดินเท่าใด</span>
+            <span class="en">Average power harvested per square metre — the number that says how much land is needed.</span>
+          </dd>
+
+          <dt><span class="th">เกษตรร่วมโซลาร์</span><span class="en">Agrivoltaics</span></dt>
+          <dd>
+            <span class="th">การใช้พื้นที่เดียวกันทั้งผลิตไฟฟ้าจากแสงอาทิตย์และเพาะปลูกไปพร้อมกัน</span>
+            <span class="en">Using the same land for solar generation and crop production at the same time.</span>
+          </dd>
+        </dl>
+
+        <h3><span class="th">คำถามท้ายบท</span><span class="en">Exercises</span></h3>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ฝึกด้วยตนเอง · ไม่มีเฉลยในระบบ</span>
+            <span class="en">Practise on your own · not auto-graded</span>
+          </div>
+          <ol>
+            <li>
+              <span class="th">แทรกเตอร์ขนาด 60 hp ทำงานวันละ 5 ชั่วโมง 90 วันต่อปี ใช้ดีเซล 12 ลิตร/ชั่วโมง จงหาพลังงานที่ใช้ต่อปีในหน่วย GJ และ kWh (กำหนดให้ดีเซลมีค่าความร้อน 45.5 MJ/kg และความหนาแน่น 0.84 kg/L)</span>
+              <span class="en">A 60 hp tractor works 5 h/day for 90 days a year, burning 12 L/h of diesel. Find the annual energy input in GJ and kWh. (Take diesel at 45.5 MJ/kg and 0.84 kg/L.)</span>
+            </li>
+            <li>
+              <span class="th">โรงไฟฟ้าชีวมวลจากแกลบขนาด 9.9 MW ผลิตไฟฟ้าได้ 62,000 MWh ในหนึ่งปี จงหาตัวประกอบกำลังผลิต และอธิบายว่าเหตุใดจึงไม่ถึง 100%</span>
+              <span class="en">A 9.9 MW rice-husk power plant generates 62,000 MWh in a year. Find its capacity factor and explain why it falls short of 100%.</span>
+            </li>
+            <li>
+              <span class="th">จากตัวอย่างที่ 1.1 ปั๊มน้ำใช้พลังงาน 3,960 kWh ต่อฤดูกาล ถ้าจะผลิตพลังงานเท่านี้ด้วยแกลบที่มีค่าความร้อน 14 MJ/kg ผ่านระบบที่มีประสิทธิภาพการแปลงเป็นไฟฟ้า 22% จะต้องใช้แกลบกี่กิโลกรัม</span>
+              <span class="en">From Worked Example 1.1, the pump needs 3,960 kWh per season. How many kilograms of rice husk (14 MJ/kg) would supply this through a system that converts to electricity at 22% efficiency?</span>
+            </li>
+            <li>
+              <span class="th">อภิปราย: ฟาร์มแห่งหนึ่งกำลังเลือกระหว่างปลูกพืชพลังงานบนพื้นที่ 10 ไร่ กับติดตั้งโซลาร์ฟาร์มบนพื้นที่เดียวกัน จงใช้ตัวเลขความหนาแน่นกำลังต่อพื้นที่ในหัวข้อ 1.6 ประเมินว่าทางเลือกใดให้พลังงานมากกว่า และระบุปัจจัยอย่างน้อยสามข้อที่ตัวเลขนี้ไม่ได้บอก</span>
+              <span class="en">Discuss: a farm is choosing between growing an energy crop on 10 rai and putting a solar array on the same land. Use the power densities in §1.6 to estimate which yields more energy, then name at least three factors that number does not capture.</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ REFERENCES ============ -->
+      <section class="section" id="references">
+        <h2><span class="num">§</span>
+          <span><span class="th">เอกสารอ้างอิงและอ่านเพิ่มเติม</span><span class="en">References and further reading</span></span>
+        </h2>
+
+        <p>
+          <span class="th">รายการต่อไปนี้คือแหล่งที่มาของแนวคิด นิยาม และช่วงตัวเลขที่ใช้ในบทนี้ นักศึกษาควรใช้แหล่งเหล่านี้เมื่อเขียนรายงานหรือทำโครงงาน แทนการอ้างอิงเอกสารประกอบการสอนฉบับนี้โดยตรง</span>
+          <span class="en">These are the sources behind the concepts, definitions and numeric ranges used in this chapter. Cite them in your reports and projects rather than citing this teaching document.</span>
+        </p>
+
+        <div class="references">
+          <h3><span class="th">ตำราหลัก</span><span class="en">Core textbooks</span></h3>
+          <ol>
+            <li><span>Twidell, J. and Weir, T. (2015). <cite>Renewable Energy Resources</cite>, 3rd ed. Abingdon: Routledge.
+              <span class="src"><span class="th">บทที่ 1 — นิยามพลังงานหมุนเวียน หน่วย และภาพรวมทรัพยากร</span><span class="en">Ch. 1 — definitions, units and the resource overview</span></span></span></li>
+            <li><span>Boyle, G. (ed.) (2012). <cite>Renewable Energy: Power for a Sustainable Future</cite>, 3rd ed. Oxford: Oxford University Press.
+              <span class="src"><span class="th">บทที่ 1 — ต้นกำเนิดพลังงานหมุนเวียนและการจำแนกประเภท</span><span class="en">Ch. 1 — origins of renewable energy and classification</span></span></span></li>
+            <li><span>Masters, G. M. (2013). <cite>Renewable and Efficient Electric Power Systems</cite>, 2nd ed. Hoboken, NJ: Wiley.
+              <span class="src"><span class="th">ตัวประกอบกำลังผลิต และการวิเคราะห์ต้นทุนระบบไฟฟ้า</span><span class="en">Capacity factor and power-system cost analysis</span></span></span></li>
+            <li><span>Sørensen, B. (2017). <cite>Renewable Energy: Physics, Engineering, Environmental Impacts, Economics and Planning</cite>, 5th ed. London: Academic Press.</span></li>
+            <li><span>MacKay, D. J. C. (2009). <cite>Sustainable Energy — Without the Hot Air</cite>. Cambridge: UIT Cambridge.
+              <span class="src"><span class="th">ที่มาของวิธีคิดเรื่องความหนาแน่นกำลังต่อพื้นที่ (W/m²) · อ่านฉบับเต็มได้ฟรีที่ withouthotair.com</span><span class="en">Source of the W/m² land-area argument · full text free at withouthotair.com</span></span></span></li>
+            <li><span>Smil, V. (2015). <cite>Power Density: A Key to Understanding Energy Sources and Uses</cite>. Cambridge, MA: MIT Press.
+              <span class="src"><span class="th">อ้างอิงหลักของตารางความหนาแน่นกำลังต่อพื้นที่ในหัวข้อ 1.6</span><span class="en">Principal source for the power-density table in §1.6</span></span></span></li>
+          </ol>
+
+          <h3><span class="th">รายงานและสถิติ</span><span class="en">Reports and statistics</span></h3>
+          <ol start="7">
+            <li><span>IRENA (2024). <cite>Renewable Power Generation Costs in 2023</cite>. Abu Dhabi: International Renewable Energy Agency.
+              <span class="src"><span class="th">ที่มาของ LCOE ตัวประกอบกำลังผลิต และแนวโน้มต้นทุนที่ลดลง · irena.org</span><span class="en">Source for LCOE, capacity factors and the cost-decline trend · irena.org</span></span></span></li>
+            <li><span>IEA. <cite>World Energy Outlook</cite> (ฉบับรายปี / annual). Paris: International Energy Agency.
+              <span class="src">iea.org</span></span></li>
+            <li><span>REN21. <cite>Renewables Global Status Report</cite> (ฉบับรายปี / annual). Paris: REN21 Secretariat.
+              <span class="src">ren21.net</span></span></li>
+            <li><span>IPCC (2011). <cite>Special Report on Renewable Energy Sources and Climate Change Mitigation (SRREN)</cite>. Cambridge: Cambridge University Press.</span></li>
+            <li><span>World Bank / ESMAP. <cite>Global Solar Atlas</cite>.
+              <span class="src"><span class="th">ค่ารังสีดวงอาทิตย์รายพื้นที่ของประเทศไทย · globalsolaratlas.info</span><span class="en">Site-level solar resource data for Thailand · globalsolaratlas.info</span></span></span></li>
+          </ol>
+
+          <h3><span class="th">บทความวิชาการ</span><span class="en">Journal articles</span></h3>
+          <ol start="12">
+            <li><span>Hall, C. A. S., Lambert, J. G. and Balogh, S. B. (2014). ‘EROI of different fuels and the implications for society’, <cite>Energy Policy</cite>, 64, pp. 141–152.
+              <span class="src"><span class="th">ที่มาของช่วงค่า EROI ในหัวข้อ 1.5</span><span class="en">Source of the EROI ranges in §1.5</span></span></span></li>
+          </ol>
+
+          <h3><span class="th">แหล่งข้อมูลของประเทศไทย</span><span class="en">Thai sources</span></h3>
+          <ol start="13">
+            <li><span><span class="th">กรมพัฒนาพลังงานทดแทนและอนุรักษ์พลังงาน (พพ.) กระทรวงพลังงาน</span><span class="en">Department of Alternative Energy Development and Efficiency (DEDE), Ministry of Energy</span>
+              <span class="src"><span class="th">สถานการณ์พลังงานทดแทนของไทย และศักยภาพชีวมวลรายจังหวัด · dede.go.th</span><span class="en">Thailand’s alternative energy situation and provincial biomass potential · dede.go.th</span></span></span></li>
+            <li><span><span class="th">สำนักงานนโยบายและแผนพลังงาน (สนพ.)</span><span class="en">Energy Policy and Planning Office (EPPO)</span>
+              <span class="src"><span class="th">สถิติพลังงานของประเทศไทย · eppo.go.th</span><span class="en">Energy statistics of Thailand · eppo.go.th</span></span></span></li>
+            <li><span><span class="th">กระทรวงพลังงาน — แผนพัฒนากำลังผลิตไฟฟ้าของประเทศ (PDP) และแผนพัฒนาพลังงานทดแทนและพลังงานทางเลือก (AEDP) ฉบับล่าสุด</span><span class="en">Ministry of Energy — the current Power Development Plan (PDP) and Alternative Energy Development Plan (AEDP)</span></span></li>
+          </ol>
+        </div>
+
+        <div class="callout callout--warn">
+          <div class="callout__title">
+            <span class="th">ก่อนนำไปอ้างอิง</span><span class="en">Before you cite</span>
+          </div>
+          <p>
+            <span class="th">ตรวจสอบปีที่พิมพ์และฉบับพิมพ์ของหนังสือ รวมถึงปีของรายงานรายปีให้ตรงกับฉบับที่นักศึกษาใช้จริงเสมอ รายงานของ IRENA, IEA, REN21 และแผน PDP/AEDP มีการปรับปรุงทุกปี ตัวเลขจึงเปลี่ยนแปลงได้</span>
+            <span class="en">Always check the edition and publication year against the copy you actually read. IRENA, IEA, REN21 and the PDP/AEDP are revised annually, so their figures change.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ POST-TEST ============ -->
+      <section class="quiz quiz--post" id="posttest" data-quiz="post" data-pass="0.7">
+        <script type="application/json" class="quiz-data">
+{
+  "questions": [
+    {
+      "q": { "th": "ปั๊มน้ำขนาด 7.5 kW เดินวันละ 4 ชั่วโมง เป็นเวลา 100 วัน ใช้พลังงานทั้งหมดเท่าใด", "en": "A 7.5 kW pump runs 4 hours a day for 100 days. How much energy does it consume in total?" },
+      "choices": [
+        { "th": "30 kWh", "en": "30 kWh" },
+        { "th": "750 kWh", "en": "750 kWh" },
+        { "th": "3,000 kWh", "en": "3,000 kWh" },
+        { "th": "3,000 kW", "en": "3,000 kW" }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "E = P × t = 7.5 kW × 4 h × 100 วัน = 3,000 kWh สังเกตว่าคำตอบต้องมีหน่วยเป็น kWh ไม่ใช่ kW เพราะเป็นปริมาณพลังงาน ไม่ใช่อัตรา",
+        "en": "E = P × t = 7.5 kW × 4 h × 100 days = 3,000 kWh. Note the unit must be kWh, not kW — it is a quantity, not a rate."
+      }
+    },
+    {
+      "q": { "th": "กังหันลมขนาด 2 MW ผลิตไฟฟ้าได้ 5,256 MWh ในหนึ่งปี ตัวประกอบกำลังผลิตเท่ากับเท่าใด", "en": "A 2 MW wind turbine produces 5,256 MWh in one year. What is its capacity factor?" },
+      "choices": [
+        { "th": "12%", "en": "12%" },
+        { "th": "30%", "en": "30%" },
+        { "th": "45%", "en": "45%" },
+        { "th": "60%", "en": "60%" }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "พลังงานสูงสุดตามทฤษฎี = 2 MW × 8,760 h = 17,520 MWh ดังนั้น CF = 5,256 / 17,520 = 0.30 หรือ 30% ซึ่งเป็นค่าปกติของกังหันลมบนบก",
+        "en": "Theoretical maximum = 2 MW × 8,760 h = 17,520 MWh, so CF = 5,256 / 17,520 = 0.30, or 30% — a normal value for an onshore turbine."
+      }
+    },
+    {
+      "q": { "th": "เหตุใดพลังงานคลื่นจึงถือว่ามีต้นกำเนิดจากดวงอาทิตย์", "en": "Why is wave energy considered solar in origin?" },
+      "choices": [
+        { "th": "เพราะแสงอาทิตย์ทำให้ผิวน้ำทะเลขยายตัวจนเกิดคลื่น", "en": "Because sunlight makes the sea surface expand into waves" },
+        { "th": "เพราะดวงอาทิตย์ทำให้อากาศร้อนไม่เท่ากันจนเกิดลม และลมที่พัดผ่านผิวทะเลทำให้เกิดคลื่น", "en": "Because the Sun heats the air unevenly, creating wind, and wind blowing over the sea creates waves" },
+        { "th": "เพราะแรงโน้มถ่วงของดวงอาทิตย์ดึงมวลน้ำให้เคลื่อนที่", "en": "Because the Sun’s gravity pulls the water mass" },
+        { "th": "เพราะการระเหยของน้ำทะเลทำให้ระดับน้ำเปลี่ยนแปลงเป็นคลื่น", "en": "Because evaporation changes the sea level into waves" }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "ลำดับการแปลงรูปคือ ดวงอาทิตย์ → ความร้อนไม่สม่ำเสมอ → ลม → คลื่น พลังงานคลื่นจึงเป็นพลังงานแสงอาทิตย์ที่ถูกแปลงรูปมาแล้วสองทอด ส่วนแรงโน้มถ่วงเกี่ยวข้องกับน้ำขึ้นน้ำลง ไม่ใช่คลื่น",
+        "en": "The chain is Sun → uneven heating → wind → waves, so wave energy is sunlight converted twice. Gravity is the origin of tides, not waves."
+      }
+    },
+    {
+      "q": { "th": "ข้อใดอธิบาย LCOE ได้ถูกต้องที่สุด", "en": "Which statement best describes LCOE?" },
+      "choices": [
+        { "th": "ต้นทุนก่อสร้างเริ่มต้นหารด้วยกำลังติดตั้ง หน่วยเป็นบาทต่อ kW", "en": "Initial construction cost divided by installed capacity, in currency per kW" },
+        { "th": "ต้นทุนรวมตลอดอายุโครงการ หารด้วยพลังงานรวมที่ผลิตได้ตลอดอายุโครงการ", "en": "Total lifetime cost divided by total lifetime energy produced" },
+        { "th": "ราคาขายไฟฟ้าที่รัฐกำหนดให้กับผู้ผลิตไฟฟ้าเอกชน", "en": "The tariff the government sets for private power producers" },
+        { "th": "อัตราส่วนพลังงานที่ได้คืนต่อพลังงานที่ใช้สร้างระบบ", "en": "The ratio of energy returned to energy invested in building the system" }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "LCOE = ต้นทุนตลอดอายุ / พลังงานตลอดอายุ ได้หน่วยเป็นบาทต่อ kWh ส่วนตัวเลือกสุดท้ายคือนิยามของ EROI ไม่ใช่ LCOE",
+        "en": "LCOE = lifetime cost / lifetime energy, giving currency per kWh. The last option is the definition of EROI, not LCOE."
+      }
+    },
+    {
+      "q": { "th": "แหล่งพลังงานหมุนเวียนกลุ่มใดจัดเป็นพลังงานที่ “สั่งได้” (dispatchable)", "en": "Which group of renewables counts as dispatchable?" },
+      "choices": [
+        { "th": "แสงอาทิตย์และลม", "en": "Solar and wind" },
+        { "th": "คลื่นและน้ำขึ้นน้ำลง", "en": "Wave and tidal" },
+        { "th": "ชีวมวลและความร้อนใต้พิภพ", "en": "Biomass and geothermal" },
+        { "th": "ทุกแหล่งพลังงานหมุนเวียนล้วนสั่งได้", "en": "All renewables are dispatchable" }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "ชีวมวลเก็บพลังงานไว้ในเชื้อเพลิงจึงสั่งเดินเครื่องได้ ส่วนความร้อนใต้พิภพมีแหล่งความร้อนต่อเนื่องตลอดเวลา ทั้งสองจึงมีตัวประกอบกำลังผลิตสูง ขณะที่คลื่นและน้ำขึ้นน้ำลง แม้ทำนายได้ แต่สั่งให้เดินตามต้องการไม่ได้",
+        "en": "Biomass stores its energy in the fuel and geothermal draws on a continuous heat source, so both run on command with high capacity factors. Wave and tidal are predictable but still cannot be dispatched."
+      }
+    },
+    {
+      "q": { "th": "ข้อใดคือเหตุผลหลักที่แทรกเตอร์ไฟฟ้ายังแข่งกับแทรกเตอร์ดีเซลได้ยากในงานภาคสนาม", "en": "What is the main reason electric tractors still struggle to match diesel tractors in the field?" },
+      "choices": [
+        { "th": "มอเตอร์ไฟฟ้ามีประสิทธิภาพต่ำกว่าเครื่องยนต์สันดาปภายใน", "en": "Electric motors are less efficient than internal combustion engines" },
+        { "th": "แบตเตอรี่ลิเทียมไอออนมีความหนาแน่นพลังงานต่อมวลต่ำกว่าดีเซลหลายสิบเท่า", "en": "Lithium-ion batteries have tens of times lower energy density per unit mass than diesel" },
+        { "th": "มอเตอร์ไฟฟ้าให้แรงบิดที่รอบต่ำได้น้อยกว่าเครื่องยนต์ดีเซล", "en": "Electric motors give less low-speed torque than diesel engines" },
+        { "th": "ไฟฟ้ามีต้นทุนต่อหน่วยพลังงานสูงกว่าน้ำมันดีเซลเสมอ", "en": "Electricity always costs more per unit of energy than diesel" }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "ดีเซลให้ราว 45 MJ/kg ขณะที่แบตเตอรี่ลิเทียมไอออนให้เพียงราว 0.7 MJ/kg ต่างกันหลายสิบเท่า การเก็บพลังงานเท่ากันจึงต้องแบกน้ำหนักมหาศาล ส่วนประสิทธิภาพและแรงบิดที่รอบต่ำนั้น มอเตอร์ไฟฟ้ากลับทำได้ดีกว่าเครื่องยนต์ดีเซลด้วยซ้ำ",
+        "en": "Diesel carries about 45 MJ/kg against roughly 0.7 MJ/kg for lithium-ion — tens of times more — so storing the same energy means carrying enormous mass. On efficiency and low-speed torque, electric motors are actually the better of the two."
+      }
+    },
+    {
+      "q": { "th": "เหตุใดชีวมวลจากเศษวัสดุเหลือทิ้งทางการเกษตรจึงมีข้อได้เปรียบด้านการใช้ที่ดินเหนือพลังงานหมุนเวียนชนิดอื่น", "en": "Why does agricultural residue biomass have a land-use advantage over other renewables?" },
+      "choices": [
+        { "th": "เพราะมีค่าความร้อนต่อกิโลกรัมสูงกว่าเชื้อเพลิงชนิดอื่น", "en": "Because it has a higher heating value per kilogram than other fuels" },
+        { "th": "เพราะเกิดขึ้นจากพื้นที่ที่ใช้ปลูกอาหารอยู่แล้ว จึงไม่ต้องใช้ที่ดินเพิ่ม", "en": "Because it arises from land already growing food, so it needs no additional land" },
+        { "th": "เพราะมีความหนาแน่นกำลังต่อพื้นที่สูงที่สุดในบรรดาพลังงานหมุนเวียน", "en": "Because it has the highest power density per unit area of any renewable" },
+        { "th": "เพราะไม่ต้องผ่านกระบวนการแปรรูปก่อนนำไปใช้", "en": "Because it needs no processing before use" }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "แกลบ ฟาง และชานอ้อยเป็นผลพลอยได้จากการผลิตอาหารซึ่งเกิดขึ้นอยู่แล้ว จึงไม่แย่งพื้นที่ปลูกอาหาร ต่างจากพืชพลังงานที่ต้องใช้ที่ดินโดยเฉพาะ ส่วนความหนาแน่นกำลังต่อพื้นที่ของชีวมวลนั้นต่ำที่สุดเมื่อเทียบกับโซลาร์และลม",
+        "en": "Husk, straw and bagasse are by-products of food production that exist anyway, so they displace no cropland — unlike a dedicated energy crop. Biomass power density per area is in fact the lowest, not the highest."
+      }
+    },
+    {
+      "q": { "th": "ข้อความใดต่อไปนี้ผิด", "en": "Which of the following statements is FALSE?" },
+      "choices": [
+        { "th": "พลังงานนิวเคลียร์ฟิชชันปล่อยคาร์บอนต่ำ แต่ไม่ใช่พลังงานหมุนเวียน", "en": "Nuclear fission is low-carbon but is not renewable" },
+        { "th": "ตัวประกอบกำลังผลิตที่ต่ำของโซลาร์เกิดจากธรรมชาติของแหล่งพลังงาน ไม่ใช่คุณภาพของแผง", "en": "Solar’s low capacity factor comes from the resource, not from panel quality" },
+        { "th": "ชีวมวลที่ตัดเร็วกว่าอัตราการปลูกทดแทน ถือว่าไม่ใช่พลังงานหมุนเวียนอีกต่อไป", "en": "Biomass harvested faster than it regrows stops being renewable" },
+        { "th": "น้ำขึ้นน้ำลงทำนายล่วงหน้าได้แม่นยำ แต่สั่งเดินเครื่องตามต้องการไม่ได้", "en": "Tidal energy is highly predictable but cannot be dispatched on demand" }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "ข้อที่ผิดคือข้อ ค. การจัดประเภทว่าเป็นพลังงานหมุนเวียนดูที่ชนิดของแหล่งพลังงาน ชีวมวลยังคงเป็นพลังงานหมุนเวียนเสมอ แต่การตัดเร็วกว่าอัตราปลูกทดแทนทำให้ “ไม่ยั่งยืน” ซึ่งเป็นคนละเรื่องกับ “ไม่หมุนเวียน” อีกสามข้อถูกต้องทั้งหมด",
+        "en": "Option C is false. The renewable label attaches to the type of resource, so biomass stays renewable; over-harvesting makes it unsustainable, which is a different claim. The other three are all correct."
+      }
+    }
+  ]
+}
+        </script>
+      </section>
+
+      <!-- ============ chapter nav ============ -->
+      <nav class="chapter-nav">
+        <a href="../index.html">
+          <span class="dir"><span class="th">ย้อนกลับ</span><span class="en">Back</span></span>
+          <span class="ttl"><span class="th">สารบัญ</span><span class="en">Contents</span></span>
+        </a>
+        <a class="next empty" href="#" aria-disabled="true">
+          <span class="dir"><span class="th">บทต่อไป</span><span class="en">Next</span></span>
+          <span class="ttl">
+            <span class="th">บทที่ 2 · ชีวมวล (เร็ว ๆ นี้)</span>
+            <span class="en">Chapter 2 · Biomass (coming soon)</span>
+          </span>
+        </a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <strong>
+          <span class="th">พลังงานหมุนเวียนสำหรับวิศวกรรมเกษตรอัจฉริยะ</span>
+          <span class="en">Renewable Energy for Smart Agricultural Engineering</span>
+        </strong>
+        <p class="small">
+          <span class="th">บทที่ 1 · บทนำสู่พลังงานหมุนเวียน</span>
+          <span class="en">Chapter 1 · Introduction to Renewable Energy</span>
+        </p>
+      </div>
+      <div class="small">
+        <span class="th">ตัวเลขในบทนี้เป็นค่าโดยประมาณเพื่อการเรียนการสอน ดูรายการอ้างอิงท้ายบทและตรวจสอบแหล่งข้อมูลปฐมภูมิที่เป็นปัจจุบันก่อนนำไปใช้</span>
+        <span class="en">Figures here are approximate teaching values. See the reference list at the end of the chapter and check current primary sources before citing.</span>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <span class="copyright__authors">© 2026 Jedsada Saijai &amp; Wanphut Saechua</span>
+      <span class="copyright__line">
+        <span class="th">สงวนลิขสิทธิ์ · ห้ามนำไปใช้ในเชิงพาณิชย์หรือเผยแพร่ซ้ำโดยไม่ได้รับอนุญาตเป็นลายลักษณ์อักษร</span>
+        <span class="en">All rights reserved. No commercial use or redistribution without written permission.</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/vendor/katex/katex.min.js"></script>
+<script src="../assets/vendor/katex/contrib/auto-render.min.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/math.js"></script>
+</body>
+</html>

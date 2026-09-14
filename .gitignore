@@ -1,0 +1,19 @@
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Editors (personal settings, not part of the course)
+.vscode/
+.idea/
+*.swp
+*~
+
+# Working files that should not be published
+/_scratch/
+/_drafts/
+*.tmp
+
+# NOTE: assets/vendor/ is intentionally committed.
+# KaTeX lives there so the equations render without an internet connection.

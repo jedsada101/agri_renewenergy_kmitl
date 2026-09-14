@@ -1,0 +1,480 @@
+/* ============================================================
+   components.css — hero, chapter cards, callouts, figures,
+   tables, formulas, quizzes, chapter navigation
+   ============================================================ */
+
+/* ---------- 1. Hero (home page) ---------- */
+.hero {
+  padding-block: var(--sp-8) var(--sp-7);
+  border-bottom: 1px solid var(--rule);
+}
+.hero h1 { margin-block: var(--sp-4) var(--sp-5); max-width: 18ch; }
+.hero h1 .accent { color: var(--accent); }
+.hero .lead { max-width: 60ch; }
+
+.hero__meta {
+  display: flex; flex-wrap: wrap; gap: var(--sp-3);
+  margin-top: var(--sp-6);
+}
+.chip {
+  font-family: var(--f-mono); font-size: var(--step--1);
+  border: 1px solid var(--rule-strong); border-radius: var(--radius);
+  padding: 0.25rem 0.6rem; color: var(--ink-2);
+  background: var(--paper-2);
+}
+.chip--accent { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+
+/* ---------- 2. Chapter index ---------- */
+.chapters { padding-block: var(--sp-7); }
+.chapters__head {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  justify-content: space-between; gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+}
+
+.chapter-list {
+  list-style: none; padding: 0; margin: 0; max-width: none;
+  border-top: 1px solid var(--rule);
+}
+.chapter-list li { margin: 0; }
+
+.chapter-card {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr) auto;
+  gap: var(--sp-5);
+  align-items: baseline;
+  padding: var(--sp-5) var(--sp-3);
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none; color: var(--ink);
+  transition: background .15s, padding-left .15s;
+}
+.chapter-card:hover, .chapter-card:focus-visible {
+  background: var(--paper-2);
+  padding-left: var(--sp-5);
+}
+.chapter-card__num {
+  font-family: var(--f-mono); font-size: var(--step-2);
+  color: var(--rule-strong); font-weight: 500;
+  transition: color .15s;
+}
+.chapter-card:hover .chapter-card__num { color: var(--accent); }
+.chapter-card__title { display: block; font-size: var(--step-1); font-weight: 600; }
+.chapter-card__desc { display: block; color: var(--ink-2); font-size: var(--step--1); margin-top: var(--sp-2); max-width: 62ch; }
+.chapter-card__tags { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-top: var(--sp-3); }
+.tag {
+  font-family: var(--f-mono); font-size: 0.72rem;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--ink-3); border: 1px solid var(--rule);
+  border-radius: var(--radius); padding: 0.1rem 0.4rem;
+}
+.chapter-card__status {
+  font-family: var(--f-mono); font-size: var(--step--1);
+  color: var(--ink-3); white-space: nowrap; text-align: right;
+}
+.chapter-card__status .done { color: var(--green); font-weight: 600; }
+.chapter-card[aria-disabled="true"] { opacity: .5; pointer-events: none; }
+
+@media (max-width: 640px) {
+  .chapter-card { grid-template-columns: 3rem minmax(0, 1fr); gap: var(--sp-4); }
+  .chapter-card__status { grid-column: 2; text-align: left; margin-top: var(--sp-2); }
+}
+
+/* ---------- 3. Chapter header ---------- */
+.chapter-head {
+  padding-block: var(--sp-7) var(--sp-6);
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: var(--sp-6);
+}
+.chapter-head__num {
+  font-family: var(--f-mono); font-size: var(--step--1);
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent);
+}
+.chapter-head h1 { margin-block: var(--sp-3) var(--sp-4); max-width: 22ch; }
+.chapter-head .lead { max-width: 62ch; }
+.chapter-head__facts {
+  display: flex; flex-wrap: wrap; gap: var(--sp-3);
+  margin-top: var(--sp-5);
+}
+
+/* learning objectives */
+.objectives {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: var(--sp-5);
+  margin-block: var(--sp-6);
+}
+.objectives h2 {
+  font-size: var(--step-0); font-family: var(--f-mono);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink-3); font-weight: 500;
+  border: 0; padding: 0; display: block;
+  margin-bottom: var(--sp-3);
+}
+.objectives ul { margin: 0; max-width: none; }
+
+/* ---------- 4. Callouts ---------- */
+.callout {
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--ink-3);
+  border-radius: var(--radius);
+  background: var(--paper-2);
+  padding: var(--sp-4) var(--sp-5);
+  margin-block: var(--sp-5);
+}
+.callout > * { max-width: none; }
+.callout__title {
+  font-family: var(--f-mono); font-size: var(--step--1);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  font-weight: 600; margin-bottom: var(--sp-2);
+  display: flex; align-items: center; gap: var(--sp-2);
+}
+.callout--note   { border-left-color: var(--blue);   background: var(--blue-soft); }
+.callout--note   .callout__title { color: var(--blue); }
+.callout--tip    { border-left-color: var(--green);  background: var(--green-soft); }
+.callout--tip    .callout__title { color: var(--green); }
+.callout--warn   { border-left-color: var(--amber);  background: var(--amber-soft); }
+.callout--warn   .callout__title { color: var(--amber); }
+.callout--key    { border-left-color: var(--accent); background: var(--accent-soft); }
+.callout--key    .callout__title { color: var(--accent); }
+
+/* worked example */
+.example {
+  border: 1px dashed var(--rule-strong);
+  border-radius: var(--radius);
+  padding: var(--sp-5);
+  margin-block: var(--sp-5);
+  background: var(--paper-2);
+}
+.example > * { max-width: none; }
+.example__label {
+  font-family: var(--f-mono); font-size: var(--step--1);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: var(--sp-3);
+}
+.example ol { counter-reset: step; }
+
+/* ---------- 5. Formulas (typeset by KaTeX — see assets/js/math.js) ---------- */
+.formula {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: var(--sp-5);
+  margin-block: var(--sp-5);
+  max-width: none;
+}
+.formula__row {
+  display: flex; align-items: center; gap: var(--sp-4);
+}
+.formula__eq {
+  flex: 1; min-width: 0;
+  overflow-x: auto; overflow-y: hidden;
+  padding-block: var(--sp-1);
+}
+.formula__eq .katex-display { margin: 0; }
+.formula__num {
+  flex: none;
+  font-family: var(--f-mono); font-size: var(--step--1);
+  color: var(--ink-3);
+}
+.formula__where {
+  font-size: var(--step--1);
+  color: var(--ink-3);
+  margin-top: var(--sp-4);
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--rule);
+  line-height: 1.7;
+}
+.formula__where > * { max-width: none; }
+
+/* KaTeX sits slightly large against this body size; bring it back in line
+   and stop long display equations from widening the page. */
+.katex { font-size: 1.08em; }
+.katex-display { overflow-x: auto; overflow-y: hidden; padding-block: 2px; }
+/* A math fragment must not inherit Thai leading, or the fraction bars drift */
+html[data-lang="th"] .katex, html[data-lang="th"] .katex-display { line-height: 1.2; }
+
+/* ---------- 6. Figures & diagrams ---------- */
+.figure {
+  margin-block: var(--sp-6);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper-2);
+  overflow: hidden;
+}
+.figure__body { padding: var(--sp-5); overflow-x: auto; }
+/* Diagrams stay legible instead of shrinking to nothing: below this width the
+   figure scrolls sideways rather than scaling the labels into illegibility. */
+.figure__body svg { margin-inline: auto; min-width: 560px; }
+.figure figcaption {
+  border-top: 1px solid var(--rule);
+  padding: var(--sp-3) var(--sp-5);
+  font-size: var(--step--1);
+  color: var(--ink-2);
+  background: var(--paper-3);
+}
+.figure figcaption .label {
+  font-family: var(--f-mono); color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.08em;
+  margin-right: var(--sp-2);
+}
+/* SVG theme hooks */
+.dg-line   { stroke: var(--ink-2); }
+.dg-rule   { stroke: var(--rule-strong); }
+.dg-fill   { fill: var(--paper-3); }
+.dg-fill-2 { fill: var(--paper-2); }
+.dg-text   { fill: var(--ink); font-size: 13px; }   /* font-family inherits, so it follows the active language */
+.dg-label  { fill: var(--ink-3); font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; }
+.dg-accent { fill: var(--accent); }
+.dg-accent-s { stroke: var(--accent); }
+
+/* ---------- 7. Tables ---------- */
+.table-wrap {
+  overflow-x: auto;
+  margin-block: var(--sp-5);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+table { border-collapse: collapse; width: 100%; font-size: var(--step--1); }
+thead th {
+  text-align: left; font-family: var(--f-mono);
+  font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink-3); font-weight: 500;
+  background: var(--paper-3);
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--rule-strong);
+  white-space: nowrap;
+}
+tbody td, tbody th {
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top; text-align: left; font-weight: 400;
+}
+tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
+tbody tr:hover { background: var(--paper-2); }
+td.num, th.num { font-family: var(--f-mono); white-space: nowrap; }
+
+/* ---------- 8. Key takeaways & glossary ---------- */
+.takeaways {
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  padding: var(--sp-5) var(--sp-6);
+  margin-block: var(--sp-6);
+  background: var(--paper-2);
+}
+.takeaways h2 {
+  font-size: var(--step-1); border: 0; padding: 0;
+  display: block; margin-bottom: var(--sp-4);
+}
+.takeaways ol { max-width: none; }
+.takeaways li::marker { font-family: var(--f-mono); font-weight: 600; }
+
+.glossary { margin-block: var(--sp-5); max-width: none; }
+.glossary dt {
+  font-weight: 600; margin-top: var(--sp-4);
+  display: flex; flex-wrap: wrap; gap: var(--sp-3); align-items: baseline;
+}
+.glossary dt .term-en {
+  font-family: var(--f-mono); font-size: var(--step--1);
+  color: var(--ink-3); font-weight: 400;
+}
+.glossary dd { margin: var(--sp-1) 0 0; color: var(--ink-2); }
+
+/* ---------- 8b. References ---------- */
+.references { margin-block: var(--sp-5); }
+.references h3 {
+  font-family: var(--f-mono); font-size: var(--step--1);
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-3); font-weight: 500;
+  margin-top: var(--sp-6); margin-bottom: var(--sp-3);
+  padding-bottom: var(--sp-2);
+  border-bottom: 1px solid var(--rule);
+}
+html[data-lang="th"] .references h3 { letter-spacing: .01em; text-transform: none; }
+.references ol {
+  list-style: none; counter-reset: ref; padding: 0; max-width: none;
+}
+.references li {
+  counter-increment: ref;
+  display: grid; grid-template-columns: 2.4rem minmax(0, 1fr);
+  gap: var(--sp-2);
+  padding-block: var(--sp-3);
+  border-bottom: 1px solid var(--rule);
+  font-size: var(--step--1);
+  line-height: 1.7;
+}
+.references li::before {
+  content: "[" counter(ref) "]";
+  font-family: var(--f-mono); color: var(--accent);
+}
+.references li:last-child { border-bottom: 0; }
+.references cite { font-style: italic; }
+.references .src {
+  display: block; margin-top: var(--sp-1);
+  font-family: var(--f-mono); font-size: 0.78rem; color: var(--ink-3);
+  overflow-wrap: anywhere;
+}
+
+/* ---------- 8c. Copyright block ---------- */
+.copyright {
+  border-top: 2px solid var(--ink);
+  padding-top: var(--sp-4);
+  margin-top: var(--sp-5);
+}
+.copyright__authors {
+  font-weight: 600; font-size: var(--step-0);
+  display: block; margin-bottom: var(--sp-2);
+}
+.copyright__line { display: block; font-size: var(--step--1); color: var(--ink-2); }
+.copyright__line + .copyright__line { margin-top: var(--sp-1); }
+
+/* ---------- 9. Quiz ---------- */
+.quiz {
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--paper-2);
+  margin-block: var(--sp-6);
+  overflow: hidden;
+}
+.quiz__head {
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-5);
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-3);
+}
+.quiz__badge {
+  font-family: var(--f-mono); font-size: var(--step--1);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.2rem 0.55rem; border-radius: var(--radius);
+  background: var(--accent); color: #fff; font-weight: 600;
+}
+.quiz--post .quiz__badge { background: var(--green); }
+.quiz__title { font-size: var(--step-1); font-weight: 600; }
+.quiz__sub { width: 100%; font-size: var(--step--1); color: var(--ink-3); }
+.quiz__body { padding: var(--sp-5); }
+
+.q { padding-block: var(--sp-4); border-bottom: 1px dashed var(--rule); }
+.q:first-child { padding-top: 0; }
+.q:last-of-type { border-bottom: 0; padding-bottom: 0; }
+.q__text {
+  font-weight: 600; display: flex; gap: var(--sp-3);
+  align-items: baseline; margin-bottom: var(--sp-3);
+}
+.q__text .q-num { font-family: var(--f-mono); color: var(--accent); flex: none; }
+.q__choices { list-style: none; padding: 0; margin: 0; max-width: none; }
+.q__choices li { margin: 0 0 var(--sp-2); }
+
+.choice {
+  display: flex; gap: var(--sp-3); align-items: flex-start;
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  cursor: pointer; background: var(--paper);
+  transition: border-color .12s, background .12s;
+}
+.choice:hover { border-color: var(--rule-strong); }
+.choice input { margin-top: 0.35em; accent-color: var(--accent); flex: none; }
+.choice__key {
+  font-family: var(--f-mono); color: var(--ink-3); flex: none; font-weight: 600;
+}
+.choice:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.choice:has(input:checked) .choice__key { color: var(--accent); }
+
+/* graded states */
+.quiz.is-graded .choice { cursor: default; }
+.quiz.is-graded .choice input { pointer-events: none; }
+.choice.is-correct { border-color: var(--green); background: var(--green-soft); }
+.choice.is-correct .choice__key { color: var(--green); }
+.choice.is-wrong { border-color: var(--red); background: var(--red-soft); }
+.choice.is-wrong .choice__key { color: var(--red); }
+
+.q__feedback {
+  margin-top: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border-left: 3px solid var(--rule-strong);
+  background: var(--paper-3);
+  border-radius: var(--radius);
+  font-size: var(--step--1);
+}
+.q__feedback > * { max-width: none; }
+.q__verdict {
+  font-family: var(--f-mono); font-size: var(--step--1);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  font-weight: 600; margin-bottom: var(--sp-1);
+}
+.q__verdict.ok  { color: var(--green); }
+.q__verdict.no  { color: var(--red); }
+
+.quiz__actions {
+  display: flex; flex-wrap: wrap; gap: var(--sp-3); align-items: center;
+  padding: var(--sp-4) var(--sp-5);
+  border-top: 1px solid var(--rule);
+  background: var(--paper-3);
+}
+.btn {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  border: 1px solid var(--ink); border-radius: var(--radius);
+  background: var(--ink); color: var(--paper);
+  padding: 0.5rem 1.1rem; cursor: pointer; font-weight: 600;
+  font-size: var(--step--1);
+  transition: opacity .15s, transform .05s;
+}
+.btn:hover { opacity: .85; }
+.btn:active { transform: translateY(1px); }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--rule-strong); }
+.btn--ghost:hover { border-color: var(--ink); opacity: 1; }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+
+.quiz__score {
+  font-family: var(--f-mono); font-size: var(--step--1);
+  color: var(--ink-2); margin-left: auto;
+}
+.quiz__score .val { font-size: var(--step-1); font-weight: 600; color: var(--ink); }
+.quiz__score .pass { color: var(--green); }
+.quiz__score .fail { color: var(--amber); }
+
+.quiz__result {
+  padding: var(--sp-4) var(--sp-5);
+  border-top: 1px solid var(--rule);
+  font-size: var(--step--1);
+}
+.quiz__result > * { max-width: none; }
+.quiz__result p + p { margin-top: var(--sp-2); }
+.warn-text { color: var(--amber); }
+.choice__text { flex: 1; }
+
+/* ---------- 10. Chapter navigation ---------- */
+.chapter-nav {
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-4);
+  margin-top: var(--sp-8);
+  padding-top: var(--sp-5);
+  border-top: 1px solid var(--rule);
+}
+@media (max-width: 640px) { .chapter-nav { grid-template-columns: 1fr; } }
+.chapter-nav a {
+  display: block; padding: var(--sp-4) var(--sp-5);
+  border: 1px solid var(--rule); border-radius: var(--radius);
+  text-decoration: none; color: var(--ink);
+  transition: border-color .15s, background .15s;
+}
+.chapter-nav a:hover { border-color: var(--accent); background: var(--paper-2); }
+.chapter-nav .dir {
+  font-family: var(--f-mono); font-size: var(--step--1);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink-3); display: block; margin-bottom: var(--sp-2);
+}
+.chapter-nav .ttl { display: block; font-weight: 600; }
+.chapter-nav .next { text-align: right; }
+.chapter-nav .empty { border-style: dashed; opacity: .45; }
+
+/* ---------- 11. Print ---------- */
+@media print {
+  .topbar, .sidebar, .chapter-nav, .quiz__actions, .progress, .skip { display: none !important; }
+  body { background: #fff; color: #000; }
+  .layout { display: block; }
+  .quiz, .figure, .callout, .takeaways { break-inside: avoid; }
+  a { color: #000; text-decoration: none; }
+}
