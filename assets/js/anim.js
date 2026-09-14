@@ -187,4 +187,134 @@
 
     render(parseFloat(slider.value));
   })();
+
+  /* ============================================================
+     4. Demo C — moisture versus usable energy  (chapter 2)
+
+     Takes 1 kg of fuel AS RECEIVED and splits the dry fuel's heating
+     value into four parts, so the whole bar always totals HHV(dry):
+       · usable        LHV as received
+       · fuel moisture latent heat spent boiling the water in the fuel
+       · hydrogen      latent heat of the water made by burning H
+       · not fuel      the share of the kilogram that is water, not fuel
+     ============================================================ */
+  (function moistureEnergyDemo() {
+    var root = document.querySelector('[data-demo="moisture-energy"]');
+    if (!root) return;
+
+    var LATENT = 2.442;   // MJ per kg of water vapour at 25 °C
+
+    var FUELS = {
+      wood:    { hhv: 19.0, h: 6.1 },
+      husk:    { hhv: 15.5, h: 5.0 },
+      bagasse: { hhv: 18.5, h: 5.8 }
+    };
+
+    var slider = root.querySelector('[data-me-slider]');
+    var segs = {
+      usable: root.querySelector('[data-me-seg="usable"]'),
+      moist:  root.querySelector('[data-me-seg="moist"]'),
+      hyd:    root.querySelector('[data-me-seg="hyd"]'),
+      water:  root.querySelector('[data-me-seg="water"]')
+    };
+    var outM    = root.querySelector('[data-me-moisture]');
+    var outLHV  = root.querySelector('[data-me-lhv]');
+    var outMass = root.querySelector('[data-me-mass]');
+    var outMax  = root.querySelector('[data-me-max]');
+    var warn    = root.querySelector('[data-me-warn]');
+    var presets = root.querySelectorAll('[data-me-fuel]');
+    var fuel = 'husk';
+
+    function render() {
+      var f = FUELS[fuel];
+      var M = parseFloat(slider.value) / 100;      // wet basis, mass fraction
+      var hhvAr = f.hhv * (1 - M);                 // MJ per kg as received
+      var hAr = (f.h / 100) * (1 - M);             // hydrogen mass fraction, as received
+      var lossHyd = LATENT * 9 * hAr;
+      var lossMoist = LATENT * M;
+      var lhvAr = hhvAr - lossHyd - lossMoist;
+      var notFuel = f.hhv * M;
+
+      var total = f.hhv;
+      var pct = function (v) { return Math.max(0, v / total * 100); };
+
+      segs.usable.style.width = pct(lhvAr) + '%';
+      segs.moist.style.width  = pct(lossMoist) + '%';
+      segs.hyd.style.width    = pct(lossHyd) + '%';
+      segs.water.style.width  = pct(notFuel) + '%';
+      segs.usable.textContent = lhvAr > 2 ? fmt(lhvAr) + ' MJ' : '';
+
+      outM.textContent = fmt(M * 100, 0);
+      outLHV.textContent = fmt(Math.max(0, lhvAr), 2);
+      outMass.textContent = lhvAr > 0.2
+        ? Math.round(1000 / lhvAr).toLocaleString('en-US')
+        : '∞';
+      outMax.textContent = fmt(f.hhv, 1);
+
+      presets.forEach(function (b) { b.classList.toggle('is-on', b.dataset.meFuel === fuel); });
+      warn.hidden = lhvAr > 3;
+    }
+
+    slider.addEventListener('input', render);
+    presets.forEach(function (b) {
+      b.addEventListener('click', function () { fuel = b.dataset.meFuel; render(); });
+    });
+    render();
+  })();
+
+  /* ============================================================
+     5. Demo D — agricultural residue calculator  (chapter 2)
+
+     Main product tonnage  ->  residue tonnage  ->  energy  ->  electricity.
+     Values are teaching approximations; the chapter says so in the note.
+     ============================================================ */
+  (function residueDemo() {
+    var root = document.querySelector('[data-demo="residue-calc"]');
+    if (!root) return;
+
+    /* rpr = residue per tonne of main product · m = moisture as collected
+       lhv = MJ/kg as received */
+    var CROPS = {
+      husk:    { rpr: 0.22, lhv: 13.0 },
+      straw:   { rpr: 0.45, lhv: 12.5 },
+      bagasse: { rpr: 0.28, lhv: 7.7 },
+      efb:     { rpr: 0.22, lhv: 5.5 },
+      cob:     { rpr: 0.27, lhv: 13.5 },
+      rhizome: { rpr: 0.08, lhv: 12.0 }
+    };
+    var ETA = 0.22;          // biomass power plant, fuel energy to electricity
+    var DIESEL_MJ_PER_L = 36.0;
+
+    var input = root.querySelector('[data-rc-input]');
+    var presets = root.querySelectorAll('[data-rc-crop]');
+    var outResidue = root.querySelector('[data-rc-residue]');
+    var outEnergy = root.querySelector('[data-rc-energy]');
+    var outPower = root.querySelector('[data-rc-power]');
+    var outDiesel = root.querySelector('[data-rc-diesel]');
+    var crop = 'husk';
+
+    function render() {
+      var tonnes = parseFloat(input.value);
+      if (!isFinite(tonnes) || tonnes < 0) tonnes = 0;
+      var c = CROPS[crop];
+
+      var residue = tonnes * c.rpr;                  // tonnes per year
+      var energyMJ = residue * 1000 * c.lhv;         // MJ per year
+      var elecMWh = energyMJ * ETA / 3600;           // MJ -> MWh
+      var dieselL = energyMJ / DIESEL_MJ_PER_L;
+
+      outResidue.textContent = fmt(residue, residue < 100 ? 1 : 0);
+      outEnergy.textContent = fmt(energyMJ / 1000, energyMJ / 1000 < 100 ? 1 : 0);
+      outPower.textContent = fmt(elecMWh, elecMWh < 100 ? 1 : 0);
+      outDiesel.textContent = Math.round(dieselL).toLocaleString('en-US');
+
+      presets.forEach(function (b) { b.classList.toggle('is-on', b.dataset.rcCrop === crop); });
+    }
+
+    input.addEventListener('input', render);
+    presets.forEach(function (b) {
+      b.addEventListener('click', function () { crop = b.dataset.rcCrop; render(); });
+    });
+    render();
+  })();
 })();
