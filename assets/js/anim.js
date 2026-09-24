@@ -372,4 +372,290 @@
     sTemp.addEventListener('input', render);
     render();
   })();
+
+  /* ---------- helper: piecewise-linear lookup ----------
+     table = [[x, [v1, v2, ...]], ...] sorted by x.
+     Returns the interpolated value array at x. Used by the chapter 3
+     demos, whose curves are published data points, not formulas.      */
+  function interpRow(x, table) {
+    if (x <= table[0][0]) return table[0][1].slice();
+    var last = table[table.length - 1];
+    if (x >= last[0]) return last[1].slice();
+    for (var i = 1; i < table.length; i++) {
+      if (x <= table[i][0]) {
+        var x0 = table[i - 1][0], x1 = table[i][0];
+        var a = table[i - 1][1], b = table[i][1];
+        var f = (x - x0) / (x1 - x0);
+        return a.map(function (v, k) { return v + (b[k] - v) * f; });
+      }
+    }
+    return last[1].slice();
+  }
+
+  /* ============================================================
+     7. Demo F — the thermal conversion spectrum  (chapter 3)
+
+     One slider: the equivalence ratio. It renames the process and
+     redistributes the fuel's energy between char, liquid, fuel gas
+     and heat already released. The splits are indicative teaching
+     values interpolated between published operating points, not a
+     reactor model — the chapter says so in the note.
+     ============================================================ */
+  (function thermoSpectrumDemo() {
+    var root = document.querySelector('[data-demo="thermo-spectrum"]');
+    if (!root) return;
+
+    var AF_ST = 4.60;          // kg air per kg fuel, rice husk (chapter 2)
+
+    /* ER -> [char, liquid, gas, heat] as % of the fuel's energy */
+    var SPLIT = [
+      [0.00, [42, 38, 20, 0]],
+      [0.10, [25, 25, 50, 0]],
+      [0.25, [8, 6, 78, 8]],
+      [0.35, [5, 3, 80, 12]],
+      [0.50, [4, 6, 55, 35]],
+      [0.80, [3, 4, 25, 68]],
+      [1.00, [2, 1, 5, 92]],
+      [1.30, [1, 0, 1, 98]],
+      [1.60, [1, 0, 1, 98]]
+    ];
+    /* ER -> peak temperature, °C */
+    var TEMP = [
+      [0.00, [500]], [0.25, [900]], [0.35, [1000]],
+      [0.50, [1050]], [1.00, [1200]], [1.60, [1000]]
+    ];
+
+    var NAME = [
+      { max: 0.02, th: 'ไพโรไลซิส / ทอร์รีแฟกชัน', en: 'Pyrolysis / torrefaction' },
+      { max: 0.20, th: 'กึ่งไพโรไลซิส — ไม่ใช่โหมดที่ต้องการ', en: 'Part-pyrolysis — not a wanted mode' },
+      { max: 0.40, th: 'แก๊สซิฟิเคชัน', en: 'Gasification' },
+      { max: 0.95, th: 'เผาไหม้ไม่สมบูรณ์ — ย่านควัน', en: 'Incomplete combustion — the smoke band' },
+      { max: 99, th: 'การเผาไหม้', en: 'Combustion' }
+    ];
+
+    var slider = root.querySelector('[data-ts-slider]');
+    var segs = {
+      char: root.querySelector('[data-ts-seg="char"]'),
+      liquid: root.querySelector('[data-ts-seg="liquid"]'),
+      gas: root.querySelector('[data-ts-seg="gas"]'),
+      heat: root.querySelector('[data-ts-seg="heat"]')
+    };
+    var nameTh = root.querySelector('[data-ts-name-th]');
+    var nameEn = root.querySelector('[data-ts-name-en]');
+    var outER = root.querySelector('[data-ts-er]');
+    var outAir = root.querySelector('[data-ts-air]');
+    var outTemp = root.querySelector('[data-ts-temp]');
+    var warn = root.querySelector('[data-ts-warn]');
+    var presets = root.querySelectorAll('[data-ts-preset]');
+
+    function render() {
+      var er = parseFloat(slider.value);
+      var s = interpRow(er, SPLIT);
+      var total = s[0] + s[1] + s[2] + s[3];
+
+      segs.char.style.width = (s[0] / total * 100) + '%';
+      segs.liquid.style.width = (s[1] / total * 100) + '%';
+      segs.gas.style.width = (s[2] / total * 100) + '%';
+      segs.heat.style.width = (s[3] / total * 100) + '%';
+
+      var label = NAME.find(function (n) { return er <= n.max; }) || NAME[NAME.length - 1];
+      nameTh.textContent = label.th;
+      nameEn.textContent = label.en;
+
+      outER.textContent = fmt(er, 2);
+      outAir.textContent = fmt(er * AF_ST, 2);
+      outTemp.textContent = Math.round(interpRow(er, TEMP)[0] / 10) * 10;
+
+      // the two bands where the reactor is destroying value
+      warn.hidden = !((er > 0.02 && er < 0.20) || (er >= 0.40 && er < 0.95));
+
+      presets.forEach(function (b) {
+        b.classList.toggle('is-on', Math.abs(parseFloat(b.dataset.tsPreset) - er) < 0.03);
+      });
+    }
+
+    slider.addEventListener('input', render);
+    presets.forEach(function (b) {
+      b.addEventListener('click', function () {
+        slider.value = b.dataset.tsPreset;
+        render();
+      });
+    });
+    render();
+  })();
+
+  /* ============================================================
+     8. Demo G — producer gas quality  (chapter 3)
+
+     Equation (3.4) made interactive. The inert balance is what the
+     three sliders do NOT claim, so nitrogen dilution is visible
+     rather than described.
+     ============================================================ */
+  (function producerGasDemo() {
+    var root = document.querySelector('[data-demo="producer-gas"]');
+    if (!root) return;
+
+    var LHV_CO = 12.63, LHV_H2 = 10.78, LHV_CH4 = 35.88;   // MJ/Nm3, pure gases
+    var LHV_NG = 36.0;        // natural gas, for comparison
+    var GAS_FLOW = 100;       // Nm3/h assumed in the readout
+    var ETA_E = 0.25;         // engine-generator, electrical
+    var GAS_YIELD = 1.8;      // Nm3 of gas per kg of husk
+    var LHV_HUSK = 12.4;      // MJ/kg as received
+
+    var sCO = root.querySelector('[data-pg-co]');
+    var sH2 = root.querySelector('[data-pg-h2]');
+    var sCH4 = root.querySelector('[data-pg-ch4]');
+    var segs = {
+      co: root.querySelector('[data-pg-seg="co"]'),
+      h2: root.querySelector('[data-pg-seg="h2"]'),
+      ch4: root.querySelector('[data-pg-seg="ch4"]'),
+      inert: root.querySelector('[data-pg-seg="inert"]')
+    };
+    var outLHV = root.querySelector('[data-pg-lhv]');
+    var outRatio = root.querySelector('[data-pg-ratio]');
+    var outPower = root.querySelector('[data-pg-power]');
+    var outCGE = root.querySelector('[data-pg-cge]');
+    var warn = root.querySelector('[data-pg-warn]');
+    var presets = root.querySelectorAll('[data-pg-preset]');
+
+    function render() {
+      var co = parseFloat(sCO.value);
+      var h2 = parseFloat(sH2.value);
+      var ch4 = parseFloat(sCH4.value);
+      var burnable = co + h2 + ch4;
+      var inert = Math.max(0, 100 - burnable);
+
+      var lhv = (co * LHV_CO + h2 * LHV_H2 + ch4 * LHV_CH4) / 100;
+
+      var scale = burnable + inert;          // 100 unless the sliders overshoot
+      segs.co.style.width = (co / scale * 100) + '%';
+      segs.h2.style.width = (h2 / scale * 100) + '%';
+      segs.ch4.style.width = (ch4 / scale * 100) + '%';
+      segs.inert.style.width = (inert / scale * 100) + '%';
+
+      outLHV.textContent = fmt(lhv, 2);
+      outRatio.textContent = fmt(lhv / LHV_NG * 100, 0);
+      outPower.textContent = fmt(GAS_FLOW * lhv * ETA_E / 3.6, 1);
+      outCGE.textContent = fmt(GAS_YIELD * lhv / LHV_HUSK * 100, 0);
+
+      warn.hidden = burnable <= 100;
+
+      presets.forEach(function (b) {
+        var p = b.dataset.pgPreset.split(',').map(parseFloat);
+        b.classList.toggle('is-on',
+          Math.abs(p[0] - co) < 0.6 && Math.abs(p[1] - h2) < 0.6 && Math.abs(p[2] - ch4) < 0.3);
+      });
+    }
+
+    [sCO, sH2, sCH4].forEach(function (s) { s.addEventListener('input', render); });
+    presets.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var p = b.dataset.pgPreset.split(',');
+        sCO.value = p[0]; sH2.value = p[1]; sCH4.value = p[2];
+        render();
+      });
+    });
+    render();
+  })();
+
+  /* ============================================================
+     9. Demo H — pyrolysis product yields  (chapter 3)
+
+     Two controls, peak temperature and heating rate, and two bars:
+     the split by mass and the split by energy. The point of the demo
+     is that the two bars never match, because char holds the most
+     energy per kilogram.
+     ============================================================ */
+  (function pyrolysisYieldDemo() {
+    var root = document.querySelector('[data-demo="pyrolysis-yields"]');
+    if (!root) return;
+
+    var FEED_KG = 1000;       // dry wood
+    var LHV = { feed: 18.0, char: 30.0, oil: 17.0, gas: 8.0 };   // MJ/kg
+
+    /* temperature -> [char, liquid, gas] as % of dry mass */
+    var YIELD = {
+      slow: [
+        [300, [60, 25, 15]],
+        [400, [38, 30, 32]],
+        [500, [32, 28, 40]],
+        [700, [25, 20, 55]],
+        [900, [20, 10, 70]]
+      ],
+      fast: [
+        [300, [55, 30, 15]],
+        [400, [22, 60, 18]],
+        [500, [14, 68, 18]],
+        [600, [12, 58, 30]],
+        [700, [10, 40, 50]],
+        [900, [8, 15, 77]]
+      ]
+    };
+
+    var LABEL = {
+      char: { th: 'ถ่าน', en: 'Char' },
+      oil: { th: 'ของเหลว', en: 'Liquid' },
+      gas: { th: 'แก๊ส', en: 'Gas' }
+    };
+
+    var sTemp = root.querySelector('[data-py-temp]');
+    var mseg = {
+      char: root.querySelector('[data-py-mseg="char"]'),
+      oil: root.querySelector('[data-py-mseg="oil"]'),
+      gas: root.querySelector('[data-py-mseg="gas"]')
+    };
+    var eseg = {
+      char: root.querySelector('[data-py-eseg="char"]'),
+      oil: root.querySelector('[data-py-eseg="oil"]'),
+      gas: root.querySelector('[data-py-eseg="gas"]')
+    };
+    var outChar = root.querySelector('[data-py-char]');
+    var outOil = root.querySelector('[data-py-oil]');
+    var outGas = root.querySelector('[data-py-gas]');
+    var outETotal = root.querySelector('[data-py-etotal]');
+    var modeTh = root.querySelector('[data-py-mode-th]');
+    var modeEn = root.querySelector('[data-py-mode-en]');
+    var rates = root.querySelectorAll('[data-py-rate]');
+    var rate = 'slow';
+
+    function render() {
+      var t = parseFloat(sTemp.value);
+      var y = interpRow(t, YIELD[rate]);
+      var mass = { char: y[0], oil: y[1], gas: y[2] };
+      var mTotal = mass.char + mass.oil + mass.gas;
+
+      var energy = {
+        char: mass.char * LHV.char,
+        oil: mass.oil * LHV.oil,
+        gas: mass.gas * LHV.gas
+      };
+      var eTotal = energy.char + energy.oil + energy.gas;
+
+      ['char', 'oil', 'gas'].forEach(function (k) {
+        mseg[k].style.width = (mass[k] / mTotal * 100) + '%';
+        eseg[k].style.width = (energy[k] / eTotal * 100) + '%';
+      });
+
+      outChar.textContent = Math.round(mass.char / 100 * FEED_KG).toLocaleString('en-US');
+      outOil.textContent = Math.round(mass.oil / 100 * FEED_KG).toLocaleString('en-US');
+      outGas.textContent = Math.round(mass.gas / 100 * FEED_KG).toLocaleString('en-US');
+      // energy still held in the products, MJ per 1,000 kg of dry feed
+      // (mass values are kg per 100 kg of feed, so x10 scales to FEED_KG)
+      outETotal.textContent =
+        (Math.round(eTotal * FEED_KG / 100 / 10) * 10).toLocaleString('en-US');
+
+      var top = mass.char >= mass.oil && mass.char >= mass.gas ? 'char'
+        : (mass.oil >= mass.gas ? 'oil' : 'gas');
+      modeTh.textContent = LABEL[top].th;
+      modeEn.textContent = LABEL[top].en;
+
+      rates.forEach(function (b) { b.classList.toggle('is-on', b.dataset.pyRate === rate); });
+    }
+
+    sTemp.addEventListener('input', render);
+    rates.forEach(function (b) {
+      b.addEventListener('click', function () { rate = b.dataset.pyRate; render(); });
+    });
+    render();
+  })();
 })();

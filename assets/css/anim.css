@@ -214,10 +214,13 @@ html[data-theme="dark"] .sbar__seg { color: var(--paper); }
 .sbar-legend .k-water  { background: var(--ink-3); opacity: .45; }
 
 .sbar-scale {
-  display: flex; justify-content: space-between;
+  display: flex; justify-content: space-between; gap: var(--sp-4);
   font-family: var(--f-mono); font-size: 0.72rem; color: var(--ink-3);
   margin-top: var(--sp-2);
 }
+/* a caption that introduces a bar, rather than labelling the one above it */
+.sbar-scale + .sbar { margin-top: var(--sp-2); }
+.sbar-legend + .sbar-scale { margin-top: var(--sp-5); }
 
 .demo__field input[type="number"] {
   width: 8rem; padding: 0.35rem 0.5rem;

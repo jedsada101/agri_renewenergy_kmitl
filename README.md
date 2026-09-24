@@ -10,6 +10,7 @@ index.html                     สารบัญ / หน้าแรก
 chapters/
   01-introduction.html         บทที่ 1 · บทนำสู่พลังงานหมุนเวียน
   02-biomass.html              บทที่ 2 · ชีวมวล
+  03-thermal-conversion.html   บทที่ 3 · การแปรรูปด้วยความร้อน
 assets/
   css/base.css                 ตัวแปรสี ตัวอักษร เลย์เอาต์ การสลับภาษา
   css/components.css           การ์ด กล่องเน้น รูป ตาราง สูตร อ้างอิง แบบทดสอบ
@@ -186,7 +187,7 @@ GitHub Pages จะอัปเดตอัตโนมัติภายใน�
 
 - [x] บทที่ 1 · บทนำสู่พลังงานหมุนเวียน
 - [x] บทที่ 2 · ชีวมวล
-- [ ] บทที่ 3 · การแปรรูปด้วยความร้อน (Gasification, Pyrolysis)
+- [x] บทที่ 3 · การแปรรูปด้วยความร้อน (Combustion, Gasification, Pyrolysis, Torrefaction)
 - [ ] บทที่ 4 · ความร้อนใต้พิภพ
 - [ ] บทที่ 5 · พลังงานน้ำ
 - [ ] บทที่ 6 · พลังงานคลื่น
@@ -203,5 +204,4 @@ GitHub Pages จะอัปเดตอัตโนมัติภายใน�
 
 ## ลิขสิทธิ์
 
-© 2026 Jedsada Saijai &amp; Wanphut Saechua — สงวนลิขสิทธิ์
-ห้ามนำไปใช้ในเชิงพาณิชย์หรือเผยแพร่ซ้ำโดยไม่ได้รับอนุญาตเป็นลายลักษณ์อักษรจากผู้จัดทำ
+2026 Prepared by Jedsada Saijai &amp; Wanphut Saechua
