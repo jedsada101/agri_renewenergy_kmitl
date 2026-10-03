@@ -247,3 +247,57 @@ html[data-theme="dark"] .sbar__seg { color: var(--paper); }
   .cf-fill,
   .sbar__seg { transition: none !important; }
 }
+
+/* ---------- temperature ladder (chapter 4) ----------
+   A fixed 30-300 C scale with the four usable bands drawn to width,
+   and a marker the gradient demo slides along it. Band widths are
+   their share of the 270 K span, so the marker's percentage and the
+   bands share one coordinate system.                                */
+.tscale {
+  position: relative;
+  display: flex;
+  height: 46px;
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.tscale__band {
+  min-width: 0;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 var(--sp-2);
+  font-size: 0.7rem; line-height: 1.15; text-align: center;
+  white-space: nowrap; overflow: hidden;
+  border-right: 1px solid var(--rule);
+}
+.tscale__band:last-of-type { border-right: 0; }
+.tscale__band--a { flex: 0 0 14.8%; background: var(--ink-3); opacity: .35; color: var(--ink); }
+.tscale__band--b { flex: 0 0 18.5%; background: var(--blue);  color: var(--paper-2); }
+.tscale__band--c { flex: 0 0 22.2%; background: var(--accent); color: var(--paper-2); }
+.tscale__band--d { flex: 0 0 44.5%; background: var(--amber); color: var(--paper-2); }
+html[data-theme="dark"] .tscale__band--b,
+html[data-theme="dark"] .tscale__band--c,
+html[data-theme="dark"] .tscale__band--d { color: var(--paper); }
+
+/* the marker reads as a plumb line, not a fill */
+.tscale__mark {
+  position: absolute; top: -5px; bottom: -5px; left: 0;
+  width: 3px; margin-left: -1.5px;
+  background: var(--ink);
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px var(--paper);
+  transition: left .45s cubic-bezier(.22, .61, .36, 1);
+  pointer-events: none;
+}
+.tscale__mark::after {
+  content: "";
+  position: absolute; left: 50%; top: -5px;
+  width: 9px; height: 9px; margin-left: -4.5px;
+  background: var(--ink);
+  border-radius: 50%;
+}
+
+@media (max-width: 640px) {
+  .tscale { height: 56px; }
+  .tscale__band { font-size: 0.62rem; white-space: normal; }
+}

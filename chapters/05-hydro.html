@@ -1,0 +1,2236 @@
+<!DOCTYPE html>
+<html lang="th" data-lang="th" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>บทที่ 5 · พลังงานน้ำ</title>
+<meta name="description" content="พลังงานน้ำ — เฮดและอัตราการไหล การสูญเสียในท่อส่งน้ำ เส้นโค้งระยะเวลาการไหล กังหันแรงกระตุ้นและแรงปฏิกิริยา ความเร็วจำเพาะ คาวิเทชัน ไฟฟ้าพลังน้ำขนาดจิ๋ว ปั๊มที่ใช้เป็นกังหัน และการประยุกต์ในคลองชลประทานของไทย">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Thai+Looped:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/anim.css">
+<script src="../assets/js/boot.js"></script>
+</head>
+<body data-chapter="05">
+
+<a class="skip" href="#main"><span class="th">ข้ามไปเนื้อหาหลัก</span><span class="en">Skip to main content</span></a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="topbar__brand" href="../index.html">
+    <span class="mark">RE</span>
+    <span class="name">
+      <span class="th">พลังงานหมุนเวียน</span>
+      <span class="en">Renewable Energy</span>
+    </span>
+  </a>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__crumb">
+    <span class="th">บทที่ 5 · พลังงานน้ำ</span>
+    <span class="en">Chapter 5 · Hydro Energy</span>
+  </span>
+  <button class="btn-toggle" data-lang-btn="th" aria-pressed="true">ไทย</button>
+  <button class="btn-toggle" data-lang-btn="en" aria-pressed="false">EN</button>
+  <button class="btn-toggle" data-theme-toggle aria-label="Switch theme"><span class="icon">☀</span></button>
+</header>
+
+<div class="wrap">
+  <div class="layout">
+
+    <!-- ============ sidebar ============ -->
+    <aside class="sidebar">
+      <h2><span class="th">ในบทนี้</span><span class="en">In this chapter</span></h2>
+      <ol>
+        <li><a href="#pretest"><span class="th">แบบทดสอบก่อนเรียน</span><span class="en">Pre-test</span></a></li>
+        <li><a href="#s1"><span class="th">5.1 เฮดคูณอัตราการไหล</span><span class="en">5.1 Head times flow</span></a></li>
+        <li><a href="#s2"><span class="th">5.2 เฮดสุทธิและการสูญเสียในท่อ</span><span class="en">5.2 Net head and pipe losses</span></a></li>
+        <li><a href="#s3"><span class="th">5.3 การประเมินแหล่งและเส้นโค้งการไหล</span><span class="en">5.3 Site assessment and the FDC</span></a></li>
+        <li><a href="#s4"><span class="th">5.4 กังหันน้ำสองตระกูล</span><span class="en">5.4 Two families of turbine</span></a></li>
+        <li><a href="#s5"><span class="th">5.5 ความเร็วจำเพาะและการเลือกกังหัน</span><span class="en">5.5 Specific speed and selection</span></a></li>
+        <li><a href="#s6"><span class="th">5.6 คาวิเทชันและเครื่องกำเนิดไฟฟ้า</span><span class="en">5.6 Cavitation and the generator</span></a></li>
+        <li><a href="#s7"><span class="th">5.7 พลังน้ำขนาดจิ๋วและปั๊มที่ใช้เป็นกังหัน</span><span class="en">5.7 Pico-hydro and pumps as turbines</span></a></li>
+        <li><a href="#s8"><span class="th">5.8 ผลกระทบและการแบ่งปันน้ำ</span><span class="en">5.8 Impacts and sharing the water</span></a></li>
+        <li><a href="#s9"><span class="th">5.9 ประเทศไทยและงานชลประทาน</span><span class="en">5.9 Thailand and irrigation</span></a></li>
+        <li><a href="#summary"><span class="th">สรุปและคำศัพท์</span><span class="en">Summary and glossary</span></a></li>
+        <li><a href="#references"><span class="th">เอกสารอ้างอิง</span><span class="en">References</span></a></li>
+        <li><a href="#posttest"><span class="th">แบบทดสอบหลังเรียน</span><span class="en">Post-test</span></a></li>
+      </ol>
+    </aside>
+
+    <!-- ============ main ============ -->
+    <main id="main">
+
+      <header class="chapter-head">
+        <span class="chapter-head__num">
+          <span class="th">บทที่ 5</span><span class="en">Chapter 5</span>
+        </span>
+        <h1>
+          <span class="th">พลังงานน้ำ</span>
+          <span class="en">Hydro Energy</span>
+        </h1>
+        <p class="lead">
+          <span class="th">บทที่ 4 จบลงด้วยทรัพยากรที่ธรณีวิทยาเป็นผู้กำหนดและเราเลือกสถานที่ไม่ได้ บทนี้เป็นเรื่องของทรัพยากรที่ <em>ภูมิประเทศ</em> เป็นผู้กำหนด และมีสมการเพียงสมการเดียวที่ควบคุมทุกอย่าง — กำลังเท่ากับความสูงที่น้ำตกลงมา คูณอัตราที่น้ำไหลผ่าน ความเรียบง่ายนี้คือเหตุผลที่พลังงานน้ำเป็นพลังงานหมุนเวียนที่เก่าแก่ที่สุด ใหญ่ที่สุด และมีประสิทธิภาพสูงที่สุดในบรรดาทั้งหมด และสำหรับวิศวกรเกษตร มันมีความหมายพิเศษอีกข้อหนึ่ง — น้ำที่ไหลในคลองชลประทานทุกสายกำลังตกลงมาอยู่แล้ว</span>
+          <span class="en">Chapter 4 ended with a resource set by geology, whose location we cannot choose. This chapter concerns a resource set by <em>terrain</em>, and a single equation governs all of it — power is the height the water falls through, times the rate at which it flows. That simplicity is why hydro is the oldest, largest and most efficient renewable of them all. For an agricultural engineer it carries one more meaning: the water in every irrigation canal is already falling.</span>
+        </p>
+        <div class="chapter-head__facts">
+          <span class="chip"><span class="th">ต่อจากบทที่ 1</span><span class="en">Builds on Chapter 1</span></span>
+          <span class="chip"><span class="th">เวลาเรียน ~110 นาที</span><span class="en">~110 min</span></span>
+          <span class="chip"><span class="th">9 หัวข้อ</span><span class="en">9 sections</span></span>
+          <span class="chip"><span class="th">ตัวอย่างคำนวณ 8 ข้อ</span><span class="en">8 worked examples</span></span>
+          <span class="chip"><span class="th">ภาพจำลอง 3 ชุด</span><span class="en">3 interactive models</span></span>
+          <span class="chip"><span class="th">Pre-test 5 ข้อ · Post-test 10 ข้อ</span><span class="en">Pre-test 5 · Post-test 10</span></span>
+        </div>
+      </header>
+
+      <div class="objectives">
+        <h2><span class="th">จุดประสงค์การเรียนรู้</span><span class="en">Learning objectives</span></h2>
+        <ul>
+          <li>
+            <span class="th">ใช้สมการกำลังของพลังงานน้ำคำนวณกำลังผลิตจากเฮดและอัตราการไหล และอธิบายได้ว่าเหตุใดเฮดกับอัตราการไหลจึงแลกเปลี่ยนกันได้แต่มีต้นทุนไม่เท่ากัน</span>
+            <span class="en">Use the hydro power equation to compute output from head and flow, and explain why head and flow trade against each other but do not cost the same.</span>
+          </li>
+          <li>
+            <span class="th">แยกความต่างระหว่างเฮดรวมกับเฮดสุทธิ คำนวณการสูญเสียในท่อส่งน้ำด้วยสมการดาร์ซี-ไวส์บาค และเลือกขนาดท่อที่คุ้มค่า</span>
+            <span class="en">Distinguish gross from net head, compute penstock losses with the Darcy&ndash;Weisbach equation, and choose an economic pipe diameter.</span>
+          </li>
+          <li>
+            <span class="th">อ่านและใช้เส้นโค้งระยะเวลาการไหล (flow duration curve) เพื่อเลือกอัตราการไหลออกแบบ แล้วประเมินพลังงานรายปีและตัวประกอบกำลังผลิต</span>
+            <span class="en">Read and use a flow duration curve to choose the design flow, then estimate annual energy and capacity factor.</span>
+          </li>
+          <li>
+            <span class="th">อธิบายความต่างเชิงหลักการระหว่างกังหันแรงกระตุ้นกับกังหันแรงปฏิกิริยา และระบุว่ากังหันแต่ละชนิดเหมาะกับเฮดและอัตราการไหลช่วงใด</span>
+            <span class="en">Explain the principle separating impulse from reaction turbines, and identify the head and flow range each type suits.</span>
+          </li>
+          <li>
+            <span class="th">คำนวณความเร็วจำเพาะ และใช้ร่วมกับแผนภาพเลือกกังหันเพื่อเลือกชนิดกังหันและความเร็วรอบที่เหมาะสม</span>
+            <span class="en">Calculate specific speed and use it with a selection chart to choose both turbine type and running speed.</span>
+          </li>
+          <li>
+            <span class="th">อธิบายกลไกการเกิดคาวิเทชัน ใช้ค่าสัมประสิทธิ์โทมาตรวจสอบความสูงติดตั้งกังหัน และเลือกวิธีต่อเครื่องกำเนิดไฟฟ้าให้ได้ความถี่ที่ถูกต้อง</span>
+            <span class="en">Explain how cavitation arises, use Thoma&rsquo;s coefficient to check the turbine setting height, and choose a generator arrangement that holds the correct frequency.</span>
+          </li>
+          <li>
+            <span class="th">ออกแบบระบบพลังน้ำขนาดจิ๋วในเบื้องต้น รวมถึงการเลือกปั๊มหอยโข่งมาใช้เป็นกังหัน (pump as turbine) และประเมินว่าเหมาะสมเมื่อใด</span>
+            <span class="en">Outline a pico-hydro design, including selecting a centrifugal pump to run as a turbine, and judge when that is the right choice.</span>
+          </li>
+          <li>
+            <span class="th">ประเมินผลกระทบด้านตะกอน การอพยพของปลา และการไหลเพื่อระบบนิเวศ และอธิบายว่าเหตุใดเขื่อนอเนกประสงค์ของไทยจึงจัดลำดับการชลประทานไว้ก่อนการผลิตไฟฟ้า</span>
+            <span class="en">Assess sediment, fish-passage and environmental-flow impacts, and explain why Thailand&rsquo;s multi-purpose dams place irrigation ahead of power generation.</span>
+          </li>
+          <li>
+            <span class="th">ระบุโอกาสของพลังน้ำขนาดเล็กในโครงสร้างชลประทานที่มีอยู่แล้ว เช่น อาคารน้ำตกและประตูระบายน้ำ และประเมินความคุ้มค่าเบื้องต้น</span>
+            <span class="en">Identify small-hydro opportunities in existing irrigation infrastructure such as drop structures and regulators, and make a first assessment of their viability.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ============ PRE-TEST ============ -->
+      <section class="quiz quiz--pre" id="pretest" data-quiz="pre" data-pass="0.6">
+        <script type="application/json" class="quiz-data">
+{
+  "questions": [
+    {
+      "q": {
+        "th": "กำลังที่ได้จากพลังงานน้ำแปรผันตามอะไร",
+        "en": "Hydro power is proportional to what?"
+      },
+      "choices": [
+        {
+          "th": "อัตราการไหลเพียงอย่างเดียว โดยไม่ขึ้นกับความสูง",
+          "en": "Flow rate alone, independently of the height"
+        },
+        {
+          "th": "ผลคูณของเฮดกับอัตราการไหลของน้ำที่ผ่านกังหัน",
+          "en": "The product of head and the flow passing the turbine"
+        },
+        {
+          "th": "ความเร็วของน้ำยกกำลังสาม เช่นเดียวกับพลังงานลม",
+          "en": "The cube of the water velocity, exactly as with wind"
+        },
+        {
+          "th": "พื้นที่ผิวของอ่างเก็บน้ำที่อยู่เหนือกังหันขึ้นไป",
+          "en": "The surface area of the reservoir above the turbine"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "P = ρgQH·η ซึ่งเป็นสมการเชิงเส้นทั้งในเฮดและอัตราการไหล ต่างจากพลังงานลมที่แปรผันตามความเร็วยกกำลังสาม ความเป็นเชิงเส้นนี้ทำให้พลังงานน้ำคาดการณ์ได้ง่ายกว่ามาก แต่ก็หมายความว่าเฮด 100 เมตรกับอัตราการไหล 1 m³/s ให้กำลังเท่ากับเฮด 1 เมตรกับอัตราการไหล 100 m³/s ซึ่งในทางวิศวกรรมเป็นโครงการคนละแบบโดยสิ้นเชิง",
+        "en": "P = ρgQH·η, linear in both head and flow — unlike wind, which goes as the cube of speed. That linearity makes hydro far more predictable, but it also means 100 m of head with 1 m³/s gives the same power as 1 m with 100 m³/s, which in engineering terms are entirely different projects."
+      }
+    },
+    {
+      "q": {
+        "th": "ประสิทธิภาพรวมของโรงไฟฟ้าพลังน้ำสมัยใหม่อยู่ในช่วงใด",
+        "en": "What is the overall efficiency of a modern hydroelectric plant?"
+      },
+      "choices": [
+        {
+          "th": "25–35%",
+          "en": "25–35%"
+        },
+        {
+          "th": "45–55%",
+          "en": "45–55%"
+        },
+        {
+          "th": "75–90%",
+          "en": "75–90%"
+        },
+        {
+          "th": "มากกว่า 99%",
+          "en": "Above 99%"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "พลังงานน้ำมีประสิทธิภาพสูงที่สุดในบรรดาเทคโนโลยีแปลงพลังงานทั้งหมด เพราะเป็นการแปลงพลังงานกลเป็นพลังงานกลโดยตรง ไม่ผ่านความร้อนจึงไม่ติดขีดจำกัดคาร์โนต์ กังหันขนาดใหญ่เพียงตัวเดียวทำได้ถึง 90–95% และเมื่อรวมการสูญเสียในท่อและเครื่องกำเนิดไฟฟ้าแล้วทั้งระบบอยู่ที่ราว 75–90% เทียบกับโรงไฟฟ้าความร้อนใต้พิภพในบทที่ 4 ที่ทำได้เพียง 8–17%",
+        "en": "Hydro is the most efficient of all conversion technologies because it turns mechanical energy directly into mechanical energy — no heat, so no Carnot limit. A large turbine alone reaches 90–95%, and with penstock and generator losses the whole system runs at 75–90%, against the 8–17% of the geothermal plants in Chapter 4."
+      }
+    },
+    {
+      "q": {
+        "th": "กังหันเพลตัน (Pelton) เหมาะกับสภาพแบบใด",
+        "en": "What conditions suit a Pelton turbine?"
+      },
+      "choices": [
+        {
+          "th": "เฮดสูงมากแต่อัตราการไหลน้อย",
+          "en": "Very high head with low flow"
+        },
+        {
+          "th": "เฮดต่ำมากแต่อัตราการไหลมหาศาล",
+          "en": "Very low head with enormous flow"
+        },
+        {
+          "th": "เฮดปานกลางและอัตราการไหลปานกลางเท่านั้น",
+          "en": "Only moderate head with moderate flow"
+        },
+        {
+          "th": "ใช้ได้ดีเท่ากันทุกสภาพ",
+          "en": "It works equally well in all conditions"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "th": "เพลตันเป็นกังหันแรงกระตุ้น (impulse) ที่เปลี่ยนเฮดทั้งหมดเป็นความเร็วของลำน้ำผ่านหัวฉีดก่อน แล้วให้ลำน้ำนั้นชนถ้วยของล้อในอากาศ จึงต้องการเฮดสูงเพื่อให้ได้ลำน้ำที่เร็วพอ โดยทั่วไปใช้ที่เฮดเกิน 50 เมตรขึ้นไปถึงมากกว่า 1,000 เมตร ส่วนเฮดต่ำและการไหลมากเป็นงานของกังหันคาปลัน (Kaplan)",
+        "en": "A Pelton is an impulse turbine: it converts the whole head into the velocity of a jet at a nozzle, then lets that jet strike buckets in open air. It therefore needs high head to produce a fast enough jet — typically above 50 m and up to more than 1,000 m. Low head with high flow is Kaplan territory."
+      }
+    },
+    {
+      "q": {
+        "th": "เส้นโค้งระยะเวลาการไหล (flow duration curve) บอกอะไรแก่ผู้ออกแบบ",
+        "en": "What does a flow duration curve tell the designer?"
+      },
+      "choices": [
+        {
+          "th": "ความลึกของน้ำที่วัดได้ในลำน้ำแต่ละจุดตลอดแนวที่ทำการสำรวจภาคสนาม",
+          "en": "The water depth measured at every point along the surveyed reach"
+        },
+        {
+          "th": "ปริมาณตะกอนที่ไหลมากับน้ำในแต่ละช่วงเวลาของปีเพาะปลูก",
+          "en": "The sediment load the water carries at each time of the cropping year"
+        },
+        {
+          "th": "ความเร็วของน้ำที่หัวฉีดกังหันในแต่ละสภาวะการเดินเครื่อง",
+          "en": "The water velocity at the turbine nozzle in each operating state"
+        },
+        {
+          "th": "สัดส่วนของเวลาในหนึ่งปีที่อัตราการไหลมีค่าเท่ากับหรือมากกว่าค่าหนึ่ง",
+          "en": "The fraction of the year for which the flow equals or exceeds a value"
+        }
+      ],
+      "answer": 3,
+      "why": {
+        "th": "การเลือกอัตราการไหลออกแบบคือการต่อรอง ถ้าเลือกค่าสูงจะได้กังหันใหญ่ที่เดินเต็มกำลังเพียงไม่กี่สัปดาห์ต่อปี ถ้าเลือกค่าต่ำจะได้กังหันเล็กที่เดินเกือบตลอดปีแต่ปล่อยน้ำส่วนเกินทิ้งในฤดูฝน โครงการแบบน้ำไหลผ่าน (run-of-river) ส่วนใหญ่จึงเลือกที่ราว Q30 ถึง Q40 คืออัตราการไหลที่มีเกินอยู่ 30–40% ของเวลาในหนึ่งปี",
+        "en": "Choosing the design flow is a negotiation. Choose high and you get a large turbine that runs at full output for only a few weeks a year; choose low and you get a small one that runs almost continuously but spills the surplus in the wet season. Most run-of-river schemes settle near Q30 to Q40 — the flow exceeded 30 to 40% of the year."
+      }
+    },
+    {
+      "q": {
+        "th": "เหตุใดเขื่อนอเนกประสงค์ขนาดใหญ่ของประเทศไทยจึงไม่ได้เดินเครื่องผลิตไฟฟ้าตามความต้องการไฟฟ้าเป็นหลัก",
+        "en": "Why do Thailand’s large multi-purpose dams not run primarily to follow electricity demand?"
+      },
+      "choices": [
+        {
+          "th": "เพราะกังหันในเขื่อนเก่ามีประสิทธิภาพต่ำเกินกว่าจะเดินตามโหลดได้",
+          "en": "Because turbines in the older dams are too inefficient to follow load"
+        },
+        {
+          "th": "เพราะกฎหมายห้ามไม่ให้ผลิตไฟฟ้าเชิงพาณิชย์จากเขื่อนชลประทาน",
+          "en": "Because the law forbids commercial generation at an irrigation dam"
+        },
+        {
+          "th": "เพราะภารกิจหลักคือชลประทานและควบคุมอุทกภัย ไฟฟ้าจึงเป็นผลพลอยได้",
+          "en": "Because irrigation and flood control come first, with power as a by-product"
+        },
+        {
+          "th": "เพราะไฟฟ้าจากพลังน้ำมีต้นทุนต่อหน่วยแพงกว่าไฟฟ้าจากถ่านหินมาก",
+          "en": "Because hydroelectricity costs far more per unit than coal-fired power"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "นี่เป็นข้อที่วิศวกรเกษตรต้องเข้าใจให้ชัด เขื่อนภูมิพลและเขื่อนสิริกิติ์ถูกสร้างขึ้นเพื่อการชลประทานและการควบคุมอุทกภัยเป็นหลัก การปล่อยน้ำจึงถูกกำหนดโดยความต้องการน้ำของพื้นที่เพาะปลูกท้ายน้ำและโดยเกณฑ์การบริหารอ่าง ไฟฟ้าที่ได้จึงเป็นผลพลอยได้จากน้ำที่ต้องปล่อยอยู่แล้ว ผลคือตัวประกอบกำลังผลิตต่ำกว่าที่หลายคนคาด และในปีที่แล้งกำลังผลิตอาจลดลงมาก",
+        "en": "This is a point an agricultural engineer must be clear about. The Bhumibol and Sirikit dams were built chiefly for irrigation and flood control, so releases are dictated by downstream crop water demand and by reservoir operating rules. The electricity is a by-product of water that had to be released anyway. Capacity factors are therefore lower than many expect, and in a dry year output can fall sharply."
+      }
+    }
+  ]
+}
+        </script>
+      </section>
+
+      <!-- ============ 5.1 ============ -->
+      <section class="section" id="s1">
+        <h2><span class="num">5.1</span>
+          <span><span class="th">เฮดคูณอัตราการไหล — สมการเดียวที่ควบคุมทั้งบท</span>
+          <span class="en">Head times flow — the one equation that governs the chapter</span></span>
+        </h2>
+
+        <p>
+          <span class="th">น้ำมวล \(m\) ที่อยู่สูงกว่าจุดอ้างอิง \(H\) เมตร มีพลังงานศักย์ \(mgH\) ถ้าปล่อยให้น้ำไหลลงมาด้วยอัตรา \(\dot m\) กิโลกรัมต่อวินาที พลังงานศักย์จะถูกปลดปล่อยด้วยอัตรา \(\dot m g H\) วัตต์ นี่คือทั้งหมดของพลังงานน้ำ ไม่มีความร้อนเข้ามาเกี่ยวข้อง จึงไม่มีขีดจำกัดคาร์โนต์มาคอยตัดทอนเหมือนบทที่ 3 และบทที่ 4</span>
+          <span class="en">A mass \(m\) of water sitting \(H\) metres above a reference level holds potential energy \(mgH\). Let it descend at \(\dot m\) kilograms per second and that energy is released at a rate of \(\dot m g H\) watts. That is the whole of hydropower. No heat is involved, so there is no Carnot limit to cut it down as there was in Chapters 3 and 4.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ P \;=\; \rho \, g \, Q \, H_{net} \, \eta_{total} \]</div>
+            <span class="formula__num">(5.1)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(P\) = กำลังไฟฟ้าที่ได้ (W) · \(\rho = 1000\ \mathrm{kg/m^3}\) · \(g = 9.81\ \mathrm{m/s^2}\) · \(Q\) = อัตราการไหล (m³/s) · \(H_{net}\) = เฮดสุทธิ (m) · \(\eta_{total}\) = ประสิทธิภาพรวมของกังหัน เกียร์ และเครื่องกำเนิดไฟฟ้า · ในการคำนวณเร็ว ๆ ให้จำว่า \(P\ (\mathrm{kW}) \approx 9.81\,Q\,H\,\eta\) และถ้าสมมติ \(\eta \approx 0.7\) ก็ได้กฎในใจว่า <strong>กำลังเป็นกิโลวัตต์ ≈ 7 × อัตราการไหล × เฮด</strong></span>
+            <span class="en">\(P\) is the electrical output (W) · \(\rho = 1000\ \mathrm{kg/m^3}\) · \(g = 9.81\ \mathrm{m/s^2}\) · \(Q\) the flow (m³/s) · \(H_{net}\) the net head (m) · \(\eta_{total}\) the combined efficiency of turbine, drive and generator. For quick work remember \(P\ (\mathrm{kW}) \approx 9.81\,Q\,H\,\eta\), and with \(\eta \approx 0.7\) the mental rule becomes <strong>kilowatts ≈ 7 × flow × head</strong>.</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 5.1 · อาคารน้ำตกในคลองส่งน้ำ</span>
+            <span class="en">Worked example 5.1 · A drop structure in an irrigation canal</span>
+          </div>
+          <p>
+            <span class="th">คลองส่งน้ำสายใหญ่มีอาคารน้ำตกสูง 4.0 เมตร และในฤดูส่งน้ำมีอัตราการไหลเฉลี่ย 1.2 m³/s หากติดตั้งกังหันที่มีประสิทธิภาพรวม 0.70 จะได้กำลังเท่าไร และในหนึ่งปีจะได้พลังงานเท่าไรถ้าคลองส่งน้ำ 55% ของเวลา</span>
+            <span class="en">A main canal has a 4.0 m drop structure and carries an average of 1.2 m³/s during the delivery season. With a turbine at 0.70 overall efficiency, what power results, and what annual energy if the canal runs 55% of the time?</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">จากสมการ (5.1): \(P = 9.81 \times 1.2 \times 4.0 \times 0.70 = \mathbf{33.0\ kW}\)</span>
+              <span class="en">From equation (5.1): \(P = 9.81 \times 1.2 \times 4.0 \times 0.70 = \mathbf{33.0\ kW}\)</span>
+            </li>
+            <li>
+              <span class="th">พลังงานรายปี: \(33.0 \times 8760 \times 0.55 = \mathbf{159{,}000\ kWh}\) หรือ 159 MWh</span>
+              <span class="en">Annual energy: \(33.0 \times 8760 \times 0.55 = \mathbf{159{,}000\ kWh}\), or 159 MWh.</span>
+            </li>
+            <li>
+              <span class="th">เทียบให้เห็นภาพ: พลังงานเท่านี้เพียงพอสำหรับสถานีสูบน้ำด้วยไฟฟ้าขนาดกลางหนึ่งแห่ง หรือครัวเรือนชนบทราว 90 หลังคาเรือน และที่สำคัญคือ <em>ได้มาโดยไม่ต้องเปลี่ยนแปลงการบริหารน้ำเลย</em> เพราะน้ำนั้นต้องไหลผ่านอาคารน้ำตกอยู่แล้ว พลังงานที่เคยถูกทิ้งไปเป็นความปั่นป่วนและเสียงดังถูกดึงกลับมาใช้แทน</span>
+              <span class="en">For scale: that is enough for one medium electric pumping station, or about 90 rural households. What matters most is that it is obtained <em>without altering water management at all</em> — the water had to pass the drop anyway. Energy formerly thrown away as turbulence and noise is simply recovered.</span>
+            </li>
+          </ol>
+        </div>
+
+        <h3><span class="th">เฮดสูงกับอัตราการไหลมาก: กำลังเท่ากัน แต่คนละโครงการ</span><span class="en">High head or high flow: the same power, a different project</span></h3>
+
+        <p>
+          <span class="th">เพราะสมการ (5.1) เป็นผลคูณ กำลัง 100 กิโลวัตต์จึงมาจากเฮด 100 เมตรกับอัตราการไหล 0.15 m³/s ก็ได้ หรือจากเฮด 2 เมตรกับอัตราการไหล 7.3 m³/s ก็ได้ แต่ในทางวิศวกรรมทั้งสองไม่เหมือนกันเลย เพราะ <strong>ต้นทุนของอุปกรณ์ขึ้นกับ <em>ขนาด</em> ซึ่งกำหนดโดยอัตราการไหล ไม่ใช่โดยกำลัง</strong></span>
+          <span class="en">Because equation (5.1) is a product, 100 kW can come from 100 m of head with 0.15 m³/s, or from 2 m with 7.3 m³/s. In engineering terms these are not remotely the same, because <strong>equipment cost follows <em>size</em>, which is set by flow rather than by power</strong>.</span>
+        </p>
+
+        <p>
+          <span class="th">โครงการเฮดสูงใช้ท่อเล็ก กังหันเล็ก ประตูน้ำเล็ก แต่ต้องมีท่อส่งน้ำยาวและมักอยู่ในภูมิประเทศที่เข้าถึงยาก ส่วนโครงการเฮดต่ำใช้โครงสร้างที่ต้องรองรับน้ำปริมาณมาก ท่อและกังหันมีเส้นผ่านศูนย์กลางใหญ่ ราคาต่อกิโลวัตต์จึงสูงกว่าอย่างมีนัยสำคัญ ด้วยเหตุนี้ในตำราจึงมักกล่าวว่า <em>เฮดคือเพื่อน อัตราการไหลคือค่าใช้จ่าย</em> — แต่ข้อยกเว้นสำคัญคือกรณีที่โครงสร้างเฮดต่ำนั้น <strong>มีอยู่แล้ว</strong> อย่างเช่นอาคารน้ำตกในคลองชลประทาน ซึ่งเป็นหัวใจของหัวข้อ 5.9</span>
+          <span class="en">A high-head scheme uses a small pipe, a small turbine and small gates, but needs a long penstock and usually sits in difficult terrain. A low-head scheme needs structures sized for a great deal of water, with large-diameter pipes and runners, so its cost per kilowatt is significantly higher. Hence the textbook saying that <em>head is your friend and flow is your bill</em> — with one important exception: when the low-head structure <strong>already exists</strong>, as an irrigation drop structure does. That exception is the heart of §5.9.</span>
+        </p>
+
+        <div class="demo" data-demo="hydro-power" data-reveal>
+          <div class="demo__head">
+            <span class="demo__label"><span class="th">ลองเล่นดู</span><span class="en">Try it</span></span>
+            <span class="demo__title">
+              <span class="th">เฮดกับอัตราการไหลแลกกันได้ แต่ราคาไม่เท่ากัน</span>
+              <span class="en">Head and flow trade freely; their prices do not</span>
+            </span>
+            <span class="demo__sub">
+              <span class="th">สมการ (5.1) ที่ประสิทธิภาพรวม 0.70 · ลองรักษากำลังให้คงที่แล้วย้ายระหว่างเฮดสูงกับอัตราการไหลมาก สังเกตว่าเส้นผ่านศูนย์กลางท่อที่ต้องใช้เปลี่ยนไปอย่างไร (คำนวณที่ความเร็วในท่อ 2.5 m/s ซึ่งเป็นค่าออกแบบทั่วไป)</span>
+              <span class="en">Equation (5.1) at 0.70 overall efficiency. Hold the power roughly constant while moving between high head and high flow, and watch what happens to the pipe diameter you need (sized at 2.5 m/s, a common design velocity).</span>
+            </span>
+          </div>
+
+          <div class="demo__stage" style="min-width:0">
+            <div class="sbar">
+              <div class="sbar__seg sbar__seg--usable" data-hp-seg="out" style="width:70%"></div>
+              <div class="sbar__seg sbar__seg--water" data-hp-seg="loss" style="width:30%"></div>
+            </div>
+            <div class="sbar-scale">
+              <span>0</span>
+              <span><span class="th">พลังงานศักย์ทั้งหมดของน้ำที่ไหลผ่าน</span><span class="en">All the potential energy passing through</span></span>
+            </div>
+            <div class="sbar-legend">
+              <span class="key"><i class="k-usable"></i><span class="th">ออกมาเป็นไฟฟ้า</span><span class="en">Delivered as electricity</span></span>
+              <span class="key"><i class="k-water"></i><span class="th">สูญเสียในกังหัน เกียร์ และเครื่องกำเนิดไฟฟ้า</span><span class="en">Lost in turbine, drive and generator</span></span>
+            </div>
+          </div>
+
+          <div class="readouts">
+            <div class="readout readout--accent">
+              <span class="readout__label"><span class="th">กำลังไฟฟ้า</span><span class="en">Electrical output</span></span>
+              <span class="readout__value"><span data-hp-power>33.0</span><span class="readout__unit">kW</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">พลังงานรายปีที่ CF 55%</span><span class="en">Annual energy at 55% CF</span></span>
+              <span class="readout__value"><span data-hp-energy>159</span><span class="readout__unit">MWh</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">เส้นผ่านศูนย์กลางท่อที่ต้องใช้</span><span class="en">Pipe diameter needed</span></span>
+              <span class="readout__value"><span data-hp-dia>780</span><span class="readout__unit">mm</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">ครัวเรือนชนบทที่รองรับได้</span><span class="en">Rural households supported</span></span>
+              <span class="readout__value"><span data-hp-homes>90</span></span>
+            </div>
+          </div>
+
+          <div class="demo__controls">
+            <label class="demo__field">
+              <span class="th">เฮดสุทธิ (m)</span><span class="en">Net head (m)</span>
+              <input type="range" min="1" max="200" step="1" value="4" data-hp-head aria-label="Net head in metres">
+            </label>
+            <label class="demo__field">
+              <span class="th">อัตราการไหล (m³/s)</span><span class="en">Flow rate (m³/s)</span>
+              <input type="range" min="0.02" max="8" step="0.01" value="1.2" data-hp-flow aria-label="Flow rate in cubic metres per second">
+            </label>
+            <div class="preset-row">
+              <button type="button" class="preset" data-hp-preset="4|1.2"><span class="th">อาคารน้ำตกในคลอง</span><span class="en">Canal drop</span></button>
+              <button type="button" class="preset" data-hp-preset="12|1.8"><span class="th">ฝายขนาดเล็ก</span><span class="en">Small weir</span></button>
+              <button type="button" class="preset" data-hp-preset="60|0.15"><span class="th">ลำธารบนภูเขา</span><span class="en">Mountain stream</span></button>
+              <button type="button" class="preset" data-hp-preset="120|0.05"><span class="th">เฮดสูงในหุบเขา</span><span class="en">High-head valley</span></button>
+            </div>
+          </div>
+
+          <div class="demo__warn" data-hp-warn hidden>
+            <span class="th">ที่อัตราการไหลระดับนี้ ท่อส่งน้ำต้องมีเส้นผ่านศูนย์กลางเกินหนึ่งเมตร ซึ่งเปลี่ยนโครงการจากงานที่ใช้ท่อ HDPE สำเร็จรูปไปเป็นงานโยธาที่ต้องหล่อคอนกรีตหรือสั่งท่อเหล็กพิเศษ ต้นทุนต่อกิโลวัตต์จะกระโดดขึ้นอย่างมีนัยสำคัญ</span>
+            <span class="en">At this flow the penstock exceeds a metre in diameter, which turns the project from something built with off-the-shelf HDPE pipe into civil works requiring cast concrete or bespoke steel. Cost per kilowatt jumps significantly.</span>
+          </div>
+
+          <div class="demo__note">
+            <p>
+              <span class="th">ลองทำสิ่งนี้: ตั้งเฮด 120 m กับอัตราการไหล 0.05 m³/s จะได้ราว 41 kW ด้วยท่อเพียง 160 mm จากนั้นหากำลังเท่ากันที่เฮด 4 m — ต้องใช้อัตราการไหลราว 1.5 m³/s และท่อเกือบ 900 mm กำลังเท่ากัน แต่ปริมาณวัสดุต่างกันหลายเท่า นี่คือเหตุผลที่โครงการพลังน้ำขนาดเล็กเกือบทั้งหมดในโลกเป็นโครงการเฮดสูง <em>ยกเว้น</em> เมื่อโครงสร้างเฮดต่ำมีอยู่แล้วโดยไม่ต้องลงทุน</span>
+              <span class="en">Try this: set 120 m of head and 0.05 m³/s for about 41 kW through a pipe of just 160 mm. Now find the same power at 4 m of head — it takes roughly 1.5 m³/s and a pipe of nearly 900 mm. Identical power, several times the material. This is why nearly every small hydro scheme in the world is a high-head scheme — <em>except</em> where the low-head structure already exists at no cost.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5.2 ============ -->
+      <section class="section" id="s2">
+        <h2><span class="num">5.2</span>
+          <span><span class="th">เฮดสุทธิ: สิ่งที่วัดได้ กับสิ่งที่ใช้ได้</span>
+          <span class="en">Net head: what you measure against what you get</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ความต่างระดับระหว่างผิวน้ำที่ทางรับน้ำกับผิวน้ำที่ทางระบายเรียกว่า <strong>เฮดรวม (gross head)</strong> ซึ่งวัดได้ด้วยกล้องระดับหรือ GPS แต่กังหันไม่ได้เห็นเฮดรวมทั้งหมด เพราะน้ำต้องเสียดสีกับผนังท่อระหว่างทาง สิ่งที่เหลือให้กังหันใช้จริงคือ <strong>เฮดสุทธิ (net head)</strong></span>
+          <span class="en">The level difference between the water surface at the intake and at the tailrace is the <strong>gross head</strong>, measured with a level or GPS. The turbine never sees all of it, because the water rubs against the pipe wall on the way down. What is left for the turbine is the <strong>net head</strong>.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ H_{net} = H_{gross} - h_{f} - h_{minor} \qquad\quad h_{f} = f \, \frac{L}{D} \, \frac{v^{2}}{2g} \qquad\quad v = \frac{4Q}{\pi D^{2}} \]</div>
+            <span class="formula__num">(5.2)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(h_{f}\) = การสูญเสียเฮดจากความเสียดทานตามสมการดาร์ซี-ไวส์บาค (m) · \(f\) = ตัวประกอบความเสียดทาน ราว 0.012&ndash;0.020 สำหรับท่อ HDPE และเหล็กใหม่ · \(L\) = ความยาวท่อ (m) · \(D\) = เส้นผ่านศูนย์กลางภายใน (m) · \(v\) = ความเร็วเฉลี่ยในท่อ (m/s) · \(h_{minor}\) = การสูญเสียที่ทางเข้า ข้องอ และวาล์ว มักคิดเป็น 5&ndash;10% ของ \(h_{f}\) ในท่อยาว</span>
+            <span class="en">\(h_{f}\) is the friction head loss from the Darcy&ndash;Weisbach equation (m) · \(f\) the friction factor, about 0.012&ndash;0.020 for new HDPE and steel · \(L\) the pipe length (m) · \(D\) the internal diameter (m) · \(v\) the mean velocity (m/s) · \(h_{minor}\) the losses at the entry, bends and valves, usually taken as 5&ndash;10% of \(h_{f}\) in a long penstock.</span>
+          </div>
+        </div>
+
+        <div class="callout callout--key">
+          <div class="callout__title">
+            <span class="th">การสูญเสียแปรผกผันกับเส้นผ่านศูนย์กลางยกกำลังห้า</span>
+            <span class="en">Losses vary as the fifth power of diameter</span>
+          </div>
+          <p>
+            <span class="th">แทน \(v = 4Q/\pi D^{2}\) ลงในสมการดาร์ซี-ไวส์บาค จะได้ \(h_{f} \propto Q^{2} L / D^{5}\) เลขยกกำลังห้านี้คือข้อเท็จจริงที่มีประโยชน์ที่สุดในงานออกแบบท่อส่งน้ำ เพราะ <strong>การเพิ่มเส้นผ่านศูนย์กลางเพียง 10% ลดการสูญเสียลงได้ถึง 38%</strong> (\(1.1^{-5} = 0.62\)) ในขณะที่ราคาท่อเพิ่มขึ้นราว 20&ndash;25% เท่านั้น ท่อที่ใหญ่ขึ้นหนึ่งขนาดจึงมักคืนทุนได้ภายในไม่กี่ปีจากพลังงานที่ได้เพิ่ม</span>
+            <span class="en">Substituting \(v = 4Q/\pi D^{2}\) into Darcy&ndash;Weisbach gives \(h_{f} \propto Q^{2} L / D^{5}\). That fifth power is the single most useful fact in penstock design, because <strong>a 10% larger diameter cuts the loss by 38%</strong> (\(1.1^{-5} = 0.62\)) while the pipe costs only some 20&ndash;25% more. Going up one pipe size therefore often pays for itself within a few years from the extra energy.</span>
+          </p>
+          <p>
+            <span class="th">กฎการออกแบบที่ใช้กันทั่วไปคือเลือกเส้นผ่านศูนย์กลางให้ \(h_{f}\) อยู่ที่ <strong>ไม่เกิน 10&ndash;15% ของเฮดรวม</strong> หรือกล่าวอีกอย่างคือให้ความเร็วในท่ออยู่ราว 2&ndash;3 m/s ถ้าคำนวณแล้วได้ความเร็วเกิน 4 m/s แสดงว่าท่อเล็กเกินไปเกือบแน่นอน</span>
+            <span class="en">The usual design rule is to pick a diameter that keeps \(h_{f}\) to <strong>no more than 10&ndash;15% of the gross head</strong> — equivalently, a pipe velocity of about 2&ndash;3 m/s. If the calculation gives more than 4 m/s, the pipe is almost certainly too small.</span>
+          </p>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 5.2 · เลือกขนาดท่อส่งน้ำ</span>
+            <span class="en">Worked example 5.2 · Choosing the penstock diameter</span>
+          </div>
+          <p>
+            <span class="th">ลำธารบนภูเขาให้เฮดรวม 60 เมตร ที่อัตราการไหล 0.15 m³/s ท่อ HDPE ยาว 300 เมตร (\(f = 0.0125\)) ประสิทธิภาพรวม 0.65 จงเปรียบเทียบท่อขนาด DN250 (\(D = 0.25\) m) กับ DN315 (\(D = 0.315\) m)</span>
+            <span class="en">A mountain stream gives 60 m gross head at 0.15 m³/s through 300 m of HDPE pipe (\(f = 0.0125\)), with 0.65 overall efficiency. Compare a DN250 pipe (\(D = 0.25\) m) with a DN315 (\(D = 0.315\) m).</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">DN250: \(v = 4 \times 0.15/(\pi \times 0.25^{2}) = 0.15/0.0491 = 3.06\ \mathrm{m/s}\)</span>
+              <span class="en">DN250: \(v = 4 \times 0.15/(\pi \times 0.25^{2}) = 0.15/0.0491 = 3.06\ \mathrm{m/s}\)</span>
+            </li>
+            <li>
+              <span class="th">\(h_{f} = 0.0125 \times (300/0.25) \times (3.06^{2}/19.62) = 0.0125 \times 1200 \times 0.477 = 7.15\ \mathrm{m}\) คิดเป็น 11.9% ของเฮดรวม</span>
+              <span class="en">\(h_{f} = 0.0125 \times (300/0.25) \times (3.06^{2}/19.62) = 0.0125 \times 1200 \times 0.477 = 7.15\ \mathrm{m}\), which is 11.9% of gross head.</span>
+            </li>
+            <li>
+              <span class="th">DN315: \(v = 0.15/0.0779 = 1.93\ \mathrm{m/s}\) จึงได้ \(h_{f} = 0.0125 \times 952 \times 0.189 = 2.25\ \mathrm{m}\) คิดเป็นเพียง 3.7%</span>
+              <span class="en">DN315: \(v = 0.15/0.0779 = 1.93\ \mathrm{m/s}\), giving \(h_{f} = 0.0125 \times 952 \times 0.189 = 2.25\ \mathrm{m}\), only 3.7%.</span>
+            </li>
+            <li>
+              <span class="th">กำลังที่ได้: DN250 ให้ \(9.81 \times 0.15 \times 52.85 \times 0.65 = \mathbf{50.6\ kW}\) · DN315 ให้ \(9.81 \times 0.15 \times 57.75 \times 0.65 = \mathbf{55.2\ kW}\)</span>
+              <span class="en">Output: DN250 gives \(9.81 \times 0.15 \times 52.85 \times 0.65 = \mathbf{50.6\ kW}\); DN315 gives \(9.81 \times 0.15 \times 57.75 \times 0.65 = \mathbf{55.2\ kW}\).</span>
+            </li>
+            <li>
+              <span class="th">ท่อที่ใหญ่ขึ้นหนึ่งขนาด (เส้นผ่านศูนย์กลางเพิ่ม 26%) ให้กำลังเพิ่ม <strong>4.6 kW หรือ 9%</strong> ตลอดอายุโครงการ 30 ปี ที่ CF 0.5 คิดเป็นพลังงานส่วนเพิ่มราว 600,000 kWh ซึ่งโดยทั่วไปมีมูลค่าสูงกว่าส่วนต่างราคาท่ออย่างชัดเจน</span>
+              <span class="en">One pipe size up — 26% more diameter — yields <strong>4.6 kW, or 9% more</strong>. Over a 30-year life at 0.5 capacity factor that is some 600,000 kWh of extra energy, normally worth considerably more than the price difference of the pipe.</span>
+            </li>
+            <li>
+              <span class="th">ข้อควรสังเกต: DN250 ยังอยู่ในเกณฑ์ที่ยอมรับได้ (11.9% &lt; 15%) จึงไม่ผิด แต่ DN315 ดีกว่าในเชิงเศรษฐศาสตร์ การออกแบบท่อส่งน้ำจึงไม่ใช่การหา &ldquo;คำตอบที่ถูก&rdquo; แต่เป็นการหาจุดที่ต้นทุนท่อที่เพิ่มขึ้นเท่ากับมูลค่าพลังงานที่ได้เพิ่ม</span>
+              <span class="en">Note that DN250 is still within the accepted rule (11.9% &lt; 15%), so it is not wrong — DN315 is simply the better economic choice. Penstock sizing is not about finding &ldquo;the right answer&rdquo; but about finding where the marginal pipe cost equals the marginal value of the energy.</span>
+            </li>
+          </ol>
+        </div>
+
+        <figure class="figure" data-reveal>
+          <div class="figure__body">
+            <svg viewBox="0 0 760 350" width="760" role="img" aria-labelledby="fig51-title fig51-desc">
+              <title id="fig51-title">Gross head, friction loss and net head in a run-of-river scheme</title>
+              <desc id="fig51-desc">A hillside scheme from left to right. A weir and intake at the top feed a forebay with a trashrack and a settling basin. A penstock descends the slope to a powerhouse with a turbine and generator, and a tailrace returns the water to the stream. Gross head is measured between the forebay water surface and the tailrace water surface. The hydraulic grade line falls below the static line, and the gap between them is the friction loss; what reaches the turbine is the net head.</desc>
+
+              <defs>
+                <marker id="ha1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                  <path d="M 0 1 L 9 5 L 0 9" fill="none" class="dg-accent-s" stroke-width="1.6"/>
+                </marker>
+                <marker id="ha2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                  <path d="M 0 1 L 9 5 L 0 9" fill="none" class="dg-line" stroke-width="1.4"/>
+                </marker>
+              </defs>
+
+              <!-- hillside -->
+              <path d="M 40 300 L 150 300 L 150 96 L 300 96 L 300 80 L 40 80 Z" class="dg-fill-2" opacity="0.45"/>
+              <path d="M 150 300 L 640 300 L 640 320 L 40 320 L 40 300 Z" class="dg-fill-2" opacity="0.45"/>
+              <path d="M 300 80 L 300 96 L 150 96 L 150 300" fill="none" class="dg-rule" stroke-width="2"/>
+
+              <!-- forebay -->
+              <rect x="176" y="96" width="112" height="34" rx="2" class="dg-fill dg-accent-s" stroke-width="1.8"/>
+              <text x="232" y="112" text-anchor="middle" class="dg-label th">ถังพักน้ำ</text>
+              <text x="232" y="112" text-anchor="middle" class="dg-label en">FOREBAY</text>
+              <text x="232" y="125" text-anchor="middle" class="dg-label th">ตะแกรง · บ่อดักตะกอน</text>
+              <text x="232" y="125" text-anchor="middle" class="dg-label en">TRASHRACK · SILT BASIN</text>
+
+              <!-- weir -->
+              <rect x="50" y="68" width="60" height="16" rx="2" class="dg-fill dg-rule" stroke-width="1.5"/>
+              <text x="80" y="60" text-anchor="middle" class="dg-label th">ฝายและทางรับน้ำ</text>
+              <text x="80" y="60" text-anchor="middle" class="dg-label en">WEIR AND INTAKE</text>
+              <line x1="110" y1="76" x2="176" y2="104" class="dg-accent-s" stroke-width="3"/>
+
+              <!-- penstock -->
+              <line x1="288" y1="118" x2="520" y2="274" class="dg-accent-s" stroke-width="6"/>
+              <text x="372" y="214" class="dg-label th">ท่อส่งน้ำ · L = 300 m · D = 315 mm</text>
+              <text x="372" y="214" class="dg-label en">PENSTOCK · L = 300 m · D = 315 mm</text>
+
+              <!-- powerhouse -->
+              <rect x="520" y="262" width="98" height="38" rx="3" class="dg-fill dg-accent-s" stroke-width="2"/>
+              <text x="569" y="279" text-anchor="middle" class="dg-text th" font-weight="600">โรงไฟฟ้า</text>
+              <text x="569" y="279" text-anchor="middle" class="dg-text en" font-weight="600">Powerhouse</text>
+              <text x="569" y="293" text-anchor="middle" class="dg-label th">กังหัน + เครื่องกำเนิดไฟฟ้า</text>
+              <text x="569" y="293" text-anchor="middle" class="dg-label en">TURBINE + GENERATOR</text>
+
+              <!-- tailrace -->
+              <line x1="618" y1="300" x2="700" y2="300" class="dg-accent-s" stroke-width="4"/>
+              <text x="660" y="318" text-anchor="middle" class="dg-label th">ทางน้ำออก</text>
+              <text x="660" y="318" text-anchor="middle" class="dg-label en">TAILRACE</text>
+
+              <!-- static line vs hydraulic grade line -->
+              <line x1="288" y1="104" x2="700" y2="104" class="dg-line" stroke-width="1.2" stroke-dasharray="5 4"/>
+              <text x="704" y="100" class="dg-label th">แนวระดับสถิต</text>
+              <text x="704" y="100" class="dg-label en">STATIC LINE</text>
+
+              <line x1="288" y1="104" x2="520" y2="140" class="dg-accent" stroke-width="2"/>
+              <text x="330" y="152" class="dg-label th">เส้นลาดชลศาสตร์ — ลดลงตามความเสียดทาน</text>
+              <text x="330" y="152" class="dg-label en">HYDRAULIC GRADE LINE — FALLS WITH FRICTION</text>
+
+              <!-- head arrows -->
+              <line x1="716" y1="104" x2="716" y2="300" class="dg-accent-s" stroke-width="1.6" marker-start="url(#ha1)" marker-end="url(#ha1)"/>
+              <text x="726" y="196" class="dg-label th">เฮดรวม</text>
+              <text x="726" y="196" class="dg-label en">GROSS</text>
+              <text x="726" y="210" class="dg-label">60 m</text>
+
+              <line x1="688" y1="140" x2="688" y2="300" class="dg-accent" stroke-width="1.6" marker-start="url(#ha2)" marker-end="url(#ha2)"/>
+              <text x="636" y="176" class="dg-label th">เฮดสุทธิ 57.8 m</text>
+              <text x="636" y="176" class="dg-label en">NET HEAD 57.8 m</text>
+
+              <line x1="524" y1="106" x2="524" y2="138" class="dg-line" stroke-width="1.6" marker-start="url(#ha2)" marker-end="url(#ha2)"/>
+              <text x="440" y="122" class="dg-label th">สูญเสีย 2.2 m</text>
+              <text x="440" y="122" class="dg-label en">LOSS 2.2 m</text>
+
+              <text x="40" y="344" class="dg-label th">บ่อดักตะกอนไม่ใช่ของฟุ่มเฟือย — ทรายที่ผ่านเข้าไปจะกัดใบกังหันจนประสิทธิภาพตกภายในไม่กี่ฤดูฝน</text>
+              <text x="40" y="344" class="dg-label en">THE SILT BASIN IS NOT A LUXURY — SAND THAT GETS THROUGH ERODES THE RUNNER WITHIN A FEW WET SEASONS</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label"><span class="th">รูปที่ 5.1</span><span class="en">Figure 5.1</span></span>
+            <span class="th">ระบบพลังน้ำแบบน้ำไหลผ่าน (run-of-river) ไม่มีอ่างเก็บน้ำ จึงผลิตได้ตามที่ลำน้ำให้มาในขณะนั้น สังเกตว่าเฮดรวมวัดระหว่าง <em>ผิวน้ำ</em> สองระดับ ไม่ใช่ระหว่างตัวอาคาร และเส้นลาดชลศาสตร์ที่ลาดลงคือภาพของการสูญเสียจากความเสียดทาน ระยะห่างระหว่างเส้นประกับเส้นทึบที่โรงไฟฟ้าคือเฮดที่หายไปกับผนังท่อ</span>
+            <span class="en">A run-of-river scheme has no reservoir, so it produces whatever the stream gives at that moment. Note that gross head is measured between two <em>water surfaces</em>, not between structures, and that the sloping hydraulic grade line is a picture of friction loss. The gap between the dashed and solid lines at the powerhouse is head surrendered to the pipe wall.</span>
+          </figcaption>
+        </figure>
+
+        <div class="demo" data-demo="penstock" data-reveal>
+          <div class="demo__head">
+            <span class="demo__label"><span class="th">ลองเล่นดู</span><span class="en">Try it</span></span>
+            <span class="demo__title">
+              <span class="th">เลขยกกำลังห้า: ขนาดท่อกับพลังงานที่หายไป</span>
+              <span class="en">The fifth power: pipe size against energy lost</span>
+            </span>
+            <span class="demo__sub">
+              <span class="th">สมการ (5.2) กับตัวอย่างที่ 5.2 — เฮดรวม 60 m, ท่อยาว 300 m, \(f = 0.0125\), ประสิทธิภาพ 0.65 · เลื่อนขนาดท่อทีละน้อยแล้วดูว่าการสูญเสียตอบสนองรุนแรงเพียงใด</span>
+              <span class="en">Equation (5.2) on worked example 5.2 — 60 m gross head, 300 m of pipe, \(f = 0.0125\), efficiency 0.65. Move the diameter a little and watch how violently the loss responds.</span>
+            </span>
+          </div>
+
+          <div class="demo__stage" style="min-width:0">
+            <div class="sbar">
+              <div class="sbar__seg sbar__seg--usable" data-pk-seg="net" style="width:96%"></div>
+              <div class="sbar__seg sbar__seg--hyd" data-pk-seg="loss" style="width:4%"></div>
+            </div>
+            <div class="sbar-scale">
+              <span>0</span>
+              <span><span class="th">เฮดรวม 60 เมตร</span><span class="en">60 m of gross head</span></span>
+            </div>
+            <div class="sbar-legend">
+              <span class="key"><i class="k-usable"></i><span class="th">เฮดสุทธิที่กังหันได้ใช้</span><span class="en">Net head the turbine receives</span></span>
+              <span class="key"><i class="k-hyd"></i><span class="th">สูญเสียไปกับความเสียดทานในท่อ</span><span class="en">Surrendered to pipe friction</span></span>
+            </div>
+          </div>
+
+          <div class="readouts">
+            <div class="readout readout--accent">
+              <span class="readout__label"><span class="th">กำลังไฟฟ้า</span><span class="en">Electrical output</span></span>
+              <span class="readout__value"><span data-pk-power>55.2</span><span class="readout__unit">kW</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">การสูญเสียเฮด</span><span class="en">Head loss</span></span>
+              <span class="readout__value"><span data-pk-loss>2.25</span><span class="readout__unit">m</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">ความเร็วในท่อ</span><span class="en">Pipe velocity</span></span>
+              <span class="readout__value"><span data-pk-vel>1.93</span><span class="readout__unit">m/s</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">สัดส่วนเฮดที่สูญเสีย</span><span class="en">Share of head lost</span></span>
+              <span class="readout__value"><span data-pk-pct>3.7</span><span class="readout__unit">%</span></span>
+            </div>
+          </div>
+
+          <div class="demo__controls">
+            <label class="demo__field">
+              <span class="th">เส้นผ่านศูนย์กลางภายใน (mm)</span><span class="en">Internal diameter (mm)</span>
+              <input type="range" min="120" max="450" step="5" value="315" data-pk-dia aria-label="Internal pipe diameter in millimetres">
+            </label>
+            <label class="demo__field">
+              <span class="th">อัตราการไหล (m³/s)</span><span class="en">Flow rate (m³/s)</span>
+              <input type="range" min="0.05" max="0.4" step="0.01" value="0.15" data-pk-flow aria-label="Flow rate in cubic metres per second">
+            </label>
+            <div class="preset-row">
+              <button type="button" class="preset" data-pk-preset="200"><span class="th">DN200 — ประหยัดท่อ</span><span class="en">DN200 — cheap pipe</span></button>
+              <button type="button" class="preset" data-pk-preset="250"><span class="th">DN250</span><span class="en">DN250</span></button>
+              <button type="button" class="preset" data-pk-preset="315"><span class="th">DN315 — สมดุล</span><span class="en">DN315 — balanced</span></button>
+              <button type="button" class="preset" data-pk-preset="400"><span class="th">DN400 — ท่อแพง</span><span class="en">DN400 — costly pipe</span></button>
+            </div>
+          </div>
+
+          <div class="demo__warn" data-pk-warn hidden>
+            <span class="th">การสูญเสียเกิน 15% ของเฮดรวม และความเร็วในท่อสูงเกิน 4 m/s แล้ว นอกจากพลังงานที่หายไปอย่างถาวร ความเร็วระดับนี้ยังทำให้ค้อนน้ำ (water hammer) ตอนปิดวาล์วรุนแรงขึ้นมาก และเร่งการสึกกร่อนจากทรายที่ผ่านบ่อดักตะกอนมาได้ ท่อขนาดนี้เล็กเกินไป</span>
+            <span class="en">The loss now exceeds 15% of gross head and the velocity is past 4 m/s. Beyond the energy permanently given up, velocities like this make water hammer on valve closure far more severe and accelerate abrasion from any sand that gets past the silt basin. The pipe is too small.</span>
+          </div>
+
+          <div class="demo__note">
+            <p>
+              <span class="th">สังเกตความไม่สมมาตร: ลดขนาดจาก DN315 เหลือ DN250 (เล็กลง 21%) การสูญเสียเพิ่มขึ้นสามเท่า แต่เพิ่มขนาดจาก DN315 เป็น DN400 (ใหญ่ขึ้น 27%) การสูญเสียลดลงเหลือไม่ถึงหนึ่งในสาม พฤติกรรมแบบนี้หมายความว่า <em>ความผิดพลาดจากการเลือกท่อเล็กเกินไปแพงกว่าความผิดพลาดจากการเลือกท่อใหญ่เกินไปเสมอ</em> เมื่อไม่แน่ใจ ให้เลือกขนาดใหญ่ขึ้นหนึ่งขั้น</span>
+              <span class="en">Note the asymmetry: dropping from DN315 to DN250 — 21% smaller — roughly triples the loss, while going up to DN400 — 27% larger — cuts it to under a third. This behaviour means <em>the mistake of undersizing always costs more than the mistake of oversizing</em>. When in doubt, go up one size.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5.3 ============ -->
+      <section class="section" id="s3">
+        <h2><span class="num">5.3</span>
+          <span><span class="th">การประเมินแหล่งและเส้นโค้งระยะเวลาการไหล</span>
+          <span class="en">Site assessment and the flow duration curve</span></span>
+        </h2>
+
+        <p>
+          <span class="th">การวัดเฮดเป็นงานง่าย ทำได้ในครึ่งวันด้วยกล้องระดับ และค่าที่ได้ก็คงที่ตลอดอายุโครงการ ส่วนการวัดอัตราการไหลเป็นงานยาก เพราะค่าเปลี่ยนทุกวัน ทุกฤดู และทุกปี ความแตกต่างข้อนี้กำหนดรูปแบบการทำงานทั้งหมด — <em>เฮดวัดครั้งเดียว อัตราการไหลต้องเฝ้าดูเป็นปี</em></span>
+          <span class="en">Measuring head is easy: half a day with a level, and the answer holds for the life of the project. Measuring flow is hard, because it changes by the day, the season and the year. That difference shapes the whole workflow — <em>head is measured once; flow must be watched for a year</em>.</span>
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">วิธีวัดอัตราการไหล</span><span class="en">Flow measurement method</span></th>
+                <th><span class="th">เหมาะกับ</span><span class="en">Suits</span></th>
+                <th><span class="th">ความแม่นยำ</span><span class="en">Accuracy</span></th>
+                <th><span class="th">ข้อสังเกต</span><span class="en">Note</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th">วิธีใช้ถัง</span><span class="en">Bucket method</span></td>
+                <td><span class="th">ลำธารเล็กมาก ต่ำกว่า 20 L/s</span><span class="en">Very small streams, under 20 L/s</span></td>
+                <td class="num">±5%</td>
+                <td><span class="th">จับเวลาน้ำที่ไหลลงถังทั้งหมด แม่นยำที่สุดถ้าทำได้</span><span class="en">Time the whole flow into a drum; the most accurate if feasible</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ฝายวัดน้ำ (สามเหลี่ยม / สี่เหลี่ยม)</span><span class="en">Measuring weir (V-notch / rectangular)</span></td>
+                <td><span class="th">ลำธารเล็กถึงกลาง 10&ndash;500 L/s</span><span class="en">Small to medium streams, 10&ndash;500 L/s</span></td>
+                <td class="num">±3–5%</td>
+                <td><span class="th">อ่านค่าจากความสูงน้ำเหนือสันฝายเพียงค่าเดียว เหมาะกับการเฝ้าวัดระยะยาว</span><span class="en">One reading of head over the crest; ideal for long-term monitoring</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">วิธีพื้นที่หน้าตัดคูณความเร็ว</span><span class="en">Area&ndash;velocity method</span></td>
+                <td><span class="th">คลองและลำน้ำขนาดใหญ่</span><span class="en">Canals and larger streams</span></td>
+                <td class="num">±10%</td>
+                <td><span class="th">วัดความเร็วหลายจุดด้วยเครื่องวัดกระแสน้ำ ความเร็วเฉลี่ยอยู่ที่ราว 0.6 ของความลึกจากผิวน้ำ</span><span class="en">Current-meter readings at several points; mean velocity sits at about 0.6 of the depth</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">วิธีทุ่นลอย</span><span class="en">Float method</span></td>
+                <td><span class="th">ประเมินคร่าว ๆ ในภาคสนาม</span><span class="en">Rough field reconnaissance</span></td>
+                <td class="num">±20–30%</td>
+                <td><span class="th">คูณความเร็วผิวน้ำด้วย 0.8&ndash;0.85 เพื่อประมาณความเร็วเฉลี่ย ใช้ตัดสินใจลงทุนไม่ได้</span><span class="en">Multiply surface velocity by 0.8&ndash;0.85 for the mean; never sufficient for an investment decision</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ข้อมูลสถานีวัดน้ำท่า</span><span class="en">Gauging-station records</span></td>
+                <td><span class="th">ลุ่มน้ำที่มีสถานีวัดอยู่แล้ว</span><span class="en">Catchments with an existing station</span></td>
+                <td class="num">—</td>
+                <td><span class="th">ดีที่สุดเมื่อมีข้อมูลย้อนหลังหลายปี ปรับค่าตามสัดส่วนพื้นที่ลุ่มน้ำได้ถ้าสถานีไม่ได้อยู่ตรงจุด</span><span class="en">Best of all when multi-year records exist; scale by catchment area if the station is not at the site</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">
+          <span class="th">ตารางที่ 5.1 · การวัดครั้งเดียวไม่มีความหมายสำหรับการออกแบบ สิ่งที่ต้องการคือการกระจายของอัตราการไหลตลอดปี ซึ่งนำไปสู่เครื่องมือชิ้นถัดไป</span>
+          <span class="en">Table 5.1 · A single measurement means nothing for design. What is needed is the distribution of flow across the year — which leads to the next tool.</span>
+        </p>
+
+        <h3><span class="th">เส้นโค้งระยะเวลาการไหล</span><span class="en">The flow duration curve</span></h3>
+
+        <p>
+          <span class="th">นำข้อมูลอัตราการไหลรายวันตลอดปีมาเรียงจากมากไปน้อย แล้ววาดกราฟระหว่างอัตราการไหลกับสัดส่วนของเวลาที่มีค่าเท่ากับหรือมากกว่านั้น จะได้ <strong>เส้นโค้งระยะเวลาการไหล (flow duration curve, FDC)</strong> สัญลักษณ์ \(Q_{30}\) หมายถึงอัตราการไหลที่มีเกินอยู่ 30% ของเวลาในหนึ่งปี</span>
+          <span class="en">Take a year of daily flows, sort them from largest to smallest, and plot flow against the fraction of time it is equalled or exceeded. The result is the <strong>flow duration curve (FDC)</strong>. The notation \(Q_{30}\) means the flow that is exceeded 30% of the year.</span>
+        </p>
+
+        <p>
+          <span class="th">การเลือกอัตราการไหลออกแบบคือการต่อรองที่มีสองด้านชัดเจน เลือกสูง (เช่น \(Q_{10}\)) จะได้กังหันใหญ่ที่เดินเต็มกำลังเพียงไม่กี่สัปดาห์แล้วเดินแบบผ่อนโหลดตลอดปีที่เหลือ ซึ่งกังหันส่วนใหญ่มีประสิทธิภาพตกเมื่อเดินต่ำกว่าพิกัด เลือกต่ำ (เช่น \(Q_{60}\)) จะได้กังหันเล็กที่เดินเกือบตลอดปีแต่ต้องปล่อยน้ำส่วนเกินทิ้งไปในฤดูฝน จุดที่ลงตัวสำหรับโครงการน้ำไหลผ่านมักอยู่ระหว่าง \(Q_{30}\) ถึง \(Q_{40}\)</span>
+          <span class="en">Choosing the design flow is a negotiation with two clear sides. Choose high, say \(Q_{10}\), and you get a large turbine that runs at full output for a few weeks and part-loaded for the rest of the year — and most turbines lose efficiency below rating. Choose low, say \(Q_{60}\), and you get a small turbine running almost continuously but spilling the surplus all wet season. For run-of-river schemes the balance usually falls between \(Q_{30}\) and \(Q_{40}\).</span>
+        </p>
+
+        <figure class="figure" data-reveal>
+          <div class="figure__body">
+            <svg viewBox="0 0 760 360" width="760" role="img" aria-labelledby="fig52-title fig52-desc">
+              <title id="fig52-title">A flow duration curve with the design flow marked</title>
+              <desc id="fig52-desc">Flow on the vertical axis against the percentage of the year exceeded on the horizontal axis. The curve falls steeply from 4.8 cubic metres per second at 5 percent exceedance to 0.18 at 95 percent. A horizontal line marks the design flow of 1.8 at 30 percent exceedance. Water above that line, to the left, is spilled. Water below the line and above the turbine minimum is the energy actually captured. Below the minimum, at the right, the turbine cannot run.</desc>
+
+              <!-- axes -->
+              <line x1="86" y1="300" x2="700" y2="300" class="dg-rule" stroke-width="2"/>
+              <line x1="86" y1="300" x2="86" y2="40" class="dg-rule" stroke-width="2"/>
+
+              <g class="dg-label" text-anchor="middle">
+                <text x="86" y="320">0</text>
+                <text x="209" y="320">20</text>
+                <text x="332" y="320">40</text>
+                <text x="455" y="320">60</text>
+                <text x="578" y="320">80</text>
+                <text x="700" y="320">100</text>
+              </g>
+              <text x="393" y="340" text-anchor="middle" class="dg-text th">สัดส่วนของเวลาในหนึ่งปีที่มีอัตราการไหลเกินค่านี้ (%)</text>
+              <text x="393" y="340" text-anchor="middle" class="dg-text en">Percentage of the year the flow is exceeded (%)</text>
+
+              <g class="dg-label" text-anchor="end">
+                <text x="78" y="304">0</text>
+                <text x="78" y="248">1.5</text>
+                <text x="78" y="196">3.0</text>
+                <text x="78" y="144">4.5</text>
+                <text x="78" y="92">6.0</text>
+              </g>
+              <text x="30" y="170" class="dg-label th">Q (m³/s)</text>
+              <text x="30" y="170" class="dg-label en">Q (m³/s)</text>
+
+              <g class="dg-line" stroke-width="1" stroke-dasharray="3 4">
+                <line x1="86" y1="248" x2="700" y2="248"/>
+                <line x1="86" y1="196" x2="700" y2="196"/>
+                <line x1="86" y1="144" x2="700" y2="144"/>
+              </g>
+
+              <!-- spilled area (above design flow, left of 30%) -->
+              <path d="M 117 133 L 148 176 L 209 217 L 270 238 L 270 238 L 117 238 Z" class="dg-fill-2 dg-rule" stroke-width="1" opacity="0.6"/>
+              <text x="150" y="196" class="dg-label th">น้ำส่วนเกิน — ปล่อยทิ้ง</text>
+              <text x="150" y="196" class="dg-label en">SURPLUS — SPILLED</text>
+
+              <!-- captured area -->
+              <path d="M 270 238 L 332 252 L 394 262 L 455 270 L 517 278 L 548 283 L 548 300 L 270 300 Z" class="dg-fill dg-accent-s" stroke-width="1.2" opacity="0.55"/>
+              <path d="M 117 238 L 270 238 L 270 300 L 117 300 Z" class="dg-fill dg-accent-s" stroke-width="1.2" opacity="0.55"/>
+              <text x="330" y="288" class="dg-text th" font-weight="600">พลังงานที่เก็บได้จริง</text>
+              <text x="330" y="288" class="dg-text en" font-weight="600">Energy actually captured</text>
+
+              <!-- the curve -->
+              <path d="M 117 133 L 148 176 L 209 217 L 270 238 L 332 252 L 394 262 L 455 270 L 517 278 L 578 286 L 639 292 L 670 294"
+                    fill="none" class="dg-accent" stroke-width="2.6"/>
+
+              <!-- design flow line -->
+              <line x1="86" y1="238" x2="700" y2="238" class="dg-accent-s" stroke-width="2" stroke-dasharray="7 4"/>
+              <text x="470" y="232" class="dg-text th" font-weight="600">อัตราการไหลออกแบบ Q₃₀ = 1.8 m³/s</text>
+              <text x="470" y="232" class="dg-text en" font-weight="600">Design flow Q₃₀ = 1.8 m³/s</text>
+
+              <!-- turbine minimum -->
+              <line x1="86" y1="287" x2="700" y2="287" class="dg-line" stroke-width="1.6" stroke-dasharray="4 3"/>
+              <text x="92" y="283" class="dg-label th">ขีดต่ำสุดที่กังหันยังเดินได้ (20% ของพิกัด)</text>
+              <text x="92" y="283" class="dg-label en">TURBINE MINIMUM (20% OF RATED)</text>
+
+              <line x1="548" y1="287" x2="548" y2="300" class="dg-line" stroke-width="1.2"/>
+              <text x="556" y="272" class="dg-label th">หยุดเดิน</text>
+              <text x="556" y="272" class="dg-label en">SHUT DOWN</text>
+
+              <line x1="270" y1="40" x2="270" y2="300" class="dg-line" stroke-width="1.2" stroke-dasharray="3 4"/>
+              <text x="276" y="52" class="dg-label th">30% ของปี</text>
+              <text x="276" y="52" class="dg-label en">30% OF THE YEAR</text>
+
+              <text x="86" y="356" class="dg-label th">พื้นที่ใต้เส้นโค้งที่ถูกตัดด้วยเส้นออกแบบคือพลังงานรายปี — เลือกเส้นสูงขึ้นได้กำลังมากขึ้นแต่เสียน้ำมากขึ้นด้วย</text>
+              <text x="86" y="356" class="dg-label en">THE AREA UNDER THE CURVE, CLIPPED BY THE DESIGN LINE, IS THE ANNUAL ENERGY — RAISE THE LINE FOR MORE POWER BUT MORE SPILL</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label"><span class="th">รูปที่ 5.2</span><span class="en">Figure 5.2</span></span>
+            <span class="th">เส้นโค้งระยะเวลาการไหลเปลี่ยนคำถาม &ldquo;ลำน้ำนี้มีน้ำเท่าไร&rdquo; ซึ่งตอบไม่ได้ ให้กลายเป็นคำถามที่ตอบได้ว่า &ldquo;มีน้ำอย่างน้อยเท่านี้อยู่กี่เปอร์เซ็นต์ของปี&rdquo; พื้นที่สีเข้มคือพลังงานที่เก็บได้จริง ส่วนพื้นที่ด้านบนซ้ายคือน้ำที่ต้องปล่อยผ่านไปเพราะกังหันรับไม่ไหว การยกเส้นออกแบบขึ้นจะกินพื้นที่ด้านบนเข้ามาได้บางส่วน แต่ต้องแลกกับกังหันที่ใหญ่ขึ้นและเดินต่ำกว่าพิกัดนานขึ้น</span>
+            <span class="en">The flow duration curve turns the unanswerable question &ldquo;how much water does this stream have?&rdquo; into the answerable &ldquo;for what percentage of the year is there at least this much?&rdquo; The shaded area is the energy actually captured; the region above and to the left is water that must be let past because the turbine cannot take it. Raising the design line claims some of that region, at the price of a larger turbine spending more of the year below rating.</span>
+          </figcaption>
+        </figure>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 5.3 · พลังงานรายปีจากเส้นโค้งระยะเวลาการไหล</span>
+            <span class="en">Worked example 5.3 · Annual energy from a flow duration curve</span>
+          </div>
+          <p>
+            <span class="th">ใช้ข้อมูลจากรูปที่ 5.2 โดยเฮดสุทธิ 12 m ประสิทธิภาพรวม 0.75 อัตราการไหลออกแบบ \(Q_{30} = 1.8\ \mathrm{m^3/s}\) และกังหันเดินได้ต่ำสุดที่ 20% ของพิกัด (0.36 m³/s) จงหากำลังพิกัด พลังงานรายปี และตัวประกอบกำลังผลิต</span>
+            <span class="en">Using the data of Figure 5.2 with 12 m net head, 0.75 overall efficiency, a design flow of \(Q_{30} = 1.8\ \mathrm{m^3/s}\), and a turbine minimum of 20% of rated (0.36 m³/s), find the rated power, the annual energy and the capacity factor.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">กำลังพิกัด: \(P = 9.81 \times 1.8 \times 12 \times 0.75 = \mathbf{158.9\ kW}\)</span>
+              <span class="en">Rated power: \(P = 9.81 \times 1.8 \times 12 \times 0.75 = \mathbf{158.9\ kW}\)</span>
+            </li>
+            <li>
+              <span class="th">แบ่งปีออกเป็นสิบช่วง ช่วงละ 876 ชั่วโมง แล้วอ่านอัตราการไหลกลางช่วงจากเส้นโค้ง โดย <em>ตัดค่าที่เกิน 1.8 ให้เหลือ 1.8</em> และตัดค่าที่ต่ำกว่า 0.36 ให้เป็นศูนย์:</span>
+              <span class="en">Divide the year into ten bands of 876 hours, read the mid-band flow from the curve, <em>clip anything above 1.8 down to 1.8</em> and anything below 0.36 to zero:</span>
+            </li>
+            <li>
+              <span class="th">1.8 · 1.8 · 1.8 · 1.6 · 1.25 · 0.97 · 0.73 · 0.52 · 0 · 0 รวมได้ \(\sum Q = 10.47\ \mathrm{m^3/s}\)</span>
+              <span class="en">1.8 · 1.8 · 1.8 · 1.6 · 1.25 · 0.97 · 0.73 · 0.52 · 0 · 0, summing to \(\sum Q = 10.47\ \mathrm{m^3/s}\)</span>
+            </li>
+            <li>
+              <span class="th">พลังงาน: \(E = 9.81 \times 12 \times 0.75 \times 10.47 \times 876 = 88.3 \times 9{,}172 = \mathbf{810{,}000\ kWh}\) หรือ 810 MWh</span>
+              <span class="en">Energy: \(E = 9.81 \times 12 \times 0.75 \times 10.47 \times 876 = 88.3 \times 9{,}172 = \mathbf{810{,}000\ kWh}\), or 810 MWh.</span>
+            </li>
+            <li>
+              <span class="th">ตัวประกอบกำลังผลิต: \(\mathrm{CF} = 810{,}000/(158.9 \times 8760) = \mathbf{58\%}\) ซึ่งเป็นค่าปกติที่ดีสำหรับโครงการน้ำไหลผ่าน และสูงกว่าโซลาร์ในไทยราวสามเท่าครึ่ง</span>
+              <span class="en">Capacity factor: \(\mathrm{CF} = 810{,}000/(158.9 \times 8760) = \mathbf{58\%}\) — a good, normal figure for run-of-river, and about three and a half times that of solar in Thailand.</span>
+            </li>
+            <li>
+              <span class="th">สังเกตสองช่วงสุดท้ายที่เป็นศูนย์: ราว 20% ของปี ลำน้ำมีน้ำน้อยเกินกว่ากังหันจะเดินได้เลย นี่ไม่ใช่ข้อบกพร่องของการออกแบบ แต่เป็นธรรมชาติของลำน้ำในเขตมรสุม การเลือกกังหันที่เดินได้ที่โหลดต่ำ เช่น กังหันครอสโฟลว์ที่แบ่งช่องได้ จะดึงพลังงานจากช่วงปลายปีกลับมาได้อีกบางส่วน</span>
+              <span class="en">Note the two zero bands: for about 20% of the year the stream has too little water for the turbine to run at all. That is not a design failure but the nature of a monsoon river. Choosing a turbine that tolerates low load — a crossflow with a split runner, for instance — recovers part of that tail.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="callout callout--warn">
+          <div class="callout__title">
+            <span class="th">น้ำที่ต้องปล่อยให้ลำน้ำ ไม่ใช่น้ำที่เหลือจากกังหัน</span>
+            <span class="en">The river&rsquo;s water is not the turbine&rsquo;s leftovers</span>
+          </div>
+          <p>
+            <span class="th">ก่อนคำนวณใด ๆ ต้องหักอัตราการไหลที่ต้องปล่อยไว้ให้ระบบนิเวศท้ายน้ำออกก่อน (environmental flow หรือ compensation flow) ซึ่งโดยทั่วไปกำหนดไว้ที่ราว \(Q_{95}\) หรือ 10% ของอัตราการไหลเฉลี่ยรายปี แล้วแต่ว่าค่าใดสูงกว่า น้ำส่วนนี้ต้องไหลผ่านช่วงลำน้ำเดิมระหว่างฝายกับโรงไฟฟ้าเสมอ ไม่ว่าจะขาดทุนหรือไม่ ในทางปฏิบัติหมายความว่าอัตราการไหลที่ใช้ได้จริงคือ \(Q_{ที่วัดได้} - Q_{นิเวศ}\) และในฤดูแล้งความแตกต่างนี้อาจทำให้โครงการต้องหยุดเดินทั้งหมด</span>
+            <span class="en">Before any calculation, subtract the flow that must be left for the downstream ecosystem — the environmental or compensation flow — usually set at about \(Q_{95}\) or 10% of the mean annual flow, whichever is greater. That water must pass down the original channel between the weir and the powerhouse at all times, profitable or not. In practice the usable flow is \(Q_{measured} - Q_{environmental}\), and in the dry season the difference can shut the scheme down entirely.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 5.4 ============ -->
+      <section class="section" id="s4">
+        <h2><span class="num">5.4</span>
+          <span><span class="th">กังหันน้ำสองตระกูล: แรงกระตุ้นและแรงปฏิกิริยา</span>
+          <span class="en">Two families of turbine: impulse and reaction</span></span>
+        </h2>
+
+        <p>
+          <span class="th">กังหันน้ำทุกชนิดในโลกแบ่งได้เป็นสองตระกูลตามวิธีที่มันดึงพลังงานออกจากน้ำ และความต่างนี้ไม่ใช่เรื่องรายละเอียดทางกล แต่เป็นความต่างเชิงหลักการที่กำหนดว่ากังหันชนิดนั้นเหมาะกับเฮดช่วงไหน</span>
+          <span class="en">Every water turbine in the world belongs to one of two families, distinguished by how it takes energy from the water. The difference is not a mechanical detail but a difference of principle, and it decides which head range each type suits.</span>
+        </p>
+
+        <p>
+          <span class="th"><strong>กังหันแรงกระตุ้น (impulse)</strong> เปลี่ยนเฮดทั้งหมดเป็นความเร็วเสียก่อนที่หัวฉีด แล้วปล่อยลำน้ำความเร็วสูงเข้าชนใบพัดที่หมุนอยู่ <em>ในอากาศ</em> ความดันรอบล้อจึงเท่ากับความดันบรรยากาศตลอดเวลา พลังงานถูกถ่ายโอนด้วยการเปลี่ยนโมเมนตัมล้วน ๆ ตัวแทนของตระกูลนี้คือ <strong>เพลตัน (Pelton)</strong> ซึ่งมีถ้วยคู่รูปช้อนที่แบ่งลำน้ำออกสองข้างและหักกลับเกือบ 180 องศา</span>
+          <span class="en"><strong>Impulse turbines</strong> convert the entire head into velocity at a nozzle first, then send the fast jet against blades spinning <em>in open air</em>. The pressure around the runner stays atmospheric throughout, and energy is transferred purely by momentum change. The family&rsquo;s representative is the <strong>Pelton</strong>, whose paired spoon-shaped buckets split the jet and turn it back through nearly 180 degrees.</span>
+        </p>
+
+        <p>
+          <span class="th"><strong>กังหันแรงปฏิกิริยา (reaction)</strong> ทำงานต่างออกไปโดยสิ้นเชิง ใบพัดจมอยู่ในน้ำที่เต็มทางเดินตลอดเวลา และน้ำยังมีความดันเหลืออยู่เมื่อเข้าสู่ใบพัด พลังงานถูกดึงออกทั้งจากการเปลี่ยนทิศทางและจากการลดความดันขณะไหลผ่าน ตัวแทนของตระกูลนี้คือ <strong>ฟรานซิส (Francis)</strong> และ <strong>คาปลัน (Kaplan)</strong> กังหันแรงปฏิกิริยาต้องมี <strong>ท่อดูด (draft tube)</strong> ที่ค่อย ๆ ขยายตัวใต้ใบพัดเพื่อกู้คืนพลังงานจลน์ที่เหลือและ &ldquo;ดูด&rdquo; ให้เกิดความดันต่ำที่ทางออกของใบพัด ซึ่งเพิ่มเฮดใช้งานได้จริง</span>
+          <span class="en"><strong>Reaction turbines</strong> work quite differently. The runner is submerged in a passage that stays full of water, and the water still carries pressure as it enters. Energy is taken both from the change of direction and from the pressure drop across the runner. The representatives are the <strong>Francis</strong> and the <strong>Kaplan</strong>. A reaction turbine requires a <strong>draft tube</strong>, a gradually expanding passage beneath the runner that recovers the remaining kinetic energy and &ldquo;sucks&rdquo; a low pressure at the runner exit, adding usefully to the head.</span>
+        </p>
+
+        <figure class="figure" data-reveal>
+          <div class="figure__body">
+            <svg viewBox="0 0 760 300" width="760" role="img" aria-labelledby="fig53-title fig53-desc">
+              <title id="fig53-title">Impulse and reaction turbines compared</title>
+              <desc id="fig53-desc">Two panels. On the left, a Pelton wheel: a penstock leads to a nozzle producing a free jet that strikes split buckets on a wheel spinning in air at atmospheric pressure, with the water falling away to the tailrace below. On the right, a Kaplan turbine: water fills a spiral case and passes through adjustable guide vanes onto a propeller runner, then down a widening draft tube to the tailwater, with pressure present throughout.</desc>
+
+              <!-- Pelton panel -->
+              <rect x="10" y="26" width="360" height="242" rx="4" class="dg-fill-2 dg-rule" stroke-width="1.2"/>
+              <text x="190" y="18" text-anchor="middle" class="dg-label th">แรงกระตุ้น · เพลตัน · ล้อหมุนในอากาศ</text>
+              <text x="190" y="18" text-anchor="middle" class="dg-label en">IMPULSE · PELTON · RUNNER SPINS IN AIR</text>
+
+              <path d="M 30 60 L 120 60 L 150 108" fill="none" class="dg-accent-s" stroke-width="7"/>
+              <text x="36" y="52" class="dg-label th">ท่อส่งน้ำ — มีความดันสูง</text>
+              <text x="36" y="52" class="dg-label en">PENSTOCK — HIGH PRESSURE</text>
+
+              <path d="M 150 104 L 168 112 L 168 124 L 150 132 Z" class="dg-fill dg-rule" stroke-width="1.5"/>
+              <text x="128" y="146" class="dg-label th">หัวฉีด</text>
+              <text x="128" y="146" class="dg-label en">NOZZLE</text>
+
+              <!-- free jet -->
+              <line x1="168" y1="118" x2="236" y2="118" class="dg-accent" stroke-width="5" stroke-dasharray="10 5"/>
+              <text x="178" y="108" class="dg-label">47 m/s</text>
+
+              <circle cx="276" cy="118" r="46" fill="none" class="dg-accent-s" stroke-width="3"/>
+              <circle cx="276" cy="118" r="7" class="dg-fill dg-rule" stroke-width="1.5"/>
+              <g class="dg-accent-s" stroke-width="2.4" fill="none">
+                <path d="M 230 112 q 10 6 0 12"/>
+                <path d="M 276 72 q 6 10 12 0"/>
+                <path d="M 322 112 q -10 6 0 12"/>
+                <path d="M 276 164 q 6 -10 12 0"/>
+              </g>
+              <text x="276" y="192" text-anchor="middle" class="dg-label th">ถ้วยคู่ — หักลำน้ำกลับเกือบ 180°</text>
+              <text x="276" y="192" text-anchor="middle" class="dg-label en">SPLIT BUCKETS — TURN THE JET ~180°</text>
+
+              <text x="30" y="216" class="dg-text th">รอบล้อเป็นอากาศ ความดันบรรยากาศตลอด</text>
+              <text x="30" y="216" class="dg-text en">Air all round; atmospheric pressure throughout</text>
+              <text x="30" y="236" class="dg-label th">เฮด 50–1,000+ m · อัตราการไหลน้อย · ไม่ต้องมีท่อดูด</text>
+              <text x="30" y="236" class="dg-label en">HEAD 50–1,000+ m · LOW FLOW · NO DRAFT TUBE</text>
+              <text x="30" y="256" class="dg-label th">ประสิทธิภาพคงที่ดีมากแม้โหลดต่ำ เพราะปิดหัวฉีดทีละหัวได้</text>
+              <text x="30" y="256" class="dg-label en">HOLDS EFFICIENCY AT LOW LOAD — JETS CAN BE SHUT ONE BY ONE</text>
+
+              <!-- Kaplan panel -->
+              <rect x="390" y="26" width="360" height="242" rx="4" class="dg-fill-2 dg-rule" stroke-width="1.2"/>
+              <text x="570" y="18" text-anchor="middle" class="dg-label th">แรงปฏิกิริยา · คาปลัน · ใบพัดจมน้ำ</text>
+              <text x="570" y="18" text-anchor="middle" class="dg-label en">REACTION · KAPLAN · RUNNER SUBMERGED</text>
+
+              <path d="M 410 58 L 700 58 L 700 96 L 410 96 Z" class="dg-fill dg-accent-s" stroke-width="1.6" opacity="0.6"/>
+              <text x="418" y="80" class="dg-label th">เรือนก้นหอย — เต็มไปด้วยน้ำที่ยังมีความดัน</text>
+              <text x="418" y="80" class="dg-label en">SPIRAL CASE — FULL OF PRESSURISED WATER</text>
+
+              <g class="dg-rule" stroke-width="2">
+                <line x1="470" y1="96" x2="482" y2="118"/>
+                <line x1="510" y1="96" x2="522" y2="118"/>
+                <line x1="550" y1="96" x2="562" y2="118"/>
+                <line x1="590" y1="96" x2="602" y2="118"/>
+                <line x1="630" y1="96" x2="642" y2="118"/>
+              </g>
+              <text x="418" y="114" class="dg-label th">ใบนำปรับมุมได้</text>
+              <text x="418" y="114" class="dg-label en">GUIDE VANES</text>
+
+              <line x1="556" y1="118" x2="556" y2="218" class="dg-rule" stroke-width="4"/>
+              <path d="M 506 130 L 606 130 L 596 146 L 516 146 Z" class="dg-fill dg-accent-s" stroke-width="2"/>
+              <text x="620" y="142" class="dg-label th">ใบพัดปรับมุมได้</text>
+              <text x="620" y="142" class="dg-label en">ADJUSTABLE BLADES</text>
+
+              <!-- draft tube -->
+              <path d="M 516 148 L 596 148 L 632 218 L 480 218 Z" class="dg-fill-2 dg-rule" stroke-width="1.8"/>
+              <text x="556" y="188" text-anchor="middle" class="dg-text th">ท่อดูด</text>
+              <text x="556" y="188" text-anchor="middle" class="dg-text en">Draft tube</text>
+              <line x1="450" y1="218" x2="700" y2="218" class="dg-accent-s" stroke-width="3"/>
+              <text x="654" y="234" class="dg-label th">ระดับน้ำท้าย</text>
+              <text x="654" y="234" class="dg-label en">TAILWATER</text>
+
+              <text x="410" y="252" class="dg-label th">เฮด 1–40 m · อัตราการไหลมาก · ท่อดูดขาดไม่ได้ · ใบปรับมุมสองชุดทำให้ประสิทธิภาพคงที่ทุกโหลด</text>
+              <text x="410" y="252" class="dg-label en">HEAD 1–40 m · HIGH FLOW · DRAFT TUBE ESSENTIAL · DOUBLE REGULATION HOLDS EFFICIENCY AT ALL LOADS</text>
+
+              <text x="10" y="292" class="dg-label th">ข้อแตกต่างที่ใช้ตัดสินได้เร็วที่สุด: ถ้ามองเห็นน้ำเป็นลำพุ่งในอากาศ นั่นคือแรงกระตุ้น ถ้าน้ำเต็มทางเดินตลอด นั่นคือแรงปฏิกิริยา</text>
+              <text x="10" y="292" class="dg-label en">THE QUICKEST TEST: IF YOU CAN SEE A JET IN OPEN AIR IT IS IMPULSE; IF THE PASSAGE STAYS FULL IT IS REACTION</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label"><span class="th">รูปที่ 5.3</span><span class="en">Figure 5.3</span></span>
+            <span class="th">สองหลักการนี้อธิบายว่าทำไมเพลตันจึงใช้กับเฮดต่ำไม่ได้ และคาปลันใช้กับเฮดสูงไม่ได้ เพลตันต้องการลำน้ำที่เร็วซึ่งมาจากเฮดสูงเท่านั้น ที่เฮด 4 เมตร ลำน้ำจะเร็วเพียง 8.8 m/s และต้องใช้ล้อที่ใหญ่เกินสมเหตุสมผลเพื่อให้ได้รอบที่ใช้งานได้ ส่วนคาปลันที่เฮดสูงจะเกิดความดันภายในเกินกว่าที่ใบพัดบาง ๆ จะรับไหว และเกิดคาวิเทชันรุนแรง</span>
+            <span class="en">These two principles explain why a Pelton cannot work at low head and a Kaplan cannot work at high head. A Pelton needs a fast jet, which only high head produces: at 4 m the jet reaches just 8.8 m/s and the wheel would have to be unreasonably large to turn at a usable speed. A Kaplan at high head would face internal pressures its slender blades cannot carry, and would cavitate severely.</span>
+          </figcaption>
+        </figure>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">ชนิดกังหัน</span><span class="en">Turbine</span></th>
+                <th><span class="th">ตระกูล</span><span class="en">Family</span></th>
+                <th class="num"><span class="th">ช่วงเฮด</span><span class="en">Head range</span></th>
+                <th class="num"><span class="th">ประสิทธิภาพสูงสุด</span><span class="en">Peak efficiency</span></th>
+                <th><span class="th">จุดเด่นที่ใช้ตัดสินใจ</span><span class="en">The deciding merit</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th"><strong>เพลตัน</strong></span><span class="en"><strong>Pelton</strong></span></td>
+                <td><span class="th">แรงกระตุ้น</span><span class="en">Impulse</span></td>
+                <td class="num">50–1,300 m</td>
+                <td class="num">88–92%</td>
+                <td><span class="th">ประสิทธิภาพแทบไม่ตกตั้งแต่ 20% ถึง 100% ของพิกัด เพราะปิดหัวฉีดทีละหัวได้</span><span class="en">Efficiency barely falls from 20% to 100% of rating, because jets shut one at a time</span></td>
+              </tr>
+              <tr>
+                <td><span class="th"><strong>เทอร์โก</strong></span><span class="en"><strong>Turgo</strong></span></td>
+                <td><span class="th">แรงกระตุ้น</span><span class="en">Impulse</span></td>
+                <td class="num">30–300 m</td>
+                <td class="num">85–90%</td>
+                <td><span class="th">ลำน้ำเข้าเฉียงและออกอีกด้าน จึงรับอัตราการไหลได้มากกว่าเพลตันที่ขนาดล้อเท่ากัน</span><span class="en">The jet enters at an angle and leaves the other side, so it swallows more flow than a Pelton of the same diameter</span></td>
+              </tr>
+              <tr>
+                <td><span class="th"><strong>ครอสโฟลว์ (แบงกี-มิเชล)</strong></span><span class="en"><strong>Crossflow (Banki-Michell)</strong></span></td>
+                <td><span class="th">แรงกระตุ้นเป็นหลัก</span><span class="en">Mostly impulse</span></td>
+                <td class="num">2–100 m</td>
+                <td class="num">75–84%</td>
+                <td><span class="th">สร้างได้ในโรงกลึงท้องถิ่น แบ่งช่องน้ำ 1:2 ได้ จึงเดินดีที่โหลดต่ำ — กังหันของงานชนบทโดยแท้</span><span class="en">Buildable in a local workshop, with a 1:2 split runner that runs well at low load — the genuinely rural turbine</span></td>
+              </tr>
+              <tr>
+                <td><span class="th"><strong>ฟรานซิส</strong></span><span class="en"><strong>Francis</strong></span></td>
+                <td><span class="th">แรงปฏิกิริยา</span><span class="en">Reaction</span></td>
+                <td class="num">10–350 m</td>
+                <td class="num">90–95%</td>
+                <td><span class="th">ประสิทธิภาพสูงสุดและครอบคลุมช่วงกว้างที่สุด เป็นกังหันที่ติดตั้งมากที่สุดในโลก</span><span class="en">The highest efficiency over the widest range; the most-installed turbine in the world</span></td>
+              </tr>
+              <tr>
+                <td><span class="th"><strong>คาปลัน / ใบพัด</strong></span><span class="en"><strong>Kaplan / propeller</strong></span></td>
+                <td><span class="th">แรงปฏิกิริยา</span><span class="en">Reaction</span></td>
+                <td class="num">1–40 m</td>
+                <td class="num">90–94%</td>
+                <td><span class="th">ชนิดเดียวที่ใช้ได้กับเฮดต่ำมาก แบบใบตายราคาถูกกว่ามากแต่ประสิทธิภาพตกเร็วเมื่อโหลดเปลี่ยน</span><span class="en">The only option at very low head; the fixed-blade propeller costs far less but loses efficiency quickly off design</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">
+          <span class="th">ตารางที่ 5.2 · คอลัมน์ขวาสุดมักสำคัญกว่าคอลัมน์ประสิทธิภาพในงานจริง เพราะลำน้ำธรรมชาติแทบไม่เคยให้อัตราการไหลคงที่ กังหันที่มีประสิทธิภาพสูงสุด 94% แต่ตกเหลือ 60% ที่ครึ่งโหลด อาจให้พลังงานรายปีน้อยกว่ากังหันที่ทำได้ 80% อย่างสม่ำเสมอ</span>
+          <span class="en">Table 5.2 · In real work the right-hand column usually matters more than the efficiency column, because a natural stream almost never delivers a steady flow. A turbine peaking at 94% but falling to 60% at half load can yield less annual energy than one that holds 80% throughout.</span>
+        </p>
+      </section>
+
+      <!-- ============ 5.5 ============ -->
+      <section class="section" id="s5">
+        <h2><span class="num">5.5</span>
+          <span><span class="th">ความเร็วจำเพาะ: ตัวเลขเดียวที่เลือกกังหันให้</span>
+          <span class="en">Specific speed: one number that picks the turbine</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ตารางที่ 5.2 ให้ช่วงเฮดของกังหันแต่ละชนิด แต่ช่วงเหล่านั้นซ้อนทับกันมาก ที่เฮด 60 เมตร ทั้งเพลตัน เทอร์โก ครอสโฟลว์ และฟรานซิสต่างก็ใช้ได้ สิ่งที่ตัดสินได้จริงคือปริมาณที่รวมเฮด อัตราการไหล และความเร็วรอบไว้ในตัวเลขเดียว เรียกว่า <strong>ความเร็วจำเพาะ (specific speed)</strong></span>
+          <span class="en">Table 5.2 gives each turbine&rsquo;s head range, but those ranges overlap heavily. At 60 m, a Pelton, a Turgo, a crossflow and a Francis are all candidates. What actually decides is a quantity that folds head, flow and rotational speed into a single number: the <strong>specific speed</strong>.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ N_{s} \;=\; \frac{N \sqrt{P}}{H^{5/4}} \]</div>
+            <span class="formula__num">(5.3)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(N_{s}\) = ความเร็วจำเพาะในระบบเมตริก (ไม่มีหน่วยที่มีความหมายทางกายภาพ) · \(N\) = ความเร็วรอบ (rpm) · \(P\) = กำลังที่เพลา (kW) · \(H\) = เฮดสุทธิ (m) · <strong>คำเตือนสำคัญ</strong>: สูตรนี้มีหลายรูปแบบที่ใช้หน่วยต่างกัน บางตำราใช้แรงม้า บางตำราใช้อัตราการไหลแทนกำลัง ตัวเลขที่ได้จึงต่างกันหลายเท่า เมื่ออ้างอิงค่า \(N_{s}\) จากที่ใด ให้ตรวจสอบนิยามที่ใช้เสมอ</span>
+            <span class="en">\(N_{s}\) is the metric specific speed (its units carry no physical meaning) · \(N\) the rotational speed (rpm) · \(P\) the shaft power (kW) · \(H\) the net head (m). <strong>An important warning</strong>: several versions of this formula exist with different units — some use horsepower, some use flow in place of power — and the resulting numbers differ severalfold. Whenever you quote an \(N_{s}\) value, check which definition produced it.</span>
+          </div>
+        </div>
+
+        <p>
+          <span class="th">ความหมายทางกายภาพของ \(N_{s}\) คือ &ldquo;รูปร่าง&rdquo; ของกังหัน ค่าต่ำหมายถึงกังหันที่หมุนช้าเมื่อเทียบกับเฮดที่มี จึงต้องมีล้อใหญ่และรับน้ำน้อย — นั่นคือเพลตัน ค่าสูงหมายถึงกังหันที่หมุนเร็วเมื่อเทียบกับเฮดที่มี จึงต้องเปิดทางให้น้ำผ่านมาก ๆ — นั่นคือคาปลัน ตัวเลขนี้จึงเรียงกังหันทั้งหมดไว้บนแกนเดียว ในลักษณะเดียวกับที่อัตราส่วนสมมูลเรียงกระบวนการแปรรูปความร้อนในบทที่ 3</span>
+          <span class="en">Physically \(N_{s}\) describes the turbine&rsquo;s &ldquo;shape&rdquo;. A low value means a machine that turns slowly for the head available, so it needs a large wheel and takes little water — a Pelton. A high value means one that turns fast for its head, so it must open a wide path for water — a Kaplan. The number therefore arranges every turbine along a single axis, much as the equivalence ratio ordered the thermal processes of Chapter 3.</span>
+        </p>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 5.4 · เลือกกังหันและความเร็วรอบ</span>
+            <span class="en">Worked example 5.4 · Choosing turbine and running speed</span>
+          </div>
+          <p>
+            <span class="th">โครงการจากตัวอย่างที่ 5.2 ให้กำลังที่เพลาราว 58 kW ที่เฮดสุทธิ 57.8 m ต้องการต่อเข้ากับเครื่องกำเนิดไฟฟ้าเหนี่ยวนำ 4 ขั้ว (1,500 rpm ที่ 50 Hz) โดยตรงโดยไม่ใช้เกียร์ จงหาความเร็วจำเพาะและเลือกชนิดกังหัน</span>
+            <span class="en">The scheme of worked example 5.2 gives about 58 kW at the shaft with 57.8 m net head, and is to be directly coupled — no gearbox — to a four-pole induction generator at 1,500 rpm, 50 Hz. Find the specific speed and choose the turbine.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">\(H^{5/4} = 57.8^{1.25}\). หา \(\ln 57.8 = 4.057\), คูณ 1.25 ได้ 5.071, แล้ว \(e^{5.071} = 159.4\)</span>
+              <span class="en">\(H^{5/4} = 57.8^{1.25}\). Take \(\ln 57.8 = 4.057\), multiply by 1.25 to get 5.071, then \(e^{5.071} = 159.4\).</span>
+            </li>
+            <li>
+              <span class="th">\(N_{s} = 1500 \times \sqrt{58} / 159.4 = 1500 \times 7.616 / 159.4 = \mathbf{71.7}\)</span>
+              <span class="en">\(N_{s} = 1500 \times \sqrt{58} / 159.4 = 1500 \times 7.616 / 159.4 = \mathbf{71.7}\)</span>
+            </li>
+            <li>
+              <span class="th">ค่า 72 ตกอยู่ในย่านของ <strong>เทอร์โก</strong> (20&ndash;80) และปลายล่างของ <strong>ฟรานซิส</strong> (60&ndash;400) ส่วนเพลตันแบบหัวฉีดเดียวอยู่ที่ 10&ndash;35 จึงต่ำเกินไปสำหรับ 1,500 rpm</span>
+              <span class="en">A value of 72 falls in <strong>Turgo</strong> territory (20&ndash;80) and at the low end of <strong>Francis</strong> (60&ndash;400). A single-jet Pelton sits at 10&ndash;35, too low for 1,500 rpm.</span>
+            </li>
+            <li>
+              <span class="th">ถ้ายืนยันจะใช้เพลตัน ต้องลดความเร็วรอบลง: ที่ \(N_{s} = 30\) จะได้ \(N = 30 \times 159.4/7.616 = 628\ \mathrm{rpm}\) ซึ่งต้องใช้เกียร์หรือสายพานทดรอบเข้าเครื่องกำเนิดไฟฟ้า เพิ่มทั้งต้นทุน การบำรุงรักษา และการสูญเสียราว 2&ndash;4%</span>
+              <span class="en">To insist on a Pelton, the speed must drop: at \(N_{s} = 30\), \(N = 30 \times 159.4/7.616 = 628\ \mathrm{rpm}\), which needs a gearbox or belt drive to the generator — adding cost, maintenance and 2&ndash;4% of loss.</span>
+            </li>
+            <li>
+              <span class="th">อีกทางเลือกคือใช้ <strong>เพลตันสองหัวฉีด</strong> ซึ่งเพิ่ม \(N_{s}\) ขึ้น \(\sqrt{2}\) เท่าที่กำลังรวมเท่าเดิม ทำให้ต่อตรงที่รอบสูงขึ้นได้ นี่คือเหตุผลที่กังหันเพลตันขนาดเล็กเชิงพาณิชย์มักมีสองหัวฉีด</span>
+              <span class="en">The alternative is a <strong>two-jet Pelton</strong>, which raises \(N_{s}\) by a factor of \(\sqrt{2}\) at the same total power, permitting direct coupling at a higher speed. This is why small commercial Pelton units so often have two jets.</span>
+            </li>
+            <li>
+              <span class="th">ข้อสรุปเชิงปฏิบัติ: <strong>เทอร์โกต่อตรง 1,500 rpm</strong> เป็นคำตอบที่สะอาดที่สุดสำหรับโครงการนี้ — ไม่มีเกียร์ ไม่มีการสูญเสียเพิ่ม และรับน้ำที่มีทรายปนได้ดีกว่าฟรานซิส ซึ่งสำคัญมากสำหรับลำธารในเขตมรสุม</span>
+              <span class="en">The practical conclusion: a <strong>direct-coupled Turgo at 1,500 rpm</strong> is the cleanest answer here — no gearbox, no extra loss, and it tolerates sandy water better than a Francis, which matters a great deal on a monsoon stream.</span>
+            </li>
+          </ol>
+        </div>
+
+        <figure class="figure" data-reveal>
+          <div class="figure__body">
+            <svg viewBox="0 0 760 400" width="760" role="img" aria-labelledby="fig54-title fig54-desc">
+              <title id="fig54-title">Turbine selection chart of head against flow</title>
+              <desc id="fig54-desc">A logarithmic chart with flow from 0.01 to 100 cubic metres per second on the horizontal axis and head from 1 to 1000 metres on the vertical. Pelton occupies the high-head, low-flow upper left. Turgo sits below it. Crossflow covers low to moderate head at small flows. Francis occupies a broad central band. Kaplan occupies the low-head, high-flow lower right. Two example points are marked: a mountain stream at 120 metres and 0.05 cubic metres per second in the Pelton region, and an irrigation canal drop at 4 metres and 1.2 cubic metres per second in the crossflow and Kaplan overlap.</desc>
+
+              <!-- axes -->
+              <line x1="90" y1="340" x2="740" y2="340" class="dg-rule" stroke-width="2"/>
+              <line x1="90" y1="340" x2="90" y2="36" class="dg-rule" stroke-width="2"/>
+
+              <g class="dg-line" stroke-width="1" stroke-dasharray="2 5">
+                <line x1="250" y1="36" x2="250" y2="340"/>
+                <line x1="410" y1="36" x2="410" y2="340"/>
+                <line x1="570" y1="36" x2="570" y2="340"/>
+                <line x1="90" y1="240" x2="740" y2="240"/>
+                <line x1="90" y1="140" x2="740" y2="140"/>
+                <line x1="90" y1="40" x2="740" y2="40"/>
+              </g>
+
+              <g class="dg-label" text-anchor="middle">
+                <text x="90" y="360">0.01</text>
+                <text x="250" y="360">0.1</text>
+                <text x="410" y="360">1</text>
+                <text x="570" y="360">10</text>
+                <text x="730" y="360">100</text>
+              </g>
+              <text x="415" y="382" text-anchor="middle" class="dg-text th">อัตราการไหล Q (m³/s) — สเกลลอการิทึม</text>
+              <text x="415" y="382" text-anchor="middle" class="dg-text en">Flow Q (m³/s) — logarithmic</text>
+
+              <g class="dg-label" text-anchor="end">
+                <text x="82" y="344">1</text>
+                <text x="82" y="244">10</text>
+                <text x="82" y="144">100</text>
+                <text x="82" y="44">1000</text>
+              </g>
+              <text x="44" y="190" class="dg-label th">เฮด H (m)</text>
+              <text x="44" y="190" class="dg-label en">HEAD H (m)</text>
+
+              <!-- Pelton -->
+              <path d="M 138 170 L 138 48 L 430 48 L 500 140 L 500 170 Z" class="dg-fill dg-accent-s" stroke-width="2" opacity="0.5"/>
+              <text x="250" y="92" class="dg-text th" font-weight="600">เพลตัน</text>
+              <text x="250" y="92" class="dg-text en" font-weight="600">Pelton</text>
+              <text x="250" y="110" class="dg-label">Ns 10–60</text>
+
+              <!-- Turgo -->
+              <path d="M 178 212 L 178 150 L 420 150 L 468 204 L 468 212 Z" fill="none" class="dg-accent" stroke-width="2" stroke-dasharray="6 4"/>
+              <text x="200" y="182" class="dg-text th">เทอร์โก</text>
+              <text x="200" y="182" class="dg-text en">Turgo</text>
+              <text x="288" y="182" class="dg-label">Ns 20–80</text>
+
+              <!-- Crossflow -->
+              <path d="M 138 312 L 138 186 L 300 186 L 300 240 L 430 240 L 430 312 Z" class="dg-fill-2 dg-rule" stroke-width="1.8" opacity="0.75"/>
+              <text x="150" y="272" class="dg-text th">ครอสโฟลว์</text>
+              <text x="150" y="272" class="dg-text en">Crossflow</text>
+              <text x="150" y="290" class="dg-label">Ns 40–200</text>
+
+              <!-- Francis -->
+              <path d="M 330 240 L 330 88 L 600 88 L 682 172 L 682 240 Z" class="dg-fill dg-accent-s" stroke-width="2" opacity="0.5"/>
+              <text x="470" y="146" class="dg-text th" font-weight="600">ฟรานซิส</text>
+              <text x="470" y="146" class="dg-text en" font-weight="600">Francis</text>
+              <text x="470" y="164" class="dg-label">Ns 60–400</text>
+
+              <!-- Kaplan -->
+              <path d="M 400 340 L 400 198 L 740 198 L 740 340 Z" class="dg-fill-2 dg-rule" stroke-width="1.8" opacity="0.75"/>
+              <text x="590" y="278" class="dg-text th">คาปลัน / ใบพัด</text>
+              <text x="590" y="278" class="dg-text en">Kaplan / propeller</text>
+              <text x="590" y="296" class="dg-label">Ns 300–1000</text>
+
+              <!-- example points -->
+              <circle cx="180" cy="132" r="6" class="dg-accent" stroke-width="2.4" fill="none"/>
+              <circle cx="180" cy="132" r="2.4" class="dg-accent" stroke-width="2"/>
+              <text x="192" y="128" class="dg-label th">ตัวอย่าง 5.5 · 120 m · 0.05 m³/s</text>
+              <text x="192" y="128" class="dg-label en">EX. 5.5 · 120 m · 0.05 m³/s</text>
+
+              <circle cx="423" cy="280" r="6" class="dg-accent" stroke-width="2.4" fill="none"/>
+              <circle cx="423" cy="280" r="2.4" class="dg-accent" stroke-width="2"/>
+              <text x="434" y="276" class="dg-label th">ตัวอย่าง 5.1 · อาคารน้ำตก 4 m · 1.2 m³/s</text>
+              <text x="434" y="276" class="dg-label en">EX. 5.1 · CANAL DROP 4 m · 1.2 m³/s</text>
+
+              <!-- constant power lines -->
+              <line x1="138" y1="88" x2="500" y2="317" class="dg-line" stroke-width="1.2" stroke-dasharray="8 4"/>
+              <text x="470" y="330" class="dg-label">100 kW</text>
+
+              <text x="90" y="398" class="dg-label th">ขอบเขตซ้อนทับกันโดยตั้งใจ — ในย่านที่ซ้อนกัน ความเร็วจำเพาะ ราคา และความทนต่อตะกอนเป็นตัวตัดสิน ไม่ใช่แผนภาพนี้</text>
+              <text x="90" y="398" class="dg-label en">THE REGIONS OVERLAP DELIBERATELY — WHERE THEY DO, SPECIFIC SPEED, PRICE AND SILT TOLERANCE DECIDE, NOT THIS CHART</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label"><span class="th">รูปที่ 5.4</span><span class="en">Figure 5.4</span></span>
+            <span class="th">เส้นประทแยงคือเส้นกำลังคงที่ 100 กิโลวัตต์ ซึ่งแสดงให้เห็นประเด็นของหัวข้อ 5.1 อีกครั้ง — ทุกจุดบนเส้นนั้นให้กำลังเท่ากัน แต่ผ่านกังหันคนละชนิดและคนละราคาโดยสิ้นเชิง สังเกตว่าจุดของอาคารน้ำตกในคลองตกอยู่ในย่านที่ครอสโฟลว์กับคาปลันซ้อนกัน ซึ่งในทางปฏิบัติหมายถึงการเลือกระหว่างกังหันที่ถูกและซ่อมเองได้ กับกังหันที่แพงกว่าแต่ประสิทธิภาพสูงกว่าราว 10 จุด</span>
+            <span class="en">The diagonal dashed line is a constant-power line at 100 kW, which makes the point of §5.1 again — every point on it gives the same power through an entirely different machine at an entirely different price. Note that the canal-drop point falls where crossflow and Kaplan overlap, which in practice means choosing between a turbine that is cheap and locally repairable and one that costs more but is some ten points more efficient.</span>
+          </figcaption>
+        </figure>
+
+        <div class="demo" data-demo="turbine-pick" data-reveal>
+          <div class="demo__head">
+            <span class="demo__label"><span class="th">ลองเล่นดู</span><span class="en">Try it</span></span>
+            <span class="demo__title">
+              <span class="th">เฮด อัตราการไหล ความเร็วรอบ — แล้วกังหันก็ถูกเลือกไปแล้ว</span>
+              <span class="en">Head, flow, speed — and the turbine has already chosen itself</span>
+            </span>
+            <span class="demo__sub">
+              <span class="th">สมการ (5.1) และ (5.3) ทำงานร่วมกัน · ความเร็วรอบเลือกได้เฉพาะค่าที่ตรงกับจำนวนขั้วของเครื่องกำเนิดไฟฟ้าที่ 50 Hz เท่านั้น ซึ่งเป็นข้อจำกัดจริงที่มักถูกลืมในห้องเรียน</span>
+              <span class="en">Equations (5.1) and (5.3) working together. The running speed can only take values matching a generator pole count at 50 Hz — a real constraint that classrooms often forget.</span>
+            </span>
+          </div>
+
+          <div class="demo__stage" style="min-width:0">
+            <div class="tscale">
+              <div class="tscale__band tscale__band--a"><span class="th">เพลตัน</span><span class="en">Pelton</span></div>
+              <div class="tscale__band tscale__band--b"><span class="th">เทอร์โก</span><span class="en">Turgo</span></div>
+              <div class="tscale__band tscale__band--c"><span class="th">ครอสโฟลว์ · ฟรานซิส</span><span class="en">Crossflow · Francis</span></div>
+              <div class="tscale__band tscale__band--d"><span class="th">คาปลัน / ใบพัด</span><span class="en">Kaplan / propeller</span></div>
+              <div class="tscale__mark" data-tp-mark style="left:18%"></div>
+            </div>
+            <div class="sbar-scale">
+              <span>Ns 10</span>
+              <span>Ns 100</span>
+              <span>Ns 1000</span>
+            </div>
+          </div>
+
+          <div class="readouts">
+            <div class="readout readout--accent">
+              <span class="readout__label"><span class="th">กังหันที่เหมาะสม</span><span class="en">Turbine indicated</span></span>
+              <span class="readout__value"><span class="th" data-tp-type-th>เทอร์โก</span><span class="en" data-tp-type-en>Turgo</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">ความเร็วจำเพาะ Ns</span><span class="en">Specific speed Ns</span></span>
+              <span class="readout__value"><span data-tp-ns>72</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">กำลังที่เพลา</span><span class="en">Shaft power</span></span>
+              <span class="readout__value"><span data-tp-power>58</span><span class="readout__unit">kW</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">เครื่องกำเนิดไฟฟ้า</span><span class="en">Generator</span></span>
+              <span class="readout__value"><span data-tp-poles>4</span><span class="readout__unit"><span class="th">ขั้ว</span><span class="en">pole</span></span></span>
+            </div>
+          </div>
+
+          <div class="demo__controls">
+            <label class="demo__field">
+              <span class="th">เฮดสุทธิ (m)</span><span class="en">Net head (m)</span>
+              <input type="range" min="2" max="400" step="1" value="58" data-tp-head aria-label="Net head in metres">
+            </label>
+            <label class="demo__field">
+              <span class="th">อัตราการไหล (m³/s)</span><span class="en">Flow rate (m³/s)</span>
+              <input type="range" min="0.02" max="6" step="0.01" value="0.15" data-tp-flow aria-label="Flow rate in cubic metres per second">
+            </label>
+            <label class="demo__field">
+              <span class="th">ความเร็วรอบ (rpm ที่ 50 Hz)</span><span class="en">Running speed (rpm at 50 Hz)</span>
+              <input type="range" min="0" max="5" step="1" value="2" data-tp-speed aria-label="Generator speed step">
+            </label>
+            <div class="preset-row">
+              <button type="button" class="preset" data-tp-preset="4|1.2|3"><span class="th">อาคารน้ำตกในคลอง</span><span class="en">Canal drop</span></button>
+              <button type="button" class="preset" data-tp-preset="58|0.15|1"><span class="th">ตัวอย่างที่ 5.4</span><span class="en">Worked example 5.4</span></button>
+              <button type="button" class="preset" data-tp-preset="120|0.05|1"><span class="th">ลำธารเฮดสูง</span><span class="en">High-head stream</span></button>
+              <button type="button" class="preset" data-tp-preset="12|3.0|3"><span class="th">ฝายในแม่น้ำ</span><span class="en">River weir</span></button>
+            </div>
+          </div>
+
+          <div class="demo__warn" data-tp-warn hidden>
+            <span class="th">ที่ความเร็วรอบนี้ ความเร็วจำเพาะตกนอกย่านของกังหันทุกชนิดที่มีขายทั่วไป ทางแก้มีสองทาง — เปลี่ยนจำนวนขั้วของเครื่องกำเนิดไฟฟ้าเพื่อเลื่อนความเร็วรอบ หรือใส่เกียร์ทดรอบระหว่างกังหันกับเครื่องกำเนิดไฟฟ้า ซึ่งแลกมาด้วยการสูญเสีย 2–4% และงานบำรุงรักษาที่เพิ่มขึ้น</span>
+            <span class="en">At this speed the specific speed falls outside the range of every commonly available machine. There are two remedies — change the generator pole count to shift the speed, or fit a gearbox between turbine and generator, at the price of 2–4% loss and more maintenance.</span>
+          </div>
+
+          <div class="demo__note">
+            <p>
+              <span class="th">สังเกตว่าความเร็วรอบเป็นตัวแปรที่ <em>ผู้ออกแบบเลือกได้</em> ต่างจากเฮดและอัตราการไหลซึ่งธรรมชาติกำหนดมาแล้ว กดพรีเซ็ต &ldquo;ตัวอย่างที่ 5.4&rdquo; แล้วไล่เปลี่ยนความเร็วรอบดู จะเห็นว่ากังหันที่แนะนำเปลี่ยนจากเพลตันไปเป็นเทอร์โกและฟรานซิสตามลำดับ โดยที่แหล่งน้ำไม่ได้เปลี่ยนอะไรเลย <em>การเลือกความเร็วรอบคือการเลือกกังหัน</em></span>
+              <span class="en">Note that running speed is the one variable <em>the designer chooses</em>, unlike head and flow which nature fixes. Press the &ldquo;Worked example 5.4&rdquo; preset and step through the speeds: the recommended turbine moves from Pelton to Turgo to Francis while the site itself changes not at all. <em>Choosing the speed is choosing the turbine.</em></span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5.6 ============ -->
+      <section class="section" id="s6">
+        <h2><span class="num">5.6</span>
+          <span><span class="th">คาวิเทชัน ความเร็วหนี และเครื่องกำเนิดไฟฟ้า</span>
+          <span class="en">Cavitation, runaway, and the generator</span></span>
+        </h2>
+
+        <h3><span class="th">คาวิเทชัน: น้ำเดือดที่อุณหภูมิห้อง</span><span class="en">Cavitation: water boiling at room temperature</span></h3>
+
+        <p>
+          <span class="th">น้ำเดือดเมื่อความดันลดลงถึงความดันไออิ่มตัว ซึ่งที่ 30 °C มีค่าเพียง 4.2 kPa สัมบูรณ์ หรือราว 4% ของความดันบรรยากาศ ในกังหันแรงปฏิกิริยา ความเร็วที่สูงบริเวณด้านหลังใบพัดทำให้ความดันตกลงต่ำมาก ถ้าตกถึงความดันไอ น้ำจะกลายเป็นฟองไอขนาดเล็กจำนวนมหาศาล เมื่อฟองเหล่านั้นถูกพัดไปยังบริเวณที่ความดันสูงขึ้น มันจะยุบตัวลงอย่างรุนแรงภายในไมโครวินาที สร้างคลื่นกระแทกที่กัดกร่อนผิวโลหะจนเป็นรูพรุน</span>
+          <span class="en">Water boils when the pressure falls to its saturation vapour pressure, which at 30 °C is only 4.2 kPa absolute — about 4% of atmospheric. In a reaction turbine the high velocity on the back of a blade drops the pressure very low indeed. Should it reach vapour pressure, the water flashes into vast numbers of tiny bubbles, and as those bubbles travel into higher pressure they collapse violently within microseconds, producing shock waves that pit and erode the metal.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ \sigma \;=\; \frac{H_{atm} - H_{vap} - H_{s}}{H_{net}} \;>\; \sigma_{crit} \]</div>
+            <span class="formula__num">(5.4)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(\sigma\) = สัมประสิทธิ์คาวิเทชันของโทมา · \(H_{atm} \approx 10.3\ \mathrm{m}\) ที่ระดับน้ำทะเล (ลดลงราว 1.2 m ต่อความสูง 1,000 m) · \(H_{vap} \approx 0.43\ \mathrm{m}\) ที่ 30 °C · \(H_{s}\) = ความสูงของใบพัดเหนือระดับน้ำท้าย (m) ซึ่งเป็น <em>ลบ</em> ถ้าใบพัดจมต่ำกว่าระดับน้ำท้าย · \(\sigma_{crit}\) = ค่าวิกฤตที่ผู้ผลิตระบุ เพิ่มขึ้นตามความเร็วจำเพาะ ราว 0.05 สำหรับฟรานซิสรอบต่ำ ถึงมากกว่า 1.5 สำหรับคาปลันรอบสูง</span>
+            <span class="en">\(\sigma\) is Thoma&rsquo;s cavitation coefficient · \(H_{atm} \approx 10.3\ \mathrm{m}\) at sea level, falling about 1.2 m per 1,000 m of altitude · \(H_{vap} \approx 0.43\ \mathrm{m}\) at 30 °C · \(H_{s}\) the height of the runner above tailwater (m), which is <em>negative</em> when the runner sits below it · \(\sigma_{crit}\) the manufacturer&rsquo;s critical value, rising with specific speed from about 0.05 for a slow Francis to over 1.5 for a fast Kaplan.</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 5.5 · ติดตั้งกังหันคาปลันสูงเท่าไรจึงปลอดภัย</span>
+            <span class="en">Worked example 5.5 · How high a Kaplan may safely sit</span>
+          </div>
+          <p>
+            <span class="th">กังหันคาปลันที่เฮดสุทธิ 12 m มี \(\sigma_{crit} = 0.85\) ติดตั้งที่ระดับความสูง 200 m เหนือระดับน้ำทะเล อุณหภูมิน้ำ 30 °C จงหาความสูงสูงสุดของใบพัดเหนือระดับน้ำท้าย</span>
+            <span class="en">A Kaplan at 12 m net head has \(\sigma_{crit} = 0.85\) and sits at an altitude of 200 m with water at 30 °C. Find the maximum permissible runner height above tailwater.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">ปรับความดันบรรยากาศตามระดับความสูง: \(H_{atm} = 10.3 - 0.0012 \times 200 = 10.06\ \mathrm{m}\)</span>
+              <span class="en">Correct atmospheric head for altitude: \(H_{atm} = 10.3 - 0.0012 \times 200 = 10.06\ \mathrm{m}\)</span>
+            </li>
+            <li>
+              <span class="th">จัดรูปสมการ (5.4): \(H_{s} = H_{atm} - H_{vap} - \sigma_{crit} H_{net}\)</span>
+              <span class="en">Rearrange equation (5.4): \(H_{s} = H_{atm} - H_{vap} - \sigma_{crit} H_{net}\)</span>
+            </li>
+            <li>
+              <span class="th">\(H_{s} = 10.06 - 0.43 - 0.85 \times 12 = 10.06 - 0.43 - 10.20 = \mathbf{-0.57\ m}\)</span>
+              <span class="en">\(H_{s} = 10.06 - 0.43 - 0.85 \times 12 = 10.06 - 0.43 - 10.20 = \mathbf{-0.57\ m}\)</span>
+            </li>
+            <li>
+              <span class="th">ค่าเป็นลบ หมายความว่า <strong>ใบพัดต้องจมอยู่ต่ำกว่าระดับน้ำท้ายอย่างน้อย 0.57 เมตร</strong> ซึ่งบังคับให้ต้องขุดฐานรากลึกลงไป และเป็นสาเหตุที่โรงไฟฟ้าเฮดต่ำมีต้นทุนงานโยธาสูง ในทางปฏิบัติควรเผื่อความปลอดภัยเพิ่มอีก 0.5&ndash;1.0 เมตร</span>
+              <span class="en">The value is negative, meaning <strong>the runner must sit at least 0.57 m below tailwater</strong>. That forces deeper excavation, and is one reason low-head powerhouses carry heavy civil costs. In practice a further 0.5&ndash;1.0 m of margin is added.</span>
+            </li>
+            <li>
+              <span class="th">สังเกตอิทธิพลของระดับความสูง: ถ้าโครงการเดียวกันอยู่บนที่สูง 1,500 เมตร \(H_{atm}\) จะเหลือ 8.5 m และ \(H_{s}\) กลายเป็น \(-2.13\) m ต้องขุดลึกลงไปอีกกว่าหนึ่งเมตรครึ่งเพียงเพราะอากาศเบาบางกว่า</span>
+              <span class="en">Note the influence of altitude: the same scheme at 1,500 m would have \(H_{atm} = 8.5\) m and \(H_{s} = -2.13\) m — over a metre and a half deeper, purely because the air is thinner.</span>
+            </li>
+          </ol>
+        </div>
+
+        <h3><span class="th">ความเร็วหนีและการควบคุมความถี่</span><span class="en">Runaway speed and frequency control</span></h3>
+
+        <p>
+          <span class="th">ถ้าเครื่องกำเนิดไฟฟ้าหลุดจากโหลดอย่างกะทันหัน — สายส่งขาด เบรกเกอร์ตัด — กังหันจะไม่มีอะไรต้านทานอีกต่อไปและเร่งขึ้นจนถึง <strong>ความเร็วหนี (runaway speed)</strong> ซึ่งอยู่ที่ราว 1.8 เท่าของความเร็วปกติสำหรับเพลตัน และสูงถึง 2.5&ndash;3.2 เท่าสำหรับคาปลัน แรงเหวี่ยงแปรผันตามความเร็วยกกำลังสอง จึงเพิ่มขึ้นเป็น 3&ndash;10 เท่า ชิ้นส่วนหมุนทุกชิ้นต้องออกแบบให้ทนสภาวะนี้ได้โดยไม่แตก แม้จะเกิดขึ้นเพียงไม่กี่วินาที</span>
+          <span class="en">If the generator loses its load suddenly — a line breaks, a breaker trips — nothing restrains the turbine and it accelerates to its <strong>runaway speed</strong>: about 1.8 times normal for a Pelton, and 2.5&ndash;3.2 times for a Kaplan. Centrifugal force goes as the square of speed, so it rises three to tenfold. Every rotating part must survive that condition intact, even though it lasts only seconds.</span>
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">วิธีควบคุมความถี่</span><span class="en">Frequency control method</span></th>
+                <th><span class="th">หลักการ</span><span class="en">Principle</span></th>
+                <th><span class="th">เหมาะกับ</span><span class="en">Suits</span></th>
+                <th><span class="th">ข้อแลกเปลี่ยน</span><span class="en">Trade-off</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th">ต่อเข้าระบบจำหน่าย (grid-tied)</span><span class="en">Grid-connected</span></td>
+                <td><span class="th">ระบบไฟฟ้าของประเทศเป็นตัวกำหนดความถี่ เครื่องกำเนิดไฟฟ้าเหนี่ยวนำเพียงแต่ป้อนกำลังเข้าไป</span><span class="en">The national grid sets the frequency; an induction generator simply pushes power into it</span></td>
+                <td><span class="th">โครงการที่มีสายส่งถึง เกือบทุกกรณีในประเทศไทย</span><span class="en">Any site the grid reaches — nearly all of Thailand</span></td>
+                <td><span class="th">ง่ายและถูกที่สุด แต่ไฟดับเมื่อระบบดับ เว้นแต่ติดตั้งระบบแยกเกาะ</span><span class="en">Simplest and cheapest, but goes dark when the grid does, unless islanding is provided</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ตัวควบคุมโหลดอิเล็กทรอนิกส์ (ELC)</span><span class="en">Electronic load controller</span></td>
+                <td><span class="th">ปล่อยให้กังหันเดินเต็มที่ตลอดเวลา แล้วเบี่ยงกำลังส่วนเกินไปลงตัวต้านทานระบายความร้อนเพื่อรักษาความถี่</span><span class="en">Lets the turbine run flat out and diverts surplus power into a ballast resistor to hold frequency</span></td>
+                <td><span class="th">ระบบแยกเดี่ยวขนาดเล็กในหมู่บ้าน</span><span class="en">Small stand-alone village systems</span></td>
+                <td><span class="th">ไม่มีชิ้นส่วนเคลื่อนไหว ราคาถูกมาก แต่พลังงานส่วนเกินถูกทิ้งเป็นความร้อน (นำไปอุ่นน้ำหรืออบแห้งได้)</span><span class="en">No moving parts and very cheap, but surplus energy is dumped as heat — which can be used for water heating or drying</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ตัวควบคุมอัตราการไหลเชิงกล (governor)</span><span class="en">Mechanical flow governor</span></td>
+                <td><span class="th">ปรับใบนำหรือเข็มหัวฉีดให้รับน้ำเท่าที่โหลดต้องการจริง</span><span class="en">Moves guide vanes or the nozzle spear to admit only the water the load requires</span></td>
+                <td><span class="th">โครงการขนาดกลางขึ้นไป และที่ซึ่งน้ำมีค่า</span><span class="en">Medium schemes upward, and wherever the water itself is valuable</span></td>
+                <td><span class="th">ประหยัดน้ำได้จริง แต่ราคาแพงและต้องบำรุงรักษา ในระบบเฮดสูงต้องระวังค้อนน้ำเมื่อปิดเร็ว</span><span class="en">Genuinely saves water, but is costly and needs maintenance; on high head, rapid closure risks water hammer</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">
+          <span class="th">ตารางที่ 5.3 · สำหรับงานในคลองชลประทาน ตัวควบคุมโหลดอิเล็กทรอนิกส์มักเป็นคำตอบที่ถูกต้อง เพราะน้ำต้องไหลผ่านอาคารน้ำตกอยู่แล้วไม่ว่าจะผลิตไฟฟ้าหรือไม่ การ &ldquo;ประหยัดน้ำ&rdquo; จึงไม่มีความหมายในบริบทนี้ และพลังงานส่วนเกินนำไปใช้อบแห้งผลผลิตได้</span>
+          <span class="en">Table 5.3 · For irrigation-canal work the electronic load controller is usually the right answer, because the water must pass the drop structure whether or not electricity is made. &ldquo;Saving water&rdquo; has no meaning in that context, and the surplus can go to crop drying.</span>
+        </p>
+      </section>
+
+      <!-- ============ 5.7 ============ -->
+      <section class="section" id="s7">
+        <h2><span class="num">5.7</span>
+          <span><span class="th">พลังน้ำขนาดจิ๋วและปั๊มที่ใช้เป็นกังหัน</span>
+          <span class="en">Pico-hydro and pumps run as turbines</span></span>
+        </h2>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">ระดับขนาด</span><span class="en">Size class</span></th>
+                <th class="num"><span class="th">กำลัง</span><span class="en">Power</span></th>
+                <th><span class="th">ลักษณะงานทั่วไป</span><span class="en">Typical character</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th">ขนาดจิ๋ว (pico)</span><span class="en">Pico</span></td>
+                <td class="num">&lt; 5 kW</td>
+                <td><span class="th">ครัวเรือนเดียวหรือไม่กี่หลัง ติดตั้งเองได้ ใช้อุปกรณ์สำเร็จรูป</span><span class="en">One household or a few; self-installed from off-the-shelf parts</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ขนาดเล็กมาก (micro)</span><span class="en">Micro</span></td>
+                <td class="num">5–100 kW</td>
+                <td><span class="th">หมู่บ้าน สถานีสูบน้ำ หรือโรงงานแปรรูปผลผลิตขนาดเล็ก</span><span class="en">A village, a pumping station, or a small processing plant</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ขนาดเล็ก (mini / small)</span><span class="en">Mini / small</span></td>
+                <td class="num">100 kW – 10 MW</td>
+                <td><span class="th">ขายไฟเข้าระบบจำหน่าย ต้องมีการศึกษาผลกระทบและใบอนุญาต</span><span class="en">Sells to the grid; requires impact studies and licensing</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ขนาดใหญ่</span><span class="en">Large</span></td>
+                <td class="num">&gt; 10 MW</td>
+                <td><span class="th">มีอ่างเก็บน้ำ เป็นส่วนหนึ่งของการวางแผนระบบไฟฟ้าและการบริหารน้ำระดับลุ่มน้ำ</span><span class="en">Has a reservoir; part of national power planning and basin-scale water management</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">
+          <span class="th">ตารางที่ 5.4 · เส้นแบ่งเหล่านี้ไม่ได้เป็นสากล แต่ละประเทศนิยามต่างกัน สิ่งที่เปลี่ยนจริงเมื่อข้ามเส้นแต่ละเส้นคือ <em>ภาระด้านกฎหมายและการเงิน</em> ไม่ใช่หลักวิศวกรรม</span>
+          <span class="en">Table 5.4 · These boundaries are not universal — every country defines them differently. What genuinely changes at each line is the <em>legal and financial burden</em>, not the engineering.</span>
+        </p>
+
+        <h3><span class="th">ปั๊มหอยโข่งที่เดินกลับทาง</span><span class="en">A centrifugal pump running backwards</span></h3>
+
+        <p>
+          <span class="th">ปัญหาใหญ่ที่สุดของพลังน้ำขนาดเล็กไม่ใช่วิศวกรรม แต่เป็นราคา กังหันที่สั่งผลิตเฉพาะงานราคาสูงมากเมื่อคิดต่อกิโลวัตต์ เพราะผลิตทีละตัว ทางออกที่ใช้กันแพร่หลายคือ <strong>ปั๊มที่ใช้เป็นกังหัน (pump as turbine, PAT)</strong> — นำปั๊มหอยโข่งมาตรฐานมาต่อให้น้ำไหลย้อนทาง ใบพัดจะหมุนกลับทิศและขับมอเตอร์ให้ทำงานเป็นเครื่องกำเนิดไฟฟ้าเหนี่ยวนำ</span>
+          <span class="en">The biggest problem in small hydro is not engineering but price: a purpose-built turbine costs a great deal per kilowatt because it is made one at a time. The widely used way round it is the <strong>pump as turbine (PAT)</strong> — take a standard centrifugal pump, run the water through it backwards, and the impeller turns the other way, driving its motor as an induction generator.</span>
+        </p>
+
+        <p>
+          <span class="th">เหตุผลที่วิธีนี้ได้ผลคือเศรษฐศาสตร์ของการผลิตจำนวนมาก ปั๊มหอยโข่งถูกผลิตนับแสนตัวต่อปี มีอะไหล่ทุกจังหวัด ช่างท้องถิ่นซ่อมเป็น และราคาต่อกิโลวัตต์อยู่ที่ราวหนึ่งในห้าถึงหนึ่งในสิบของกังหันสั่งทำ ข้อเสียคือปั๊มไม่มีใบนำปรับมุม จึงเดินได้ดีเฉพาะใกล้จุดออกแบบ และประสิทธิภาพตกลงเร็วเมื่ออัตราการไหลเปลี่ยน ในลำน้ำที่อัตราการไหลผันผวนมาก PAT จึงไม่ใช่คำตอบ แต่ในคลองชลประทานที่อัตราการไหลถูกควบคุมให้คงที่ มันเกือบจะเป็นคำตอบที่สมบูรณ์แบบ</span>
+          <span class="en">It works because of mass-production economics. Centrifugal pumps are made by the hundred thousand, spares exist in every province, local fitters know them, and the cost per kilowatt is a fifth to a tenth that of a bespoke turbine. The drawback is that a pump has no adjustable guide vanes, so it performs well only near its design point and loses efficiency quickly as flow varies. On a flashy stream a PAT is the wrong answer; in an irrigation canal, where flow is deliberately held steady, it is very nearly the perfect one.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ H_{t} \approx 1.2\text{–}1.3 \; H_{p,BEP} \qquad\quad Q_{t} \approx 1.15\text{–}1.25 \; Q_{p,BEP} \qquad\quad \eta_{t} \approx \eta_{p,BEP} - 2\text{–}5\ \text{points} \]</div>
+            <span class="formula__num">(5.5)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">ดัชนี \(t\) หมายถึงการเดินเป็นกังหัน ส่วน \(p,BEP\) หมายถึงค่าที่จุดประสิทธิภาพสูงสุดของปั๊มตามแคตตาล็อก · ความหมายคือ <strong>ปั๊มที่เดินเป็นกังหันต้องการเฮดและอัตราการไหลสูงกว่าตอนเดินเป็นปั๊มราว 20&ndash;30%</strong> ที่ความเร็วรอบเดียวกัน · ค่าประมาณเหล่านี้มีความคลาดเคลื่อนราว ±10% จึงควรยืนยันด้วยการทดสอบจริงก่อนสั่งซื้อจำนวนมาก</span>
+            <span class="en">Subscript \(t\) denotes turbine operation and \(p,BEP\) the pump&rsquo;s catalogue best efficiency point. The meaning is that <strong>a pump run as a turbine needs 20&ndash;30% more head and flow than it did as a pump</strong> at the same speed. These estimates carry about ±10% uncertainty, so confirm by test before committing to a large order.</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 5.6 · เลือกปั๊มมาใช้เป็นกังหันสำหรับหมู่บ้าน</span>
+            <span class="en">Worked example 5.6 · Selecting a pump as turbine for a village</span>
+          </div>
+          <p>
+            <span class="th">ลำธารให้เฮดสุทธิ 25 m ที่อัตราการไหล 0.09 m³/s ต้องการผลิตไฟฟ้าสำหรับหมู่บ้าน จงหากำลังที่คาดหวัง และระบุปั๊มที่ควรเลือกจากแคตตาล็อก</span>
+            <span class="en">A stream gives 25 m net head at 0.09 m³/s and is to supply a village. Find the expected output and specify the pump to look for in a catalogue.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">กำลังที่คาดหวัง (ประสิทธิภาพรวมของ PAT ราว 0.65 รวมเครื่องกำเนิดไฟฟ้า): \(P = 9.81 \times 0.09 \times 25 \times 0.65 = \mathbf{14.3\ kW}\)</span>
+              <span class="en">Expected output, taking 0.65 overall for a PAT including the generator: \(P = 9.81 \times 0.09 \times 25 \times 0.65 = \mathbf{14.3\ kW}\)</span>
+            </li>
+            <li>
+              <span class="th">ย้อนสมการ (5.5) เพื่อหาสเปกของปั๊ม: \(H_{p,BEP} = 25/1.25 = \mathbf{20\ m}\)</span>
+              <span class="en">Invert equation (5.5) for the pump specification: \(H_{p,BEP} = 25/1.25 = \mathbf{20\ m}\)</span>
+            </li>
+            <li>
+              <span class="th">\(Q_{p,BEP} = 0.09/1.20 = 0.075\ \mathrm{m^3/s} = \mathbf{270\ m^3/h}\)</span>
+              <span class="en">\(Q_{p,BEP} = 0.09/1.20 = 0.075\ \mathrm{m^3/s} = \mathbf{270\ m^3/h}\)</span>
+            </li>
+            <li>
+              <span class="th">จึงมองหาปั๊มหอยโข่งดูดข้างมาตรฐานที่ให้ 270 m³/h ที่เฮด 20 m ซึ่งเป็นขนาดที่หาได้ทั่วไปในตลาดงานชลประทานและงานประปา ราคาพร้อมมอเตอร์อยู่ในหลักหลายหมื่นถึงแสนต้น ๆ เทียบกับกังหันสั่งทำขนาดเดียวกันที่มักเกินหนึ่งล้านบาท</span>
+              <span class="en">So look for a standard end-suction centrifugal pump rated 270 m³/h at 20 m head — a common size in the irrigation and water-supply trade. Complete with motor it costs in the tens of thousands of baht, against well over a million for a bespoke turbine of the same rating.</span>
+            </li>
+            <li>
+              <span class="th">มอเตอร์เหนี่ยวนำของปั๊มตัวนี้จะทำหน้าที่เป็นเครื่องกำเนิดไฟฟ้าเหนี่ยวนำได้ทันทีเมื่อถูกขับให้หมุนเร็วกว่าความเร็วซิงโครนัสเล็กน้อย หากต่อเข้าระบบจำหน่ายก็ไม่ต้องใช้อุปกรณ์อื่นเพิ่ม หากเป็นระบบแยกเดี่ยวต้องเพิ่มชุดตัวเก็บประจุกระตุ้นและตัวควบคุมโหลดอิเล็กทรอนิกส์</span>
+              <span class="en">The pump&rsquo;s induction motor becomes an induction generator the moment it is driven slightly above synchronous speed. Grid-connected, nothing further is needed; stand-alone, add excitation capacitors and an electronic load controller.</span>
+            </li>
+            <li>
+              <span class="th">ข้อควรระวัง: ต้องตรวจสอบว่าปั๊มรุ่นนั้นไม่มีวาล์วกันกลับในตัว และตลับลูกปืนกับซีลรองรับการหมุนย้อนทางได้ ผู้ผลิตบางรายระบุไว้ชัดเจน บางรายต้องสอบถาม</span>
+              <span class="en">One caution: check that the model has no integral non-return valve and that its bearings and seals accept reverse rotation. Some manufacturers state this explicitly; others must be asked.</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ 5.8 ============ -->
+      <section class="section" id="s8">
+        <h2><span class="num">5.8</span>
+          <span><span class="th">ผลกระทบและการแบ่งปันน้ำ</span>
+          <span class="en">Impacts, and sharing the water</span></span>
+        </h2>
+
+        <p>
+          <span class="th">พลังงานน้ำไม่ปล่อยคาร์บอนขณะเดินเครื่อง มีอายุใช้งานยาวนานหลายสิบปี และมีต้นทุนการเดินระบบต่ำที่สุดในบรรดาพลังงานทั้งหมด แต่ก็เป็นพลังงานหมุนเวียนที่เปลี่ยนแปลงระบบนิเวศและวิถีชีวิตของผู้คนมากที่สุดเช่นกัน วิศวกรที่ซื่อสัตย์ต้องยอมรับทั้งสองด้านพร้อมกัน</span>
+          <span class="en">Hydropower emits no carbon in operation, lasts for decades, and has the lowest operating cost of any generation there is. It is also the renewable that alters ecosystems and people&rsquo;s livelihoods the most. An honest engineer holds both facts at once.</span>
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">ผลกระทบ</span><span class="en">Impact</span></th>
+                <th><span class="th">กลไก</span><span class="en">Mechanism</span></th>
+                <th><span class="th">การจัดการ</span><span class="en">Mitigation</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th">การขวางการอพยพของปลา</span><span class="en">Blocking fish migration</span></td>
+                <td><span class="th">ฝายและเขื่อนตัดเส้นทางที่ปลาใช้ขึ้นไปวางไข่ กระทบทั้งจำนวนและความหลากหลายของชนิดพันธุ์</span><span class="en">Weirs and dams sever the routes fish use to reach spawning grounds, hitting both numbers and diversity</span></td>
+                <td><span class="th">ทางปลาผ่าน บันไดปลาโจน หรือช่องทางเลี่ยง — ต้องออกแบบตามชนิดปลาในลุ่มน้ำนั้น ทางปลาที่ลอกแบบมาจากปลาแซลมอนในยุโรปมักใช้ไม่ได้กับปลาลุ่มน้ำเขตร้อน</span><span class="en">Fish passes, ladders or bypass channels — designed for the species actually present. Designs copied from European salmon rivers usually fail for tropical species</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">การกักตะกอน</span><span class="en">Sediment trapping</span></td>
+                <td><span class="th">อ่างเก็บน้ำดักตะกอนและธาตุอาหารไว้ ทำให้ที่ราบน้ำท่วมถึงท้ายน้ำขาดธาตุอาหาร และชายฝั่งปากแม่น้ำถูกกัดเซาะ</span><span class="en">Reservoirs trap sediment and nutrients, starving downstream floodplains and letting the delta coastline erode</span></td>
+                <td><span class="th">ประตูระบายตะกอน การชะล้างตะกอนตามฤดูกาล และการวางแผนในระดับลุ่มน้ำ — ทั้งหมดนี้ลดความจุอ่างที่ใช้ได้</span><span class="en">Sediment sluices, seasonal flushing, and basin-scale planning — all of which reduce usable reservoir storage</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">การเปลี่ยนรูปแบบการไหลตามฤดูกาล</span><span class="en">Altered seasonal flow regime</span></td>
+                <td><span class="th">อ่างเก็บน้ำทำให้การไหลราบเรียบขึ้น น้ำหลากตามฤดูที่ปลาและพืชริมน้ำใช้เป็นสัญญาณหายไป</span><span class="en">Reservoirs flatten the hydrograph, removing the seasonal floods that fish and riparian plants use as cues</span></td>
+                <td><span class="th">ปล่อยน้ำเลียนแบบธรรมชาติ (environmental flow) รวมถึงการจงใจปล่อยน้ำหลากจำลองในช่วงเวลาที่เหมาะสม</span><span class="en">Environmental flow releases, including deliberate artificial floods timed to the ecological calendar</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ก๊าซเรือนกระจกจากอ่างเก็บน้ำ</span><span class="en">Reservoir greenhouse gases</span></td>
+                <td><span class="th">ชีวมวลที่จมน้ำย่อยสลายแบบไร้อากาศและปล่อยมีเทน ซึ่งรุนแรงเป็นพิเศษในอ่างเขตร้อนที่ตื้นและอุ่น</span><span class="en">Submerged biomass decomposes anaerobically and releases methane — pronounced in shallow, warm tropical reservoirs</span></td>
+                <td><span class="th">ตัดไม้ออกก่อนกักเก็บน้ำ และเลือกทำเลที่มีพื้นที่ผิวน้ำต่อกำลังผลิตต่ำ</span><span class="en">Clear vegetation before impoundment, and favour sites with low flooded area per megawatt</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">การอพยพโยกย้ายผู้คน</span><span class="en">Displacement of people</span></td>
+                <td><span class="th">อ่างเก็บน้ำท่วมที่ดินทำกินและชุมชน ต้นทุนตกกับคนกลุ่มหนึ่ง ส่วนประโยชน์ตกกับคนอีกกลุ่มหนึ่ง</span><span class="en">Reservoirs flood farmland and settlements: the costs fall on one group of people and the benefits on another</span></td>
+                <td><span class="th">ไม่มีทางแก้ทางวิศวกรรม มีแต่กระบวนการชดเชยที่เป็นธรรมและการมีส่วนร่วมตั้งแต่ก่อนตัดสินใจ</span><span class="en">There is no engineering fix — only fair compensation and genuine participation before the decision, not after</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">
+          <span class="th">ตารางที่ 5.5 · โครงการแบบน้ำไหลผ่านขนาดเล็กและโครงการที่ติดตั้งในโครงสร้างชลประทานที่มีอยู่แล้ว หลีกเลี่ยงแถวล่าง ๆ ของตารางนี้ได้เกือบทั้งหมด ซึ่งเป็นเหตุผลสำคัญที่ทำให้แนวทางนั้นน่าสนใจเป็นพิเศษในบริบทของประเทศไทย</span>
+          <span class="en">Table 5.5 · Small run-of-river schemes, and schemes fitted into irrigation infrastructure that already exists, avoid almost all of the lower rows — a substantial part of why that approach is so attractive in the Thai context.</span>
+        </p>
+
+        <div class="callout callout--warn">
+          <div class="callout__title">
+            <span class="th">บทเรียนจากเขื่อนปากมูล</span>
+            <span class="en">The lesson of Pak Mun</span>
+          </div>
+          <p>
+            <span class="th">เขื่อนปากมูลบนแม่น้ำมูลใกล้จุดบรรจบกับแม่น้ำโขง สร้างเสร็จในปี 1994 มีกำลังผลิตติดตั้ง 136 MW แต่กลายเป็นกรณีศึกษาที่ถูกอ้างถึงมากที่สุดของประเทศไทยในเรื่องผลกระทบทางสังคมและการประมง เพราะแม่น้ำมูลเป็นเส้นทางอพยพของปลาจำนวนมากจากแม่น้ำโขง การสร้างเขื่อนกระทบการประมงพื้นบ้านของชุมชนท้ายน้ำและต้นน้ำอย่างมีนัยสำคัญ นำไปสู่การประท้วงที่ยืดเยื้อและข้อตกลงให้เปิดประตูระบายน้ำในช่วงฤดูปลาอพยพ ซึ่งทำให้ผลิตไฟฟ้าได้น้อยลง</span>
+            <span class="en">The Pak Mun dam on the Mun river near its confluence with the Mekong, completed in 1994 with 136 MW installed, became Thailand&rsquo;s most-cited case study in social and fisheries impact. The Mun is a migration route for large numbers of fish from the Mekong, and the dam significantly affected the subsistence fisheries of communities both upstream and down. Prolonged protest followed, and eventually an agreement to open the gates during the migration season — which reduces generation.</span>
+          </p>
+          <p>
+            <span class="th">บทเรียนทางวิศวกรรมมีสองข้อ ข้อแรก การประเมินผลกระทบทางการประมงและทางสังคมต้องทำ <em>ก่อน</em> การตัดสินใจลงทุน ไม่ใช่หลังจากสร้างเสร็จ ข้อที่สอง ตัวเลขกำลังผลิตติดตั้งไม่ใช่ตัวเลขที่ควรใช้ประเมินคุณค่าของโครงการ เพราะข้อจำกัดด้านการบริหารน้ำที่ตามมาภายหลังทำให้พลังงานที่ผลิตได้จริงต่ำกว่าที่ออกแบบไว้มาก</span>
+            <span class="en">Two engineering lessons follow. First, fisheries and social assessment must be done <em>before</em> the investment decision, not after construction. Second, installed capacity is the wrong number by which to judge a project, because the water-management constraints that arrive later can put actual generation far below the design figure.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 5.9 ============ -->
+      <section class="section" id="s9">
+        <h2><span class="num">5.9</span>
+          <span><span class="th">ประเทศไทย: เขื่อนอเนกประสงค์และคลองชลประทาน</span>
+          <span class="en">Thailand: multi-purpose dams and irrigation canals</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ประเทศไทยมีกำลังผลิตไฟฟ้าพลังน้ำติดตั้งราว 3,000 เมกะวัตต์ รวมโรงไฟฟ้าแบบสูบกลับ คิดเป็นสัดส่วนราว 6&ndash;7% ของกำลังผลิตทั้งประเทศ แต่สัดส่วนของ <em>พลังงาน</em> ที่ผลิตได้จริงต่ำกว่านั้นมาก และเหตุผลอยู่ที่คำว่า &ldquo;อเนกประสงค์&rdquo;</span>
+          <span class="en">Thailand has roughly 3,000 MW of installed hydro capacity including pumped storage, about 6&ndash;7% of national capacity. Its share of actual <em>energy</em> is considerably smaller, and the reason lies in the word &ldquo;multi-purpose&rdquo;.</span>
+        </p>
+
+        <div class="callout callout--key">
+          <div class="callout__title">
+            <span class="th">เขื่อนของไทยผลิตไฟฟ้าจากน้ำที่ต้องปล่อยอยู่แล้ว</span>
+            <span class="en">Thai dams generate from water that had to be released anyway</span>
+          </div>
+          <p>
+            <span class="th">เขื่อนภูมิพลบนแม่น้ำปิงและเขื่อนสิริกิติ์บนแม่น้ำน่าน ซึ่งเป็นสองเขื่อนที่ใหญ่ที่สุดของประเทศ ถูกสร้างขึ้นโดยมีภารกิจหลักคือการชลประทานในที่ราบภาคกลาง การควบคุมอุทกภัย การผลักดันน้ำเค็ม และการประปา ส่วนการผลิตไฟฟ้าเป็นภารกิจรอง ผลที่ตามมาในทางปฏิบัติคือ <strong>ตารางการปล่อยน้ำถูกกำหนดโดยปฏิทินการเพาะปลูกและเกณฑ์บริหารอ่าง ไม่ใช่โดยราคาค่าไฟหรือความต้องการไฟฟ้าในแต่ละชั่วโมง</strong></span>
+            <span class="en">The Bhumibol dam on the Ping and the Sirikit dam on the Nan — the country&rsquo;s two largest — were built with irrigation of the central plain, flood control, salinity repulsion and water supply as their primary duties, and generation as a secondary one. The practical consequence is that <strong>the release schedule is set by the cropping calendar and reservoir operating rules, not by the electricity price or the hourly demand</strong>.</span>
+          </p>
+          <p>
+            <span class="th">สำหรับวิศวกรเกษตรอัจฉริยะ นี่คือประเด็นที่ต้องเข้าใจให้ลึก เพราะมันหมายความว่าไฟฟ้าจากเขื่อนเหล่านี้ <em>ผันแปรตามสภาพอุทกวิทยาและตามความต้องการน้ำของภาคเกษตร</em> ในปีที่แล้งจัด พลังงานที่ผลิตได้อาจลดลงเหลือครึ่งเดียว และในบางช่วงที่ต้องกักน้ำไว้เพื่อการเพาะปลูกฤดูถัดไป โรงไฟฟ้าอาจแทบไม่เดินเลย เขื่อนเหล่านี้จึงไม่ใช่กำลังผลิตฐาน แต่เป็นกำลังผลิตที่ตอบสนองได้เร็วซึ่งใช้รองรับช่วงความต้องการสูงสุดและใช้เป็นกำลังสำรองพร้อมจ่าย</span>
+            <span class="en">For an agri-intelligence engineer this deserves close attention, because it means the electricity from these dams <em>varies with hydrology and with agriculture&rsquo;s demand for water</em>. In a severe drought year output can halve, and in periods when water must be held back for the coming season the plant may barely run at all. These dams are therefore not baseload but fast-responding capacity, used for peaks and as spinning reserve.</span>
+          </p>
+        </div>
+
+        <p>
+          <span class="th">กรณีพิเศษที่น่าสนใจคือ <strong>โรงไฟฟ้าลำตะคองชลภาวัฒนา</strong> จังหวัดนครราชสีมา ซึ่งเป็นโรงไฟฟ้าพลังน้ำแบบสูบกลับ (pumped storage) กำลังผลิต 1,000 เมกะวัตต์ โรงไฟฟ้าแบบนี้ไม่ได้ผลิตพลังงานสุทธิ แต่ <em>เก็บ</em> พลังงาน — สูบน้ำขึ้นอ่างบนในช่วงที่ไฟฟ้าเหลือและราคาถูก แล้วปล่อยลงมาผลิตไฟฟ้าในช่วงที่ต้องการ ประสิทธิภาพไปกลับอยู่ที่ราว 70&ndash;80% ซึ่งหมายถึงเสียพลังงานไป 20&ndash;30% ในการเก็บ แต่ได้ความสามารถในการย้ายพลังงานข้ามเวลามาแทน ความสามารถนี้จะสำคัญขึ้นมากเมื่อสัดส่วนของพลังงานแสงอาทิตย์ในบทที่ 8 เพิ่มขึ้น เพราะระบบไฟฟ้าต้องการที่เก็บพลังงานกลางวันไว้ใช้กลางคืน</span>
+          <span class="en">One case deserves particular note: the <strong>Lam Takhong Jolabha Vadhana</strong> plant in Nakhon Ratchasima, a 1,000 MW pumped-storage station. Such a plant produces no net energy but <em>stores</em> it — pumping water to an upper reservoir when electricity is surplus and cheap, releasing it to generate when wanted. Round-trip efficiency is about 70&ndash;80%, so 20&ndash;30% is lost to storage, bought in exchange for the ability to move energy through time. That ability grows much more valuable as the solar share of Chapter 8 rises, because the system then needs somewhere to put the daytime surplus.</span>
+        </p>
+
+        <h3><span class="th">โอกาสที่แท้จริง: โครงสร้างชลประทานที่มีอยู่แล้ว</span><span class="en">The real opportunity: irrigation structures that already exist</span></h3>
+
+        <p>
+          <span class="th">ยุคของการสร้างเขื่อนใหญ่ในประเทศไทยผ่านไปแล้ว ทำเลที่เหมาะสมถูกใช้ไปหมดแล้ว และต้นทุนทางสังคมกับสิ่งแวดล้อมของทำเลที่เหลือสูงเกินกว่าจะยอมรับได้ แต่โอกาสที่เหลืออยู่และยังแทบไม่ถูกแตะต้องคือ <strong>โครงสร้างชลประทานที่กรมชลประทานสร้างไว้แล้วทั่วประเทศ</strong> — อาคารน้ำตกในคลองส่งน้ำ ประตูระบายน้ำ และฝายทดน้ำ ซึ่งมีอยู่นับพันแห่ง</span>
+          <span class="en">The era of large dam building in Thailand is over: the suitable sites are taken, and the social and environmental costs of what remains are beyond acceptance. What does remain, and is barely touched, is the <strong>irrigation infrastructure the Royal Irrigation Department has already built across the country</strong> — canal drop structures, regulators and diversion weirs, numbering in the thousands.</span>
+        </p>
+
+        <p>
+          <span class="th">สิ่งที่ทำให้แนวทางนี้น่าสนใจเป็นพิเศษมีสี่ข้อ ข้อแรก <em>ต้นทุนงานโยธาส่วนใหญ่ถูกจ่ายไปแล้ว</em> ซึ่งเป็นการแก้ปัญหาที่หัวข้อ 5.1 ชี้ไว้ว่าโครงการเฮดต่ำมีต้นทุนต่อกิโลวัตต์สูง ข้อที่สอง <em>ไม่มีผลกระทบใหม่ต่อระบบนิเวศ</em> เพราะน้ำไหลผ่านโครงสร้างเดิมด้วยปริมาณเท่าเดิมตามตารางส่งน้ำเดิมทุกประการ ข้อที่สาม <em>อัตราการไหลถูกควบคุมให้คงที่อยู่แล้ว</em> ซึ่งเป็นเงื่อนไขที่ทำให้ปั๊มที่ใช้เป็นกังหันทำงานได้ดีที่สุด และข้อที่สี่ <em>มีผู้ใช้ไฟฟ้าอยู่ตรงนั้นพอดี</em> — สถานีสูบน้ำ ประตูน้ำไฟฟ้า ระบบเซนเซอร์และโทรมาตร และโรงคัดบรรจุผลผลิตในพื้นที่ชลประทาน</span>
+          <span class="en">Four things make this attractive. First, <em>most of the civil cost has already been paid</em>, which answers the difficulty §5.1 identified — that low-head schemes cost too much per kilowatt. Second, <em>there is no new ecological impact</em>, because the same water passes the same structure on the same delivery schedule. Third, <em>the flow is already held steady</em>, which is precisely the condition under which a pump-as-turbine performs best. Fourth, <em>the electricity consumer is already standing there</em> — pumping stations, powered gates, sensor and telemetry systems, and packhouses within the irrigation scheme.</span>
+        </p>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 5.7 · อาคารน้ำตกจ่ายไฟให้สถานีสูบน้ำ</span>
+            <span class="en">Worked example 5.7 · A drop structure powering a pumping station</span>
+          </div>
+          <p>
+            <span class="th">โครงการชลประทานแห่งหนึ่งมีอาคารน้ำตกสูง 3.2 m ในคลองสายซอยที่ส่งน้ำ 0.9 m³/s เป็นเวลา 210 วันต่อปี ในบริเวณเดียวกันมีสถานีสูบน้ำที่ใช้ไฟฟ้า 18 kW เดินวันละ 10 ชั่วโมงในช่วงเดียวกัน จงประเมินว่าพลังน้ำจากอาคารน้ำตกจะทดแทนไฟฟ้าของสถานีสูบน้ำได้หรือไม่ (ใช้ PAT ประสิทธิภาพรวม 0.62 · ค่าไฟ 4.20 บาท/kWh)</span>
+            <span class="en">An irrigation scheme has a 3.2 m drop structure on a lateral canal carrying 0.9 m³/s for 210 days a year. Alongside it is a pumping station drawing 18 kW for 10 hours a day over the same period. Assess whether the drop structure can displace the station&rsquo;s electricity, using a PAT at 0.62 overall efficiency and a tariff of 4.20 baht/kWh.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">กำลังที่ผลิตได้: \(P = 9.81 \times 0.9 \times 3.2 \times 0.62 = \mathbf{17.5\ kW}\)</span>
+              <span class="en">Output: \(P = 9.81 \times 0.9 \times 3.2 \times 0.62 = \mathbf{17.5\ kW}\)</span>
+            </li>
+            <li>
+              <span class="th">พลังงานที่ผลิตได้ต่อปี (เดินตลอด 24 ชั่วโมงในช่วงส่งน้ำ): \(17.5 \times 24 \times 210 = \mathbf{88{,}200\ kWh}\)</span>
+              <span class="en">Annual generation, running around the clock through the delivery season: \(17.5 \times 24 \times 210 = \mathbf{88{,}200\ kWh}\)</span>
+            </li>
+            <li>
+              <span class="th">พลังงานที่สถานีสูบน้ำใช้: \(18 \times 10 \times 210 = \mathbf{37{,}800\ kWh}\)</span>
+              <span class="en">Pumping-station consumption: \(18 \times 10 \times 210 = \mathbf{37{,}800\ kWh}\)</span>
+            </li>
+            <li>
+              <span class="th">ผลิตได้มากกว่าที่ใช้ถึง 2.3 เท่า ส่วนเกิน 50,400 kWh ขายเข้าระบบจำหน่ายหรือใช้กับโรงคัดบรรจุและห้องเย็นในพื้นที่ได้</span>
+              <span class="en">Generation exceeds consumption by a factor of 2.3. The surplus of 50,400 kWh can be sold to the grid or used by a local packhouse and cold room.</span>
+            </li>
+            <li>
+              <span class="th">มูลค่ารวมต่อปี: \(88{,}200 \times 4.20 = \mathbf{370{,}000}\) บาท ถ้าต้นทุนติดตั้งทั้งระบบ (PAT ชุดควบคุม งานท่อ และงานโยธาดัดแปลง) อยู่ที่ราว 1.2&ndash;1.8 ล้านบาท ระยะคืนทุนอยู่ที่ <strong>3.2&ndash;4.9 ปี</strong></span>
+              <span class="en">Annual value: \(88{,}200 \times 4.20 = \mathbf{370{,}000}\) baht. With an installed cost of some 1.2&ndash;1.8 million baht for the PAT, controls, pipework and civil modifications, the payback is <strong>3.2&ndash;4.9 years</strong>.</span>
+            </li>
+            <li>
+              <span class="th">ข้อสังเกตที่สำคัญ: ความไม่ตรงกันของช่วงเวลาไม่เป็นปัญหาเลยหากต่อเข้าระบบจำหน่าย เพราะระบบทำหน้าที่เป็นที่เก็บพลังงานให้ แต่ถ้าเป็นระบบแยกเดี่ยว จะต้องมีแบตเตอรี่หรือต้องยอมทิ้งพลังงานในช่วงที่ปั๊มไม่เดิน ซึ่งเปลี่ยนเศรษฐศาสตร์ของโครงการไปอย่างสิ้นเชิง</span>
+              <span class="en">One important observation: the mismatch in timing is no problem at all when grid-connected, since the grid acts as the store. Stand-alone, it would require batteries or the acceptance of dumping energy when the pump is idle — which changes the project economics entirely.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 5.8 · ประเมินศักยภาพระดับโครงการชลประทาน</span>
+            <span class="en">Worked example 5.8 · Scheme-level potential</span>
+          </div>
+          <p>
+            <span class="th">สมมติโครงการชลประทานขนาดกลางแห่งหนึ่งมีอาคารน้ำตกที่มีเฮดตั้งแต่ 1.5 ถึง 4 เมตร รวม 24 แห่ง โดยมีเฮดเฉลี่ย 2.6 m และอัตราการไหลเฉลี่ย 0.7 m³/s ส่งน้ำ 200 วันต่อปี จงประเมินศักยภาพรวมและพิจารณาว่าคุ้มค่าหรือไม่</span>
+            <span class="en">Suppose a medium irrigation scheme has 24 drop structures with heads from 1.5 to 4 m, averaging 2.6 m, each carrying an average 0.7 m³/s for 200 days a year. Estimate the total potential and consider whether it is worth pursuing.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">กำลังต่อแห่ง: \(9.81 \times 0.7 \times 2.6 \times 0.62 = 11.1\ \mathrm{kW}\)</span>
+              <span class="en">Power per structure: \(9.81 \times 0.7 \times 2.6 \times 0.62 = 11.1\ \mathrm{kW}\)</span>
+            </li>
+            <li>
+              <span class="th">กำลังรวมทั้งโครงการ: \(11.1 \times 24 = \mathbf{266\ kW}\)</span>
+              <span class="en">Total across the scheme: \(11.1 \times 24 = \mathbf{266\ kW}\)</span>
+            </li>
+            <li>
+              <span class="th">พลังงานรวมต่อปี: \(266 \times 24 \times 200 = \mathbf{1.28\ GWh}\) ซึ่งเทียบเท่ากับโซลาร์ฟาร์มขนาดราว 0.9 MW ในประเทศไทย</span>
+              <span class="en">Annual energy: \(266 \times 24 \times 200 = \mathbf{1.28\ GWh}\), equivalent to roughly a 0.9 MW solar farm in Thailand.</span>
+            </li>
+            <li>
+              <span class="th">แต่ต้องอ่านผลอย่างระมัดระวัง — 24 จุดติดตั้งหมายถึง 24 ชุดอุปกรณ์ 24 จุดเชื่อมต่อไฟฟ้า และ 24 จุดที่ต้องบำรุงรักษา ต้นทุนต่อกิโลวัตต์ของหน่วยขนาด 11 kW สูงกว่าหน่วยขนาด 266 kW มาก การคัดเลือกเฉพาะจุดที่มีเฮดสูงสุดและอยู่ใกล้ผู้ใช้ไฟฟ้ามากที่สุดสัก 6&ndash;8 จุด มักให้ผลตอบแทนดีกว่าการทำทั้งหมด</span>
+              <span class="en">Read the result carefully, though — 24 sites means 24 sets of equipment, 24 grid connections and 24 places to maintain. The cost per kilowatt of an 11 kW unit far exceeds that of a 266 kW one. Selecting only the six to eight structures with the highest head and the nearest electricity user usually returns more than attempting all of them.</span>
+            </li>
+            <li>
+              <span class="th">ข้อสรุปเชิงวิธีการ: การประเมินศักยภาพระดับประเทศที่คูณจำนวนโครงสร้างด้วยกำลังเฉลี่ยจะได้ตัวเลขที่ดูน่าตื่นเต้นเสมอ แต่ศักยภาพ <em>เชิงเทคนิค</em> ที่คุ้มค่าจริงมักอยู่ที่ราว 20&ndash;40% ของตัวเลขนั้น ข้อจำกัดคือระยะทางถึงจุดเชื่อมต่อ ความสม่ำเสมอของการส่งน้ำ และขนาดที่เล็กเกินไปของแต่ละจุด</span>
+              <span class="en">A methodological conclusion: national assessments that multiply a structure count by an average power always produce an exciting number, but the <em>economically viable</em> technical potential is usually 20&ndash;40% of it. The binding constraints are distance to a connection point, the reliability of the delivery schedule, and the small size of each individual site.</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ SUMMARY ============ -->
+      <section class="section" id="summary">
+        <h2><span class="num">✦</span>
+          <span><span class="th">สรุปและคำศัพท์</span><span class="en">Summary and glossary</span></span>
+        </h2>
+
+        <div class="takeaways" data-reveal>
+          <h2><span class="th">ประเด็นสำคัญที่ต้องจำ</span><span class="en">Key takeaways</span></h2>
+          <ol data-reveal-stagger>
+            <li>
+              <span class="th"><strong>สมการเดียวควบคุมทั้งบท</strong> \(P = \rho g Q H \eta\) เป็นเชิงเส้นทั้งในเฮดและอัตราการไหล ต่างจากลมที่แปรผันตามความเร็วยกกำลังสาม กฎในใจคือกำลังเป็นกิโลวัตต์ ≈ 7 × อัตราการไหล × เฮด</span>
+              <span class="en"><strong>One equation governs the chapter.</strong> \(P = \rho g Q H \eta\) is linear in both head and flow, unlike wind with its cube law. The mental rule is kilowatts ≈ 7 × flow × head.</span>
+            </li>
+            <li>
+              <span class="th"><strong>เฮดคือเพื่อน อัตราการไหลคือค่าใช้จ่าย</strong> กำลังเท่ากันได้จากหลายชุดค่า แต่ต้นทุนอุปกรณ์ขึ้นกับขนาดซึ่งกำหนดโดยอัตราการไหล โครงการเฮดต่ำจึงแพงต่อกิโลวัตต์ <em>ยกเว้น</em> เมื่อโครงสร้างมีอยู่แล้ว</span>
+              <span class="en"><strong>Head is your friend, flow is your bill.</strong> The same power comes from many combinations, but equipment cost follows size, which follows flow. Low-head schemes therefore cost more per kilowatt — <em>except</em> where the structure already exists.</span>
+            </li>
+            <li>
+              <span class="th"><strong>การสูญเสียในท่อแปรผกผันกับเส้นผ่านศูนย์กลางยกกำลังห้า</strong> ท่อที่ใหญ่ขึ้น 10% ลดการสูญเสียลง 38% ขณะที่ราคาเพิ่มเพียง 20&ndash;25% เมื่อไม่แน่ใจให้เลือกขนาดใหญ่ขึ้นหนึ่งขั้นเสมอ และคุมให้เสียเฮดไม่เกิน 10&ndash;15%</span>
+              <span class="en"><strong>Pipe loss varies as the fifth power of diameter.</strong> Ten per cent more diameter cuts the loss by 38% for 20&ndash;25% more cost. When unsure, always go up one size, and keep the loss under 10&ndash;15% of gross head.</span>
+            </li>
+            <li>
+              <span class="th"><strong>เฮดวัดครั้งเดียว อัตราการไหลต้องเฝ้าดูเป็นปี</strong> เส้นโค้งระยะเวลาการไหลเปลี่ยนคำถามที่ตอบไม่ได้ให้เป็นคำถามที่ตอบได้ และอัตราการไหลออกแบบของโครงการน้ำไหลผ่านมักอยู่ที่ \(Q_{30}\) ถึง \(Q_{40}\)</span>
+              <span class="en"><strong>Head is measured once; flow must be watched for a year.</strong> The flow duration curve turns an unanswerable question into an answerable one, and run-of-river design flows usually land between \(Q_{30}\) and \(Q_{40}\).</span>
+            </li>
+            <li>
+              <span class="th"><strong>น้ำเพื่อระบบนิเวศต้องหักออกก่อน ไม่ใช่สิ่งที่เหลือ</strong> โดยทั่วไปกำหนดที่ \(Q_{95}\) หรือ 10% ของอัตราการไหลเฉลี่ยรายปี และในฤดูแล้งอาจทำให้โครงการต้องหยุดเดินทั้งหมด</span>
+              <span class="en"><strong>Environmental flow comes off the top, not from what is left.</strong> It is usually set at \(Q_{95}\) or 10% of mean annual flow, and in the dry season it can shut a scheme down entirely.</span>
+            </li>
+            <li>
+              <span class="th"><strong>การทดสอบที่เร็วที่สุดระหว่างสองตระกูลกังหัน</strong> ถ้าเห็นลำน้ำพุ่งในอากาศคือแรงกระตุ้น (เพลตัน เทอร์โก) ถ้าน้ำเต็มทางเดินตลอดคือแรงปฏิกิริยา (ฟรานซิส คาปลัน) และกังหันแรงปฏิกิริยาขาดท่อดูดไม่ได้</span>
+              <span class="en"><strong>The quickest test between the two families:</strong> a jet visible in open air means impulse (Pelton, Turgo); a passage that stays full means reaction (Francis, Kaplan) — and a reaction turbine cannot do without its draft tube.</span>
+            </li>
+            <li>
+              <span class="th"><strong>ความเร็วรอบคือตัวแปรที่ผู้ออกแบบเลือกได้ และการเลือกความเร็วรอบคือการเลือกกังหัน</strong> ความเร็วจำเพาะ \(N_{s} = N\sqrt{P}/H^{5/4}\) รวมทุกอย่างไว้ในตัวเลขเดียว แต่ต้องตรวจสอบนิยามของสูตรที่ใช้เสมอเพราะมีหลายรูปแบบ</span>
+              <span class="en"><strong>Running speed is the designer&rsquo;s variable, and choosing the speed is choosing the turbine.</strong> Specific speed \(N_{s} = N\sqrt{P}/H^{5/4}\) folds everything into one number — but always check which definition produced a quoted value, because several exist.</span>
+            </li>
+            <li>
+              <span class="th"><strong>คาวิเทชันมักบังคับให้ใบพัดต้องจมต่ำกว่าระดับน้ำท้าย</strong> ที่เฮดต่ำและความเร็วจำเพาะสูง สัมประสิทธิ์โทมาให้ค่าติดลบ ซึ่งแปลว่าต้องขุดฐานรากลึกลงไป และเป็นสาเหตุหนึ่งที่โรงไฟฟ้าเฮดต่ำมีต้นทุนงานโยธาสูง</span>
+              <span class="en"><strong>Cavitation often forces the runner below tailwater.</strong> At low head and high specific speed, Thoma&rsquo;s coefficient gives a negative setting height, which means deeper excavation — one reason low-head powerhouses carry heavy civil costs.</span>
+            </li>
+            <li>
+              <span class="th"><strong>ปั๊มหอยโข่งที่เดินย้อนทางมีราคาหนึ่งในห้าถึงหนึ่งในสิบของกังหันสั่งทำ</strong> ต้องการเฮดและอัตราการไหลสูงกว่าจุด BEP ของปั๊มราว 20&ndash;30% และเหมาะที่สุดเมื่ออัตราการไหลคงที่ — ซึ่งตรงกับลักษณะของคลองชลประทานพอดี</span>
+              <span class="en"><strong>A centrifugal pump run backwards costs a fifth to a tenth of a bespoke turbine.</strong> It needs 20&ndash;30% more head and flow than its pump BEP, and performs best where flow is steady — exactly the character of an irrigation canal.</span>
+            </li>
+            <li>
+              <span class="th"><strong>เขื่อนอเนกประสงค์ของไทยผลิตไฟฟ้าจากน้ำที่ต้องปล่อยอยู่แล้ว</strong> ตารางการปล่อยน้ำถูกกำหนดโดยปฏิทินการเพาะปลูก ไม่ใช่โดยความต้องการไฟฟ้า ส่วนโอกาสที่เหลืออยู่จริงคือโครงสร้างชลประทานนับพันแห่งที่จ่ายค่างานโยธาไปแล้ว ไม่มีผลกระทบใหม่ และมีผู้ใช้ไฟฟ้าอยู่ตรงนั้นพอดี</span>
+              <span class="en"><strong>Thailand&rsquo;s multi-purpose dams generate from water that had to be released anyway.</strong> Releases follow the cropping calendar, not electricity demand. The opportunity that genuinely remains is the thousands of irrigation structures whose civil cost is already paid, which add no new impact, and which already have an electricity consumer standing beside them.</span>
+            </li>
+          </ol>
+        </div>
+
+        <dl class="glossary">
+          <dt><span class="th">เฮดรวม</span><span class="en">Gross head</span></dt>
+          <dd>
+            <span class="th">ความต่างระดับระหว่างผิวน้ำที่ทางรับน้ำกับผิวน้ำที่ทางระบาย วัดระหว่างผิวน้ำ ไม่ใช่ระหว่างตัวอาคาร</span>
+            <span class="en">The level difference between the water surface at the intake and at the tailrace — measured between water surfaces, not between structures.</span>
+          </dd>
+
+          <dt><span class="th">เฮดสุทธิ</span><span class="en">Net head</span></dt>
+          <dd>
+            <span class="th">เฮดรวมหักการสูญเสียจากความเสียดทานในท่อและการสูญเสียย่อย คือเฮดที่กังหันได้ใช้จริงและเป็นค่าที่ต้องใส่ในสมการ (5.1)</span>
+            <span class="en">Gross head less friction and minor losses — the head the turbine actually receives, and the value that belongs in equation (5.1).</span>
+          </dd>
+
+          <dt><span class="th">ท่อส่งน้ำ</span><span class="en">Penstock</span></dt>
+          <dd>
+            <span class="th">ท่อความดันที่นำน้ำจากถังพักลงสู่กังหัน ขนาดของท่อเป็นการต่อรองระหว่างราคาท่อกับพลังงานที่สูญเสียตลอดอายุโครงการ</span>
+            <span class="en">The pressure pipe carrying water from the forebay to the turbine. Its size is a negotiation between pipe cost and energy lost over the project life.</span>
+          </dd>
+
+          <dt><span class="th">เส้นโค้งระยะเวลาการไหล</span><span class="en">Flow duration curve</span> <span class="term-en">FDC</span></dt>
+          <dd>
+            <span class="th">กราฟระหว่างอัตราการไหลกับสัดส่วนของเวลาที่มีค่าเท่ากับหรือมากกว่านั้น \(Q_{30}\) คืออัตราการไหลที่มีเกินอยู่ 30% ของปี</span>
+            <span class="en">A plot of flow against the fraction of time it is equalled or exceeded. \(Q_{30}\) is the flow exceeded 30% of the year.</span>
+          </dd>
+
+          <dt><span class="th">น้ำไหลผ่าน</span><span class="en">Run-of-river</span></dt>
+          <dd>
+            <span class="th">โครงการที่ไม่มีอ่างเก็บน้ำหรือมีขนาดเล็กมาก จึงผลิตได้ตามที่ลำน้ำให้มาในขณะนั้น ผลกระทบต่อระบบนิเวศน้อยกว่าโครงการที่มีอ่างเก็บน้ำมาก</span>
+            <span class="en">A scheme with no reservoir, or a very small one, producing whatever the stream gives at that moment. Its ecological impact is far smaller than that of a storage scheme.</span>
+          </dd>
+
+          <dt><span class="th">การไหลเพื่อระบบนิเวศ</span><span class="en">Environmental flow</span></dt>
+          <dd>
+            <span class="th">อัตราการไหลที่ต้องปล่อยให้ลำน้ำเดิมตลอดเวลาเพื่อรักษาระบบนิเวศท้ายน้ำ ต้องหักออกก่อนการคำนวณใด ๆ ไม่ใช่สิ่งที่เหลือจากกังหัน</span>
+            <span class="en">The flow that must be left in the original channel at all times to sustain the downstream ecosystem. It is subtracted before any calculation, not taken from the turbine&rsquo;s leftovers.</span>
+          </dd>
+
+          <dt><span class="th">กังหันแรงกระตุ้น</span><span class="en">Impulse turbine</span></dt>
+          <dd>
+            <span class="th">กังหันที่เปลี่ยนเฮดเป็นความเร็วที่หัวฉีดก่อน แล้วให้ลำน้ำชนใบพัดที่หมุนในอากาศที่ความดันบรรยากาศ เช่น เพลตันและเทอร์โก</span>
+            <span class="en">A turbine that converts head into jet velocity at a nozzle, then strikes blades spinning in open air at atmospheric pressure — the Pelton and the Turgo.</span>
+          </dd>
+
+          <dt><span class="th">กังหันแรงปฏิกิริยา</span><span class="en">Reaction turbine</span></dt>
+          <dd>
+            <span class="th">กังหันที่ใบพัดจมอยู่ในทางเดินที่เต็มไปด้วยน้ำซึ่งยังมีความดัน ดึงพลังงานจากทั้งการเปลี่ยนทิศทางและการลดความดัน เช่น ฟรานซิสและคาปลัน</span>
+            <span class="en">A turbine whose runner is submerged in a passage full of still-pressurised water, taking energy from both the change of direction and the pressure drop — the Francis and the Kaplan.</span>
+          </dd>
+
+          <dt><span class="th">ท่อดูด</span><span class="en">Draft tube</span></dt>
+          <dd>
+            <span class="th">ทางน้ำที่ค่อย ๆ ขยายตัวใต้ใบพัดของกังหันแรงปฏิกิริยา ทำหน้าที่กู้คืนพลังงานจลน์และสร้างความดันต่ำที่ทางออกของใบพัด ซึ่งเพิ่มเฮดใช้งาน</span>
+            <span class="en">The gradually expanding passage below a reaction runner, which recovers kinetic energy and creates a low pressure at the runner exit, adding to the usable head.</span>
+          </dd>
+
+          <dt><span class="th">ความเร็วจำเพาะ</span><span class="en">Specific speed</span> <span class="term-en">N<sub>s</sub></span></dt>
+          <dd>
+            <span class="th">\(N\sqrt{P}/H^{5/4}\) ซึ่งอธิบาย &ldquo;รูปร่าง&rdquo; ของกังหันและใช้เลือกชนิดกังหัน ค่าต่ำคือเพลตัน ค่าสูงคือคาปลัน</span>
+            <span class="en">\(N\sqrt{P}/H^{5/4}\), describing a turbine&rsquo;s &ldquo;shape&rdquo; and used to select its type: low values mean Pelton, high values mean Kaplan.</span>
+          </dd>
+
+          <dt><span class="th">คาวิเทชัน</span><span class="en">Cavitation</span></dt>
+          <dd>
+            <span class="th">การเกิดและยุบตัวของฟองไอเมื่อความดันในกระแสน้ำตกถึงความดันไออิ่มตัว ทำให้ผิวโลหะถูกกัดกร่อนเป็นรูพรุนและประสิทธิภาพลดลง ควบคุมด้วยสัมประสิทธิ์โทมา</span>
+            <span class="en">The formation and violent collapse of vapour bubbles where the pressure falls to saturation vapour pressure, pitting metal surfaces and cutting efficiency. It is controlled through Thoma&rsquo;s coefficient.</span>
+          </dd>
+
+          <dt><span class="th">ความเร็วหนี</span><span class="en">Runaway speed</span></dt>
+          <dd>
+            <span class="th">ความเร็วรอบที่กังหันเร่งขึ้นไปถึงเมื่อสูญเสียโหลดกะทันหัน ราว 1.8 เท่าของปกติสำหรับเพลตันและ 2.5&ndash;3.2 เท่าสำหรับคาปลัน ชิ้นส่วนหมุนต้องทนสภาวะนี้ได้</span>
+            <span class="en">The speed a turbine reaches on sudden loss of load — about 1.8 times normal for a Pelton and 2.5&ndash;3.2 times for a Kaplan. Rotating parts must survive it.</span>
+          </dd>
+
+          <dt><span class="th">ตัวควบคุมโหลดอิเล็กทรอนิกส์</span><span class="en">Electronic load controller</span> <span class="term-en">ELC</span></dt>
+          <dd>
+            <span class="th">อุปกรณ์ที่รักษาความถี่โดยเบี่ยงกำลังส่วนเกินไปลงตัวต้านทานแทนการปรับอัตราการไหล ไม่มีชิ้นส่วนเคลื่อนไหวและราคาถูก เหมาะกับงานที่น้ำไม่มีต้นทุนค่าเสียโอกาส</span>
+            <span class="en">A device that holds frequency by diverting surplus power into a ballast resistor instead of regulating flow. It has no moving parts and costs little, suiting sites where the water carries no opportunity cost.</span>
+          </dd>
+
+          <dt><span class="th">ปั๊มที่ใช้เป็นกังหัน</span><span class="en">Pump as turbine</span> <span class="term-en">PAT</span></dt>
+          <dd>
+            <span class="th">ปั๊มหอยโข่งมาตรฐานที่เดินย้อนทางเพื่อทำหน้าที่เป็นกังหัน ราคาถูกกว่ากังหันสั่งทำมาก แต่เดินได้ดีเฉพาะใกล้จุดออกแบบ</span>
+            <span class="en">A standard centrifugal pump run backwards as a turbine. Far cheaper than a bespoke machine, but it performs well only near its design point.</span>
+          </dd>
+
+          <dt><span class="th">โรงไฟฟ้าพลังน้ำแบบสูบกลับ</span><span class="en">Pumped storage</span></dt>
+          <dd>
+            <span class="th">โรงไฟฟ้าที่สูบน้ำขึ้นอ่างบนเมื่อไฟฟ้าเหลือและปล่อยลงมาผลิตเมื่อต้องการ ไม่ผลิตพลังงานสุทธิแต่ย้ายพลังงานข้ามเวลาได้ที่ประสิทธิภาพไปกลับ 70&ndash;80%</span>
+            <span class="en">A plant that pumps water uphill when electricity is surplus and releases it when wanted. It produces no net energy but moves energy through time at a round-trip efficiency of 70&ndash;80%.</span>
+          </dd>
+        </dl>
+      </section>
+
+      <!-- ============ REFERENCES ============ -->
+      <section class="section" id="references">
+        <h2><span class="num">§</span>
+          <span><span class="th">เอกสารอ้างอิงและอ่านเพิ่มเติม</span><span class="en">References and further reading</span></span>
+        </h2>
+
+        <div class="references">
+          <h3><span class="th">ตำราหลัก</span><span class="en">Core textbooks</span></h3>
+          <ol>
+            <li><span>Penche, C. (2004). <cite>Guide on How to Develop a Small Hydropower Plant</cite>. Brussels: European Small Hydropower Association (ESHA).
+              <span class="src"><span class="th">คู่มือที่ใช้งานได้จริงที่สุดสำหรับพลังน้ำขนาดเล็ก เผยแพร่ฟรี — ที่มาของวิธีคำนวณเฮดสุทธิ เส้นโค้งการไหล และการเลือกกังหันในหัวข้อ 5.2 ถึง 5.5</span><span class="en">The most practical small-hydro handbook there is, and freely available — source of the net head, FDC and turbine selection methods of §5.2 to §5.5</span></span></span></li>
+            <li><span>Harvey, A. <em>et al.</em> (1993). <cite>Micro-Hydro Design Manual: A Guide to Small-Scale Water Power Schemes</cite>. Rugby: Practical Action Publishing.
+              <span class="src"><span class="th">ตำรามาตรฐานของงานพลังน้ำขนาดเล็กมากในบริบทชนบท ครอบคลุมครอสโฟลว์และตัวควบคุมโหลดอย่างละเอียด</span><span class="en">The standard text for rural micro-hydro, with thorough coverage of crossflow turbines and load controllers</span></span></span></li>
+            <li><span>Dixon, S. L. and Hall, C. A. (2014). <cite>Fluid Mechanics and Thermodynamics of Turbomachinery</cite>, 7th ed. Oxford: Butterworth-Heinemann.
+              <span class="src"><span class="th">ที่มาของทฤษฎีความเร็วจำเพาะและสามเหลี่ยมความเร็วในหัวข้อ 5.5</span><span class="en">Source of the specific-speed theory and velocity triangles of §5.5</span></span></span></li>
+            <li><span>Çengel, Y. A. and Cimbala, J. M. (2018). <cite>Fluid Mechanics: Fundamentals and Applications</cite>, 4th ed. New York: McGraw-Hill.
+              <span class="src"><span class="th">บทว่าด้วยการไหลในท่อและเครื่องจักรกลของไหล ใช้คู่กับสมการ (5.2)</span><span class="en">The pipe-flow and turbomachinery chapters, to read alongside equation (5.2)</span></span></span></li>
+            <li><span>Boyle, G. (ed.) (2012). <cite>Renewable Energy: Power for a Sustainable Future</cite>, 3rd ed. Oxford: Oxford University Press.
+              <span class="src"><span class="th">บทว่าด้วยพลังงานน้ำ เหมาะสำหรับภาพรวมระดับปริญญาตรี</span><span class="en">The hydro chapter, well suited to an undergraduate overview</span></span></span></li>
+          </ol>
+
+          <h3><span class="th">บทความวิชาการและรายงาน</span><span class="en">Journal articles and reports</span></h3>
+          <ol start="6">
+            <li><span>Williams, A. A. (1996). &lsquo;Pumps as turbines for low cost micro hydro power&rsquo;, <cite>Renewable Energy</cite>, 9(1&ndash;4), pp. 1227&ndash;1234.
+              <span class="src"><span class="th">ที่มาของกฎการแปลงค่าระหว่างปั๊มกับกังหันในสมการ (5.5)</span><span class="en">Source of the pump-to-turbine conversion rules of equation (5.5)</span></span></span></li>
+            <li><span>Jain, S. V. and Patel, R. N. (2014). &lsquo;Investigations on pump running in turbine mode: a review of the state-of-the-art&rsquo;, <cite>Renewable and Sustainable Energy Reviews</cite>, 30, pp. 841&ndash;868.
+              <span class="src"><span class="th">บทปริทัศน์ที่ครอบคลุมที่สุดเรื่อง PAT รวมข้อจำกัดด้านประสิทธิภาพนอกจุดออกแบบ</span><span class="en">The most complete review of PAT technology, including its off-design efficiency limits</span></span></span></li>
+            <li><span>Paish, O. (2002). &lsquo;Small hydro power: technology and current status&rsquo;, <cite>Renewable and Sustainable Energy Reviews</cite>, 6(6), pp. 537&ndash;556.</span></li>
+            <li><span>Kougias, I. <em>et al.</em> (2019). &lsquo;Analysis of emerging technologies in the hydropower sector&rsquo;, <cite>Renewable and Sustainable Energy Reviews</cite>, 113, 109257.
+              <span class="src"><span class="th">รวมถึงกังหันเฮดต่ำมากและเทคโนโลยีที่เป็นมิตรต่อปลา</span><span class="en">Includes very-low-head turbines and fish-friendly technologies</span></span></span></li>
+            <li><span>Jutagate, T. <em>et al.</em> (2007). &lsquo;Effects of Pak Mun Dam on the migration of fishes in the Mun River&rsquo;, <cite>Kasetsart Journal (Natural Science)</cite>, 41, pp. 130&ndash;142.
+              <span class="src"><span class="th">กรณีศึกษาผลกระทบต่อการอพยพของปลาที่อ้างถึงในหัวข้อ 5.8</span><span class="en">The fish-migration impact study cited in §5.8</span></span></span></li>
+            <li><span>Deemer, B. R. <em>et al.</em> (2016). &lsquo;Greenhouse gas emissions from reservoir water surfaces: a new global synthesis&rsquo;, <cite>BioScience</cite>, 66(11), pp. 949&ndash;964.
+              <span class="src"><span class="th">ที่มาของเนื้อหาเรื่องมีเทนจากอ่างเก็บน้ำเขตร้อนในตารางที่ 5.5</span><span class="en">Source of the tropical-reservoir methane material in Table 5.5</span></span></span></li>
+          </ol>
+
+          <h3><span class="th">มาตรฐานและแหล่งข้อมูลระหว่างประเทศ</span><span class="en">Standards and international sources</span></h3>
+          <ol start="12">
+            <li><span>IEC 60041, <cite>Field acceptance tests to determine the hydraulic performance of hydraulic turbines, storage pumps and pump-turbines</cite>. Geneva: International Electrotechnical Commission.
+              <span class="src"><span class="th">มาตรฐานสากลสำหรับการทดสอบสมรรถนะกังหันน้ำในสนาม</span><span class="en">The international standard for field performance testing of water turbines</span></span></span></li>
+            <li><span>IEC 61116, <cite>Electromechanical equipment guide for small hydroelectric installations</cite>. Geneva: International Electrotechnical Commission.</span></li>
+            <li><span>International Hydropower Association (IHA). <cite>Hydropower Status Report</cite> and the <cite>Hydropower Sustainability Standard</cite>.
+              <span class="src">hydropower.org</span></span></li>
+            <li><span>International Renewable Energy Agency (IRENA). <cite>Renewable Power Generation Costs</cite>, annual series.
+              <span class="src">irena.org</span></span></li>
+          </ol>
+
+          <h3><span class="th">แหล่งข้อมูลของประเทศไทย</span><span class="en">Thai sources</span></h3>
+          <ol start="16">
+            <li><span><span class="th">กรมชลประทาน — ข้อมูลโครงการชลประทาน อาคารน้ำตก ประตูระบายน้ำ และตารางการส่งน้ำรายโครงการ ซึ่งเป็นจุดตั้งต้นของงานในหัวข้อ 5.9</span><span class="en">Royal Irrigation Department — scheme data, drop structures, regulators and delivery schedules, the starting point for the work of §5.9</span>
+              <span class="src">rid.go.th</span></span></li>
+            <li><span><span class="th">การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย (กฟผ.) — ข้อมูลเขื่อนภูมิพล สิริกิติ์ ศรีนครินทร์ วชิราลงกรณ รัชชประภา และโรงไฟฟ้าลำตะคองชลภาวัฒนาแบบสูบกลับ</span><span class="en">EGAT — data on the Bhumibol, Sirikit, Srinagarind, Vajiralongkorn and Rajjaprabha dams and the Lam Takhong pumped-storage plant</span>
+              <span class="src">egat.co.th</span></span></li>
+            <li><span><span class="th">กรมพัฒนาพลังงานทดแทนและอนุรักษ์พลังงาน (พพ.) — โครงการไฟฟ้าพลังน้ำขนาดเล็กและขนาดเล็กมาก และรายงานศักยภาพพลังน้ำของประเทศ</span><span class="en">DEDE — small and micro hydropower programmes and the national hydro potential assessments</span>
+              <span class="src">dede.go.th</span></span></li>
+            <li><span><span class="th">กรมทรัพยากรน้ำ และสถาบันสารสนเทศทรัพยากรน้ำ (สสน.) — ข้อมูลน้ำท่ารายวันและรายสถานี สำหรับสร้างเส้นโค้งระยะเวลาการไหลในหัวข้อ 5.3</span><span class="en">Department of Water Resources and HII — daily streamflow records by station, for building the flow duration curves of §5.3</span>
+              <span class="src">dwr.go.th · hii.or.th</span></span></li>
+            <li><span><span class="th">กรมประมง — ข้อมูลชนิดพันธุ์ปลาและเส้นทางอพยพในลุ่มน้ำ สำหรับใช้ออกแบบทางปลาผ่านให้เหมาะกับชนิดปลาในพื้นที่จริง</span><span class="en">Department of Fisheries — species and migration-route data for designing fish passes that suit the species actually present</span>
+              <span class="src">fisheries.go.th</span></span></li>
+          </ol>
+        </div>
+
+        <div class="callout callout--warn">
+          <div class="callout__title">
+            <span class="th">ก่อนนำไปอ้างอิง</span><span class="en">Before you cite</span>
+          </div>
+          <p>
+            <span class="th">ค่าความเร็วจำเพาะที่ตีพิมพ์ในแหล่งต่าง ๆ ใช้นิยามและหน่วยไม่ตรงกัน บางแหล่งใช้แรงม้า บางแหล่งใช้อัตราการไหลแทนกำลัง ตัวเลขจึงต่างกันหลายเท่า เมื่ออ้างอิงให้ระบุนิยามที่ใช้เสมอ เช่นเดียวกับค่าประสิทธิภาพกังหันซึ่งต้องระบุว่าเป็นค่าที่จุดออกแบบหรือค่าเฉลี่ยถ่วงน้ำหนักตลอดปี สำหรับข้อมูลอัตราการไหลของลำน้ำในประเทศไทย ควรใช้ข้อมูลย้อนหลังอย่างน้อย 10 ปีจากกรมทรัพยากรน้ำหรือ สสน. ไม่ใช่การวัดภาคสนามเพียงไม่กี่ครั้ง</span>
+            <span class="en">Published specific-speed values use inconsistent definitions and units — some use horsepower, some use flow in place of power — so the numbers differ severalfold. Always state which definition you used. The same applies to turbine efficiencies, which must be identified as design-point or annual weighted-average values. For Thai streamflow, use at least ten years of record from the Department of Water Resources or HII, never a handful of field measurements.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ POST-TEST ============ -->
+      <section class="quiz quiz--post" id="posttest" data-quiz="post" data-pass="0.7">
+        <script type="application/json" class="quiz-data">
+{
+  "questions": [
+    {
+      "q": {
+        "th": "ฝายแห่งหนึ่งให้เฮดสุทธิ 8 m ที่อัตราการไหล 2.5 m³/s หากประสิทธิภาพรวม 0.72 จะได้กำลังเท่าไร",
+        "en": "A weir gives 8 m net head at 2.5 m³/s. At 0.72 overall efficiency, what is the output?"
+      },
+      "choices": [
+        {
+          "th": "ประมาณ 14 kW",
+          "en": "About 14 kW"
+        },
+        {
+          "th": "ประมาณ 141 kW",
+          "en": "About 141 kW"
+        },
+        {
+          "th": "ประมาณ 196 kW",
+          "en": "About 196 kW"
+        },
+        {
+          "th": "ประมาณ 1,410 kW",
+          "en": "About 1,410 kW"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "P = 9.81 × 2.5 × 8 × 0.72 = 141 kW ข้อผิดพลาดที่พบบ่อยคือลืมคูณประสิทธิภาพ ซึ่งจะได้ 196 kW ลองตรวจด้วยกฎในใจ: 7 × 2.5 × 8 = 140 kW ซึ่งใกล้เคียงมาก",
+        "en": "P = 9.81 × 2.5 × 8 × 0.72 = 141 kW. The common slip is forgetting the efficiency, which gives 196 kW. Check with the mental rule: 7 × 2.5 × 8 = 140 kW, very close."
+      }
+    },
+    {
+      "q": {
+        "th": "หากเพิ่มเส้นผ่านศูนย์กลางท่อส่งน้ำขึ้น 20% โดยอัตราการไหลคงเดิม การสูญเสียเฮดจากความเสียดทานจะเปลี่ยนไปอย่างไร",
+        "en": "If the penstock diameter is increased by 20% at constant flow, what happens to the friction head loss?"
+      },
+      "choices": [
+        {
+          "th": "ลดลงราว 20% ตามสัดส่วนของเส้นผ่านศูนย์กลางที่เพิ่มขึ้น",
+          "en": "It falls by about 20%, in proportion to the added diameter"
+        },
+        {
+          "th": "ลดลงราว 40% เพราะการสูญเสียแปรผกผันกับพื้นที่หน้าตัด",
+          "en": "It falls by about 40%, as loss varies inversely with the flow area"
+        },
+        {
+          "th": "ลดลงราว 60% เพราะการสูญเสียแปรผกผันกับเส้นผ่านศูนย์กลางยกกำลังห้า",
+          "en": "It falls by about 60%, as loss varies as the inverse fifth power of diameter"
+        },
+        {
+          "th": "ไม่เปลี่ยนแปลง เพราะอัตราการไหลที่ผ่านท่อยังคงเท่าเดิมทุกประการ",
+          "en": "It does not change at all, because the flow through the pipe is the same"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "h_f ∝ Q²L/D⁵ ดังนั้น 1.2⁻⁵ = 0.402 คือเหลือเพียง 40% ของเดิม หรือลดลง 60% ความสัมพันธ์ยกกำลังห้านี้เกิดจากสองผล — ความเร็วลดลงตาม D² แล้วยกกำลังสองในสมการดาร์ซี-ไวส์บาค รวมเป็น D⁴ แล้วคูณด้วยเทอม L/D อีกหนึ่ง จึงเป็น D⁵ ผลคือความผิดพลาดจากการเลือกท่อเล็กเกินไปแพงกว่าการเลือกใหญ่เกินไปเสมอ",
+        "en": "h_f ∝ Q²L/D⁵, so 1.2⁻⁵ = 0.402 — only 40% remains, a 60% reduction. The fifth power comes from two effects: velocity falls as D², then is squared in Darcy–Weisbach giving D⁴, multiplied by the L/D term for D⁵. The consequence is that undersizing always costs more than oversizing."
+      }
+    },
+    {
+      "q": {
+        "th": "ข้อใดอธิบายความต่างเชิงหลักการระหว่างกังหันแรงกระตุ้นกับกังหันแรงปฏิกิริยาได้ถูกต้อง",
+        "en": "Which correctly states the difference in principle between impulse and reaction turbines?"
+      },
+      "choices": [
+        {
+          "th": "กังหันแรงกระตุ้นใช้กับน้ำสะอาด ส่วนกังหันแรงปฏิกิริยาใช้กับน้ำที่มีตะกอนปน",
+          "en": "Impulse turbines take clean water while reaction turbines take silty water"
+        },
+        {
+          "th": "กังหันแรงปฏิกิริยาไม่ต้องใช้เครื่องกำเนิดไฟฟ้า เพราะผลิตกระแสได้ในตัวเอง",
+          "en": "Reaction turbines need no generator at all, since they make current themselves"
+        },
+        {
+          "th": "กังหันแรงกระตุ้นหมุนเร็วกว่ากังหันแรงปฏิกิริยาเสมอเมื่อเฮดเท่ากัน",
+          "en": "Impulse turbines always spin faster than reaction ones at the same head"
+        },
+        {
+          "th": "แรงกระตุ้นใช้ลำน้ำชนใบพัดในอากาศ ส่วนแรงปฏิกิริยาใบพัดจมในน้ำมีความดัน",
+          "en": "Impulse strikes blades with a jet in air; reaction runs submerged under pressure"
+        }
+      ],
+      "answer": 3,
+      "why": {
+        "th": "การทดสอบที่เร็วที่สุดคือมองว่าเห็นลำน้ำพุ่งในอากาศหรือไม่ ความต่างนี้อธิบายด้วยว่าทำไมเพลตันจึงใช้กับเฮดต่ำไม่ได้ — ที่เฮด 4 เมตร ลำน้ำเร็วเพียง 8.8 m/s ต้องใช้ล้อที่ใหญ่เกินสมเหตุสมผล และทำไมกังหันแรงปฏิกิริยาจึงขาดท่อดูดไม่ได้ เพราะต้องกู้คืนพลังงานจลน์และสร้างความดันต่ำที่ทางออกใบพัด",
+        "en": "The quickest test is whether you can see a jet in open air. The distinction also explains why a Pelton cannot work at low head — at 4 m the jet reaches only 8.8 m/s and the wheel would be absurdly large — and why a reaction turbine cannot do without its draft tube, which recovers kinetic energy and sets a low pressure at the runner exit."
+      }
+    },
+    {
+      "q": {
+        "th": "โครงการน้ำไหลผ่านมักเลือกอัตราการไหลออกแบบที่ราว Q30 ถึง Q40 เพราะเหตุใด",
+        "en": "Why do run-of-river schemes usually choose a design flow near Q30 to Q40?"
+      },
+      "choices": [
+        {
+          "th": "เพราะเป็นจุดสมดุลระหว่างกังหันใหญ่ที่เดินไม่เต็มกำลัง กับกังหันเล็กที่ปล่อยน้ำทิ้ง",
+          "en": "Because it balances an oversized turbine against a small one that spills water"
+        },
+        {
+          "th": "เพราะเป็นค่าที่กฎหมายและระเบียบการขออนุญาตใช้น้ำกำหนดไว้อย่างชัดเจน",
+          "en": "Because water abstraction law and licensing rules prescribe exactly that value"
+        },
+        {
+          "th": "เพราะกังหันทุกชนิดให้ประสิทธิภาพสูงสุดเมื่อเดินที่อัตราการไหล Q30 พอดี",
+          "en": "Because every turbine reaches its peak efficiency running at exactly Q30"
+        },
+        {
+          "th": "เพราะ Q30 มีค่าเท่ากับอัตราการไหลเฉลี่ยรายปีของลำน้ำเสมอไม่ว่าลุ่มน้ำใด",
+          "en": "Because Q30 always equals the mean annual flow, in any catchment at all"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "th": "เลือกสูงเกินไปได้กังหันใหญ่ที่เดินต่ำกว่าพิกัดเกือบตลอดปี ซึ่งกังหันส่วนใหญ่ประสิทธิภาพตกในสภาพนั้น เลือกต่ำเกินไปได้กังหันเล็กที่เดินเกือบตลอดปีแต่ปล่อยน้ำส่วนเกินทิ้งไปมาก จุดที่พื้นที่ใต้เส้นโค้งที่เก็บได้จริงต่อเงินลงทุนสูงสุดมักอยู่ระหว่าง Q30 ถึง Q40",
+        "en": "Choose too high and you get a large turbine part-loaded nearly all year, where most machines lose efficiency. Choose too low and you get a small one running almost continuously but spilling a great deal. The point of maximum captured area under the curve per unit of investment usually lies between Q30 and Q40."
+      }
+    },
+    {
+      "q": {
+        "th": "กังหันให้กำลังที่เพลา 100 kW ที่เฮดสุทธิ 20 m และหมุนที่ 750 rpm ความเร็วจำเพาะเป็นเท่าไร และควรเลือกกังหันชนิดใด",
+        "en": "A turbine delivers 100 kW at the shaft with 20 m net head at 750 rpm. What is its specific speed, and which type suits?"
+      },
+      "choices": [
+        {
+          "th": "Ns ≈ 18 · เพลตัน",
+          "en": "Ns ≈ 18 · Pelton"
+        },
+        {
+          "th": "Ns ≈ 176 · ครอสโฟลว์หรือฟรานซิส",
+          "en": "Ns ≈ 176 · crossflow or Francis"
+        },
+        {
+          "th": "Ns ≈ 375 · คาปลันเท่านั้น",
+          "en": "Ns ≈ 375 · Kaplan only"
+        },
+        {
+          "th": "Ns ≈ 750 · ไม่มีกังหันชนิดใดใช้ได้",
+          "en": "Ns ≈ 750 · no turbine is suitable"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "H^1.25 = 20^1.25 = 42.6 และ √100 = 10 ดังนั้น Ns = 750 × 10/42.6 = 176 ซึ่งตกในย่านครอสโฟลว์ (40–200) และฟรานซิส (60–400) ที่เฮด 20 เมตรทั้งสองชนิดใช้ได้จริง การตัดสินใจจึงขึ้นกับราคา ความสามารถในการซ่อมในพื้นที่ และความทนต่อตะกอน มากกว่าขึ้นกับตัวเลข Ns เพียงอย่างเดียว",
+        "en": "H^1.25 = 20^1.25 = 42.6 and √100 = 10, so Ns = 750 × 10/42.6 = 176 — within crossflow (40–200) and Francis (60–400). At 20 m both are genuinely workable, so the decision turns on price, local repairability and silt tolerance rather than on Ns alone."
+      }
+    },
+    {
+      "q": {
+        "th": "การคำนวณด้วยสัมประสิทธิ์โทมาให้ค่าความสูงติดตั้ง Hs = −1.2 m หมายความว่าอย่างไร",
+        "en": "A Thoma calculation gives a setting height Hs = −1.2 m. What does that mean?"
+      },
+      "choices": [
+        {
+          "th": "กังหันต้องติดตั้งสูงกว่าระดับน้ำท้าย 1.2 เมตร เพื่อระบายน้ำได้สะดวก",
+          "en": "The turbine must sit 1.2 m above tailwater so the water drains freely"
+        },
+        {
+          "th": "เฮดสุทธิที่กังหันได้ใช้ลดลงไป 1.2 เมตรจากค่าที่คำนวณไว้เดิม",
+          "en": "The net head available to the turbine is 1.2 m less than first calculated"
+        },
+        {
+          "th": "ใบพัดต้องจมต่ำกว่าระดับน้ำท้ายอย่างน้อย 1.2 เมตร จึงจะไม่เกิดคาวิเทชัน",
+          "en": "The runner must sit at least 1.2 m below tailwater to avoid cavitation"
+        },
+        {
+          "th": "การคำนวณผิดพลาด เพราะค่าความสูงติดตั้งเป็นจำนวนลบไม่ได้ในทางกายภาพ",
+          "en": "The calculation is wrong, since a setting height cannot physically be negative"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "ค่าติดลบเป็นเรื่องปกติมากสำหรับกังหันเฮดต่ำที่มีความเร็วจำเพาะสูง และมีผลโดยตรงต่อต้นทุน เพราะบังคับให้ต้องขุดฐานรากลึกลงไปใต้ระดับน้ำท้าย ในทางปฏิบัติควรเผื่อความปลอดภัยเพิ่มอีก 0.5–1.0 เมตร และอย่าลืมว่าที่ระดับความสูงมาก ความดันบรรยากาศต่ำลงจึงต้องจมลึกกว่าเดิม",
+        "en": "A negative value is entirely normal for low-head, high-specific-speed machines, and it has a direct cost consequence: the foundation must be excavated below tailwater. In practice a further 0.5–1.0 m of margin is added — and remember that at altitude the lower atmospheric pressure requires deeper submergence still."
+      }
+    },
+    {
+      "q": {
+        "th": "ต้องการเลือกปั๊มหอยโข่งมาใช้เป็นกังหันที่เฮดสุทธิ 30 m และอัตราการไหล 0.06 m³/s ควรมองหาปั๊มที่มีจุด BEP ประมาณเท่าไร",
+        "en": "To select a pump as turbine for 30 m net head and 0.06 m³/s, what pump BEP should you look for?"
+      },
+      "choices": [
+        {
+          "th": "เฮด 24 m และอัตราการไหล 0.05 m³/s",
+          "en": "24 m head and 0.05 m³/s"
+        },
+        {
+          "th": "เฮด 36 m และอัตราการไหล 0.072 m³/s",
+          "en": "36 m head and 0.072 m³/s"
+        },
+        {
+          "th": "เฮด 30 m และอัตราการไหล 0.06 m³/s เท่ากันพอดี",
+          "en": "Exactly 30 m and 0.06 m³/s"
+        },
+        {
+          "th": "เฮด 60 m และอัตราการไหล 0.12 m³/s",
+          "en": "60 m head and 0.12 m³/s"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "th": "ปั๊มที่เดินเป็นกังหันต้องการเฮดและอัตราการไหลสูงกว่าจุด BEP ตอนเดินเป็นปั๊มราว 20–30% ดังนั้นต้องหารกลับ: H_pump = 30/1.25 = 24 m และ Q_pump = 0.06/1.2 = 0.05 m³/s (180 m³/h) ข้อผิดพลาดที่พบบ่อยคือคูณแทนที่จะหาร ซึ่งจะได้ปั๊มที่ใหญ่เกินไปและเดินห่างจากจุดออกแบบมาก",
+        "en": "A pump run as a turbine needs 20–30% more head and flow than its pump BEP, so divide rather than multiply: H_pump = 30/1.25 = 24 m and Q_pump = 0.06/1.2 = 0.05 m³/s (180 m³/h). The common error is multiplying, which gives an oversized pump running far from its design point."
+      }
+    },
+    {
+      "q": {
+        "th": "เหตุใดตัวควบคุมโหลดอิเล็กทรอนิกส์ (ELC) จึงมักเป็นคำตอบที่เหมาะสมสำหรับพลังน้ำในคลองชลประทาน",
+        "en": "Why is an electronic load controller usually the right choice for hydro in an irrigation canal?"
+      },
+      "choices": [
+        {
+          "th": "เพราะ ELC ประหยัดน้ำในคลองได้มากกว่าตัวควบคุมเชิงกลอย่างชัดเจน",
+          "en": "Because an ELC saves markedly more canal water than a mechanical governor"
+        },
+        {
+          "th": "เพราะระเบียบของกรมชลประทานกำหนดให้ใช้ ELC ในงานติดตั้งลักษณะนี้",
+          "en": "Because irrigation department rules require an ELC for installations of this kind"
+        },
+        {
+          "th": "เพราะ ELC ให้ประสิทธิภาพการแปลงพลังงานสูงกว่าตัวควบคุมชนิดอื่นทุกชนิด",
+          "en": "Because an ELC converts energy more efficiently than any other controller"
+        },
+        {
+          "th": "เพราะน้ำต้องไหลผ่านอยู่แล้ว การประหยัดน้ำจึงไม่มีความหมาย และ ELC ทนกว่า",
+          "en": "Because the water passes anyway, so saving it is meaningless, and an ELC lasts better"
+        }
+      ],
+      "answer": 3,
+      "why": {
+        "th": "ตัวควบคุมเชิงกลมีคุณค่าตรงที่ปรับอัตราการไหลให้พอดีกับโหลด ซึ่งประหยัดน้ำในอ่างเก็บน้ำ แต่ในคลองส่งน้ำ น้ำต้องไหลผ่านตามตารางส่งน้ำอยู่แล้ว การกักไว้ไม่ได้ทำให้ได้ประโยชน์ใด ๆ ELC จึงเหมาะกว่าเพราะถูกกว่า ทนกว่า และพลังงานส่วนเกินที่เบี่ยงไปลงตัวต้านทานยังนำไปใช้อบแห้งผลผลิตหรืออุ่นน้ำได้",
+        "en": "A mechanical governor earns its keep by matching flow to load, which saves reservoir water. In a canal the water passes on its delivery schedule anyway, so holding it back gains nothing. The ELC is then better: cheaper, more robust, and the diverted surplus can still be used for crop drying or water heating."
+      }
+    },
+    {
+      "q": {
+        "th": "ข้อใดอธิบายบทบาทของโรงไฟฟ้าพลังน้ำแบบสูบกลับได้ถูกต้อง",
+        "en": "Which correctly describes the role of a pumped-storage plant?"
+      },
+      "choices": [
+        {
+          "th": "ผลิตพลังงานสุทธิได้มากกว่าโรงไฟฟ้าพลังน้ำธรรมดา เพราะนำน้ำกลับมาใช้ซ้ำได้",
+          "en": "It yields more net energy than conventional hydro, because the water is reused"
+        },
+        {
+          "th": "ไม่ผลิตพลังงานสุทธิ แต่เก็บพลังงานไว้ได้ที่ประสิทธิภาพไปกลับ 70–80%",
+          "en": "It yields no net energy but stores it, at a round-trip efficiency of 70–80%"
+        },
+        {
+          "th": "ใช้ได้เฉพาะกับเขื่อนที่มีอ่างเก็บน้ำขนาดใหญ่มากและมีเฮดสูงเท่านั้น",
+          "en": "It works only with very large storage reservoirs that also have high head"
+        },
+        {
+          "th": "มีประสิทธิภาพไปกลับเกือบ 100% เพราะไม่มีการเปลี่ยนรูปพลังงานเป็นความร้อน",
+          "en": "Its round-trip efficiency nears 100%, since no energy is turned into heat"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "โรงไฟฟ้าแบบสูบกลับเป็นแบตเตอรี่ขนาดใหญ่ ไม่ใช่แหล่งพลังงาน เสียพลังงาน 20–30% ในการเก็บ แต่ได้ความสามารถย้ายพลังงานข้ามเวลามาแทน ความสามารถนี้จะสำคัญขึ้นมากเมื่อสัดส่วนพลังงานแสงอาทิตย์เพิ่มขึ้น เพราะระบบต้องการที่เก็บพลังงานกลางวันไว้ใช้กลางคืน โรงไฟฟ้าลำตะคองชลภาวัฒนาขนาด 1,000 MW คือตัวอย่างในประเทศไทย",
+        "en": "Pumped storage is a very large battery, not an energy source: 20–30% is lost in storing, bought in exchange for moving energy through time. That ability grows far more valuable as the solar share rises, since the system needs somewhere to put the daytime surplus. Thailand's example is the 1,000 MW Lam Takhong plant."
+      }
+    },
+    {
+      "q": {
+        "th": "ข้อใดเป็นเหตุผลหลักที่ทำให้การติดตั้งพลังน้ำในอาคารน้ำตกของคลองชลประทานน่าสนใจเป็นพิเศษในประเทศไทย",
+        "en": "What chiefly makes hydro at irrigation drop structures so attractive in Thailand?"
+      },
+      "choices": [
+        {
+          "th": "เพราะแต่ละจุดให้กำลังผลิตสูงกว่าเขื่อนขนาดใหญ่เมื่อคิดต่อพื้นที่ที่ใช้ไป",
+          "en": "Because each site yields more power than a large dam per unit of land taken"
+        },
+        {
+          "th": "เพราะเฮดต่ำทำให้ต้นทุนต่อกิโลวัตต์ถูกกว่าโครงการเฮดสูงเสมอไป",
+          "en": "Because low head always costs less per kilowatt than a high-head scheme"
+        },
+        {
+          "th": "เพราะงานโยธาจ่ายไปแล้ว ไม่มีผลกระทบใหม่ และมีผู้ใช้ไฟฟ้าอยู่แล้ว",
+          "en": "Because the civil works are paid, add no new impact, and a user is there"
+        },
+        {
+          "th": "เพราะติดตั้งได้ทันทีโดยไม่ต้องขออนุญาตจากหน่วยงานราชการใด ๆ เลย",
+          "en": "Because it can be installed at once with no permit from any authority"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "ข้ออ้างที่ว่าเฮดต่ำถูกกว่านั้นผิด เพราะโดยทั่วไปเฮดต่ำมีต้นทุนต่อกิโลวัตต์ *สูงกว่า* ตามที่อธิบายในหัวข้อ 5.1 สิ่งที่พลิกสมการคือโครงสร้างที่มีอยู่แล้ว ซึ่งลบต้นทุนงานโยธาออกจากสมการ ข้อควรระวังคือแต่ละจุดมีขนาดเล็กมาก การคัดเลือกเฉพาะจุดที่เฮดสูงสุดและอยู่ใกล้ผู้ใช้ไฟฟ้าจึงให้ผลตอบแทนดีกว่าการทำทุกจุด",
+        "en": "The claim that low head is cheaper is wrong: low head generally costs *more* per kilowatt, as §5.1 explains. What flips the equation is the pre-existing structure, which removes the civil cost from the sum. The caution is that each site is very small, so selecting only the highest-head structures nearest an electricity user returns more than attempting them all."
+      }
+    }
+  ]
+}
+        </script>
+      </section>
+
+      <!-- ============ chapter nav ============ -->
+      <nav class="chapter-nav">
+        <a href="04-geothermal.html">
+          <span class="dir"><span class="th">บทก่อนหน้า</span><span class="en">Previous</span></span>
+          <span class="ttl">
+            <span class="th">บทที่ 4 · พลังงานความร้อนใต้พิภพ</span>
+            <span class="en">Chapter 4 · Geothermal Energy</span>
+          </span>
+        </a>
+        <a class="next" href="06-wave.html">
+          <span class="dir"><span class="th">บทต่อไป</span><span class="en">Next</span></span>
+          <span class="ttl">
+            <span class="th">บทที่ 6 · พลังงานคลื่น</span>
+            <span class="en">Chapter 6 · Wave Energy</span>
+          </span>
+        </a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <strong>
+          <span class="th">พลังงานหมุนเวียนสำหรับวิศวกรรมเกษตรอัจฉริยะ</span>
+          <span class="en">Renewable Energy for Agri-Intelligence Engineering</span>
+        </strong>
+        <p class="small">
+          <span class="th">บทที่ 5 · พลังงานน้ำ</span>
+          <span class="en">Chapter 5 · Hydro Energy</span>
+        </p>
+      </div>
+      <div class="small">
+        <span class="th">ตัวเลขในบทนี้เป็นค่าโดยประมาณเพื่อการเรียนการสอน ดูรายการอ้างอิงท้ายบทและตรวจสอบแหล่งข้อมูลปฐมภูมิที่เป็นปัจจุบันก่อนนำไปใช้</span>
+        <span class="en">Figures here are approximate teaching values. See the reference list at the end of the chapter and check current primary sources before citing.</span>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <span class="copyright__authors">2026 Prepared by Jedsada Saijai &amp; Wanphut Saechua</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/vendor/katex/katex.min.js"></script>
+<script src="../assets/vendor/katex/contrib/auto-render.min.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/math.js"></script>
+</body>
+</html>

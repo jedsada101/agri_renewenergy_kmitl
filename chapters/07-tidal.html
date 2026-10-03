@@ -1,0 +1,2007 @@
+<!DOCTYPE html>
+<html lang="th" data-lang="th" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>บทที่ 7 · พลังงานน้ำขึ้นน้ำลง</title>
+<meta name="description" content="พลังงานน้ำขึ้นน้ำลง — ต้นกำเนิดทางดาราศาสตร์ การขยายในอ่าวและการสั่นพ้อง พลังงานศักย์จากเขื่อนกั้นน้ำ พลังงานจลน์จากกระแสน้ำและกฎกำลังสาม การประเมินทรัพยากร ข้อได้เปรียบด้านการคาดการณ์ และการใช้หัวน้ำขึ้นน้ำลงในงานชลประทานและการเพาะเลี้ยงชายฝั่งของไทย">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Thai+Looped:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/anim.css">
+<script src="../assets/js/boot.js"></script>
+</head>
+<body data-chapter="07">
+
+<a class="skip" href="#main"><span class="th">ข้ามไปเนื้อหาหลัก</span><span class="en">Skip to main content</span></a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="topbar__brand" href="../index.html">
+    <span class="mark">RE</span>
+    <span class="name">
+      <span class="th">พลังงานหมุนเวียน</span>
+      <span class="en">Renewable Energy</span>
+    </span>
+  </a>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__crumb">
+    <span class="th">บทที่ 7 · พลังงานน้ำขึ้นน้ำลง</span>
+    <span class="en">Chapter 7 · Tidal Energy</span>
+  </span>
+  <button class="btn-toggle" data-lang-btn="th" aria-pressed="true">ไทย</button>
+  <button class="btn-toggle" data-lang-btn="en" aria-pressed="false">EN</button>
+  <button class="btn-toggle" data-theme-toggle aria-label="Switch theme"><span class="icon">☀</span></button>
+</header>
+
+<div class="wrap">
+  <div class="layout">
+
+    <!-- ============ sidebar ============ -->
+    <aside class="sidebar">
+      <h2><span class="th">ในบทนี้</span><span class="en">In this chapter</span></h2>
+      <ol>
+        <li><a href="#pretest"><span class="th">แบบทดสอบก่อนเรียน</span><span class="en">Pre-test</span></a></li>
+        <li><a href="#s1"><span class="th">7.1 ต้นกำเนิดทางดาราศาสตร์</span><span class="en">7.1 Where tides come from</span></a></li>
+        <li><a href="#s2"><span class="th">7.2 การขยายและการสั่นพ้อง</span><span class="en">7.2 Amplification and resonance</span></a></li>
+        <li><a href="#s3"><span class="th">7.3 พลังงานจากช่วงต่างระดับ</span><span class="en">7.3 Energy from tidal range</span></a></li>
+        <li><a href="#s4"><span class="th">7.4 พลังงานจากกระแสน้ำ</span><span class="en">7.4 Energy from tidal streams</span></a></li>
+        <li><a href="#s5"><span class="th">7.5 การประเมินทรัพยากร</span><span class="en">7.5 Assessing the resource</span></a></li>
+        <li><a href="#s6"><span class="th">7.6 กังหันกระแสน้ำ</span><span class="en">7.6 Tidal stream turbines</span></a></li>
+        <li><a href="#s7"><span class="th">7.7 ข้อได้เปรียบด้านการคาดการณ์</span><span class="en">7.7 The predictability advantage</span></a></li>
+        <li><a href="#s8"><span class="th">7.8 ผลกระทบและความท้าทาย</span><span class="en">7.8 Impacts and challenges</span></a></li>
+        <li><a href="#s9"><span class="th">7.9 ประเทศไทยและงานชายฝั่ง</span><span class="en">7.9 Thailand and the coast</span></a></li>
+        <li><a href="#summary"><span class="th">สรุปและคำศัพท์</span><span class="en">Summary and glossary</span></a></li>
+        <li><a href="#references"><span class="th">เอกสารอ้างอิง</span><span class="en">References</span></a></li>
+        <li><a href="#posttest"><span class="th">แบบทดสอบหลังเรียน</span><span class="en">Post-test</span></a></li>
+      </ol>
+    </aside>
+
+    <!-- ============ main ============ -->
+    <main id="main">
+
+      <header class="chapter-head">
+        <span class="chapter-head__num">
+          <span class="th">บทที่ 7</span><span class="en">Chapter 7</span>
+        </span>
+        <h1>
+          <span class="th">พลังงานน้ำขึ้นน้ำลง</span>
+          <span class="en">Tidal Energy</span>
+        </h1>
+        <p class="lead">
+          <span class="th">บทที่ 6 เป็นเรื่องของคลื่นที่ลมสร้างขึ้น ซึ่งคาดการณ์ได้เพียงไม่กี่วัน บทนี้ต่างออกไปในข้อที่สำคัญที่สุด — น้ำขึ้นน้ำลงไม่ได้มาจากอากาศ แต่มาจาก <em>กลศาสตร์ท้องฟ้า</em> ตำแหน่งของดวงจันทร์และดวงอาทิตย์คำนวณล่วงหน้าได้นับร้อยปี ตารางน้ำขึ้นน้ำลงของปี 2050 จึงพิมพ์ออกมาได้ตั้งแต่วันนี้ และจะถูกต้องภายในไม่กี่นาที นี่คือพลังงานหมุนเวียนชนิดเดียวที่ <em>คาดการณ์ได้อย่างแท้จริง</em> และข้อได้เปรียบนั้นมีค่ามากกว่าที่ตัวเลขประสิทธิภาพจะบอกได้</span>
+          <span class="en">Chapter 6 dealt with waves the wind creates, predictable only days ahead. This chapter differs in the way that matters most — tides come not from the atmosphere but from <em>celestial mechanics</em>. The positions of the Moon and the Sun can be computed centuries in advance, so a tide table for 2050 could be printed today and would be right to within minutes. This is the one renewable that is <em>genuinely predictable</em>, and that advantage is worth more than any efficiency figure can express.</span>
+        </p>
+        <div class="chapter-head__facts">
+          <span class="chip"><span class="th">ต่อจากบทที่ 5 และ 6</span><span class="en">Builds on Chapters 5 and 6</span></span>
+          <span class="chip"><span class="th">เวลาเรียน ~100 นาที</span><span class="en">~100 min</span></span>
+          <span class="chip"><span class="th">9 หัวข้อ</span><span class="en">9 sections</span></span>
+          <span class="chip"><span class="th">ตัวอย่างคำนวณ 8 ข้อ</span><span class="en">8 worked examples</span></span>
+          <span class="chip"><span class="th">ภาพจำลอง 3 ชุด</span><span class="en">3 interactive models</span></span>
+          <span class="chip"><span class="th">Pre-test 5 ข้อ · Post-test 10 ข้อ</span><span class="en">Pre-test 5 · Post-test 10</span></span>
+        </div>
+      </header>
+
+      <div class="objectives">
+        <h2><span class="th">จุดประสงค์การเรียนรู้</span><span class="en">Learning objectives</span></h2>
+        <ul>
+          <li>
+            <span class="th">อธิบายว่าเหตุใดแรงที่ก่อให้เกิดน้ำขึ้นน้ำลงจึงแปรผกผันกับระยะทางยกกำลังสาม และเหตุใดดวงจันทร์จึงมีอิทธิพลมากกว่าดวงอาทิตย์แม้จะเล็กกว่ามาก</span>
+            <span class="en">Explain why the tide-generating force varies as the inverse cube of distance, and why the Moon dominates the Sun despite being far smaller.</span>
+          </li>
+          <li>
+            <span class="th">อธิบายการเกิดน้ำเกิดและน้ำตาย และคำนวณคาบของวัฏจักรทั้งสองจากคาบขององค์ประกอบ M2 และ S2</span>
+            <span class="en">Account for spring and neap tides, and derive the period of both cycles from the M2 and S2 constituents.</span>
+          </li>
+          <li>
+            <span class="th">อธิบายว่าเหตุใดช่วงต่างระดับน้ำจึงแตกต่างกันจาก 0.5 เมตรถึง 16 เมตรระหว่างชายฝั่งต่าง ๆ ด้วยแนวคิดการสั่นพ้องของอ่าว</span>
+            <span class="en">Explain why tidal range varies from 0.5 m to 16 m between coasts, using the idea of basin resonance.</span>
+          </li>
+          <li>
+            <span class="th">คำนวณพลังงานที่ได้จากเขื่อนกั้นน้ำขึ้นน้ำลงด้วยสมการช่วงต่างระดับยกกำลังสอง และประเมินพลังงานรายปีกับกำลังพิกัดที่เหมาะสม</span>
+            <span class="en">Compute the energy available to a tidal barrage from the range-squared relation, and estimate annual energy and a sensible rated power.</span>
+          </li>
+          <li>
+            <span class="th">คำนวณกำลังของกระแสน้ำด้วยกฎกำลังสาม และเปรียบเทียบขนาดใบพัดของกังหันกระแสน้ำกับกังหันลมที่ให้กำลังเท่ากัน</span>
+            <span class="en">Compute tidal stream power from the cube law, and compare the rotor size of a tidal turbine with a wind turbine of the same output.</span>
+          </li>
+          <li>
+            <span class="th">แยกความต่างระหว่างทรัพยากรที่มีอยู่กับทรัพยากรที่สกัดออกมาได้ และอธิบายว่าเหตุใดการสกัดพลังงานมากเกินไปจึงลดกระแสน้ำลงเอง</span>
+            <span class="en">Distinguish the available resource from the extractable resource, and explain why taking too much energy slows the current itself.</span>
+          </li>
+          <li>
+            <span class="th">ประเมินผลของวัฏจักรน้ำเกิดน้ำตายต่อกำลังผลิต และอธิบายว่าเหตุใดตัวประกอบกำลังผลิตที่ 30&ndash;40% ของพลังงานน้ำขึ้นน้ำลงจึงมีค่ามากกว่าตัวเลขเดียวกันของพลังงานลม</span>
+            <span class="en">Assess the effect of the spring&ndash;neap cycle on output, and explain why a 30&ndash;40% capacity factor is worth more for tidal energy than the same figure is for wind.</span>
+          </li>
+          <li>
+            <span class="th">เปรียบเทียบผลกระทบทางสิ่งแวดล้อมของเขื่อนกั้นน้ำกับกังหันกระแสน้ำ และอธิบายว่าเหตุใดสองแนวทางนี้จึงต่างกันอย่างสิ้นเชิง</span>
+            <span class="en">Compare the environmental impact of a barrage with that of a tidal stream turbine, and explain why the two differ so completely.</span>
+          </li>
+          <li>
+            <span class="th">ประเมินศักยภาพของอ่าวไทยและทะเลอันดามันอย่างตรงไปตรงมา และคำนวณพลังงานที่ประหยัดได้จากการใช้หัวน้ำขึ้นน้ำลงแทนการสูบน้ำในบ่อเพาะเลี้ยงชายฝั่ง</span>
+            <span class="en">Assess the Gulf of Thailand and Andaman Sea honestly, and compute the energy saved by using tidal head instead of pumping in coastal aquaculture.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ============ PRE-TEST ============ -->
+      <section class="quiz quiz--pre" id="pretest" data-quiz="pre" data-pass="0.6">
+        <script type="application/json" class="quiz-data">
+{
+  "questions": [
+    {
+      "q": {
+        "th": "น้ำขึ้นน้ำลงมีต้นกำเนิดมาจากอะไร",
+        "en": "What causes the tides?"
+      },
+      "choices": [
+        {
+          "th": "ลมประจำฤดูที่พัดผลักมวลน้ำทะเลเข้าหาชายฝั่งเป็นจังหวะสม่ำเสมอ",
+          "en": "Seasonal winds pushing the sea towards the coast in a steady rhythm"
+        },
+        {
+          "th": "ความแตกต่างของแรงโน้มถ่วงจากดวงจันทร์และดวงอาทิตย์ทั่วโลก",
+          "en": "Differences in the Moon's and Sun's pull across the Earth"
+        },
+        {
+          "th": "การขยายตัวของน้ำทะเลเมื่อได้รับความร้อนจากดวงอาทิตย์ในรอบวัน",
+          "en": "Seawater expanding as the Sun warms it through the daily cycle"
+        },
+        {
+          "th": "กระแสน้ำอุ่นและน้ำเย็นที่ไหลวนอยู่ในมหาสมุทรลึกตามฤดูกาล",
+          "en": "Warm and cold currents circulating seasonally in the deep ocean"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "น้ำขึ้นน้ำลงเกิดจาก ความแตกต่าง ของแรงโน้มถ่วง ไม่ใช่จากแรงโน้มถ่วงเอง ด้านของโลกที่หันเข้าหาดวงจันทร์ถูกดึงแรงกว่าจุดศูนย์กลางโลก ส่วนด้านตรงข้ามถูกดึงน้อยกว่า ผลคือเกิดส่วนนูนของน้ำทะเลสองด้านพร้อมกัน จึงมีน้ำขึ้นสองครั้งต่อวันในพื้นที่ส่วนใหญ่ของโลก นี่เป็นคนละปรากฏการณ์กับคลื่นในบทที่ 6 ซึ่งลมเป็นต้นกำเนิด",
+        "en": "Tides arise from the DIFFERENCE in gravitational pull, not from the pull itself. The side of the Earth facing the Moon is pulled harder than the centre, and the far side less, so two bulges of water form at once — which is why most of the world sees two high tides a day. This is a different phenomenon from the wind-driven waves of Chapter 6."
+      }
+    },
+    {
+      "q": {
+        "th": "เหตุใดดวงจันทร์จึงมีอิทธิพลต่อน้ำขึ้นน้ำลงมากกว่าดวงอาทิตย์ราวสองเท่า",
+        "en": "Why does the Moon influence the tides about twice as strongly as the Sun?"
+      },
+      "choices": [
+        {
+          "th": "เพราะดวงจันทร์โคจรรอบโลกเร็วกว่าที่โลกโคจรรอบดวงอาทิตย์มาก",
+          "en": "Because the Moon orbits the Earth far faster than the Earth orbits the Sun"
+        },
+        {
+          "th": "เพราะดวงจันทร์มีมวลมากกว่าดวงอาทิตย์เมื่อเทียบตามปริมาตรที่แท้จริง",
+          "en": "Because the Moon outweighs the Sun when compared by true volume"
+        },
+        {
+          "th": "เพราะแรงที่ก่อน้ำขึ้นน้ำลงแปรผกผันกับระยะทางยกกำลังสาม ไม่ใช่กำลังสอง",
+          "en": "Because the tide-raising force goes as the inverse cube of distance"
+        },
+        {
+          "th": "เพราะดวงอาทิตย์อยู่ในระนาบที่ต่างจากระนาบวงโคจรของดวงจันทร์",
+          "en": "Because the Sun lies in a different plane from the Moon's own orbit"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "แรงโน้มถ่วงแปรผกผันกับระยะทางยกกำลังสอง แต่ แรงที่ก่อน้ำขึ้นน้ำลง คือผลต่างของแรงโน้มถ่วงระหว่างสองจุดบนโลก จึงเป็นอนุพันธ์ของกฎกำลังสอง ซึ่งให้กำลังสาม ดวงอาทิตย์มีมวลมากกว่าดวงจันทร์ราว 27 ล้านเท่า แต่อยู่ไกลกว่าราว 390 เท่า เมื่อยกกำลังสามแล้วผลลัพธ์คือดวงจันทร์ชนะไปราว 2.2 เท่า",
+        "en": "Gravity falls as the inverse square of distance, but the TIDE-GENERATING force is the difference in gravity between two points on the Earth — the derivative of an inverse-square law, which gives an inverse cube. The Sun is some 27 million times more massive than the Moon but about 390 times further away, and once cubed the Moon wins by roughly 2.2 times."
+      }
+    },
+    {
+      "q": {
+        "th": "กำลังที่ได้จากกระแสน้ำขึ้นน้ำลงแปรผันกับความเร็วกระแสน้ำอย่างไร",
+        "en": "How does tidal stream power vary with current speed?"
+      },
+      "choices": [
+        {
+          "th": "แปรผันตรงกับความเร็วกระแสน้ำ",
+          "en": "In direct proportion to the current speed"
+        },
+        {
+          "th": "แปรผันกับกำลังสองของความเร็ว",
+          "en": "With the square of the speed"
+        },
+        {
+          "th": "แปรผันกับกำลังสามของความเร็ว",
+          "en": "With the cube of the speed"
+        },
+        {
+          "th": "แปรผันกับกำลังสี่ของความเร็ว",
+          "en": "With the fourth power of the speed"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "P = ½ρAv³ เช่นเดียวกับพลังงานลม เพราะมวลที่ไหลผ่านต่อวินาทีแปรผันกับ v และพลังงานจลน์ต่อหน่วยมวลแปรผันกับ v² ผลคูณจึงเป็น v³ กฎกำลังสามนี้มีผลรุนแรงมาก — กระแสน้ำที่ลดจาก 3 เหลือ 2 m/s ทำให้กำลังลดลงเหลือเพียง 30% ของเดิม และเป็นเหตุผลที่พลังงานกระแสน้ำต้องการแหล่งที่มีกระแสเร็วเกิน 2.5 m/s จึงจะคุ้ม",
+        "en": "P = ½ρAv³, exactly as for wind, because the mass passing per second scales with v while kinetic energy per unit mass scales with v², and the product is v³. The cube law bites hard: a current falling from 3 to 2 m/s leaves only 30% of the power, which is why tidal stream sites need currents above about 2.5 m/s to pay."
+      }
+    },
+    {
+      "q": {
+        "th": "ข้อได้เปรียบที่สำคัญที่สุดของพลังงานน้ำขึ้นน้ำลงเหนือพลังงานลมและแสงอาทิตย์คือข้อใด",
+        "en": "What is tidal energy's most important advantage over wind and solar?"
+      },
+      "choices": [
+        {
+          "th": "คาดการณ์ล่วงหน้าได้แม่นยำนับสิบปีเพราะมาจากกลศาสตร์ท้องฟ้า",
+          "en": "It can be predicted accurately decades ahead, coming from celestial mechanics"
+        },
+        {
+          "th": "มีตัวประกอบกำลังผลิตสูงที่สุดในบรรดาพลังงานหมุนเวียนทุกชนิด",
+          "en": "It has the highest capacity factor of any renewable technology there is"
+        },
+        {
+          "th": "มีต้นทุนต่อหน่วยพลังงานต่ำที่สุดในบรรดาพลังงานจากทะเลทั้งหมด",
+          "en": "It has the lowest cost per unit of energy of all marine technologies"
+        },
+        {
+          "th": "ผลิตพลังงานได้ต่อเนื่องสม่ำเสมอตลอดยี่สิบสี่ชั่วโมงโดยไม่ขาดช่วง",
+          "en": "It generates steadily around the clock without any interruption"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "th": "ตัวเลือกสุดท้ายผิด เพราะกระแสน้ำหยุดนิ่งสี่ครั้งต่อวันในช่วงน้ำเปลี่ยนทิศ กำลังผลิตจึงลงถึงศูนย์เป็นช่วง ๆ และตัวประกอบกำลังผลิตอยู่ที่ราว 30–40% เท่านั้น แต่สิ่งที่ไม่มีพลังงานหมุนเวียนชนิดใดเทียบได้คือการคาดการณ์ — ตารางน้ำขึ้นน้ำลงคำนวณล่วงหน้าได้นับสิบปีด้วยความแม่นยำระดับนาที ผู้ควบคุมระบบไฟฟ้าจึงวางแผนรองรับได้ล่วงหน้า ซึ่งต่างจากลมที่พยากรณ์ได้เพียงไม่กี่ชั่วโมง",
+        "en": "The last option is wrong: the current stands still four times a day at slack water, so output falls to zero periodically and the capacity factor is only about 30–40%. But what no other renewable can match is predictability — tide tables are computed decades ahead to within minutes, so a system operator can plan around them, unlike wind which is forecast only hours ahead."
+      }
+    },
+    {
+      "q": {
+        "th": "เหตุใดอ่าวบางแห่งจึงมีช่วงต่างระดับน้ำสูงถึง 16 เมตร ขณะที่บางแห่งมีเพียง 0.5 เมตร",
+        "en": "Why do some bays have a tidal range of 16 m while others have only 0.5 m?"
+      },
+      "choices": [
+        {
+          "th": "เพราะความลึกของน้ำทะเลในอ่าวแต่ละแห่งต่างกันอย่างมีนัยสำคัญ",
+          "en": "Because the water depth in those bays differs quite significantly"
+        },
+        {
+          "th": "เพราะระยะห่างจากดวงจันทร์ต่างกันไปตามละติจูดของแต่ละอ่าว",
+          "en": "Because the distance to the Moon varies with each bay's latitude"
+        },
+        {
+          "th": "เพราะรูปร่างและความยาวของอ่าวอาจสั่นพ้องกับคาบน้ำขึ้นน้ำลง",
+          "en": "Because a bay's shape and length may resonate with the tidal period"
+        },
+        {
+          "th": "เพราะความเค็มและความหนาแน่นของน้ำทะเลในแต่ละอ่าวไม่เท่ากัน",
+          "en": "Because the salinity and density of the water differ from bay to bay"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "ในมหาสมุทรเปิด ช่วงต่างระดับน้ำจากแรงดาราศาสตร์โดยตรงมีเพียงราว 0.5 เมตรเท่านั้น ช่วงที่สูงกว่านั้นทั้งหมดเกิดจากการขยายในอ่าว เมื่อความยาวของอ่าวใกล้เคียงหนึ่งในสี่ของความยาวคลื่นน้ำขึ้นน้ำลง จะเกิดการสั่นพ้องและคลื่นสะท้อนเสริมกับคลื่นที่เข้ามา อ่าวฟันดีในแคนาดาที่มีช่วงต่างระดับ 16 เมตรเป็นตัวอย่างที่ชัดเจนที่สุด ส่วนอ่าวที่ความยาวไม่ตรงเงื่อนไขจะมีช่วงต่างระดับน้อย",
+        "en": "In the open ocean the range due directly to astronomical forcing is only about 0.5 m. Everything above that comes from amplification within a basin: when a bay's length approaches a quarter of the tidal wavelength it resonates, and the reflected wave reinforces the incoming one. The Bay of Fundy in Canada, with its 16 m range, is the clearest example, while basins whose length does not match stay small."
+      }
+    }
+  ]
+}
+        </script>
+      </section>
+
+      <!-- ============ 7.1 ============ -->
+      <section class="section" id="s1">
+        <h2><span class="num">7.1</span>
+          <span><span class="th">ต้นกำเนิดทางดาราศาสตร์: ผลต่างของแรง ไม่ใช่ตัวแรง</span>
+          <span class="en">Astronomical origin: the difference of a force, not the force</span></span>
+        </h2>
+
+        <p>
+          <span class="th">คำอธิบายที่พบบ่อยว่า &ldquo;ดวงจันทร์ดึงน้ำทะเลขึ้น&rdquo; ไม่ผิดทั้งหมดแต่ก็ไม่เพียงพอ เพราะมันอธิบายไม่ได้ว่าทำไมจึงมีน้ำขึ้นสองครั้งต่อวัน ไม่ใช่ครั้งเดียว กุญแจอยู่ที่คำว่า <strong>ผลต่าง</strong> — ด้านของโลกที่หันเข้าหาดวงจันทร์อยู่ใกล้กว่าจุดศูนย์กลางโลกราว 6,370 กิโลเมตร จึงถูกดึงแรงกว่า ส่วนด้านตรงข้ามอยู่ไกลกว่า จึงถูกดึงน้อยกว่า เมื่อเทียบกับจุดศูนย์กลางโลกที่เป็นกรอบอ้างอิง น้ำทั้งสองด้านจึงถูก &ldquo;ทิ้งไว้ข้างหลัง&rdquo; และ &ldquo;ถูกดึงนำหน้า&rdquo; ตามลำดับ เกิดเป็นส่วนนูนสองด้านพร้อมกัน</span>
+          <span class="en">The familiar statement that &ldquo;the Moon pulls the water up&rdquo; is not wrong but is not enough, because it cannot explain why there are two high tides a day rather than one. The key word is <strong>difference</strong>: the side of the Earth facing the Moon is some 6,370 km closer than the centre and is pulled harder, while the far side is further away and pulled less. Measured against the centre as a reference frame, the near water runs ahead and the far water is left behind — producing two bulges at once.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ F_{tide} \;\propto\; \frac{G M R_{E}}{r^{3}} \qquad\quad \frac{F_{moon}}{F_{sun}} = \frac{M_{m}}{M_{s}}\left(\frac{r_{s}}{r_{m}}\right)^{3} \approx 2.2 \]</div>
+            <span class="formula__num">(7.1)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(M\) = มวลของวัตถุที่ก่อน้ำขึ้นน้ำลง · \(R_{E}\) = รัศมีโลก · \(r\) = ระยะห่างจากโลก · <strong>สังเกตเลขยกกำลังสาม</strong> ซึ่งเป็นผลจากการที่แรงก่อน้ำขึ้นน้ำลงเป็น <em>อนุพันธ์</em> ของกฎแรงโน้มถ่วงกำลังสอง ดวงอาทิตย์มีมวลมากกว่าดวงจันทร์ราว 27 ล้านเท่า แต่ไกลกว่าราว 390 เท่า เมื่อยกกำลังสามจะได้ \(390^{3} \approx 5.9 \times 10^{7}\) ซึ่งมากกว่าอัตราส่วนมวล ดวงจันทร์จึงชนะ</span>
+            <span class="en">\(M\) is the mass of the tide-raising body · \(R_{E}\) the Earth&rsquo;s radius · \(r\) the distance. <strong>Note the cube</strong>, which follows from the tide-generating force being the <em>derivative</em> of an inverse-square law. The Sun is about 27 million times more massive than the Moon but roughly 390 times further off, and \(390^{3} \approx 5.9 \times 10^{7}\) exceeds the mass ratio — so the Moon prevails.</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 7.1 · เหตุใดจึงมีน้ำขึ้นสองครั้งใน 24 ชั่วโมง 50 นาที</span>
+            <span class="en">Worked example 7.1 · Why two high tides every 24 h 50 min</span>
+          </div>
+          <p>
+            <span class="th">ดวงจันทร์โคจรรอบโลกครบรอบในเวลา 27.32 วัน ขณะที่โลกหมุนรอบตัวเองครบรอบในเวลา 23.93 ชั่วโมง จงหาเวลาที่จุดหนึ่งบนโลกใช้ในการกลับมาอยู่ใต้ดวงจันทร์อีกครั้ง และคาบของน้ำขึ้นน้ำลงที่ตามมา</span>
+            <span class="en">The Moon completes an orbit in 27.32 days while the Earth turns on its axis in 23.93 hours. Find how long a point on Earth takes to return beneath the Moon, and the tidal period that follows.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">ดวงจันทร์เคลื่อนไปข้างหน้าในหนึ่งวัน: \(360/27.32 = 13.18\) องศา</span>
+              <span class="en">The Moon advances in one day by \(360/27.32 = 13.18\) degrees.</span>
+            </li>
+            <li>
+              <span class="th">โลกต้องหมุนเพิ่มอีก 13.18 องศาเพื่อไล่ตาม ซึ่งใช้เวลา \(23.93 \times 13.18/360 = 0.876\ \mathrm{h} = 52.6\) นาที</span>
+              <span class="en">The Earth must turn a further 13.18° to catch up, taking \(23.93 \times 13.18/360 = 0.876\ \mathrm{h} = 52.6\) minutes.</span>
+            </li>
+            <li>
+              <span class="th">วันจันทรคติ: \(23.93 + 0.876 = \mathbf{24.81\ h} = 24\ \mathrm{h}\ 49\ \mathrm{min}\)</span>
+              <span class="en">The lunar day: \(23.93 + 0.876 = \mathbf{24.81\ h} = 24\ \mathrm{h}\ 49\ \mathrm{min}\)</span>
+            </li>
+            <li>
+              <span class="th">เพราะมีส่วนนูนสองด้าน จุดหนึ่งจึงผ่านส่วนนูนสองครั้งต่อวันจันทรคติ คาบของน้ำขึ้นน้ำลงจึงเป็น \(24.81/2 = \mathbf{12.41\ h} = 12\ \mathrm{h}\ 25\ \mathrm{min}\) ซึ่งคือองค์ประกอบ <strong>M2</strong> อันเป็นองค์ประกอบหลักของน้ำขึ้นน้ำลงทั่วโลก</span>
+              <span class="en">Because there are two bulges, a point passes through them twice per lunar day, so the tidal period is \(24.81/2 = \mathbf{12.41\ h} = 12\ \mathrm{h}\ 25\ \mathrm{min}\) — the <strong>M2</strong> constituent, the dominant tide worldwide.</span>
+            </li>
+            <li>
+              <span class="th">ผลที่สังเกตได้ในชีวิตจริง: น้ำขึ้นสูงสุดในแต่ละวันช้ากว่าวันก่อนราว 50 นาที ซึ่งเป็นเหตุผลที่ชาวประมงและเกษตรกรชายฝั่งต้องอ่านตารางน้ำทุกวัน ไม่ใช่จำเวลาเดียวไว้ตลอด</span>
+              <span class="en">The everyday consequence: each day&rsquo;s high water arrives about 50 minutes later than the day before, which is why coastal fishers and farmers must read the tide table daily rather than memorise one time.</span>
+            </li>
+          </ol>
+        </div>
+
+        <h3><span class="th">น้ำเกิดและน้ำตาย: การแทรกสอดของสององค์ประกอบ</span><span class="en">Spring and neap: two constituents interfering</span></h3>
+
+        <p>
+          <span class="th">ดวงอาทิตย์สร้างน้ำขึ้นน้ำลงของตัวเองที่มีคาบ 12.00 ชั่วโมงพอดี เรียกว่าองค์ประกอบ <strong>S2</strong> ซึ่งมีขนาดราว 46% ของ M2 เมื่อสองคาบที่ใกล้เคียงกันแต่ไม่เท่ากันซ้อนทับกัน จะเกิดปรากฏการณ์บีต (beat) — บางช่วงยอดคลื่นตรงกันและเสริมกัน บางช่วงยอดกับท้องตรงกันและหักล้างกัน ช่วงที่เสริมกันคือ <strong>น้ำเกิด (spring tide)</strong> ซึ่งเกิดเมื่อดวงจันทร์เต็มดวงหรือเดือนดับ ส่วนช่วงที่หักล้างคือ <strong>น้ำตาย (neap tide)</strong> ซึ่งเกิดเมื่อดวงจันทร์ครึ่งดวง</span>
+          <span class="en">The Sun raises a tide of its own with a period of exactly 12.00 hours, the <strong>S2</strong> constituent, about 46% the size of M2. When two nearly equal periods superpose, a beat appears — sometimes the crests coincide and reinforce, sometimes a crest meets a trough and they cancel. The reinforcing phase is the <strong>spring tide</strong>, at full and new Moon; the cancelling phase is the <strong>neap tide</strong>, at the quarters.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ T_{beat} = \frac{T_{M2}\,T_{S2}}{T_{M2} - T_{S2}} = \frac{12.4206 \times 12.0000}{0.4206} \approx 354.4\ \mathrm{h} \approx 14.77\ \mathrm{days} \]</div>
+            <span class="formula__num">(7.2)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">คาบของบีตคือ 14.77 วัน หรือราวครึ่งเดือน ซึ่งตรงกับช่วงจากน้ำเกิดถึงน้ำเกิดครั้งถัดไปที่สังเกตได้จริง และเป็นเหตุผลที่กำลังผลิตของโรงไฟฟ้าน้ำขึ้นน้ำลงแกว่งเป็นวัฏจักรสองสัปดาห์ ไม่ใช่วัฏจักรรายวันอย่างที่หลายคนคาด</span>
+            <span class="en">The beat period is 14.77 days, about half a month, matching the observed interval from one spring tide to the next. It is why the output of a tidal power station swings on a fortnightly cycle rather than the daily one many people expect.</span>
+          </div>
+        </div>
+
+        <figure class="figure" data-reveal>
+          <div class="figure__body">
+            <svg viewBox="0 0 760 390" width="760" role="img" aria-labelledby="fig71-title fig71-desc">
+              <title id="fig71-title">Two tidal bulges and the spring-neap beat</title>
+              <desc id="fig71-desc">The upper panel shows the Earth with two water bulges, one facing the Moon and one on the opposite side, with arrows showing that the near side is pulled harder than the centre and the far side less. The lower panel plots the M2 lunar tide and the smaller S2 solar tide, and their sum, over about a month: where the two align the combined range is large, a spring tide, and where they oppose it is small, a neap tide, with the beat repeating every 14.77 days.</desc>
+
+              <defs>
+                <marker id="ta1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M 0 1 L 9 5 L 0 9" fill="none" class="dg-accent-s" stroke-width="1.6"/>
+                </marker>
+              </defs>
+
+              <!-- upper: two bulges -->
+              <text x="20" y="20" class="dg-label th">ส่วนนูนสองด้าน</text>
+              <text x="20" y="20" class="dg-label en">THE TWO BULGES</text>
+
+              <ellipse cx="200" cy="96" rx="92" ry="58" class="dg-fill dg-accent-s" stroke-width="2" opacity="0.45"/>
+              <circle cx="200" cy="96" r="58" class="dg-fill-2 dg-rule" stroke-width="2"/>
+              <text x="200" y="100" text-anchor="middle" class="dg-text th">โลก</text>
+              <text x="200" y="100" text-anchor="middle" class="dg-text en">Earth</text>
+
+              <circle cx="430" cy="96" r="17" class="dg-fill dg-rule" stroke-width="1.8"/>
+              <text x="430" y="100" text-anchor="middle" class="dg-label th">จันทร์</text>
+              <text x="430" y="100" text-anchor="middle" class="dg-label en">MOON</text>
+
+              <g class="dg-accent-s" stroke-width="1.8" fill="none" marker-end="url(#ta1)">
+                <line x1="292" y1="96" x2="340" y2="96"/>
+                <line x1="200" y1="96" x2="234" y2="96"/>
+                <line x1="108" y1="96" x2="128" y2="96"/>
+              </g>
+              <text x="296" y="84" class="dg-label th">ใกล้ที่สุด — ถูกดึงแรงที่สุด</text>
+              <text x="296" y="84" class="dg-label en">NEAREST — PULLED HARDEST</text>
+              <text x="120" y="84" class="dg-label th">ไกลที่สุด — ถูกดึงน้อยที่สุด</text>
+              <text x="120" y="84" class="dg-label en">FURTHEST — PULLED LEAST</text>
+
+              <text x="20" y="176" class="dg-text th">น้ำทั้งสองด้านยืดออกจากจุดศูนย์กลาง เพราะแรงที่ต่างกัน ไม่ใช่เพราะแรงเอง</text>
+              <text x="20" y="176" class="dg-text en">Water stretches away from the centre on BOTH sides, from the difference in pull, not the pull</text>
+              <text x="20" y="194" class="dg-label th">จุดหนึ่งบนโลกจึงผ่านส่วนนูนสองครั้งต่อวันจันทรคติ 24 ชม. 49 นาที → คาบ M2 = 12 ชม. 25 นาที</text>
+              <text x="20" y="194" class="dg-label en">A POINT THEREFORE PASSES TWO BULGES PER 24 h 49 min LUNAR DAY → M2 PERIOD 12 h 25 min</text>
+
+              <!-- lower: beat -->
+              <text x="20" y="232" class="dg-label th">การแทรกสอดของ M2 กับ S2 ตลอดหนึ่งเดือน</text>
+              <text x="20" y="232" class="dg-label en">M2 AND S2 INTERFERING OVER ONE MONTH</text>
+
+              <line x1="60" y1="300" x2="740" y2="300" class="dg-line" stroke-width="1" stroke-dasharray="4 4"/>
+
+              <!-- envelope -->
+              <path d="M 60 254 Q 145 300 230 300 Q 315 300 400 254 Q 485 300 570 300 Q 655 300 740 254"
+                    fill="none" class="dg-line" stroke-width="1.4" stroke-dasharray="6 4"/>
+              <path d="M 60 346 Q 145 300 230 300 Q 315 300 400 346 Q 485 300 570 300 Q 655 300 740 346"
+                    fill="none" class="dg-line" stroke-width="1.4" stroke-dasharray="6 4"/>
+
+              <!-- the summed tide: dense oscillation inside the envelope -->
+              <path d="M 60 256 L 74 344 L 88 258 L 102 342 L 116 266 L 130 334 L 144 278 L 158 322
+                       L 172 288 L 186 312 L 200 294 L 214 306 L 228 298 L 242 302 L 256 296 L 270 304
+                       L 284 290 L 298 310 L 312 282 L 326 318 L 340 272 L 354 328 L 368 262 L 382 338
+                       L 396 256 L 410 344 L 424 258 L 438 342 L 452 266 L 466 334 L 480 278 L 494 322
+                       L 508 288 L 522 312 L 536 294 L 550 306 L 564 298 L 578 302 L 592 296 L 606 304
+                       L 620 290 L 634 310 L 648 282 L 662 318 L 676 272 L 690 328 L 704 262 L 718 338
+                       L 732 256 L 740 300"
+                    fill="none" class="dg-accent" stroke-width="1.7"/>
+
+              <g class="dg-accent-s" stroke-width="1.5">
+                <line x1="60" y1="240" x2="60" y2="252"/>
+                <line x1="400" y1="240" x2="400" y2="252"/>
+                <line x1="740" y1="240" x2="740" y2="252"/>
+              </g>
+              <text x="60" y="234" text-anchor="middle" class="dg-label th">น้ำเกิด</text>
+              <text x="60" y="234" text-anchor="middle" class="dg-label en">SPRING</text>
+              <text x="400" y="234" text-anchor="middle" class="dg-label th">น้ำเกิด</text>
+              <text x="400" y="234" text-anchor="middle" class="dg-label en">SPRING</text>
+              <text x="740" y="234" text-anchor="middle" class="dg-label th">น้ำเกิด</text>
+              <text x="740" y="234" text-anchor="middle" class="dg-label en">SPRING</text>
+
+              <text x="230" y="366" text-anchor="middle" class="dg-label th">น้ำตาย</text>
+              <text x="230" y="366" text-anchor="middle" class="dg-label en">NEAP</text>
+              <text x="570" y="366" text-anchor="middle" class="dg-label th">น้ำตาย</text>
+              <text x="570" y="366" text-anchor="middle" class="dg-label en">NEAP</text>
+
+              <line x1="60" y1="378" x2="400" y2="378" class="dg-accent-s" stroke-width="1.4" marker-start="url(#ta1)" marker-end="url(#ta1)"/>
+              <text x="230" y="388" text-anchor="middle" class="dg-label th">14.77 วัน</text>
+              <text x="230" y="388" text-anchor="middle" class="dg-label en">14.77 DAYS</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label"><span class="th">รูปที่ 7.1</span><span class="en">Figure 7.1</span></span>
+            <span class="th">แผงล่างคือสิ่งที่กำหนดเศรษฐศาสตร์ของพลังงานน้ำขึ้นน้ำลงทั้งหมด เพราะกำลังผลิตแปรผันกับช่วงต่างระดับ <em>ยกกำลังสอง</em> ในกรณีเขื่อนกั้นน้ำ และแปรผันกับความเร็วกระแส <em>ยกกำลังสาม</em> ในกรณีกังหันกระแสน้ำ ช่วงต่างระดับที่ต่างกันสองเท่าระหว่างน้ำเกิดกับน้ำตายจึงกลายเป็นกำลังที่ต่างกันสี่ถึงแปดเท่า โรงไฟฟ้าน้ำขึ้นน้ำลงจึงมีวัฏจักรสองสัปดาห์ที่ชัดเจน แต่ <em>รู้ล่วงหน้าทุกรอบ</em></span>
+            <span class="en">The lower panel governs the entire economics of tidal energy, because output varies as the <em>square</em> of the range for a barrage and as the <em>cube</em> of current speed for a stream turbine. A twofold spring-to-neap difference in range therefore becomes a four- to eightfold difference in power. A tidal plant thus has a pronounced fortnightly cycle — but every swing of it is <em>known in advance</em>.</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ============ 7.2 ============ -->
+      <section class="section" id="s2">
+        <h2><span class="num">7.2</span>
+          <span><span class="th">การขยายและการสั่นพ้อง: ทำไมบางอ่าวจึงได้เปรียบ</span>
+          <span class="en">Amplification and resonance: why some bays win</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ข้อเท็จจริงที่น่าประหลาดใจคือ แรงดาราศาสตร์โดยตรงสร้างช่วงต่างระดับน้ำในมหาสมุทรเปิดได้เพียงราว <strong>0.5 เมตร</strong> เท่านั้น ช่วงต่างระดับ 4 เมตรที่ระนอง 8 เมตรที่ปากแม่น้ำเซเวิร์น หรือ 16 เมตรที่อ่าวฟันดี ไม่ได้มาจากดวงจันทร์โดยตรง แต่มาจาก <strong>การขยายภายในอ่าว</strong> ทั้งสิ้น และกลไกที่ทำให้เกิดการขยายมีสองอย่าง</span>
+          <span class="en">A surprising fact: direct astronomical forcing produces an open-ocean range of only about <strong>0.5 m</strong>. The 4 m range at Ranong, the 8 m in the Severn estuary and the 16 m in the Bay of Fundy do not come from the Moon directly but entirely from <strong>amplification within a basin</strong>, by two mechanisms.</span>
+        </p>
+
+        <p>
+          <span class="th">กลไกแรกคือ <strong>การบีบทางเรขาคณิต</strong> เมื่อคลื่นน้ำขึ้นน้ำลงเดินเข้าสู่อ่าวที่แคบลงและตื้นขึ้น ฟลักซ์พลังงานต้องคงที่ ความสูงจึงต้องเพิ่มขึ้น ซึ่งเป็นปรากฏการณ์เดียวกับ shoaling ของคลื่นในบทที่ 6 กลไกที่สองซึ่งมีผลมากกว่าคือ <strong>การสั่นพ้อง</strong> อ่าวแต่ละอ่าวมีคาบธรรมชาติของตัวเองเหมือนท่อออร์แกน ถ้าคาบนั้นใกล้เคียง 12.42 ชั่วโมง คลื่นที่สะท้อนจากก้นอ่าวจะกลับมาเสริมกับคลื่นที่กำลังเข้ามาพอดี และช่วงต่างระดับจะโตขึ้นอย่างมาก</span>
+          <span class="en">The first is <strong>geometric funnelling</strong>: as the tidal wave enters a bay that narrows and shallows, the energy flux must be conserved, so the height must rise — the same shoaling seen in Chapter 6. The second, and more powerful, is <strong>resonance</strong>. Every basin has a natural period, like an organ pipe, and if that period lies near 12.42 hours the wave reflected from the head returns exactly in step with the incoming one, and the range grows dramatically.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ T_{n} = \frac{4L}{\sqrt{gd}} \qquad\quad L_{res} = \frac{T_{M2}\sqrt{gd}}{4} \]</div>
+            <span class="formula__num">(7.3)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(T_{n}\) = คาบธรรมชาติของอ่าวที่ปิดปลายข้างหนึ่ง (s) · \(L\) = ความยาวอ่าว (m) · \(d\) = ความลึกเฉลี่ย (m) · \(\sqrt{gd}\) = ความเร็วคลื่นน้ำตื้นจากสมการ (6.2) · ตัวเลข 4 มาจากเงื่อนไขหนึ่งในสี่ของความยาวคลื่น ซึ่งเป็นรูปแบบการสั่นพื้นฐานของท่อที่ปิดปลายเดียว · \(L_{res}\) = ความยาวอ่าวที่ทำให้เกิดการสั่นพ้องกับองค์ประกอบ M2 พอดี</span>
+            <span class="en">\(T_{n}\) is the natural period of a basin closed at one end (s) · \(L\) its length (m) · \(d\) the mean depth (m) · \(\sqrt{gd}\) the shallow-water wave speed from equation (6.2). The factor of 4 comes from the quarter-wavelength condition, the fundamental mode of a pipe closed at one end · \(L_{res}\) is the length that resonates exactly with M2.</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 7.2 · อ่าวยาวเท่าไรจึงสั่นพ้องกับน้ำขึ้นน้ำลง</span>
+            <span class="en">Worked example 7.2 · How long a bay resonates with the tide</span>
+          </div>
+          <p>
+            <span class="th">จงหาความยาวอ่าวที่สั่นพ้องกับองค์ประกอบ M2 เมื่อความลึกเฉลี่ย (ก) 60 เมตร และ (ข) 45 เมตร ซึ่งเป็นความลึกเฉลี่ยของอ่าวไทย แล้วเปรียบเทียบกับอ่าวฟันดีที่ยาว 270 กิโลเมตร ลึกเฉลี่ย 60 เมตร</span>
+            <span class="en">Find the bay length that resonates with M2 at a mean depth of (a) 60 m and (b) 45 m, the mean depth of the Gulf of Thailand, then compare with the Bay of Fundy at 270 km long and 60 m deep.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">(ก) \(\sqrt{gd} = \sqrt{9.81 \times 60} = 24.3\ \mathrm{m/s}\) และ \(T_{M2} = 12.4206 \times 3600 = 44{,}714\ \mathrm{s}\)</span>
+              <span class="en">(a) \(\sqrt{gd} = \sqrt{9.81 \times 60} = 24.3\ \mathrm{m/s}\) and \(T_{M2} = 12.4206 \times 3600 = 44{,}714\ \mathrm{s}\)</span>
+            </li>
+            <li>
+              <span class="th">\(L_{res} = 44{,}714 \times 24.3/4 = 271{,}600\ \mathrm{m} = \mathbf{272\ km}\)</span>
+              <span class="en">\(L_{res} = 44{,}714 \times 24.3/4 = 271{,}600\ \mathrm{m} = \mathbf{272\ km}\)</span>
+            </li>
+            <li>
+              <span class="th">อ่าวฟันดียาว 270 กิโลเมตร ซึ่ง <em>ตรงกับเงื่อนไขการสั่นพ้องเกือบพอดี</em> นี่คือคำอธิบายทั้งหมดของช่วงต่างระดับ 16 เมตรที่นั่น ไม่ใช่เพราะดวงจันทร์อยู่ใกล้แคนาดามากกว่าที่อื่น</span>
+              <span class="en">The Bay of Fundy is 270 km long — <em>almost exactly the resonant condition</em>. That is the whole explanation of its 16 m range, and not that the Moon somehow hangs closer to Canada.</span>
+            </li>
+            <li>
+              <span class="th">(ข) ที่ความลึก 45 เมตร: \(\sqrt{gd} = 21.0\ \mathrm{m/s}\) จึงได้ \(L_{res} = 44{,}714 \times 21.0/4 = \mathbf{235\ km}\)</span>
+              <span class="en">(b) At 45 m depth: \(\sqrt{gd} = 21.0\ \mathrm{m/s}\), so \(L_{res} = 44{,}714 \times 21.0/4 = \mathbf{235\ km}\)</span>
+            </li>
+            <li>
+              <span class="th">อ่าวไทยยาวราว 720 กิโลเมตรจากปากอ่าวถึงก้นอ่าวที่ปากแม่น้ำเจ้าพระยา ซึ่งยาวกว่าความยาวสั่นพ้องราวสามเท่า จึงไม่ตรงกับรูปแบบพื้นฐาน แต่ก็ไม่ไกลจากรูปแบบที่สามเกินไป ผลคืออ่าวไทยมีการขยายอยู่บ้างโดยเฉพาะในอ่าวตอนบน แต่ไม่ถึงระดับอ่าวฟันดี</span>
+              <span class="en">The Gulf of Thailand runs some 720 km from its mouth to the head at the Chao Phraya, about three times the resonant length. It does not match the fundamental mode, though it is not far from the third, so the Gulf shows some amplification — pronounced in its upper reaches — but nothing like Fundy.</span>
+            </li>
+            <li>
+              <span class="th">บทเรียนเชิงวิธีการ: ก่อนประเมินศักยภาพของชายฝั่งใด ให้ถามก่อนว่าอ่าวนั้นสั่นพ้องหรือไม่ เพราะคำตอบนั้นกำหนดช่วงต่างระดับ และช่วงต่างระดับยกกำลังสองกำหนดพลังงาน ความยาวและความลึกของอ่าวจึงมีน้ำหนักมากกว่าละติจูดหรือระยะห่างจากดวงจันทร์โดยสิ้นเชิง</span>
+              <span class="en">The methodological lesson: before assessing any coast, ask whether its basin resonates, because that answer sets the range, and the square of the range sets the energy. A bay&rsquo;s length and depth matter far more than its latitude or its distance from the Moon.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">สถานที่</span><span class="en">Location</span></th>
+                <th class="num"><span class="th">ช่วงต่างระดับน้ำเกิด</span><span class="en">Spring range</span></th>
+                <th><span class="th">เหตุใดจึงเป็นเช่นนั้น</span><span class="en">Why</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th">มหาสมุทรเปิด</span><span class="en">Open ocean</span></td>
+                <td class="num">~0.5 m</td>
+                <td><span class="th">แรงดาราศาสตร์โดยตรงโดยไม่มีการขยาย เป็นค่าอ้างอิงที่ทุกค่าอื่นต้องเทียบกับ</span><span class="en">Direct astronomical forcing with no amplification — the baseline everything else is measured against</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">อ่าวฟันดี แคนาดา</span><span class="en">Bay of Fundy, Canada</span></td>
+                <td class="num">16 m</td>
+                <td><span class="th">ความยาว 270 กม. ตรงกับเงื่อนไขสั่นพ้องหนึ่งในสี่ความยาวคลื่นเกือบพอดี เป็นช่วงต่างระดับสูงสุดในโลก</span><span class="en">Its 270 km length matches the quarter-wavelength condition almost exactly — the world&rsquo;s greatest range</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ปากแม่น้ำเซเวิร์น สหราชอาณาจักร</span><span class="en">Severn estuary, UK</span></td>
+                <td class="num">14 m</td>
+                <td><span class="th">การบีบทางเรขาคณิตอย่างรุนแรงร่วมกับการสั่นพ้องบางส่วน เป็นที่ตั้งของข้อเสนอเขื่อนกั้นน้ำที่ถกเถียงกันมานาน</span><span class="en">Severe funnelling together with partial resonance; the site of a long-debated barrage proposal</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ปากแม่น้ำลารองซ์ ฝรั่งเศส</span><span class="en">La Rance, France</span></td>
+                <td class="num">13.5 m</td>
+                <td><span class="th">ที่ตั้งของโรงไฟฟ้าน้ำขึ้นน้ำลงแห่งแรกของโลก เดินเครื่องตั้งแต่ปี 1966 กำลัง 240 MW</span><span class="en">Home of the world&rsquo;s first tidal power station, running since 1966 at 240 MW</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ระนอง ชายฝั่งอันดามัน</span><span class="en">Ranong, Andaman coast</span></td>
+                <td class="num">~3.5–4 m</td>
+                <td><span class="th">ช่วงต่างระดับสูงสุดของประเทศไทย เป็นแบบกึ่งวัน (semidiurnal) ตามอิทธิพลของมหาสมุทรอินเดีย</span><span class="en">Thailand&rsquo;s largest range, semidiurnal under the influence of the Indian Ocean</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">อ่าวไทยตอนบน (สมุทรปราการ)</span><span class="en">Upper Gulf of Thailand</span></td>
+                <td class="num">~2.5–3 m</td>
+                <td><span class="th">มีการขยายจากรูปร่างอ่าวตอนบนอยู่บ้าง แต่เป็นแบบรายวัน (diurnal) เป็นหลัก คือมีน้ำขึ้นเพียงครั้งเดียวต่อวัน</span><span class="en">Some amplification from the upper Gulf&rsquo;s shape, but predominantly diurnal — only one high tide a day</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">อ่าวไทยตอนล่าง (สงขลา)</span><span class="en">Lower Gulf (Songkhla)</span></td>
+                <td class="num">~0.5–1.5 m</td>
+                <td><span class="th">ไม่มีการขยายที่มีนัยสำคัญ ใกล้เคียงกับค่าของมหาสมุทรเปิด จึงไม่มีศักยภาพด้านพลังงาน</span><span class="en">No significant amplification, close to the open-ocean value, so no energy potential</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">
+          <span class="th">ตารางที่ 7.1 · สังเกตว่าช่วงต่างระดับกระจายตัวราว 32 เท่าระหว่างสงขลากับอ่าวฟันดี และเพราะพลังงานแปรผันกับช่วงต่างระดับยกกำลังสอง พลังงานจึงต่างกันถึงราวหนึ่งพันเท่า นี่คือการกระจุกตัวทางภูมิศาสตร์ที่รุนแรงยิ่งกว่าพลังงานคลื่นในบทที่ 6</span>
+          <span class="en">Table 7.1 · The range spans about 32 times between Songkhla and Fundy, and since energy goes as the square of range, the energy differs by roughly a thousand times — a geographic concentration even more severe than the wave resource of Chapter 6.</span>
+        </p>
+
+        <div class="callout callout--key">
+          <div class="callout__title">
+            <span class="th">น้ำขึ้นน้ำลงแบบรายวันของอ่าวไทย: ความผิดปกติที่มีความหมายทางวิศวกรรม</span>
+            <span class="en">The Gulf&rsquo;s diurnal tide: an anomaly with engineering meaning</span>
+          </div>
+          <p>
+            <span class="th">พื้นที่ส่วนใหญ่ของโลกมีน้ำขึ้นสองครั้งต่อวัน (semidiurnal) ตามองค์ประกอบ M2 แต่อ่าวไทยตอนบนมีน้ำขึ้นเพียง <strong>ครั้งเดียวต่อวัน</strong> (diurnal) ซึ่งเป็นความผิดปกติที่พบในไม่กี่แห่งของโลก สาเหตุคือรูปร่างและความลึกของอ่าวทำให้องค์ประกอบรายวัน K1 และ O1 (คาบราว 23.9 และ 25.8 ชั่วโมง) ถูกขยายมากกว่าองค์ประกอบกึ่งวัน</span>
+            <span class="en">Most of the world has two high tides a day, following M2, but the upper Gulf of Thailand has only <strong>one</strong> — a diurnal regime found in only a few places. The cause is that the Gulf&rsquo;s shape and depth amplify the diurnal constituents K1 and O1, with periods near 23.9 and 25.8 hours, more than the semidiurnal ones.</span>
+          </p>
+          <p>
+            <span class="th">ผลทางวิศวกรรมมีสองข้อที่ต้องรู้ ข้อแรก — โรงไฟฟ้าแบบเขื่อนกั้นน้ำในอ่าวไทยจะผลิตได้เพียง <em>หนึ่งหรือสองรอบต่อวัน</em> ไม่ใช่สี่รอบอย่างในยุโรป ทำให้ตัวประกอบกำลังผลิตต่ำลงอีก ข้อที่สอง — ช่วงที่น้ำนิ่งยาวนานกว่า ซึ่งเป็นข้อเสียสำหรับการผลิตไฟฟ้า แต่กลับเป็น <em>ข้อดี</em> สำหรับงานเพาะเลี้ยงชายฝั่ง เพราะมีเวลามากพอให้เปิดประตูระบายน้ำเข้าออกบ่อด้วยแรงโน้มถ่วงในแต่ละรอบ ซึ่งเป็นประเด็นของหัวข้อ 7.9</span>
+            <span class="en">Two engineering consequences follow. First, a barrage in the Gulf would generate on only <em>one or two cycles a day</em> rather than the four available in Europe, depressing the capacity factor further. Second, slack water lasts longer — a drawback for generation but an <em>advantage</em> for coastal aquaculture, since there is ample time to pass water through a sluice by gravity on each cycle, which is the subject of §7.9.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 7.3 ============ -->
+      <section class="section" id="s3">
+        <h2><span class="num">7.3</span>
+          <span><span class="th">พลังงานจากช่วงต่างระดับ: เขื่อนกั้นน้ำขึ้นน้ำลง</span>
+          <span class="en">Energy from tidal range: the barrage</span></span>
+        </h2>
+
+        <p>
+          <span class="th">แนวทางแรกของพลังงานน้ำขึ้นน้ำลงคือใช้ <em>พลังงานศักย์</em> โดยสร้างเขื่อนปิดปากอ่าวหรือปากแม่น้ำ ปล่อยให้น้ำขึ้นเข้าเติมอ่างจนเต็ม ปิดประตู รอให้น้ำทะเลข้างนอกลดลง แล้วปล่อยน้ำในอ่างออกผ่านกังหันเฮดต่ำ ซึ่งเป็นกังหันคาปลันหรือกังหันบัลบ์ชนิดเดียวกับที่ศึกษาในบทที่ 5 นี่คือพลังงานน้ำแบบเดิมที่เรารู้จักดี เพียงแต่เฮดมาจากดวงจันทร์แทนที่จะมาจากภูเขา</span>
+          <span class="en">The first approach uses <em>potential energy</em>: build a barrage across a bay or estuary, let the rising tide fill the basin, close the gates, wait for the sea outside to fall, then release the stored water through low-head turbines — the same Kaplan or bulb machines studied in Chapter 5. This is ordinary hydropower, except that the head comes from the Moon rather than from a mountain.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ E_{tide} \;=\; \tfrac{1}{2}\,\rho\, g\, A\, R^{2} \qquad\quad E_{year} = \tfrac{1}{2}\,\rho\, g\, A\, \overline{R^{2}}\, N\, \eta_{ex} \]</div>
+            <span class="formula__num">(7.4)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(E_{tide}\) = พลังงานศักย์ที่สะสมได้ต่อหนึ่งรอบน้ำ (J) · \(\rho = 1025\ \mathrm{kg/m^3}\) · \(A\) = พื้นที่ผิวของอ่าง (m²) · \(R\) = ช่วงต่างระดับน้ำ (m) · \(N\) = จำนวนรอบน้ำต่อปี ซึ่งสำหรับน้ำกึ่งวันเท่ากับ 706 รอบ · \(\eta_{ex}\) = ตัวประกอบการสกัดรวม ซึ่งรวมทั้งประสิทธิภาพกังหันและความจริงที่ว่าเฮดลดลงเรื่อย ๆ ขณะปล่อยน้ำ โดยทั่วไป 0.25&ndash;0.40 สำหรับการผลิตทางเดียว</span>
+            <span class="en">\(E_{tide}\) is the potential energy stored per tidal cycle (J) · \(\rho = 1025\ \mathrm{kg/m^3}\) · \(A\) the basin surface area (m²) · \(R\) the tidal range (m) · \(N\) the number of cycles a year, 706 for a semidiurnal tide · \(\eta_{ex}\) the overall extraction factor, covering both turbine efficiency and the fact that the head falls steadily as the basin drains — typically 0.25&ndash;0.40 for one-way generation.</span>
+          </div>
+        </div>
+
+        <div class="callout callout--key">
+          <div class="callout__title">
+            <span class="th">ตัวประกอบครึ่งหนึ่งมาจากไหน และทำไมจึงพลาดกันบ่อย</span>
+            <span class="en">Where the half comes from, and why it is so often missed</span>
+          </div>
+          <p>
+            <span class="th">สัญชาตญาณบอกว่าน้ำปริมาณ \(A \times R\) ตกลงมาสูง \(R\) จึงควรได้พลังงาน \(\rho g A R^{2}\) แต่คำตอบนั้นมากเกินไปสองเท่า เพราะ <em>น้ำไม่ได้ตกลงมาทั้งก้อนจากความสูง \(R\)</em> ชั้นน้ำบนสุดตกลงมาเต็ม \(R\) จริง แต่ชั้นล่างสุดแทบไม่ตกเลย ค่าเฉลี่ยของระยะที่น้ำทั้งก้อนตกคือ \(R/2\) ซึ่งเป็นจุดศูนย์ถ่วงของมวลน้ำที่เก็บไว้ จึงได้ \(E = \rho g A R \times (R/2) = \tfrac{1}{2}\rho g A R^{2}\)</span>
+            <span class="en">Intuition says a volume \(A \times R\) falling through a height \(R\) should yield \(\rho g A R^{2}\) — but that is twice too much, because <em>the water does not all fall from a height \(R\)</em>. The topmost layer does, but the bottom layer barely falls at all. The mean fall for the whole volume is \(R/2\), the centre of gravity of the stored water, giving \(E = \rho g A R \times (R/2) = \tfrac{1}{2}\rho g A R^{2}\).</span>
+          </p>
+          <p>
+            <span class="th">ข้อสำคัญที่ต้องสังเกตคือ <strong>ช่วงต่างระดับยกกำลังสอง</strong> ซึ่งหมายความว่าอ่าวที่มีช่วงต่างระดับ 8 เมตรให้พลังงานมากกว่าอ่าวที่มี 4 เมตรถึงสี่เท่า ที่พื้นที่เท่ากัน การเลือกทำเลจึงสำคัญกว่าการขยายขนาดอ่างเสมอ</span>
+            <span class="en">The thing to notice is the <strong>square of the range</strong>: a bay with an 8 m range yields four times the energy of a 4 m one of the same area. Choosing the site therefore always matters more than enlarging the basin.</span>
+          </p>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 7.3 · เขื่อนกั้นน้ำขึ้นน้ำลงในปากแม่น้ำขนาดกลาง</span>
+            <span class="en">Worked example 7.3 · A barrage across a medium estuary</span>
+          </div>
+          <p>
+            <span class="th">ปากแม่น้ำแห่งหนึ่งมีพื้นที่อ่างที่กั้นได้ 20 km² และช่วงต่างระดับเฉลี่ย 4.0 เมตร น้ำเป็นแบบกึ่งวัน จงหาพลังงานต่อรอบน้ำ พลังงานรายปีที่ \(\eta_{ex} = 0.33\) และกำลังพิกัดที่เหมาะสมหากออกแบบให้ตัวประกอบกำลังผลิตเท่ากับ 0.25</span>
+            <span class="en">An estuary offers an impoundable basin of 20 km² with a mean range of 4.0 m and a semidiurnal tide. Find the energy per cycle, the annual energy at \(\eta_{ex} = 0.33\), and a sensible rated power for a design capacity factor of 0.25.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">พลังงานต่อรอบ: \(E = 0.5 \times 1025 \times 9.81 \times 20 \times 10^{6} \times 4.0^{2}\)</span>
+              <span class="en">Energy per cycle: \(E = 0.5 \times 1025 \times 9.81 \times 20 \times 10^{6} \times 4.0^{2}\)</span>
+            </li>
+            <li>
+              <span class="th">\(= 5{,}028 \times 2 \times 10^{7} \times 16 = 1.609 \times 10^{12}\ \mathrm{J} = \mathbf{447\ MWh}\) ต่อรอบน้ำ</span>
+              <span class="en">\(= 5{,}028 \times 2 \times 10^{7} \times 16 = 1.609 \times 10^{12}\ \mathrm{J} = \mathbf{447\ MWh}\) per cycle.</span>
+            </li>
+            <li>
+              <span class="th">พลังงานทางทฤษฎีรายปี: \(447 \times 706 = 315{,}600\ \mathrm{MWh} = 316\ \mathrm{GWh}\)</span>
+              <span class="en">Theoretical annual energy: \(447 \times 706 = 315{,}600\ \mathrm{MWh} = 316\ \mathrm{GWh}\)</span>
+            </li>
+            <li>
+              <span class="th">พลังงานที่ผลิตได้จริง: \(316 \times 0.33 = \mathbf{104\ GWh}\) ต่อปี</span>
+              <span class="en">Energy actually generated: \(316 \times 0.33 = \mathbf{104\ GWh}\) a year.</span>
+            </li>
+            <li>
+              <span class="th">กำลังพิกัด: \(104 \times 10^{3}/(8760 \times 0.25) = \mathbf{47.5\ MW}\)</span>
+              <span class="en">Rated power: \(104 \times 10^{3}/(8760 \times 0.25) = \mathbf{47.5\ MW}\)</span>
+            </li>
+            <li>
+              <span class="th">ข้อสังเกตที่สำคัญ: อ่างกว้าง 20 ตารางกิโลเมตร — ใหญ่กว่าเขตดุสิตทั้งเขต — ให้ไฟฟ้าเพียง 104 GWh ต่อปี ซึ่งเทียบเท่าโซลาร์ฟาร์มขนาดราว 70 MW ที่ใช้พื้นที่เพียง 1 ตารางกิโลเมตร <em>เขื่อนกั้นน้ำขึ้นน้ำลงใช้พื้นที่ต่อหน่วยพลังงานมากกว่าโซลาร์ราวยี่สิบเท่า</em> และพื้นที่นั้นคือพื้นที่ชายเลนและหาดเลนซึ่งเป็นแหล่งอนุบาลสัตว์น้ำ นี่คือเหตุผลหลักที่โครงการเขื่อนกั้นน้ำขึ้นน้ำลงถูกคัดค้านทั่วโลก</span>
+              <span class="en">The point worth dwelling on: a basin of 20 km² — larger than a whole Bangkok district — yields only 104 GWh a year, about the output of a 70 MW solar farm occupying one square kilometre. <em>A tidal barrage uses some twenty times more land per unit of energy than solar does</em>, and that land is mudflat and mangrove, the nursery ground of fisheries. This is the main reason barrage schemes meet opposition worldwide.</span>
+            </li>
+          </ol>
+        </div>
+
+        <figure class="figure" data-reveal>
+          <div class="figure__body">
+            <svg viewBox="0 0 760 330" width="760" role="img" aria-labelledby="fig72-title fig72-desc">
+              <title id="fig72-title">One-way ebb generation cycle of a tidal barrage</title>
+              <desc id="fig72-desc">Sea level and basin level plotted over one tidal cycle. During the flood the sluices open and the basin fills with the sea. At high water the gates close and the basin is held. As the sea falls a head builds between basin and sea. Once the head is large enough the turbines generate until the head falls below the minimum, after which the sluices reopen. The shaded area between the two curves is the head available, and generating occupies only part of the cycle.</desc>
+
+              <defs>
+                <marker id="tb1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M 0 1 L 9 5 L 0 9" fill="none" class="dg-accent-s" stroke-width="1.5"/>
+                </marker>
+              </defs>
+
+              <line x1="70" y1="250" x2="730" y2="250" class="dg-rule" stroke-width="1.8"/>
+              <line x1="70" y1="250" x2="70" y2="40" class="dg-rule" stroke-width="1.8"/>
+              <text x="26" y="150" class="dg-label th">ระดับน้ำ</text>
+              <text x="26" y="150" class="dg-label en">LEVEL</text>
+              <g class="dg-label" text-anchor="middle">
+                <text x="70" y="270">0</text>
+                <text x="235" y="270">3</text>
+                <text x="400" y="270">6</text>
+                <text x="565" y="270">9</text>
+                <text x="730" y="270">12.4</text>
+              </g>
+              <text x="400" y="290" text-anchor="middle" class="dg-text th">เวลาในหนึ่งรอบน้ำ (ชั่วโมง)</text>
+              <text x="400" y="290" text-anchor="middle" class="dg-text en">Time through one tidal cycle (hours)</text>
+
+              <!-- head area -->
+              <path d="M 400 70 L 730 70 L 730 230 L 565 230 L 400 70 Z" class="dg-fill dg-accent-s" stroke-width="0" opacity="0.3"/>
+              <path d="M 400 70 L 565 230 L 400 230 Z" class="dg-fill dg-accent-s" stroke-width="0" opacity="0.0"/>
+
+              <!-- sea level: sinusoid -->
+              <path d="M 70 230 Q 152 230 235 150 Q 318 70 400 70 Q 482 70 565 150 Q 648 230 730 230"
+                    fill="none" class="dg-accent" stroke-width="2.6"/>
+              <text x="150" y="222" class="dg-label th">ระดับน้ำทะเล</text>
+              <text x="150" y="222" class="dg-label en">SEA LEVEL</text>
+
+              <!-- basin level: follows sea on flood, held at high water, then drains -->
+              <path d="M 70 230 Q 152 230 235 150 Q 318 70 400 70 L 565 70 Q 620 70 672 150 Q 700 194 730 230"
+                    fill="none" class="dg-line" stroke-width="2.6" stroke-dasharray="7 4"/>
+              <text x="440" y="60" class="dg-label th">ระดับน้ำในอ่าง — กักไว้</text>
+              <text x="440" y="60" class="dg-label en">BASIN LEVEL — HELD</text>
+
+              <!-- phase bands -->
+              <g class="dg-line" stroke-width="1" stroke-dasharray="3 4">
+                <line x1="400" y1="40" x2="400" y2="250"/>
+                <line x1="565" y1="40" x2="565" y2="250"/>
+              </g>
+
+              <rect x="70" y="302" width="330" height="18" rx="2" class="dg-fill-2 dg-rule" stroke-width="1.2"/>
+              <text x="235" y="315" text-anchor="middle" class="dg-label th">น้ำขึ้น — เปิดประตูให้อ่างเติมเอง</text>
+              <text x="235" y="315" text-anchor="middle" class="dg-label en">FLOOD — SLUICES OPEN, BASIN FILLS</text>
+
+              <rect x="400" y="302" width="165" height="18" rx="2" class="dg-fill dg-rule" stroke-width="1.2"/>
+              <text x="482" y="315" text-anchor="middle" class="dg-label th">ปิดประตู รอสร้างเฮด</text>
+              <text x="482" y="315" text-anchor="middle" class="dg-label en">GATES SHUT, HEAD BUILDS</text>
+
+              <rect x="565" y="302" width="165" height="18" rx="2" class="dg-fill dg-accent-s" stroke-width="1.6"/>
+              <text x="648" y="315" text-anchor="middle" class="dg-label th">ผลิตไฟฟ้า</text>
+              <text x="648" y="315" text-anchor="middle" class="dg-label en">GENERATING</text>
+
+              <line x1="690" y1="150" x2="690" y2="226" class="dg-accent-s" stroke-width="1.5" marker-start="url(#tb1)" marker-end="url(#tb1)"/>
+              <text x="698" y="192" class="dg-label th">เฮด</text>
+              <text x="698" y="192" class="dg-label en">HEAD</text>
+
+              <text x="70" y="30" class="dg-label th">การผลิตทางเดียวแบบน้ำลง: ผลิตได้เพียงราวหนึ่งในสามของรอบน้ำ และเฮดลดลงตลอดเวลาที่ผลิต</text>
+              <text x="70" y="30" class="dg-label en">ONE-WAY EBB GENERATION: ONLY ABOUT A THIRD OF THE CYCLE GENERATES, AND THE HEAD FALLS THROUGHOUT</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label"><span class="th">รูปที่ 7.2</span><span class="en">Figure 7.2</span></span>
+            <span class="th">ภาพนี้อธิบายว่าตัวประกอบการสกัด \(\eta_{ex}\) ราว 0.33 มาจากไหน — ไม่ใช่เพราะกังหันแย่ แต่เพราะเฮดมีค่าเต็มที่เพียงชั่วครู่แล้วลดลงเรื่อย ๆ จนต้องหยุดผลิตเมื่อเฮดต่ำกว่าขีดต่ำสุดของกังหัน การผลิต <strong>สองทาง</strong> ซึ่งผลิตทั้งตอนน้ำขึ้นและน้ำลงเพิ่มพลังงานได้ราว 10&ndash;20% แต่ต้องใช้กังหันที่หมุนได้สองทิศทางและทำให้ช่วงต่างระดับภายในอ่างแคบลง ซึ่งกระทบระบบนิเวศชายเลนมากขึ้น</span>
+            <span class="en">This is where the extraction factor of about 0.33 comes from — not from poor turbines but because the head is at its full value only briefly, then falls until generation must stop below the turbine&rsquo;s minimum. <strong>Two-way</strong> operation, generating on both flood and ebb, adds some 10&ndash;20% but needs bidirectional turbines and compresses the range inside the basin, which bears harder on the mangrove ecology.</span>
+          </figcaption>
+        </figure>
+
+        <div class="demo" data-demo="tidal-range" data-reveal>
+          <div class="demo__head">
+            <span class="demo__label"><span class="th">ลองเล่นดู</span><span class="en">Try it</span></span>
+            <span class="demo__title">
+              <span class="th">ช่วงต่างระดับยกกำลังสอง: ทำเลสำคัญกว่าขนาด</span>
+              <span class="en">Range squared: the site matters more than the size</span>
+            </span>
+            <span class="demo__sub">
+              <span class="th">สมการ (7.4) ที่ \(\eta_{ex} = 0.33\) และน้ำกึ่งวัน 706 รอบต่อปี · เทียบพลังงานกับโซลาร์ฟาร์มที่ใช้พื้นที่เท่ากัน (สมมติ 70 MW ต่อ 1 km² ผลิต 1,500 kWh ต่อ kWp ต่อปี) เพื่อให้เห็นต้นทุนด้านพื้นที่</span>
+              <span class="en">Equation (7.4) at \(\eta_{ex} = 0.33\) with 706 semidiurnal cycles a year. The energy is set against a solar farm on the same footprint (taking 70 MW per km² at 1,500 kWh per kWp a year) to show the land cost.</span>
+            </span>
+          </div>
+
+          <div class="demo__stage" style="min-width:0">
+            <div class="sbar">
+              <div class="sbar__seg sbar__seg--usable" data-tr-seg="tidal" style="width:5%"></div>
+              <div class="sbar__seg sbar__seg--water" data-tr-seg="solar" style="width:95%"></div>
+            </div>
+            <div class="sbar-scale">
+              <span>0</span>
+              <span><span class="th">พลังงานที่โซลาร์ให้ได้บนพื้นที่เท่ากัน</span><span class="en">What solar would yield on the same footprint</span></span>
+            </div>
+            <div class="sbar-legend">
+              <span class="key"><i class="k-usable"></i><span class="th">เขื่อนกั้นน้ำขึ้นน้ำลง</span><span class="en">The tidal barrage</span></span>
+              <span class="key"><i class="k-water"></i><span class="th">ส่วนที่โซลาร์ให้ได้มากกว่าบนพื้นที่เดียวกัน</span><span class="en">What solar would add on the same land</span></span>
+            </div>
+          </div>
+
+          <div class="readouts">
+            <div class="readout readout--accent">
+              <span class="readout__label"><span class="th">พลังงานรายปี</span><span class="en">Annual energy</span></span>
+              <span class="readout__value"><span data-tr-energy>104</span><span class="readout__unit">GWh</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">พลังงานต่อรอบน้ำ</span><span class="en">Energy per tidal cycle</span></span>
+              <span class="readout__value"><span data-tr-per>447</span><span class="readout__unit">MWh</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">กำลังพิกัดที่ CF 25%</span><span class="en">Rated power at 25% CF</span></span>
+              <span class="readout__value"><span data-tr-rated>47.5</span><span class="readout__unit">MW</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">เทียบกับโซลาร์บนพื้นที่เท่ากัน</span><span class="en">Against solar on the same land</span></span>
+              <span class="readout__value"><span data-tr-ratio>5</span><span class="readout__unit">%</span></span>
+            </div>
+          </div>
+
+          <div class="demo__controls">
+            <label class="demo__field">
+              <span class="th">พื้นที่อ่าง (km²)</span><span class="en">Basin area (km²)</span>
+              <input type="range" min="1" max="200" step="1" value="20" data-tr-area aria-label="Basin area in square kilometres">
+            </label>
+            <label class="demo__field">
+              <span class="th">ช่วงต่างระดับเฉลี่ย (m)</span><span class="en">Mean tidal range (m)</span>
+              <input type="range" min="0.5" max="12" step="0.1" value="4" data-tr-range aria-label="Mean tidal range in metres">
+            </label>
+            <div class="preset-row">
+              <button type="button" class="preset" data-tr-preset="20|4.0"><span class="th">ตัวอย่างที่ 7.3</span><span class="en">Worked example 7.3</span></button>
+              <button type="button" class="preset" data-tr-preset="22|8.0"><span class="th">ลารองซ์ ฝรั่งเศส</span><span class="en">La Rance, France</span></button>
+              <button type="button" class="preset" data-tr-preset="43|5.6"><span class="th">ชีฮวา เกาหลีใต้</span><span class="en">Sihwa, South Korea</span></button>
+              <button type="button" class="preset" data-tr-preset="20|2.5"><span class="th">อ่าวไทยตอนบน</span><span class="en">Upper Gulf of Thailand</span></button>
+            </div>
+          </div>
+
+          <div class="demo__warn" data-tr-warn hidden>
+            <span class="th">ที่ช่วงต่างระดับต่ำกว่าราว 4 เมตร เขื่อนกั้นน้ำขึ้นน้ำลงไม่คุ้มค่าในทุกกรณีที่ทราบ เพราะต้นทุนงานโยธาแปรผันตามความยาวและความลึกของเขื่อน ไม่ใช่ตามพลังงานที่ได้ ขณะที่พลังงานแปรผันกับช่วงต่างระดับยกกำลังสอง นี่คือเหตุผลที่โรงไฟฟ้าแบบนี้ทั้งโลกมีเพียงไม่กี่แห่ง และทุกแห่งอยู่ในอ่าวที่มีช่วงต่างระดับเกิน 5 เมตร</span>
+            <span class="en">Below a range of roughly 4 m, no barrage anywhere is known to pay, because the civil cost scales with the length and depth of the dam rather than with the energy, while the energy scales with the square of the range. This is why only a handful of such stations exist worldwide, every one of them in a basin with a range above 5 m.</span>
+          </div>
+
+          <div class="demo__note">
+            <p>
+              <span class="th">ลองทำสิ่งนี้: ตั้งพื้นที่ไว้ที่ 20 km² แล้วเลื่อนช่วงต่างระดับจาก 2.5 เป็น 5.0 เมตร ซึ่งเป็นเพียงสองเท่า จะพบว่าพลังงานเพิ่มขึ้นสี่เท่า จากนั้นกลับมาที่ 2.5 เมตรแล้วเพิ่มพื้นที่เป็น 80 km² เพื่อให้ได้พลังงานเท่ากัน — ต้องใช้พื้นที่ชายเลนมากกว่าสี่เท่า <em>ช่วงต่างระดับซื้อไม่ได้ แต่พื้นที่ต้องจ่ายทั้งค่าก่อสร้างและค่าระบบนิเวศ</em></span>
+              <span class="en">Try this: hold the area at 20 km² and move the range from 2.5 to 5.0 m — a doubling that quadruples the energy. Now return to 2.5 m and enlarge the area to 80 km² to recover that energy: four times the mudflat. <em>Range cannot be bought, but area is paid for twice, in construction and in ecology.</em></span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 7.4 ============ -->
+      <section class="section" id="s4">
+        <h2><span class="num">7.4</span>
+          <span><span class="th">พลังงานจากกระแสน้ำ: กังหันใต้น้ำ</span>
+          <span class="en">Energy from tidal streams: turbines underwater</span></span>
+        </h2>
+
+        <p>
+          <span class="th">แนวทางที่สองไม่สร้างเขื่อนเลย แต่วางกังหันลงในกระแสน้ำที่ไหลไปมาตามจังหวะน้ำขึ้นน้ำลง และดึง <em>พลังงานจลน์</em> ออกมาโดยตรง สมการที่ใช้เหมือนกับพลังงานลมทุกตัวอักษร เพราะเป็นฟิสิกส์เดียวกัน — ของไหลที่มีความหนาแน่น \(\rho\) ไหลผ่านพื้นที่ \(A\) ด้วยความเร็ว \(v\)</span>
+          <span class="en">The second approach builds no dam at all. It places turbines in the current that runs back and forth with the tide and takes the <em>kinetic energy</em> directly. The equation is identical to the wind one, letter for letter, because the physics is identical — a fluid of density \(\rho\) crossing an area \(A\) at speed \(v\).</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ P = \tfrac{1}{2}\,\rho\, A\, v^{3}\, C_{p} \qquad\quad C_{p,max} = \tfrac{16}{27} \approx 0.593 \]</div>
+            <span class="formula__num">(7.5)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(P\) = กำลังที่ได้ (W) · \(\rho = 1025\ \mathrm{kg/m^3}\) สำหรับน้ำทะเล · \(A\) = พื้นที่กวาดของใบพัด (m²) · \(v\) = ความเร็วกระแสน้ำ (m/s) · \(C_{p}\) = สัมประสิทธิ์กำลัง โดยกังหันกระแสน้ำจริงทำได้ราว 0.35&ndash;0.45 · \(C_{p,max}\) = ขีดจำกัดเบ็ตซ์ (Betz limit) ซึ่งเป็นขีดจำกัดเดียวกับพลังงานลม เพราะมาจากข้อเท็จจริงว่าถ้าดึงพลังงานออกทั้งหมด ของไหลจะหยุดนิ่งและไหลผ่านต่อไม่ได้</span>
+            <span class="en">\(P\) is the power (W) · \(\rho = 1025\ \mathrm{kg/m^3}\) for seawater · \(A\) the swept area (m²) · \(v\) the current speed (m/s) · \(C_{p}\) the power coefficient, around 0.35&ndash;0.45 for real tidal turbines · \(C_{p,max}\) the Betz limit, the same ceiling as for wind, arising from the fact that extracting all the energy would stop the fluid and prevent any more from passing.</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 7.4 · กังหันกระแสน้ำเทียบกับกังหันลมที่กำลังเท่ากัน</span>
+            <span class="en">Worked example 7.4 · A tidal turbine against a wind turbine of equal output</span>
+          </div>
+          <p>
+            <span class="th">กังหันกระแสน้ำเส้นผ่านศูนย์กลางใบพัด 18 เมตร ทำงานที่กระแสน้ำพิกัด 3.0 m/s และ \(C_{p} = 0.40\) จงหากำลังพิกัด แล้วหาว่ากังหันลมที่ให้กำลังเท่ากันที่ลมพิกัด 12 m/s และ \(C_{p} = 0.45\) ต้องมีใบพัดเส้นผ่านศูนย์กลางเท่าไร</span>
+            <span class="en">A tidal turbine with an 18 m rotor works at a rated current of 3.0 m/s with \(C_{p} = 0.40\). Find its rated power, then find the rotor diameter a wind turbine would need for the same output at a rated wind of 12 m/s with \(C_{p} = 0.45\).</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">พื้นที่กวาด: \(A = \pi \times 9^{2} = 254.5\ \mathrm{m^2}\)</span>
+              <span class="en">Swept area: \(A = \pi \times 9^{2} = 254.5\ \mathrm{m^2}\)</span>
+            </li>
+            <li>
+              <span class="th">กำลัง: \(P = 0.5 \times 1025 \times 254.5 \times 27 \times 0.40 = \mathbf{1.41\ MW}\)</span>
+              <span class="en">Power: \(P = 0.5 \times 1025 \times 254.5 \times 27 \times 0.40 = \mathbf{1.41\ MW}\)</span>
+            </li>
+            <li>
+              <span class="th">กังหันลมต้องมีพื้นที่: \(A = 2P/(\rho v^{3} C_{p}) = 2 \times 1.41 \times 10^{6}/(1.225 \times 1728 \times 0.45) = 2{,}959\ \mathrm{m^2}\)</span>
+              <span class="en">The wind turbine needs \(A = 2P/(\rho v^{3} C_{p}) = 2 \times 1.41 \times 10^{6}/(1.225 \times 1728 \times 0.45) = 2{,}959\ \mathrm{m^2}\)</span>
+            </li>
+            <li>
+              <span class="th">\(D = \sqrt{4A/\pi} = \sqrt{3{,}768} = \mathbf{61.4\ m}\)</span>
+              <span class="en">\(D = \sqrt{4A/\pi} = \sqrt{3{,}768} = \mathbf{61.4\ m}\)</span>
+            </li>
+            <li>
+              <span class="th">ใบพัดกังหันกระแสน้ำ 18 เมตรให้กำลังเท่ากับใบพัดกังหันลม 61 เมตร หรือเล็กกว่ากันราว <strong>3.4 เท่า</strong> ในด้านเส้นผ่านศูนย์กลาง และเล็กกว่า 12 เท่าในด้านพื้นที่</span>
+              <span class="en">An 18 m tidal rotor matches a 61 m wind rotor — about <strong>3.4 times</strong> smaller in diameter and twelve times smaller in area.</span>
+            </li>
+            <li>
+              <span class="th">ที่มาของความได้เปรียบ: น้ำทะเลมีความหนาแน่นมากกว่าอากาศ \(1025/1.225 = 837\) เท่า แต่กระแสน้ำช้ากว่าลม 4 เท่า เมื่อยกกำลังสามแล้วเสียเปรียบ 64 เท่า สุทธิจึงยังได้เปรียบ \(837/64 = \mathbf{13}\) เท่าต่อหนึ่งตารางเมตร ความได้เปรียบนี้เป็นเหตุผลที่กังหันกระแสน้ำกะทัดรัดอย่างน่าทึ่ง แต่ก็ไม่ได้ทำให้ถูกลง เพราะต้นทุนอยู่ที่การติดตั้งและบำรุงรักษาใต้น้ำ ไม่ใช่ที่ใบพัด</span>
+              <span class="en">Where the advantage comes from: seawater is \(1025/1.225 = 837\) times denser than air, but the current is four times slower, and cubed that costs a factor of 64. The net advantage is \(837/64 = \mathbf{13}\) times per square metre. This is why tidal rotors are remarkably compact — though it does not make them cheap, because the cost lies in installing and maintaining them underwater, not in the blades.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="demo" data-demo="tidal-stream" data-reveal>
+          <div class="demo__head">
+            <span class="demo__label"><span class="th">ลองเล่นดู</span><span class="en">Try it</span></span>
+            <span class="demo__title">
+              <span class="th">กฎกำลังสาม: ทำไมต้องมีกระแสเกิน 2.5 เมตรต่อวินาที</span>
+              <span class="en">The cube law: why the current must exceed 2.5 m/s</span>
+            </span>
+            <span class="demo__sub">
+              <span class="th">สมการ (7.5) ที่ \(C_{p} = 0.40\) · แถบด้านล่างเทียบกับแหล่งชั้นดีที่กระแส 3.5 m/s และคอลัมน์ขวาแสดงขนาดใบพัดกังหันลมที่ให้กำลังเท่ากัน เพื่อให้เห็นความกะทัดรัดที่ความหนาแน่นของน้ำมอบให้</span>
+              <span class="en">Equation (7.5) at \(C_{p} = 0.40\). The bar compares against a world-class site at 3.5 m/s, and the last readout gives the wind rotor of equal output, so the compactness that water&rsquo;s density buys is visible.</span>
+            </span>
+          </div>
+
+          <div class="demo__stage" style="min-width:0">
+            <div class="sbar">
+              <div class="sbar__seg sbar__seg--usable" data-ts2-seg="here" style="width:63%"></div>
+              <div class="sbar__seg sbar__seg--water" data-ts2-seg="rest" style="width:37%"></div>
+            </div>
+            <div class="sbar-scale">
+              <span>0</span>
+              <span><span class="th">กำลังต่อตารางเมตรที่แหล่งชั้นดี 3.5 m/s</span><span class="en">Power per square metre at a world-class 3.5 m/s</span></span>
+            </div>
+            <div class="sbar-legend">
+              <span class="key"><i class="k-usable"></i><span class="th">กำลังที่กระแสนี้ให้</span><span class="en">What this current gives</span></span>
+              <span class="key"><i class="k-water"></i><span class="th">ส่วนที่ขาดไปจากแหล่งชั้นดี</span><span class="en">The shortfall against a world-class site</span></span>
+            </div>
+          </div>
+
+          <div class="readouts">
+            <div class="readout readout--accent">
+              <span class="readout__label"><span class="th">กำลังพิกัด</span><span class="en">Rated power</span></span>
+              <span class="readout__value"><span data-ts2-power>1.41</span><span class="readout__unit">MW</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">ความหนาแน่นกำลังของกระแสน้ำ</span><span class="en">Current power density</span></span>
+              <span class="readout__value"><span data-ts2-dens>13.8</span><span class="readout__unit">kW/m²</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">พลังงานรายปีที่ CF 35%</span><span class="en">Annual energy at 35% CF</span></span>
+              <span class="readout__value"><span data-ts2-energy>4.3</span><span class="readout__unit">GWh</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">ใบพัดกังหันลมที่กำลังเท่ากัน</span><span class="en">Wind rotor of equal output</span></span>
+              <span class="readout__value"><span data-ts2-wind>61</span><span class="readout__unit">m</span></span>
+            </div>
+          </div>
+
+          <div class="demo__controls">
+            <label class="demo__field">
+              <span class="th">ความเร็วกระแสน้ำพิกัด (m/s)</span><span class="en">Rated current speed (m/s)</span>
+              <input type="range" min="0.4" max="5" step="0.1" value="3" data-ts2-vel aria-label="Rated current speed in metres per second">
+            </label>
+            <label class="demo__field">
+              <span class="th">เส้นผ่านศูนย์กลางใบพัด (m)</span><span class="en">Rotor diameter (m)</span>
+              <input type="range" min="4" max="24" step="0.5" value="18" data-ts2-dia aria-label="Rotor diameter in metres">
+            </label>
+            <div class="preset-row">
+              <button type="button" class="preset" data-ts2-preset="3.0|18"><span class="th">ตัวอย่างที่ 7.4</span><span class="en">Worked example 7.4</span></button>
+              <button type="button" class="preset" data-ts2-preset="5.0|20"><span class="th">เพนต์แลนด์เฟิร์ธ</span><span class="en">Pentland Firth</span></button>
+              <button type="button" class="preset" data-ts2-preset="2.5|16"><span class="th">ขีดต่ำสุดเชิงพาณิชย์</span><span class="en">Commercial minimum</span></button>
+              <button type="button" class="preset" data-ts2-preset="1.0|16"><span class="th">ช่องแคบในอ่าวไทย</span><span class="en">A Gulf of Thailand channel</span></button>
+            </div>
+          </div>
+
+          <div class="demo__warn" data-ts2-warn hidden>
+            <span class="th">ต่ำกว่าราว 2 เมตรต่อวินาที ไม่มีโครงการกังหันกระแสน้ำใดในโลกที่คุ้มค่าเชิงพาณิชย์ เพราะต้นทุนโครงสร้างรองรับ การติดตั้งด้วยเรือเฉพาะทาง และสายไฟใต้น้ำแทบไม่ลดลงตามความเร็วกระแส ขณะที่พลังงานลดลงตามกำลังสาม ที่กระแส 1 m/s กำลังต่อตารางเมตรเหลือเพียงราวหนึ่งในสามสิบของแหล่งชั้นดี</span>
+            <span class="en">Below roughly 2 m/s no tidal stream project anywhere pays commercially, because the cost of the support structure, the specialist installation vessel and the subsea cable barely falls as the current weakens, while the energy falls as its cube. At 1 m/s the power per square metre is only about a thirtieth of a world-class site.</span>
+          </div>
+
+          <div class="demo__note">
+            <p>
+              <span class="th">ลองทำสิ่งนี้: ตั้งใบพัดไว้ที่ 18 เมตรแล้วเลื่อนกระแสน้ำจาก 3.0 ลงมาเป็น 1.5 m/s ซึ่งเป็นเพียงครึ่งเดียว จะพบว่ากำลังเหลือเพียงหนึ่งในแปด จากนั้นลองขยายใบพัดให้ใหญ่สุดที่ 24 เมตรก็ยังกู้คืนไม่ได้ เพราะพื้นที่เพิ่มเพียง 1.8 เท่าแต่ที่เสียไปคือ 8 เท่า <em>กฎกำลังสามเอาชนะเรขาคณิตได้ทุกครั้ง</em> และนี่คือเหตุผลที่พลังงานกระแสน้ำต้องไปหาช่องแคบที่น้ำไหลเร็ว ไม่ใช่สร้างกังหันให้ใหญ่ขึ้น</span>
+              <span class="en">Try this: hold the rotor at 18 m and drop the current from 3.0 to 1.5 m/s — half the speed leaves an eighth of the power. Now enlarge the rotor to its 24 m maximum and the loss is still not recovered, because the area grows only 1.8 times against a loss of eight. <em>The cube law beats geometry every time</em>, which is why tidal stream energy must seek out fast channels rather than build bigger turbines.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 7.5 ============ -->
+      <section class="section" id="s5">
+        <h2><span class="num">7.5</span>
+          <span><span class="th">การประเมินทรัพยากร: ที่มีอยู่กับที่สกัดออกมาได้</span>
+          <span class="en">Assessing the resource: available against extractable</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ในบทที่ 5 และ 6 ทรัพยากรที่มีอยู่กับทรัพยากรที่ใช้ได้ต่างกันเพียงที่ประสิทธิภาพของอุปกรณ์ แต่พลังงานกระแสน้ำมีข้อแตกต่างเชิงหลักการที่ลึกกว่านั้น — <strong>การสกัดพลังงานออกจากช่องแคบทำให้กระแสน้ำในช่องนั้นช้าลงเอง</strong> ถ้าวางกังหันมากพอ กระแสจะช้าลงจนกังหันทุกตัวได้พลังงานน้อยลงพร้อมกัน ทรัพยากรจึงไม่ใช่ค่าคงที่ที่รอให้ไปเก็บ แต่เป็นสิ่งที่เปลี่ยนไปตามปริมาณที่เราเก็บ</span>
+          <span class="en">In Chapters 5 and 6 the difference between the available and the usable resource was only device efficiency. Tidal streams differ in principle and more deeply: <strong>extracting energy from a channel slows the current in that channel</strong>. Install enough turbines and the flow drops until every one of them collects less. The resource is not a fixed quantity waiting to be gathered but something that changes with how much is taken.</span>
+        </p>
+
+        <div class="callout callout--key">
+          <div class="callout__title">
+            <span class="th">เหตุใดการคูณพื้นที่ช่องแคบด้วยความหนาแน่นกำลังจึงให้คำตอบที่ผิด</span>
+            <span class="en">Why multiplying channel area by power density gives the wrong answer</span>
+          </div>
+          <p>
+            <span class="th">วิธีประเมินที่พบบ่อยในรายงานระดับประเทศคือคูณพื้นที่หน้าตัดของช่องแคบด้วยความหนาแน่นกำลัง \(\tfrac{1}{2}\rho v^{3}\) แล้วเรียกผลลัพธ์ว่า &ldquo;ศักยภาพ&rdquo; วิธีนี้ผิดเชิงหลักการ เพราะการวางกังหันเต็มหน้าตัดจะปิดกั้นการไหลจนไม่มีน้ำผ่าน และกำลังที่ได้จะเป็นศูนย์ ไม่ใช่ค่าสูงสุด</span>
+            <span class="en">A common method in national studies multiplies the channel cross-section by the power density \(\tfrac{1}{2}\rho v^{3}\) and calls the result the &ldquo;potential&rdquo;. It is wrong in principle: filling the cross-section with turbines would block the flow entirely, and the power obtained would be zero rather than maximal.</span>
+          </p>
+          <p>
+            <span class="th">งานของ Garrett และ Cummins ในปี 2005 แสดงว่ากำลังสูงสุดที่สกัดได้จากช่องแคบขึ้นกับความต่างระดับน้ำที่ขับการไหลและความต้านทานของช่อง ไม่ใช่กับพลังงานจลน์ที่ไหลผ่าน และมีค่าราว <strong>20&ndash;25% ของฟลักซ์พลังงานจลน์ที่ยังไม่ถูกรบกวน</strong> เท่านั้น ตัวประกอบนี้บางครั้งเรียกว่า <em>ตัวประกอบผลกระทบนัยสำคัญ (significant impact factor)</em> เพราะการสกัดเกินกว่านี้จะเปลี่ยนรูปแบบการไหลของทั้งช่องอย่างมีนัยสำคัญ ซึ่งกระทบทั้งกำลังผลิตและระบบนิเวศ</span>
+            <span class="en">The 2005 work of Garrett and Cummins showed that the maximum extractable power from a channel depends on the head difference driving the flow and the channel&rsquo;s resistance, not on the kinetic energy passing through, and amounts to only about <strong>20&ndash;25% of the undisturbed kinetic energy flux</strong>. That factor is sometimes called the <em>significant impact factor</em>, because extracting more than it changes the whole channel&rsquo;s flow pattern appreciably, which affects both output and ecology.</span>
+          </p>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 7.5 · ช่องแคบหนึ่งรองรับกังหันได้กี่ตัว</span>
+            <span class="en">Worked example 7.5 · How many turbines a channel supports</span>
+          </div>
+          <p>
+            <span class="th">ช่องแคบระหว่างเกาะมีหน้าตัด 400 เมตร × 25 เมตร และความเร็วกระแสน้ำเฉลี่ยเชิงกำลังสาม 2.8 m/s จงประเมินกำลังที่สกัดได้จริง และจำนวนกังหันขนาด 1.4 MW ที่วางได้</span>
+            <span class="en">A channel between islands has a cross-section of 400 m by 25 m and a cube-mean current of 2.8 m/s. Estimate the realistically extractable power and the number of 1.4 MW turbines it could host.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">พื้นที่หน้าตัด: \(400 \times 25 = 10{,}000\ \mathrm{m^2}\)</span>
+              <span class="en">Cross-section: \(400 \times 25 = 10{,}000\ \mathrm{m^2}\)</span>
+            </li>
+            <li>
+              <span class="th">ฟลักซ์พลังงานจลน์: \(P = 0.5 \times 1025 \times 10{,}000 \times 2.8^{3} = 1.125 \times 10^{8}\ \mathrm{W} = 112\ \mathrm{MW}\)</span>
+              <span class="en">Kinetic energy flux: \(P = 0.5 \times 1025 \times 10{,}000 \times 2.8^{3} = 1.125 \times 10^{8}\ \mathrm{W} = 112\ \mathrm{MW}\)</span>
+            </li>
+            <li>
+              <span class="th">ตัวเลข 112 MW นี้คือค่าที่ <em>ไม่ควรรายงานว่าเป็นศักยภาพ</em> เพราะสกัดได้จริงเพียงราว 20%: \(112 \times 0.20 = \mathbf{22.5\ MW}\)</span>
+              <span class="en">That 112 MW is the figure that <em>should not be reported as potential</em>, since only about 20% is extractable: \(112 \times 0.20 = \mathbf{22.5\ MW}\).</span>
+            </li>
+            <li>
+              <span class="th">หักประสิทธิภาพกังหันและเครื่องกำเนิดไฟฟ้าราว 0.40 แล้ว: \(22.5 \times 0.40 = \mathbf{9.0\ MW}\) ที่ส่งเข้าสายได้</span>
+              <span class="en">After turbine and generator efficiency of about 0.40: \(22.5 \times 0.40 = \mathbf{9.0\ MW}\) delivered to the cable.</span>
+            </li>
+            <li>
+              <span class="th">จำนวนกังหัน: \(9.0/1.4 \approx \mathbf{6\ ตัว}\) ซึ่งน้อยกว่าที่ตัวเลข 112 MW ชวนให้คิดถึงราวสิบสองเท่า การประเมินที่ถูกต้องจึงเป็นเครื่องมือป้องกันการลงทุนผิดพลาด ไม่ใช่เพียงความถูกต้องทางวิชาการ</span>
+              <span class="en">Turbine count: \(9.0/1.4 \approx \mathbf{6}\) machines — about twelve times fewer than the 112 MW figure invites one to imagine. A correct assessment is therefore a guard against bad investment, not merely academic tidiness.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">ชั้นของการประเมิน</span><span class="en">Level of assessment</span></th>
+                <th><span class="th">วิธีคำนวณ</span><span class="en">How it is computed</span></th>
+                <th class="num"><span class="th">สัดส่วนของชั้นก่อน</span><span class="en">Share of the level above</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th">ฟลักซ์พลังงานจลน์</span><span class="en">Kinetic energy flux</span></td>
+                <td><span class="th">\(\tfrac{1}{2}\rho A v^{3}\) ของหน้าตัดช่องแคบทั้งหมด — ไม่มีความหมายทางวิศวกรรม</span><span class="en">\(\tfrac{1}{2}\rho A v^{3}\) over the whole cross-section — of no engineering meaning</span></td>
+                <td class="num">100%</td>
+              </tr>
+              <tr>
+                <td><span class="th">สกัดได้ทางทฤษฎี</span><span class="en">Theoretically extractable</span></td>
+                <td><span class="th">จำกัดโดยพลศาสตร์ของช่องแคบตามวิธีของ Garrett และ Cummins</span><span class="en">Limited by channel dynamics after Garrett and Cummins</span></td>
+                <td class="num">20–25%</td>
+              </tr>
+              <tr>
+                <td><span class="th">สกัดได้ทางเทคนิค</span><span class="en">Technically extractable</span></td>
+                <td><span class="th">หักประสิทธิภาพกังหัน เครื่องกำเนิดไฟฟ้า และการสูญเสียในอาร์เรย์</span><span class="en">After turbine, generator and array losses</span></td>
+                <td class="num">35–45%</td>
+              </tr>
+              <tr>
+                <td><span class="th">คุ้มค่าเชิงเศรษฐศาสตร์</span><span class="en">Economically viable</span></td>
+                <td><span class="th">หักพื้นที่ที่ติดตั้งไม่ได้ ระยะถึงจุดเชื่อมต่อ และความลึกที่เรือติดตั้งทำงานได้</span><span class="en">After excluded areas, distance to a grid connection, and depths an installation vessel can work in</span></td>
+                <td class="num">30–70%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">
+          <span class="th">ตารางที่ 7.2 · คูณสัดส่วนทั้งหมดเข้าด้วยกันจะได้ราว 2&ndash;8% ของตัวเลขชั้นบนสุด เมื่ออ่านรายงานศักยภาพใด ให้มองหาว่าตัวเลขที่รายงานอยู่ชั้นไหน เพราะความต่างระหว่างชั้นบนสุดกับชั้นล่างสุดคือราวยี่สิบถึงห้าสิบเท่า — เป็นคำเตือนเดียวกับที่ท้ายหัวข้อ 6.9</span>
+          <span class="en">Table 7.2 · Multiply the shares together and roughly 2&ndash;8% of the top figure survives. When reading any potential study, establish which level is being quoted, because top and bottom differ by twenty to fifty times — the same caution given at the end of §6.9.</span>
+        </p>
+      </section>
+
+      <!-- ============ 7.6 ============ -->
+      <section class="section" id="s6">
+        <h2><span class="num">7.6</span>
+          <span><span class="th">กังหันกระแสน้ำ: แบบที่เริ่มบรรจบกัน</span>
+          <span class="en">Tidal stream turbines: designs that are converging</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ต่างจากพลังงานคลื่นในบทที่ 6 ที่ยังไม่บรรจบกันหลังห้าสิบปี พลังงานกระแสน้ำ <em>บรรจบแล้วเกือบสมบูรณ์</em> — อุปกรณ์ที่ติดตั้งเชิงพาณิชย์แทบทั้งหมดในปัจจุบันเป็นกังหันแกนนอนสามใบพัดที่หน้าตาเหมือนกังหันลมใต้น้ำ สาเหตุที่บรรจบได้เร็วกว่าพลังงานคลื่นมีสองข้อ หนึ่ง — กระแสน้ำไหลเป็นทิศทางที่คาดเดาได้และค่อนข้างคงที่ ไม่ใช่การแกว่งหลายความถี่ปนกัน สอง — มีแบบที่พิสูจน์แล้วให้ยืมมาใช้ คือกังหันลม ซึ่งผ่านการพัฒนามาสี่สิบปีแล้ว</span>
+          <span class="en">Unlike wave energy, which has not converged in fifty years, tidal stream energy <em>very nearly has</em>: almost every commercially installed device today is a three-bladed horizontal-axis machine that looks like an underwater wind turbine. Two reasons explain the faster convergence. First, a tidal current flows in a predictable and fairly steady direction rather than oscillating across many frequencies at once. Second, a proven design was available to borrow — the wind turbine, with forty years of development behind it.</span>
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">ประเด็นการออกแบบ</span><span class="en">Design question</span></th>
+                <th><span class="th">ทางเลือกและเหตุผล</span><span class="en">The options and the reasoning</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th">การรับกระแสสองทิศทาง</span><span class="en">Taking flow from both directions</span></td>
+                <td><span class="th">กระแสน้ำกลับทิศทุกหกชั่วโมง ทางแก้มีสามแบบ — ใบพัดที่ปรับมุมกลับได้ 180 องศา (pitch) · ตัวเรือนที่หมุนตามกระแสได้ (yaw) · หรือใบพัดที่สมมาตรจึงทำงานได้ทั้งสองทิศโดยไม่ต้องขยับอะไร ซึ่งง่ายที่สุดแต่ประสิทธิภาพต่ำกว่า</span><span class="en">The current reverses every six hours. Three answers exist — blades that pitch through 180°, a nacelle that yaws with the flow, or symmetrical blades that work both ways without moving at all, the simplest but least efficient</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">คาวิเทชันที่ปลายใบพัด</span><span class="en">Cavitation at the blade tip</span></td>
+                <td><span class="th">ปลายใบพัดเคลื่อนที่เร็วกว่ากระแสน้ำหลายเท่า ถ้าความดันด้านหลังใบพัดตกถึงความดันไอจะเกิดคาวิเทชันตามกลไกในหัวข้อ 5.6 ข้อจำกัดนี้ทำให้กังหันกระแสน้ำหมุนช้ากว่ากังหันลมมาก โดยมีอัตราส่วนความเร็วปลายใบพัดเพียง 4&ndash;6 เทียบกับ 7&ndash;9 ของกังหันลม</span><span class="en">The tip moves several times faster than the current, and if the pressure behind the blade reaches vapour pressure it cavitates by the mechanism of §5.6. This limit keeps tidal rotors far slower than wind ones, with tip speed ratios of only 4&ndash;6 against 7&ndash;9 for wind</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">โครงสร้างรองรับ</span><span class="en">The support structure</span></td>
+                <td><span class="th">ฐานถ่วงน้ำหนักวางบนพื้นทะเล (ติดตั้งง่าย ยกกลับขึ้นมาซ่อมได้) · เสาเข็มเดี่ยวตอกลงพื้น (มั่นคงแต่ต้องเจาะหินใต้น้ำ) · หรือแพลอยที่ยึดด้วยสายและแขวนกังหันไว้ใต้ท้อง (เข้าถึงง่ายที่สุด เป็นแนวทางที่ได้รับความสนใจมากขึ้นเพราะลดต้นทุนเรือติดตั้ง)</span><span class="en">A gravity base resting on the seabed (easy to install and liftable for repair), a monopile driven into it (firm but needing underwater rock drilling), or a moored floating platform slung with turbines below (the easiest to reach, and gaining favour because it cuts installation-vessel costs)</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ระยะห่างในอาร์เรย์</span><span class="en">Spacing within an array</span></td>
+                <td><span class="th">ร่องรอยการไหล (wake) ของกังหันตัวหน้าลดความเร็วให้ตัวหลัง เช่นเดียวกับฟาร์มกังหันลม แต่ในช่องแคบที่ขยายออกข้างไม่ได้ ปัญหานี้รุนแรงกว่า โดยทั่วไปต้องเว้นระยะตามกระแส 10&ndash;20 เท่าของเส้นผ่านศูนย์กลาง และ 2.5&ndash;5 เท่าในแนวขวาง</span><span class="en">The wake of an upstream rotor slows the one behind, as in a wind farm, but the problem bites harder in a channel that cannot spread sideways. Spacings of 10&ndash;20 diameters along the flow and 2.5&ndash;5 across are typical</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">การเข้าถึงเพื่อบำรุงรักษา</span><span class="en">Access for maintenance</span></td>
+                <td><span class="th">งานใต้น้ำในกระแสเชี่ยวทำได้เฉพาะช่วงน้ำนิ่งซึ่งยาวเพียงไม่กี่สิบนาทีต่อรอบ และเฉพาะช่วงน้ำตายที่กระแสอ่อนที่สุด หน้าต่างการทำงานจึงแคบมาก และเป็นเหตุผลที่การออกแบบให้ยกกังหันขึ้นมาทั้งตัวได้มีค่ามากกว่าการเพิ่มประสิทธิภาพสองสามจุด</span><span class="en">Underwater work in a fast current is possible only at slack water, which lasts tens of minutes per cycle, and preferably at neaps when the flow is weakest. The window is very narrow, which is why designing the whole machine to be lifted out is worth more than two or three points of efficiency</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">
+          <span class="th">ตารางที่ 7.3 · โครงการที่เดินเครื่องจริงและใหญ่ที่สุดคือ MeyGen ที่เพนต์แลนด์เฟิร์ธ สกอตแลนด์ ซึ่งมีกังหัน 1.5 MW จำนวนสี่ตัวจ่ายไฟเข้าระบบมาตั้งแต่ปี 2016 ต่างจากพลังงานคลื่นที่ผู้บุกเบิกหลายรายปิดตัวไป พลังงานกระแสน้ำยังมีผู้พัฒนาที่เดินเครื่องต่อเนื่องและขยายกำลังเพิ่ม</span>
+          <span class="en">Table 7.3 · The largest operating project is MeyGen in the Pentland Firth, Scotland, whose four 1.5 MW turbines have exported power since 2016. Unlike wave energy, where several pioneers closed, tidal stream still has developers running continuously and adding capacity.</span>
+        </p>
+      </section>
+
+      <!-- ============ 7.7 ============ -->
+      <section class="section" id="s7">
+        <h2><span class="num">7.7</span>
+          <span><span class="th">ข้อได้เปรียบด้านการคาดการณ์: สิ่งที่ตัวประกอบกำลังผลิตบอกไม่ได้</span>
+          <span class="en">The predictability advantage: what capacity factor cannot tell you</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ตัวประกอบกำลังผลิตของพลังงานกระแสน้ำอยู่ที่ราว 30&ndash;40% ซึ่งใกล้เคียงกับกังหันลมนอกชายฝั่ง และถ้าดูเพียงตัวเลขนี้ก็ดูเหมือนไม่มีอะไรน่าสนใจ แต่ตัวเลขเดียวกันมีความหมายต่างกันโดยสิ้นเชิงเมื่ออยู่ในมือผู้ควบคุมระบบไฟฟ้า เพราะ <strong>พลังงานน้ำขึ้นน้ำลงเป็นกำลังผลิตที่ผันผวนแต่ไม่ไม่แน่นอน</strong></span>
+          <span class="en">The capacity factor of tidal stream energy is about 30&ndash;40%, close to offshore wind, and on that number alone there seems nothing remarkable. Yet the same figure means something quite different in a system operator&rsquo;s hands, because <strong>tidal energy is variable without being uncertain</strong>.</span>
+        </p>
+
+        <p>
+          <span class="th">ความต่างนี้สำคัญกว่าที่ฟัง ระบบไฟฟ้าต้องสำรองกำลังผลิตไว้รองรับความ <em>ไม่แน่นอน</em> ไม่ใช่ความ <em>ผันผวน</em> ลมที่พยากรณ์ผิดไป 30% ในอีกหกชั่วโมงข้างหน้าต้องมีโรงไฟฟ้าสำรองเดินเครื่องรอไว้ ซึ่งมีต้นทุน แต่น้ำขึ้นน้ำลงที่จะหยุดไหลเวลา 14:37 ของวันที่ 12 มีนาคม ปี 2035 เป็นสิ่งที่วางแผนล่วงหน้าได้ตั้งแต่วันนี้ ไม่ต้องสำรองอะไรเพื่อความไม่แน่นอนเลย ต้องเพียงจัดตารางให้ถูก</span>
+          <span class="en">That distinction matters more than it sounds. A power system must hold reserve against <em>uncertainty</em>, not against <em>variability</em>. Wind that may be mis-forecast by 30% six hours ahead requires standby plant to be running, which costs money. But a tide that will stand still at 14:37 on 12 March 2035 can be planned for today, requiring no reserve against uncertainty at all — only correct scheduling.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ \eta(t) = \sum_{i} A_{i}\cos\!\left(\omega_{i} t - \phi_{i}\right) \]</div>
+            <span class="formula__num">(7.6)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">การวิเคราะห์ฮาร์มอนิก — ระดับน้ำ \(\eta(t)\) เขียนเป็นผลรวมขององค์ประกอบที่มีความถี่ \(\omega_{i}\) ซึ่งกำหนดโดยดาราศาสตร์และ <em>รู้ค่าแน่นอน</em> ส่วนแอมพลิจูด \(A_{i}\) และเฟส \(\phi_{i}\) ของแต่ละสถานีหาได้จากการวัดเพียงหนึ่งปี · องค์ประกอบ 37 ตัวพอสำหรับงานทั่วไป และ 100 ตัวพอสำหรับความแม่นยำสูงสุด · เมื่อได้ค่าแล้วก็พยากรณ์ล่วงหน้าได้ไม่จำกัด เพราะไม่มีตัวแปรทางอุตุนิยมวิทยาเข้ามาเกี่ยวข้องเลย</span>
+            <span class="en">Harmonic analysis — the water level \(\eta(t)\) is written as a sum of constituents whose frequencies \(\omega_{i}\) are set by astronomy and are <em>known exactly</em>, while each station&rsquo;s amplitudes \(A_{i}\) and phases \(\phi_{i}\) come from as little as one year of measurement. Thirty-seven constituents suffice for ordinary work and a hundred for the highest accuracy. Once fitted, the prediction extends indefinitely, because no meteorological variable enters at all.</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 7.6 · วัฏจักรน้ำเกิดน้ำตายกับกำลังผลิตเฉลี่ย</span>
+            <span class="en">Worked example 7.6 · The spring&ndash;neap cycle and mean output</span>
+          </div>
+          <p>
+            <span class="th">แหล่งกระแสน้ำแห่งหนึ่งมีความเร็วกระแสสูงสุด 3.0 m/s ในช่วงน้ำเกิด และ 1.8 m/s ในช่วงน้ำตาย จงหาอัตราส่วนกำลังระหว่างสองช่วง และอธิบายผลต่อการเลือกกำลังพิกัดของกังหัน</span>
+            <span class="en">A site peaks at 3.0 m/s on springs and 1.8 m/s on neaps. Find the ratio of power between them, and explain what it means for choosing the turbine rating.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">อัตราส่วนความเร็ว: \(3.0/1.8 = 1.667\)</span>
+              <span class="en">Speed ratio: \(3.0/1.8 = 1.667\)</span>
+            </li>
+            <li>
+              <span class="th">อัตราส่วนกำลัง: \(1.667^{3} = \mathbf{4.63}\) เท่า</span>
+              <span class="en">Power ratio: \(1.667^{3} = \mathbf{4.63}\)</span>
+            </li>
+            <li>
+              <span class="th">ถ้าเลือกกำลังพิกัดให้พอดีกับน้ำเกิด กังหันจะเดินที่ 22% ของพิกัดในช่วงน้ำตาย และช่วงนั้นกินเวลาราวหนึ่งในสี่ของทุกสองสัปดาห์ ตัวประกอบกำลังผลิตจึงต่ำ และอุปกรณ์แพงกว่าที่จำเป็น</span>
+              <span class="en">Rating the machine for springs leaves it running at 22% of rated through neaps, which occupy roughly a quarter of every fortnight. The capacity factor suffers and the equipment costs more than it need.</span>
+            </li>
+            <li>
+              <span class="th">ในทางปฏิบัติจึงเลือกกำลังพิกัดไว้ที่ราว 70&ndash;80% ของความเร็วน้ำเกิด แล้วยอม &ldquo;ตัดยอด&rdquo; กำลังในช่วงน้ำเกิดสูงสุด ซึ่งทิ้งพลังงานไปราว 10&ndash;20% แต่สิ่งที่ได้คืนมานั้นมากกว่า — เพราะกำลังพิกัดแปรผันกับความเร็วยกกำลังสาม การลดพิกัดเหลือ 80% จึงลดขนาดเครื่องกำเนิดไฟฟ้า สายไฟ และหม้อแปลงลงเหลือ \(0.8^{3} = 51\%\) หรือราวครึ่งหนึ่ง</span>
+              <span class="en">Practice therefore rates the machine at about 70&ndash;80% of the spring speed and accepts clipping the peaks. That discards some 10&ndash;20% of the energy, but what it buys back is larger: because rated power goes as the cube of speed, rating at 80% shrinks the generator, cable and transformer to \(0.8^{3} = 51\%\) — about half.</span>
+            </li>
+            <li>
+              <span class="th">นี่เป็นการตัดสินใจเดียวกันกับการเลือกอัตราการไหลออกแบบจากเส้นโค้งระยะเวลาการไหลในหัวข้อ 5.3 — เลือกสูงได้พลังงานมากแต่อุปกรณ์เดินต่ำกว่าพิกัดนาน เลือกต่ำได้อุปกรณ์เล็กแต่ทิ้งพลังงานในช่วงที่ทรัพยากรดีที่สุด</span>
+              <span class="en">This is the same decision as choosing a design flow from the duration curve in §5.3 — rate high for more energy but long part-load running, or rate low for smaller plant but spilled energy when the resource is at its best.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="demo" data-demo="tidal-cycle" data-reveal>
+          <div class="demo__head">
+            <span class="demo__label"><span class="th">ลองเล่นดู</span><span class="en">Try it</span></span>
+            <span class="demo__title">
+              <span class="th">เลือกกำลังพิกัด: ตัดยอดเท่าไรจึงพอดี</span>
+              <span class="en">Choosing the rating: how much clipping is right</span>
+            </span>
+            <span class="demo__sub">
+              <span class="th">กำลังคำนวณจากกฎกำลังสามทุกชั่วโมงตลอดวัฏจักรน้ำเกิดน้ำตาย 14.77 วัน โดยความเร็วสูงสุดแกว่งระหว่างค่าน้ำเกิดกับน้ำตาย และกระแสเป็นรูปไซน์ในแต่ละรอบ 12.42 ชั่วโมง · เลื่อนกำลังพิกัดแล้วดูว่าตัวประกอบกำลังผลิตกับพลังงานที่ทิ้งไปเปลี่ยนไปอย่างไร</span>
+              <span class="en">Power is computed from the cube law hour by hour through the 14.77-day spring&ndash;neap cycle, with the peak speed oscillating between the spring and neap values and the current sinusoidal within each 12.42-hour cycle. Move the rating and watch the capacity factor and the spilled energy respond.</span>
+            </span>
+          </div>
+
+          <div class="demo__stage" style="min-width:0">
+            <div class="sbar">
+              <div class="sbar__seg sbar__seg--usable" data-tc-seg="captured" style="width:88%"></div>
+              <div class="sbar__seg sbar__seg--hyd" data-tc-seg="clipped" style="width:12%"></div>
+            </div>
+            <div class="sbar-scale">
+              <span>0</span>
+              <span><span class="th">พลังงานทั้งหมดที่กระแสน้ำพาผ่านใบพัด</span><span class="en">All the energy the current carries through the rotor</span></span>
+            </div>
+            <div class="sbar-legend">
+              <span class="key"><i class="k-usable"></i><span class="th">เก็บได้</span><span class="en">Captured</span></span>
+              <span class="key"><i class="k-hyd"></i><span class="th">ถูกตัดยอดทิ้งเพราะเกินกำลังพิกัด</span><span class="en">Clipped away above the rating</span></span>
+            </div>
+          </div>
+
+          <div class="readouts">
+            <div class="readout readout--accent">
+              <span class="readout__label"><span class="th">ตัวประกอบกำลังผลิต</span><span class="en">Capacity factor</span></span>
+              <span class="readout__value"><span data-tc-cf>35</span><span class="readout__unit">%</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">พลังงานรายปี</span><span class="en">Annual energy</span></span>
+              <span class="readout__value"><span data-tc-energy>4.3</span><span class="readout__unit">GWh</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">พลังงานที่ตัดทิ้ง</span><span class="en">Energy clipped</span></span>
+              <span class="readout__value"><span data-tc-spill>12</span><span class="readout__unit">%</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">อัตราส่วนกำลังน้ำเกิดต่อน้ำตาย</span><span class="en">Spring-to-neap power ratio</span></span>
+              <span class="readout__value"><span data-tc-ratio>4.6</span><span class="readout__unit">×</span></span>
+            </div>
+          </div>
+
+          <div class="demo__controls">
+            <label class="demo__field">
+              <span class="th">ความเร็วสูงสุดช่วงน้ำเกิด (m/s)</span><span class="en">Peak spring current (m/s)</span>
+              <input type="range" min="1.5" max="5" step="0.1" value="3" data-tc-spring aria-label="Peak spring current in metres per second">
+            </label>
+            <label class="demo__field">
+              <span class="th">ความเร็วสูงสุดช่วงน้ำตาย (m/s)</span><span class="en">Peak neap current (m/s)</span>
+              <input type="range" min="0.5" max="4" step="0.1" value="1.8" data-tc-neap aria-label="Peak neap current in metres per second">
+            </label>
+            <label class="demo__field">
+              <span class="th">กำลังพิกัด คิดเป็นสัดส่วนของความเร็วน้ำเกิด (%)</span><span class="en">Rating, as a share of the spring speed (%)</span>
+              <input type="range" min="50" max="110" step="1" value="80" data-tc-rated aria-label="Rated speed as a percentage of the spring peak">
+            </label>
+            <div class="preset-row">
+              <button type="button" class="preset" data-tc-preset="3.0|1.8|80"><span class="th">ตัวอย่างที่ 7.6</span><span class="en">Worked example 7.6</span></button>
+              <button type="button" class="preset" data-tc-preset="3.0|1.8|100"><span class="th">พิกัดเท่าน้ำเกิด</span><span class="en">Rated at the spring peak</span></button>
+              <button type="button" class="preset" data-tc-preset="5.0|2.8|75"><span class="th">เพนต์แลนด์เฟิร์ธ</span><span class="en">Pentland Firth</span></button>
+            </div>
+          </div>
+
+          <div class="demo__warn" data-tc-warn hidden>
+            <span class="th">พลังงานที่ถูกตัดทิ้งเกิน 20% แล้ว ซึ่งโดยทั่วไปมากเกินกว่าที่ประหยัดจากอุปกรณ์ที่เล็กลงจะคุ้ม การลดกำลังพิกัดช่วยลดต้นทุนเครื่องกำเนิดไฟฟ้าและสายไฟได้จริง แต่เมื่อถึงจุดหนึ่งก็เริ่มทิ้งพลังงานในช่วงน้ำเกิดซึ่งเป็นช่วงที่ทรัพยากรให้ดีที่สุด</span>
+            <span class="en">More than 20% of the energy is now being clipped, which usually outweighs the savings from smaller equipment. Lowering the rating genuinely reduces generator and cable costs, but past a point it discards energy during springs, exactly when the resource is at its best.</span>
+          </div>
+
+          <div class="demo__note">
+            <p>
+              <span class="th">ลองทำสิ่งนี้: กดพรีเซ็ต &ldquo;พิกัดเท่าน้ำเกิด&rdquo; จะเห็นว่าไม่ตัดยอดเลยแต่ตัวประกอบกำลังผลิตต่ำ แล้วเลื่อนกำลังพิกัดลงมาที่ 80% ตัวประกอบกำลังผลิตจะกระโดดจากราว 24% ไปเป็นราว 40% โดยทิ้งพลังงานไปราว 15% และเครื่องกำเนิดไฟฟ้าเล็กลงเหลือราวครึ่งหนึ่ง นี่คือเหตุผลที่กังหันกระแสน้ำเชิงพาณิชย์แทบทุกตัวมีกำลังพิกัดต่ำกว่าความเร็วสูงสุดของแหล่ง — และสังเกตว่าอัตราส่วนน้ำเกิดต่อน้ำตายไวต่อค่าความเร็วน้ำตายมาก เพราะมันอยู่ในตัวหารที่ยกกำลังสาม</span>
+              <span class="en">Try this: press &ldquo;Rated at the spring peak&rdquo; and nothing is clipped, but the capacity factor is poor. Now bring the rating down to 80%: the capacity factor jumps from about 24% to about 40% for 15% of the energy, and the generator shrinks to roughly half. This is why nearly every commercial tidal turbine is rated below its site&rsquo;s peak — and note how sensitive the spring-to-neap ratio is to the neap speed, which sits in a cubed denominator.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 7.8 ============ -->
+      <section class="section" id="s8">
+        <h2><span class="num">7.8</span>
+          <span><span class="th">ผลกระทบ: สองแนวทางที่ต่างกันอย่างสิ้นเชิง</span>
+          <span class="en">Impacts: two approaches that could hardly differ more</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ข้อผิดพลาดที่พบบ่อยที่สุดในการพูดถึงพลังงานน้ำขึ้นน้ำลงคือการเหมารวมสองแนวทางเข้าด้วยกัน ทั้งที่ผลกระทบของเขื่อนกั้นน้ำกับกังหันกระแสน้ำต่างกันคนละระดับ เขื่อนกั้นน้ำเปลี่ยนระบบนิเวศของปากแม่น้ำทั้งระบบอย่างถาวร ส่วนกังหันกระแสน้ำเป็นโครงสร้างที่ยกออกได้และแทบไม่เปลี่ยนรูปแบบการไหลหากสกัดพลังงานอยู่ในขอบเขตที่หัวข้อ 7.5 กำหนด</span>
+          <span class="en">The commonest error in discussing tidal energy is to lump the two approaches together, when the impacts of a barrage and of a stream turbine differ by orders of magnitude. A barrage permanently alters an entire estuarine system; a stream turbine is a removable structure that scarcely changes the flow pattern, provided extraction stays within the bounds §7.5 established.</span>
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">ประเด็น</span><span class="en">Concern</span></th>
+                <th><span class="th">เขื่อนกั้นน้ำขึ้นน้ำลง</span><span class="en">Tidal barrage</span></th>
+                <th><span class="th">กังหันกระแสน้ำ</span><span class="en">Tidal stream turbine</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th">พื้นที่หาดเลนและชายเลน</span><span class="en">Intertidal mudflat and mangrove</span></td>
+                <td><span class="th">สูญเสียถาวร 20&ndash;50% ของพื้นที่น้ำขึ้นน้ำลงถึง เพราะช่วงต่างระดับภายในอ่างถูกบีบให้แคบลง กระทบแหล่งอนุบาลสัตว์น้ำและนกอพยพโดยตรง</span><span class="en">A permanent loss of 20&ndash;50% of the intertidal zone, because the range inside the basin is compressed — striking directly at fish nurseries and migratory birds</span></td>
+                <td><span class="th">ไม่มีผลกระทบ เพราะไม่ได้เปลี่ยนระดับน้ำ</span><span class="en">None, since water levels are unchanged</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">การอพยพของปลาและสัตว์น้ำ</span><span class="en">Fish and wildlife passage</span></td>
+                <td><span class="th">เขื่อนขวางทางอพยพทั้งหมด ปลาที่ผ่านกังหันมีอัตราตายราว 5&ndash;20% ต่อครั้ง ซึ่งเป็นปัญหาเดียวกับที่บทที่ 5 กล่าวถึงกรณีเขื่อนปากมูล</span><span class="en">The dam blocks migration entirely, and fish passing the turbines suffer 5&ndash;20% mortality per transit — the same problem Chapter 5 described at Pak Mun</span></td>
+                <td><span class="th">สัตว์น้ำว่ายผ่านช่องว่างระหว่างกังหันได้ ความเสี่ยงจากการถูกใบพัดชนมีอยู่แต่ต่ำกว่ามาก เพราะใบพัดหมุนช้า (ปลายใบพัดราว 10&ndash;14 m/s เทียบกับ 80 m/s ของกังหันลม)</span><span class="en">Animals swim between the machines; collision risk exists but is far lower, because the rotors turn slowly — tip speeds of 10&ndash;14 m/s against 80 m/s for a wind turbine</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ตะกอนและคุณภาพน้ำ</span><span class="en">Sediment and water quality</span></td>
+                <td><span class="th">อ่างกลายเป็นที่ดักตะกอน ความขุ่นลดลงทำให้สาหร่ายเติบโตมากขึ้น และการแลกเปลี่ยนน้ำที่ลดลงอาจทำให้ออกซิเจนละลายต่ำในฤดูร้อน</span><span class="en">The basin becomes a sediment trap; reduced turbidity encourages algal growth, and poorer flushing can depress dissolved oxygen in the warm season</span></td>
+                <td><span class="th">มีผลเฉพาะที่รอบฐานกังหัน จากการกัดเซาะเฉพาะจุดและร่องรอยการไหล</span><span class="en">Localised only, around the foundations, from scour and the wake</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">เสียงใต้น้ำ</span><span class="en">Underwater noise</span></td>
+                <td><span class="th">มีเสียงจากกังหันแต่ถูกจำกัดอยู่ภายในอ่าง</span><span class="en">Turbine noise, but confined within the basin</span></td>
+                <td><span class="th">เป็นประเด็นที่ยังอยู่ในการศึกษา โดยเฉพาะผลต่อสัตว์เลี้ยงลูกด้วยนมในทะเลที่ใช้เสียงนำทาง ระดับเสียงที่วัดได้จนถึงปัจจุบันต่ำกว่าเรือสินค้าที่แล่นผ่าน</span><span class="en">Still under study, particularly for marine mammals that navigate by sound; measured levels so far are below those of a passing cargo ship</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ประโยชน์ร่วม</span><span class="en">Co-benefits</span></td>
+                <td><span class="th">สันเขื่อนใช้เป็นถนนข้ามปากแม่น้ำได้ และช่วยป้องกันคลื่นพายุซัดฝั่ง ซึ่งในบางกรณีเป็นเหตุผลหลักของโครงการมากกว่าไฟฟ้า</span><span class="en">The crest carries a road across the estuary and provides storm-surge protection — which in some schemes is a stronger motive than the electricity</span></td>
+                <td><span class="th">ไม่มีประโยชน์ร่วมเชิงโครงสร้าง แต่ก็ไม่ปิดกั้นการใช้พื้นที่ทะเลเพื่อการอื่น</span><span class="en">No structural co-benefit, but it does not shut the sea area to other uses either</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">
+          <span class="th">ตารางที่ 7.4 · ความไม่สมมาตรของตารางนี้คือเหตุผลที่การลงทุนวิจัยทั่วโลกย้ายจากเขื่อนกั้นน้ำไปสู่กังหันกระแสน้ำเกือบทั้งหมดตั้งแต่ราวปี 2000 โรงไฟฟ้าแบบเขื่อนกั้นน้ำขนาดใหญ่ที่สร้างใหม่หลังจากนั้นมีเพียงแห่งเดียวคือชีฮวาในเกาหลีใต้ ซึ่งใช้เขื่อนที่สร้างไว้ก่อนแล้วเพื่อวัตถุประสงค์อื่น</span>
+          <span class="en">Table 7.4 · The asymmetry of this table is why research investment worldwide moved almost entirely from barrages to stream turbines after about 2000. Only one large barrage has been built since — Sihwa in South Korea, which reused a sea wall already built for another purpose.</span>
+        </p>
+
+        <div class="callout callout--key">
+          <div class="callout__title">
+            <span class="th">ชีฮวา: บทเรียนเรื่องการใช้โครงสร้างที่มีอยู่แล้ว</span>
+            <span class="en">Sihwa: the lesson of using what is already built</span>
+          </div>
+          <p>
+            <span class="th">โรงไฟฟ้าน้ำขึ้นน้ำลงชีฮวาในเกาหลีใต้ กำลังติดตั้ง 254 เมกะวัตต์ เป็นโรงไฟฟ้าแบบเขื่อนกั้นน้ำที่ใหญ่ที่สุดในโลก แต่สิ่งที่น่าสนใจกว่ากำลังผลิตคือที่มาของมัน — เขื่อนนั้นถูกสร้างขึ้นในปี 1994 เพื่อทำอ่างเก็บน้ำจืดสำหรับการเกษตร ไม่ใช่เพื่อผลิตไฟฟ้า แต่น้ำในอ่างเน่าเสียเพราะไม่มีการแลกเปลี่ยนกับทะเล การติดตั้งกังหันในปี 2011 จึงแก้ปัญหาสองอย่างพร้อมกัน — บังคับให้น้ำทะเลไหลเข้าออกทุกรอบน้ำซึ่งฟื้นคุณภาพน้ำ และผลิตไฟฟ้าได้ราว 550 กิกะวัตต์-ชั่วโมงต่อปีเป็นผลพลอยได้</span>
+            <span class="en">The Sihwa tidal power station in South Korea, at 254 MW, is the largest barrage plant in the world — but its origin is more interesting than its rating. The sea wall was built in 1994 to create a freshwater reservoir for agriculture, not to generate. The impounded water then went foul for want of exchange with the sea. Fitting turbines in 2011 solved two problems at once: it forced seawater through on every tide, restoring water quality, and produced some 550 GWh a year as a by-product.</span>
+          </p>
+          <p>
+            <span class="th">นี่คือตรรกะเดียวกับที่ปรากฏในบทที่ 5 (อาคารน้ำตกในคลองชลประทาน) และบทที่ 6 (เขื่อนกันคลื่นที่ผลิตพลังงาน) — <em>เมื่อต้นทุนงานโยธาถูกจ่ายไปเพื่อวัตถุประสงค์อื่นแล้ว เศรษฐศาสตร์ของการเพิ่มกังหันเข้าไปเปลี่ยนไปโดยสิ้นเชิง</em> ข้อสังเกตนี้สำคัญกว่าตัวเลขใด ๆ ในบทนี้ และเป็นแนวคิดที่ใช้ได้ทั่วไปในงานวิศวกรรมพลังงาน</span>
+            <span class="en">This is the same logic seen in Chapter 5 with irrigation drop structures and in Chapter 6 with generating breakwaters: <em>once the civil cost has been paid for some other purpose, the economics of adding turbines changes completely</em>. That observation matters more than any number in this chapter, and it generalises across energy engineering.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 7.9 ============ -->
+      <section class="section" id="s9">
+        <h2><span class="num">7.9</span>
+          <span><span class="th">ประเทศไทย: หัวน้ำขึ้นน้ำลงในงานชายฝั่ง</span>
+          <span class="en">Thailand: tidal head in coastal practice</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ข้อสรุปเรื่องการผลิตไฟฟ้าตรงไปตรงมาและไม่ต่างจากบทที่ 6 มาก — ประเทศไทยไม่มีช่องแคบที่กระแสน้ำเชี่ยวพอสำหรับกังหันกระแสน้ำเชิงพาณิชย์ และไม่มีอ่าวที่ช่วงต่างระดับสูงพอสำหรับเขื่อนกั้นน้ำ ตัวเลขยืนยันข้อนี้ชัดเจน</span>
+          <span class="en">The conclusion on electricity generation is blunt and not very different from Chapter 6: Thailand has no channel with current fast enough for commercial stream turbines, and no basin with range enough for a barrage. The numbers settle the matter plainly.</span>
+        </p>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 7.7 · ช่องแคบในอ่าวไทยเทียบกับเพนต์แลนด์เฟิร์ธ</span>
+            <span class="en">Worked example 7.7 · A Gulf channel against the Pentland Firth</span>
+          </div>
+          <p>
+            <span class="th">ช่องแคบระหว่างเกาะในอ่าวไทยมีกระแสน้ำสูงสุดราว 1.0 m/s ขณะที่เพนต์แลนด์เฟิร์ธมีราว 5.0 m/s จงเปรียบเทียบความหนาแน่นกำลัง และหาขนาดใบพัดที่อ่าวไทยต้องใช้เพื่อให้ได้กำลังเท่ากับกังหัน 18 เมตรที่เพนต์แลนด์เฟิร์ธ</span>
+            <span class="en">A channel between islands in the Gulf of Thailand peaks near 1.0 m/s, against roughly 5.0 m/s in the Pentland Firth. Compare the power densities, and find the rotor the Gulf would need to match an 18 m machine in the Firth.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">อ่าวไทย: \(\tfrac{1}{2}\rho v^{3} = 0.5 \times 1025 \times 1.0 = \mathbf{0.51\ kW/m^2}\)</span>
+              <span class="en">The Gulf: \(\tfrac{1}{2}\rho v^{3} = 0.5 \times 1025 \times 1.0 = \mathbf{0.51\ kW/m^2}\)</span>
+            </li>
+            <li>
+              <span class="th">เพนต์แลนด์เฟิร์ธ: \(0.5 \times 1025 \times 125 = \mathbf{64.1\ kW/m^2}\) หรือมากกว่ากัน <strong>125 เท่า</strong></span>
+              <span class="en">The Pentland Firth: \(0.5 \times 1025 \times 125 = \mathbf{64.1\ kW/m^2}\) — <strong>125 times</strong> greater.</span>
+            </li>
+            <li>
+              <span class="th">กังหัน 18 เมตรที่เพนต์แลนด์เฟิร์ธมีพื้นที่ 254.5 m² ดังนั้นอ่าวไทยต้องมีพื้นที่ \(254.5 \times 125 = 31{,}800\ \mathrm{m^2}\)</span>
+              <span class="en">The 18 m rotor in the Firth sweeps 254.5 m², so the Gulf would need \(254.5 \times 125 = 31{,}800\ \mathrm{m^2}\).</span>
+            </li>
+            <li>
+              <span class="th">เส้นผ่านศูนย์กลาง: \(D = \sqrt{4 \times 31{,}800/\pi} = \mathbf{201\ m}\) ซึ่งเป็นไปไม่ได้เลยในน้ำที่ลึกราว 25&ndash;40 เมตร</span>
+              <span class="en">Diameter: \(D = \sqrt{4 \times 31{,}800/\pi} = \mathbf{201\ m}\) — simply impossible in water 25&ndash;40 m deep.</span>
+            </li>
+            <li>
+              <span class="th">ข้อสรุป: ไม่ใช่เรื่องที่เทคโนโลยีจะพัฒนาไปแก้ได้ เพราะกฎกำลังสามเป็นฟิสิกส์ ไม่ใช่ข้อจำกัดทางวิศวกรรม ความเร็วกระแสน้ำที่ต่ำกว่าห้าเท่าหมายถึงพลังงานที่ต่ำกว่าหนึ่งร้อยยี่สิบห้าเท่าเสมอ</span>
+              <span class="en">The conclusion: this is not something technology will fix, because the cube law is physics rather than an engineering limit. A current five times slower always means energy one hundred and twenty-five times smaller.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="callout callout--key">
+          <div class="callout__title">
+            <span class="th">แต่หัวน้ำขึ้นน้ำลงถูกใช้ในภาคเกษตรไทยมาเป็นร้อยปีแล้ว</span>
+            <span class="en">Yet Thai agriculture has used tidal head for a century</span>
+          </div>
+          <p>
+            <span class="th">สิ่งที่น่าสนใจคือ เกษตรกรและผู้เพาะเลี้ยงชายฝั่งของไทยใช้พลังงานน้ำขึ้นน้ำลงอยู่แล้วทุกวัน เพียงแต่ไม่ได้แปลงเป็นไฟฟ้า ประตูระบายน้ำในนาข้าวชายฝั่งและบ่อกุ้งบ่อปลาถูกเปิดให้น้ำทะเลไหลเข้าเองตอนน้ำขึ้น และระบายออกเองตอนน้ำลง <em>โดยไม่ใช้ปั๊มเลย</em> นี่คือการใช้พลังงานศักย์จากดวงจันทร์โดยตรงในรูปงานกล ซึ่งมีประสิทธิภาพสูงกว่าการแปลงเป็นไฟฟ้าแล้วเอาไปขับปั๊มอย่างเทียบกันไม่ได้</span>
+            <span class="en">What is interesting is that Thai coastal farmers and aquaculturists already use tidal energy daily — they simply never convert it to electricity. Sluice gates on coastal paddy and on shrimp and fish ponds are opened to let the sea in on the flood and out on the ebb, <em>with no pump at all</em>. This is lunar potential energy used directly as mechanical work, incomparably more efficient than converting it to electricity to drive a pump.</span>
+          </p>
+          <p>
+            <span class="th">ในบริบทนี้ &ldquo;พลังงานที่ได้&rdquo; ไม่ใช่กิโลวัตต์-ชั่วโมงที่ผลิต แต่เป็น <strong>กิโลวัตต์-ชั่วโมงที่ไม่ต้องใช้</strong> ซึ่งเป็นตัวเลขที่คำนวณได้และมีมูลค่าจริง</span>
+            <span class="en">In this setting the &ldquo;energy produced&rdquo; is not kilowatt-hours generated but <strong>kilowatt-hours not needed</strong> — a figure that can be computed and has real value.</span>
+          </p>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 7.8 · พลังงานที่ประหยัดได้จากการแลกเปลี่ยนน้ำด้วยแรงโน้มถ่วง</span>
+            <span class="en">Worked example 7.8 · Energy saved by gravity water exchange</span>
+          </div>
+          <p>
+            <span class="th">ฟาร์มกุ้งขนาด 10 เฮกตาร์ (100,000 m²) ลึกเฉลี่ย 1.5 เมตร ต้องแลกเปลี่ยนน้ำ 20% ของปริมาตรต่อวัน ถ้าใช้ปั๊มต้องยกน้ำเฮดรวม 2.0 เมตร ที่ประสิทธิภาพปั๊มและมอเตอร์รวม 0.60 จงหาพลังงานและค่าไฟที่ประหยัดได้ต่อปีเมื่อใช้ประตูระบายน้ำอาศัยหัวน้ำขึ้นน้ำลงแทน (ค่าไฟ 4.20 บาท/kWh)</span>
+            <span class="en">A 10 hectare shrimp farm (100,000 m²) averaging 1.5 m deep must exchange 20% of its volume daily. Pumping would require a total head of 2.0 m at a combined pump-and-motor efficiency of 0.60. Find the energy and the electricity cost saved per year by using tide-fed sluice gates instead, at 4.20 baht/kWh.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">ปริมาตรน้ำที่แลกเปลี่ยนต่อวัน: \(0.20 \times 100{,}000 \times 1.5 = 30{,}000\ \mathrm{m^3}\)</span>
+              <span class="en">Volume exchanged daily: \(0.20 \times 100{,}000 \times 1.5 = 30{,}000\ \mathrm{m^3}\)</span>
+            </li>
+            <li>
+              <span class="th">พลังงานที่ปั๊มต้องใช้: \(E = \rho g V H/\eta = 1000 \times 9.81 \times 30{,}000 \times 2.0/0.60\)</span>
+              <span class="en">Pumping energy required: \(E = \rho g V H/\eta = 1000 \times 9.81 \times 30{,}000 \times 2.0/0.60\)</span>
+            </li>
+            <li>
+              <span class="th">\(= 9.81 \times 10^{8}\ \mathrm{J} = \mathbf{272\ kWh}\) ต่อวัน</span>
+              <span class="en">\(= 9.81 \times 10^{8}\ \mathrm{J} = \mathbf{272\ kWh}\) per day.</span>
+            </li>
+            <li>
+              <span class="th">ต่อปี: \(272 \times 365 = \mathbf{99{,}400\ kWh}\) และคิดเป็นเงิน \(99{,}400 \times 4.20 = \mathbf{417{,}000}\) บาทต่อปี</span>
+              <span class="en">Annually: \(272 \times 365 = \mathbf{99{,}400\ kWh}\), worth \(99{,}400 \times 4.20 = \mathbf{417{,}000}\) baht a year.</span>
+            </li>
+            <li>
+              <span class="th">เทียบให้เห็นภาพ: พลังงานที่ประหยัดได้ 99.4 MWh ต่อปีจากฟาร์มเดียว เทียบเท่ากับผลผลิตของโซลาร์รูฟท็อปขนาดราว 66 kWp และฟาร์มกุ้งในประเทศไทยมีพื้นที่รวมหลายแสนไร่ ศักยภาพรวมของการออกแบบระบบแลกเปลี่ยนน้ำให้ใช้หัวน้ำขึ้นน้ำลงอย่างเต็มที่จึงอยู่ในระดับที่มีนัยสำคัญระดับชาติ</span>
+              <span class="en">For scale: 99.4 MWh a year from a single farm matches the output of about 66 kWp of rooftop solar — and Thailand has hundreds of thousands of rai under shrimp ponds. The aggregate potential of designing water exchange to exploit tidal head fully is therefore nationally significant.</span>
+            </li>
+            <li>
+              <span class="th">เงื่อนไขทางวิศวกรรมที่ต้องทำให้ถูก: ระดับก้นบ่อต้องสูงกว่าระดับน้ำลงต่ำสุด (MLWS) เพื่อให้ระบายออกได้เอง และระดับขอบบ่อต้องต่ำกว่าระดับน้ำขึ้นสูงสุด (MHWS) เพื่อให้เติมเข้าได้เอง ความต่างระหว่างสองระดับนี้คือ &ldquo;งบประมาณ&rdquo; ของช่วงต่างระดับที่ใช้ได้ ซึ่งในอ่าวไทยตอนบนที่มีช่วงต่างระดับ 2.5&ndash;3 เมตรนั้นเพียงพอ แต่ในอ่าวตอนล่างที่มีเพียง 0.5&ndash;1.5 เมตรมักไม่พอ และต้องใช้ปั๊มช่วย</span>
+              <span class="en">The engineering conditions that must be got right: the pond bottom must sit above mean low water springs for gravity drainage, and the pond rim below mean high water springs for gravity filling. The gap between those levels is the usable range &ldquo;budget&rdquo; — ample in the upper Gulf with its 2.5&ndash;3 m range, but usually insufficient in the lower Gulf at 0.5&ndash;1.5 m, where pumping must assist.</span>
+            </li>
+          </ol>
+        </div>
+
+        <h3><span class="th">สามงานที่วิศวกรเกษตรอัจฉริยะทำได้จริง</span><span class="en">Three tasks an agri-intelligence engineer can actually do</span></h3>
+
+        <p>
+          <span class="th"><strong>หนึ่ง · ออกแบบระดับและประตูระบายน้ำให้ใช้หัวน้ำขึ้นน้ำลงได้เต็มที่</strong> งานนี้ไม่ต้องการเทคโนโลยีใหม่เลย ต้องการเพียงการสำรวจระดับที่แม่นยำ ตารางน้ำขึ้นน้ำลงของสถานีที่ใกล้ที่สุด และการออกแบบขนาดช่องประตูให้ระบายน้ำได้ทันภายในหน้าต่างเวลาที่น้ำเปิดให้ สมการที่ใช้คือสมการการไหลผ่านช่องเปิดใต้น้ำซึ่งขึ้นกับรากที่สองของเฮด จึงต้องคำนวณแบบขั้นเวลาเพราะเฮดเปลี่ยนตลอด</span>
+          <span class="en"><strong>One · set levels and sluice sizes to exploit the tidal head fully.</strong> This needs no new technology at all — only accurate levelling, the tide table for the nearest station, and gate openings sized to pass the water within the window the tide allows. The governing relation is submerged orifice flow, which depends on the square root of the head, so it must be computed in time steps because the head changes throughout.</span>
+        </p>
+
+        <p>
+          <span class="th"><strong>สอง · ใช้การคาดการณ์น้ำขึ้นน้ำลงในการวางแผนการจัดการน้ำ</strong> เพราะตารางน้ำคำนวณล่วงหน้าได้เป็นปี การวางแผนการเปลี่ยนน้ำ การจับผลผลิต และการเตรียมบ่อจึงทำล่วงหน้าได้แม่นยำ ซึ่งเป็นงานที่ระบบเซนเซอร์และระบบควบคุมอัตโนมัติทำได้ดี การผนวกตารางน้ำขึ้นน้ำลงเข้ากับระบบควบคุมประตูน้ำอัตโนมัติเป็นการประยุกต์ที่ตรงกับสาขาวิศวกรรมเกษตรอัจฉริยะโดยตรง</span>
+          <span class="en"><strong>Two · use tidal prediction in water-management planning.</strong> Because tide tables run years ahead, water exchange, harvesting and pond preparation can be scheduled precisely in advance — work that sensors and automatic control do well. Folding a tide table into an automatic gate-control system is an application that falls squarely within agri-intelligence engineering.</span>
+        </p>
+
+        <p>
+          <span class="th"><strong>สาม · จัดการการรุกตัวของน้ำเค็ม</strong> ในปากแม่น้ำเจ้าพระยาและแม่น้ำท่าจีน น้ำขึ้นพาน้ำเค็มรุกขึ้นไปตามลำน้ำ และกระทบคุณภาพน้ำที่สถานีสูบน้ำเพื่อการเกษตรและการประปา การบริหารการปล่อยน้ำจากเขื่อนภูมิพลและเขื่อนสิริกิติ์เพื่อผลักดันน้ำเค็มเป็นภารกิจที่ต้องทำทุกฤดูแล้ง และเป็นงานที่ต้องรู้พลศาสตร์น้ำขึ้นน้ำลงอย่างแม่นยำ ซึ่งเชื่อมโยงบทนี้กลับไปยังหัวข้อ 5.9 โดยตรง</span>
+          <span class="en"><strong>Three · manage salinity intrusion.</strong> In the Chao Phraya and Tha Chin estuaries the flood tide drives salt water upstream, affecting water quality at agricultural and municipal intakes. Managing releases from the Bhumibol and Sirikit dams to repel that salt is a task for every dry season, and it demands an accurate grasp of tidal dynamics — tying this chapter directly back to §5.9.</span>
+        </p>
+
+        <div class="callout callout--warn">
+          <div class="callout__title">
+            <span class="th">ข้อควรระวังสองข้อที่เปลี่ยนไปตามเวลา</span>
+            <span class="en">Two cautions that change with time</span>
+          </div>
+          <p>
+            <span class="th">ข้อแรก — <strong>ระดับน้ำทะเลสูงขึ้น</strong> การออกแบบระดับก้นบ่อและขอบบ่อโดยใช้ตารางน้ำปัจจุบันจะใช้ได้ไม่ตลอดอายุโครงการ ระบบที่ออกแบบวันนี้ควรเผื่อระดับน้ำทะเลที่สูงขึ้นในช่วงสามสิบปีข้างหน้าไว้ด้วย ซึ่งสำหรับอ่าวไทยยังมีความไม่แน่นอนสูงเพราะมีการทรุดตัวของแผ่นดินในพื้นที่กรุงเทพฯ และปริมณฑลซ้อนทับอยู่</span>
+            <span class="en">First, <strong>sea level rise</strong>. Setting pond bottom and rim levels from today&rsquo;s tide tables will not hold for the project&rsquo;s whole life; a system designed now should allow for the rise expected over the next thirty years. For the Gulf of Thailand that allowance carries wide uncertainty, because land subsidence around Bangkok is superimposed on it.</span>
+          </p>
+          <p>
+            <span class="th">ข้อที่สอง — <strong>การทรุดตัวของแผ่นดิน</strong> พื้นที่ชายฝั่งอ่าวไทยตอนบนทรุดตัวจากการสูบน้ำบาดาลในอัตราที่ต่างกันไปแต่ละพื้นที่ ซึ่งหมายความว่าระดับอ้างอิงที่สำรวจไว้เมื่อสิบปีก่อนอาจไม่ถูกต้องแล้ว การสำรวจระดับใหม่จึงเป็นขั้นตอนแรกของงานออกแบบ ไม่ใช่การใช้ค่าจากเอกสารเก่า</span>
+            <span class="en">Second, <strong>land subsidence</strong>. The upper Gulf coast is sinking from groundwater abstraction at rates that vary by locality, which means a benchmark surveyed a decade ago may no longer be correct. Re-levelling is therefore the first step of a design, not a value taken from an old report.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ SUMMARY ============ -->
+      <section class="section" id="summary">
+        <h2><span class="num">✦</span>
+          <span><span class="th">สรุปและคำศัพท์</span><span class="en">Summary and glossary</span></span>
+        </h2>
+
+        <div class="takeaways" data-reveal>
+          <h2><span class="th">ประเด็นสำคัญที่ต้องจำ</span><span class="en">Key takeaways</span></h2>
+          <ol data-reveal-stagger>
+            <li>
+              <span class="th"><strong>น้ำขึ้นน้ำลงเกิดจากผลต่างของแรงโน้มถ่วง ไม่ใช่จากตัวแรง</strong> จึงเกิดส่วนนูนสองด้านพร้อมกัน และแรงที่ก่อน้ำขึ้นน้ำลงแปรผกผันกับระยะทาง <em>ยกกำลังสาม</em> ทำให้ดวงจันทร์ชนะดวงอาทิตย์ราว 2.2 เท่าแม้มีมวลน้อยกว่า 27 ล้านเท่า</span>
+              <span class="en"><strong>Tides arise from the difference of gravity, not from gravity itself</strong>, which is why two bulges form at once. The tide-generating force varies as the inverse <em>cube</em> of distance, so the Moon beats the Sun by about 2.2 times despite being 27 million times less massive.</span>
+            </li>
+            <li>
+              <span class="th"><strong>คาบ M2 เท่ากับ 12 ชั่วโมง 25 นาที</strong> ซึ่งมาจากวันจันทรคติ 24 ชั่วโมง 49 นาทีหารสอง และการแทรกสอดกับองค์ประกอบ S2 ของดวงอาทิตย์ให้วัฏจักรน้ำเกิดน้ำตายคาบ 14.77 วัน</span>
+              <span class="en"><strong>The M2 period is 12 h 25 min</strong>, half the 24 h 49 min lunar day, and its beat against the solar S2 constituent produces the 14.77-day spring&ndash;neap cycle.</span>
+            </li>
+            <li>
+              <span class="th"><strong>มหาสมุทรเปิดมีช่วงต่างระดับเพียง 0.5 เมตร</strong> ส่วนที่เหลือทั้งหมดมาจากการขยายในอ่าว โดยการสั่นพ้องเกิดเมื่อความยาวอ่าวใกล้ \(T\sqrt{gd}/4\) อ่าวฟันดีที่ยาว 270 กม. ตรงเงื่อนไขนี้เกือบพอดี จึงได้ 16 เมตร</span>
+              <span class="en"><strong>The open ocean has a range of only 0.5 m</strong>; everything above comes from basin amplification, with resonance when the length approaches \(T\sqrt{gd}/4\). The Bay of Fundy&rsquo;s 270 km almost exactly meets that condition, hence its 16 m.</span>
+            </li>
+            <li>
+              <span class="th"><strong>พลังงานของเขื่อนกั้นน้ำแปรผันกับช่วงต่างระดับยกกำลังสอง</strong> \(E = \tfrac{1}{2}\rho g A R^{2}\) โดยตัวประกอบครึ่งหนึ่งมาจากจุดศูนย์ถ่วงของน้ำที่ตกเฉลี่ยเพียง \(R/2\) ทำเลจึงสำคัญกว่าขนาดอ่างเสมอ</span>
+              <span class="en"><strong>Barrage energy varies as the square of the range</strong>, \(E = \tfrac{1}{2}\rho g A R^{2}\), the half arising because the stored water&rsquo;s centre of gravity falls only \(R/2\). The site therefore always matters more than the basin size.</span>
+            </li>
+            <li>
+              <span class="th"><strong>เขื่อนกั้นน้ำใช้พื้นที่ต่อหน่วยพลังงานมากกว่าโซลาร์ราวยี่สิบเท่า</strong> และพื้นที่นั้นคือหาดเลนและชายเลนซึ่งเป็นแหล่งอนุบาลสัตว์น้ำ นี่คือเหตุผลหลักที่โครงการแบบนี้ถูกคัดค้านและทั่วโลกมีเพียงไม่กี่แห่ง</span>
+              <span class="en"><strong>A barrage uses some twenty times more land per unit of energy than solar</strong>, and that land is mudflat and mangrove, the nursery of fisheries. This is the main reason such schemes meet opposition and only a handful exist.</span>
+            </li>
+            <li>
+              <span class="th"><strong>กระแสน้ำใช้สมการเดียวกับพลังงานลมทุกตัวอักษร</strong> \(P = \tfrac{1}{2}\rho A v^{3} C_{p}\) พร้อมขีดจำกัดเบ็ตซ์เดียวกัน น้ำหนาแน่นกว่าอากาศ 837 เท่าแต่ช้ากว่า 4 เท่า สุทธิจึงได้เปรียบ 13 เท่าต่อตารางเมตร ใบพัด 18 เมตรใต้น้ำจึงเท่ากับใบพัดลม 61 เมตร</span>
+              <span class="en"><strong>Tidal streams use the wind equation letter for letter</strong>, \(P = \tfrac{1}{2}\rho A v^{3} C_{p}\), with the same Betz limit. Water is 837 times denser but four times slower, a net advantage of 13 times per square metre — so an 18 m underwater rotor matches a 61 m wind rotor.</span>
+            </li>
+            <li>
+              <span class="th"><strong>การสกัดพลังงานทำให้กระแสน้ำช้าลงเอง</strong> ทรัพยากรจึงไม่ใช่ค่าคงที่ กำลังสูงสุดที่สกัดได้มีเพียงราว 20&ndash;25% ของฟลักซ์พลังงานจลน์ และเมื่อคูณทุกชั้นในตารางที่ 7.2 แล้วเหลือเพียง 2&ndash;8% ของตัวเลขชั้นบนสุด</span>
+              <span class="en"><strong>Extracting energy slows the current itself</strong>, so the resource is not a fixed quantity. The maximum extractable is only about 20&ndash;25% of the kinetic flux, and multiplying through Table 7.2 leaves just 2&ndash;8% of the headline figure.</span>
+            </li>
+            <li>
+              <span class="th"><strong>ผันผวนไม่ได้แปลว่าไม่แน่นอน</strong> ระบบไฟฟ้าต้องสำรองกำลังไว้รองรับความไม่แน่นอน ไม่ใช่ความผันผวน ตารางน้ำที่คำนวณล่วงหน้าได้นับสิบปีจึงทำให้ตัวประกอบกำลังผลิต 35% ของน้ำขึ้นน้ำลงมีค่ามากกว่า 35% เดียวกันของพลังงานลม</span>
+              <span class="en"><strong>Variable does not mean uncertain.</strong> A grid holds reserve against uncertainty, not variability, so a tide table computed decades ahead makes a 35% tidal capacity factor worth more than the same 35% from wind.</span>
+            </li>
+            <li>
+              <span class="th"><strong>วัฏจักรน้ำเกิดน้ำตายทำให้กำลังต่างกัน 4&ndash;8 เท่า</strong> เพราะความเร็วที่ต่างกันเพียง 1.7 เท่าถูกยกกำลังสาม ในทางปฏิบัติจึงเลือกกำลังพิกัดไว้ราว 70&ndash;80% ของความเร็วน้ำเกิด แล้วยอมตัดยอดทิ้งไม่กี่เปอร์เซ็นต์เพื่อลดขนาดอุปกรณ์ลงมาก</span>
+              <span class="en"><strong>The spring&ndash;neap cycle swings the power four- to eightfold</strong>, because a speed ratio of only 1.7 is cubed. Practice therefore rates the machine at 70&ndash;80% of the spring speed, giving up a few per cent to clipping to shrink the equipment substantially.</span>
+            </li>
+            <li>
+              <span class="th"><strong>สำหรับประเทศไทย การผลิตไฟฟ้าทั้งสองแนวทางไม่คุ้ม</strong> ช่องแคบในอ่าวไทยที่กระแส 1 m/s ให้พลังงานน้อยกว่าเพนต์แลนด์เฟิร์ธ 125 เท่า และอ่าวไทยไม่มีช่วงต่างระดับพอสำหรับเขื่อนกั้นน้ำ ซึ่งเป็นข้อจำกัดทางฟิสิกส์ที่เทคโนโลยีแก้ไม่ได้</span>
+              <span class="en"><strong>For Thailand neither route pays for generation.</strong> A Gulf channel at 1 m/s yields 125 times less than the Pentland Firth, and no Thai basin has range enough for a barrage — limits of physics that technology cannot remove.</span>
+            </li>
+            <li>
+              <span class="th"><strong>แต่หัวน้ำขึ้นน้ำลงถูกใช้ในภาคเกษตรไทยอยู่แล้วทุกวัน</strong> ประตูระบายน้ำที่อาศัยแรงโน้มถ่วงแลกเปลี่ยนน้ำในบ่อเพาะเลี้ยงประหยัดพลังงานได้ราว 99 MWh ต่อปีต่อฟาร์ม 10 เฮกตาร์ หรือราว 417,000 บาท และนี่คือ &ldquo;พลังงานที่ไม่ต้องใช้&rdquo; ซึ่งมีมูลค่าเท่ากับพลังงานที่ผลิตได้</span>
+              <span class="en"><strong>Yet Thai agriculture already uses tidal head daily.</strong> Gravity-fed sluices exchanging pond water save some 99 MWh a year on a 10 hectare farm, about 417,000 baht — &ldquo;energy not needed&rdquo;, worth exactly as much as energy generated.</span>
+            </li>
+          </ol>
+        </div>
+
+        <dl class="glossary">
+          <dt><span class="th">แรงที่ก่อน้ำขึ้นน้ำลง</span><span class="en">Tide-generating force</span></dt>
+          <dd>
+            <span class="th">ผลต่างระหว่างแรงโน้มถ่วงที่กระทำต่อจุดหนึ่งบนโลกกับที่กระทำต่อจุดศูนย์กลางโลก แปรผกผันกับระยะทางยกกำลังสาม ไม่ใช่กำลังสองอย่างแรงโน้มถ่วงเอง</span>
+            <span class="en">The difference between the gravitational pull on a point on Earth and that on the Earth&rsquo;s centre. It varies as the inverse cube of distance, not the inverse square as gravity itself does.</span>
+          </dd>
+
+          <dt><span class="th">องค์ประกอบน้ำขึ้นน้ำลง</span><span class="en">Tidal constituent</span></dt>
+          <dd>
+            <span class="th">คลื่นไซน์องค์ประกอบหนึ่งที่มีคาบกำหนดโดยดาราศาสตร์ เช่น M2 (จันทรคติกึ่งวัน 12.42 ชม.) S2 (สุริยคติกึ่งวัน 12.00 ชม.) K1 และ O1 (รายวัน) ระดับน้ำจริงคือผลรวมขององค์ประกอบเหล่านี้หลายสิบตัว</span>
+            <span class="en">One sinusoidal component whose period is fixed by astronomy — M2 (lunar semidiurnal, 12.42 h), S2 (solar semidiurnal, 12.00 h), K1 and O1 (diurnal). The real water level is the sum of dozens of them.</span>
+          </dd>
+
+          <dt><span class="th">น้ำเกิดและน้ำตาย</span><span class="en">Spring and neap tides</span></dt>
+          <dd>
+            <span class="th">น้ำเกิดคือช่วงที่ M2 และ S2 เสริมกัน เกิดเมื่อจันทร์เต็มดวงหรือเดือนดับ น้ำตายคือช่วงที่หักล้างกัน เกิดเมื่อจันทร์ครึ่งดวง วัฏจักรจากน้ำเกิดถึงน้ำเกิดถัดไปคือ 14.77 วัน</span>
+            <span class="en">Springs occur where M2 and S2 reinforce, at full and new Moon; neaps where they oppose, at the quarters. One spring to the next is 14.77 days.</span>
+          </dd>
+
+          <dt><span class="th">กึ่งวันและรายวัน</span><span class="en">Semidiurnal and diurnal</span></dt>
+          <dd>
+            <span class="th">กึ่งวันคือมีน้ำขึ้นสองครั้งต่อวัน ซึ่งพบในพื้นที่ส่วนใหญ่ของโลกรวมถึงชายฝั่งอันดามัน รายวันคือมีน้ำขึ้นครั้งเดียวต่อวัน ซึ่งเป็นความผิดปกติที่พบในอ่าวไทยตอนบน</span>
+            <span class="en">Semidiurnal means two high tides a day, the pattern over most of the world including the Andaman coast. Diurnal means one, an anomaly found in the upper Gulf of Thailand.</span>
+          </dd>
+
+          <dt><span class="th">ช่วงต่างระดับน้ำ</span><span class="en">Tidal range</span> <span class="term-en">R</span></dt>
+          <dd>
+            <span class="th">ความต่างระหว่างระดับน้ำสูงสุดกับต่ำสุดในหนึ่งรอบน้ำ กำหนดพลังงานของเขื่อนกั้นน้ำโดยแปรผันกับค่ายกกำลังสอง มหาสมุทรเปิดมีราว 0.5 เมตร อ่าวฟันดี 16 เมตร</span>
+            <span class="en">The difference between high and low water in one cycle. It sets a barrage&rsquo;s energy through its square: about 0.5 m in the open ocean and 16 m in the Bay of Fundy.</span>
+          </dd>
+
+          <dt><span class="th">การสั่นพ้องของอ่าว</span><span class="en">Basin resonance</span></dt>
+          <dd>
+            <span class="th">ภาวะที่ความยาวอ่าวใกล้เคียงหนึ่งในสี่ของความยาวคลื่นน้ำขึ้นน้ำลง คลื่นสะท้อนจากก้นอ่าวจึงกลับมาเสริมกับคลื่นที่เข้ามา และช่วงต่างระดับถูกขยายขึ้นหลายเท่า</span>
+            <span class="en">The condition where a basin&rsquo;s length approaches a quarter of the tidal wavelength, so the wave reflected from its head returns in step with the incoming one and the range is amplified several times.</span>
+          </dd>
+
+          <dt><span class="th">เขื่อนกั้นน้ำขึ้นน้ำลง</span><span class="en">Tidal barrage</span></dt>
+          <dd>
+            <span class="th">เขื่อนปิดปากอ่าวหรือปากแม่น้ำที่กักน้ำขึ้นไว้แล้วปล่อยผ่านกังหันเฮดต่ำเมื่อน้ำทะเลลดลง เป็นพลังงานศักย์และใช้กังหันชนิดเดียวกับบทที่ 5</span>
+            <span class="en">A dam across a bay or estuary that impounds the flood tide and releases it through low-head turbines as the sea falls. It is potential energy, using the same turbines as Chapter 5.</span>
+          </dd>
+
+          <dt><span class="th">ตัวประกอบการสกัด</span><span class="en">Extraction factor</span> <span class="term-en">η<sub>ex</sub></span></dt>
+          <dd>
+            <span class="th">สัดส่วนของพลังงานศักย์ทางทฤษฎีที่เขื่อนกั้นน้ำผลิตได้จริง ราว 0.25&ndash;0.40 สำหรับการผลิตทางเดียว ค่าที่ต่ำนี้ไม่ได้มาจากกังหันที่แย่ แต่มาจากเฮดที่ลดลงตลอดเวลาที่ปล่อยน้ำ</span>
+            <span class="en">The fraction of the theoretical potential energy a barrage actually delivers, about 0.25&ndash;0.40 for one-way operation. The low value comes not from poor turbines but from the head falling throughout the release.</span>
+          </dd>
+
+          <dt><span class="th">พลังงานกระแสน้ำ</span><span class="en">Tidal stream energy</span></dt>
+          <dd>
+            <span class="th">การดึงพลังงานจลน์จากกระแสน้ำที่ไหลไปมาตามจังหวะน้ำขึ้นน้ำลง โดยไม่สร้างเขื่อน ใช้สมการและขีดจำกัดเบ็ตซ์เดียวกับพลังงานลม</span>
+            <span class="en">Taking kinetic energy from the current that runs with the tide, building no dam, and governed by the same equation and Betz limit as wind.</span>
+          </dd>
+
+          <dt><span class="th">ตัวประกอบผลกระทบนัยสำคัญ</span><span class="en">Significant impact factor</span></dt>
+          <dd>
+            <span class="th">สัดส่วนสูงสุดของฟลักซ์พลังงานจลน์ที่สกัดได้จากช่องแคบโดยไม่เปลี่ยนรูปแบบการไหลอย่างมีนัยสำคัญ มีค่าราว 20&ndash;25% ตามงานของ Garrett และ Cummins</span>
+            <span class="en">The greatest share of a channel&rsquo;s kinetic flux that can be extracted without appreciably altering its flow, about 20&ndash;25% after Garrett and Cummins.</span>
+          </dd>
+
+          <dt><span class="th">การวิเคราะห์ฮาร์มอนิก</span><span class="en">Harmonic analysis</span></dt>
+          <dd>
+            <span class="th">การเขียนระดับน้ำเป็นผลรวมขององค์ประกอบที่ความถี่กำหนดโดยดาราศาสตร์ โดยหาแอมพลิจูดและเฟสของแต่ละสถานีจากการวัดหนึ่งปี เมื่อได้ค่าแล้วพยากรณ์ล่วงหน้าได้ไม่จำกัด</span>
+            <span class="en">Writing the water level as a sum of constituents whose frequencies astronomy fixes, with each station&rsquo;s amplitudes and phases fitted from a year of measurement. Once fitted, the prediction extends indefinitely.</span>
+          </dd>
+
+          <dt><span class="th">น้ำนิ่ง</span><span class="en">Slack water</span></dt>
+          <dd>
+            <span class="th">ช่วงที่กระแสน้ำหยุดก่อนกลับทิศ เกิดสี่ครั้งต่อวันในน้ำกึ่งวัน กำลังผลิตลงถึงศูนย์ในช่วงนี้ แต่เป็นหน้าต่างเวลาเดียวที่ทำงานซ่อมบำรุงใต้น้ำได้</span>
+            <span class="en">The pause as the current reverses, occurring four times a day in a semidiurnal regime. Output falls to zero, but it is the only window in which underwater maintenance is possible.</span>
+          </dd>
+
+          <dt><span class="th">การแลกเปลี่ยนน้ำด้วยแรงโน้มถ่วง</span><span class="en">Gravity water exchange</span></dt>
+          <dd>
+            <span class="th">การใช้หัวน้ำขึ้นน้ำลงเติมและระบายน้ำในบ่อเพาะเลี้ยงหรือนาข้าวชายฝั่งผ่านประตูระบายน้ำ โดยไม่ใช้ปั๊ม ต้องให้ก้นบ่ออยู่สูงกว่าระดับน้ำลงต่ำสุดและขอบบ่ออยู่ต่ำกว่าระดับน้ำขึ้นสูงสุด</span>
+            <span class="en">Using tidal head to fill and drain ponds or coastal paddy through sluice gates without pumping. It requires the pond bottom above mean low water springs and the rim below mean high water springs.</span>
+          </dd>
+        </dl>
+      </section>
+
+      <!-- ============ REFERENCES ============ -->
+      <section class="section" id="references">
+        <h2><span class="num">§</span>
+          <span><span class="th">เอกสารอ้างอิงและอ่านเพิ่มเติม</span><span class="en">References and further reading</span></span>
+        </h2>
+
+        <div class="references">
+          <h3><span class="th">ตำราหลัก</span><span class="en">Core textbooks</span></h3>
+          <ol>
+            <li><span>Pugh, D. and Woodworth, P. (2014). <cite>Sea-Level Science: Understanding Tides, Surges, Tsunamis and Mean Sea-Level Changes</cite>. Cambridge: Cambridge University Press.
+              <span class="src"><span class="th">ตำราอ้างอิงมาตรฐานของวิชาน้ำขึ้นน้ำลง — ที่มาของการวิเคราะห์ฮาร์มอนิกและองค์ประกอบในหัวข้อ 7.1 และ 7.7</span><span class="en">The standard reference on tides — source of the harmonic analysis and constituents of §7.1 and §7.7</span></span></span></li>
+            <li><span>Hardisty, J. (2009). <cite>The Analysis of Tidal Stream Power</cite>. Chichester: Wiley-Blackwell.
+              <span class="src"><span class="th">ครอบคลุมการประเมินทรัพยากรกระแสน้ำและการออกแบบกังหันอย่างเป็นระบบ</span><span class="en">A systematic treatment of tidal stream resource assessment and turbine design</span></span></span></li>
+            <li><span>Charlier, R. H. and Finkl, C. W. (2009). <cite>Ocean Energy: Tide and Tidal Power</cite>. Berlin: Springer.
+              <span class="src"><span class="th">ประวัติและรายละเอียดของโรงไฟฟ้าแบบเขื่อนกั้นน้ำทุกแห่งในโลก รวมถึงลารองซ์และชีฮวา</span><span class="en">The history and detail of every barrage plant in the world, La Rance and Sihwa included</span></span></span></li>
+            <li><span>Boyle, G. (ed.) (2012). <cite>Renewable Energy: Power for a Sustainable Future</cite>, 3rd ed. Oxford: Oxford University Press.
+              <span class="src"><span class="th">บทว่าด้วยพลังงานจากทะเล เหมาะสำหรับภาพรวมระดับปริญญาตรี</span><span class="en">The marine energy chapter, suited to an undergraduate overview</span></span></span></li>
+            <li><span>Open University (1999). <cite>Waves, Tides and Shallow-Water Processes</cite>, 2nd ed. Oxford: Butterworth-Heinemann.
+              <span class="src"><span class="th">อธิบายการสั่นพ้องของอ่าวและการขยายช่วงต่างระดับได้ชัดเจนที่สุดสำหรับผู้เริ่มต้น</span><span class="en">The clearest introductory account of basin resonance and range amplification</span></span></span></li>
+          </ol>
+
+          <h3><span class="th">บทความวิชาการและรายงาน</span><span class="en">Journal articles and reports</span></h3>
+          <ol start="6">
+            <li><span>Garrett, C. and Cummins, P. (2005). &lsquo;The power potential of tidal currents in channels&rsquo;, <cite>Proceedings of the Royal Society A</cite>, 461, pp. 2563&ndash;2572.
+              <span class="src"><span class="th">บทความที่เปลี่ยนวิธีประเมินทรัพยากรกระแสน้ำทั้งวงการ — ที่มาของขีดจำกัด 20&ndash;25% ในหัวข้อ 7.5</span><span class="en">The paper that changed how the field assesses tidal stream resource — source of the 20&ndash;25% limit of §7.5</span></span></span></li>
+            <li><span>Garrett, C. and Cummins, P. (2008). &lsquo;Limits to tidal current power&rsquo;, <cite>Renewable Energy</cite>, 33(11), pp. 2485&ndash;2490.</span></li>
+            <li><span>Vennell, R. (2011). &lsquo;Tuning turbines in a tidal channel&rsquo;, <cite>Journal of Fluid Mechanics</cite>, 671, pp. 587&ndash;604.
+              <span class="src"><span class="th">อธิบายว่าการจัดเรียงและปรับกังหันในช่องแคบมีผลต่อกำลังรวมอย่างไร ใช้คู่กับตารางที่ 7.3</span><span class="en">How arranging and tuning turbines in a channel affects total power; read with Table 7.3</span></span></span></li>
+            <li><span>Neill, S. P. <em>et al.</em> (2018). &lsquo;Tidal range energy resource and optimization — past perspectives and future challenges&rsquo;, <cite>Renewable Energy</cite>, 127, pp. 763&ndash;778.
+              <span class="src"><span class="th">บทปริทัศน์สมัยใหม่เรื่องพลังงานจากช่วงต่างระดับ รวมถึงการผลิตสองทางและทะเลสาบกั้นน้ำ</span><span class="en">A modern review of tidal range energy, including two-way operation and tidal lagoons</span></span></span></li>
+            <li><span>Kadiri, M. <em>et al.</em> (2012). &lsquo;A review of the potential water quality impacts of tidal renewable energy systems&rsquo;, <cite>Renewable and Sustainable Energy Reviews</cite>, 16(1), pp. 329&ndash;341.
+              <span class="src"><span class="th">ที่มาของเนื้อหาผลกระทบด้านตะกอนและคุณภาพน้ำในตารางที่ 7.4</span><span class="en">Source of the sediment and water-quality material in Table 7.4</span></span></span></li>
+            <li><span>Bae, Y. H., Kim, K. O. and Choi, B. H. (2010). &lsquo;Lake Sihwa tidal power plant project&rsquo;, <cite>Ocean Engineering</cite>, 37(5&ndash;6), pp. 454&ndash;463.
+              <span class="src"><span class="th">กรณีศึกษาชีฮวาที่อ้างถึงในหัวข้อ 7.8 รวมถึงที่มาด้านคุณภาพน้ำของโครงการ</span><span class="en">The Sihwa case study cited in §7.8, including the water-quality origin of the project</span></span></span></li>
+          </ol>
+
+          <h3><span class="th">มาตรฐานและแหล่งข้อมูลระหว่างประเทศ</span><span class="en">Standards and international sources</span></h3>
+          <ol start="12">
+            <li><span>IEC TS 62600-200, <cite>Marine energy — Wave, tidal and other water current converters — Part 200: Electricity producing tidal energy converters, power performance assessment</cite>. Geneva: IEC.
+              <span class="src"><span class="th">มาตรฐานสากลสำหรับการรายงานสมรรถนะกังหันกระแสน้ำ ซึ่งกำหนดวิธีวัดและรายงานให้เปรียบเทียบกันได้</span><span class="en">The international standard for reporting tidal turbine performance, fixing how it is measured so devices can be compared</span></span></span></li>
+            <li><span>IEC TS 62600-201, <cite>Tidal energy resource assessment and characterization</cite>. Geneva: IEC.</span></li>
+            <li><span>IEA-OES (Ocean Energy Systems). <cite>Annual Report</cite>, tidal chapters.
+              <span class="src">ocean-energy-systems.org</span></span></li>
+            <li><span>European Marine Energy Centre (EMEC) and the MeyGen project, Pentland Firth. <cite>Operating records and resource data</cite>.
+              <span class="src">emec.org.uk</span></span></li>
+          </ol>
+
+          <h3><span class="th">แหล่งข้อมูลของประเทศไทย</span><span class="en">Thai sources</span></h3>
+          <ol start="16">
+            <li><span><span class="th">กรมอุทกศาสตร์ กองทัพเรือ — ตารางน้ำขึ้นน้ำลงรายสถานีของประเทศไทย ค่าคงที่ฮาร์มอนิก และระดับอ้างอิงทางทะเล ซึ่งเป็นข้อมูลตั้งต้นที่ขาดไม่ได้ของงานในหัวข้อ 7.9</span><span class="en">Hydrographic Department, Royal Thai Navy — tide tables by station, harmonic constants and tidal datums, the indispensable starting data for the work of §7.9</span>
+              <span class="src">hydro.navy.mi.th</span></span></li>
+            <li><span><span class="th">กรมชลประทาน — ข้อมูลประตูระบายน้ำชายฝั่ง ระบบป้องกันน้ำเค็ม และเกณฑ์การปล่อยน้ำเพื่อผลักดันน้ำเค็มในลุ่มน้ำเจ้าพระยา</span><span class="en">Royal Irrigation Department — coastal regulators, salinity barriers and the release rules used to repel salt in the Chao Phraya basin</span>
+              <span class="src">rid.go.th</span></span></li>
+            <li><span><span class="th">กรมประมง — แนวปฏิบัติการจัดการน้ำในบ่อเพาะเลี้ยงสัตว์น้ำชายฝั่ง รวมถึงอัตราการเปลี่ยนน้ำและเกณฑ์คุณภาพน้ำที่ใช้ในตัวอย่างที่ 7.8</span><span class="en">Department of Fisheries — water management practice for coastal aquaculture ponds, including the exchange rates and water-quality criteria used in worked example 7.8</span>
+              <span class="src">fisheries.go.th</span></span></li>
+            <li><span><span class="th">กรมทรัพยากรทางทะเลและชายฝั่ง — ข้อมูลพื้นที่ป่าชายเลน การกัดเซาะชายฝั่ง และการทรุดตัวของพื้นที่ชายฝั่งอ่าวไทยตอนบน</span><span class="en">Department of Marine and Coastal Resources — mangrove extent, coastal erosion and subsidence along the upper Gulf</span>
+              <span class="src">dmcr.go.th</span></span></li>
+            <li><span><span class="th">กรมพัฒนาพลังงานทดแทนและอนุรักษ์พลังงาน (พพ.) — รายงานศักยภาพพลังงานจากทะเลของประเทศไทย ควรอ่านโดยแยกชั้นของการประเมินตามตารางที่ 7.2</span><span class="en">DEDE — Thailand's marine energy potential studies, to be read by separating the assessment levels of Table 7.2</span>
+              <span class="src">dede.go.th</span></span></li>
+          </ol>
+        </div>
+
+        <div class="callout callout--warn">
+          <div class="callout__title">
+            <span class="th">ก่อนนำไปอ้างอิง</span><span class="en">Before you cite</span>
+          </div>
+          <p>
+            <span class="th">ตัวเลขศักยภาพพลังงานกระแสน้ำต้องตรวจสอบว่าอยู่ชั้นใดของตารางที่ 7.2 เพราะตัวเลขที่ได้จากการคูณพื้นที่หน้าตัดด้วย \(\tfrac{1}{2}\rho v^{3}\) สูงกว่าค่าที่คุ้มค่าจริงราวยี่สิบถึงห้าสิบเท่า และต้องตรวจด้วยว่าความเร็วที่ใช้เป็นค่าสูงสุดช่วงน้ำเกิด ค่าเฉลี่ย หรือค่าเฉลี่ยเชิงกำลังสาม เพราะสามค่านี้ต่างกันมากเมื่อถูกยกกำลังสาม สำหรับงานออกแบบในประเทศไทย ค่าช่วงต่างระดับและระดับอ้างอิงต้องใช้จากกรมอุทกศาสตร์โดยตรง และต้องสำรวจระดับใหม่ในพื้นที่ที่มีการทรุดตัว ไม่ใช่ใช้ค่าจากเอกสารเก่า</span>
+            <span class="en">Check which level of Table 7.2 any tidal stream potential figure belongs to, since a number from multiplying cross-section by \(\tfrac{1}{2}\rho v^{3}\) exceeds the economically viable value by twenty to fifty times. Check also whether the speed quoted is a spring peak, a simple mean or a cube-mean, because once cubed the three differ greatly. For design work in Thailand, take ranges and datums directly from the Hydrographic Department, and re-level on the ground where subsidence is occurring rather than using values from an older report.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ POST-TEST ============ -->
+      <section class="quiz quiz--post" id="posttest" data-quiz="post" data-pass="0.7">
+        <script type="application/json" class="quiz-data">
+{
+  "questions": [
+    {
+      "q": {
+        "th": "เหตุใดจึงมีน้ำขึ้นสองครั้งในหนึ่งวันจันทรคติ ไม่ใช่ครั้งเดียว",
+        "en": "Why are there two high tides in a lunar day rather than one?"
+      },
+      "choices": [
+        {
+          "th": "เพราะผลต่างของแรงโน้มถ่วงทำให้เกิดส่วนนูนทั้งด้านใกล้และด้านไกลดวงจันทร์",
+          "en": "Because the difference in pull raises a bulge on the near and the far side alike"
+        },
+        {
+          "th": "เพราะดวงจันทร์โคจรรอบโลกสองรอบในหนึ่งวันตามที่สังเกตได้จากพื้นโลก",
+          "en": "Because the Moon circles the Earth twice a day as seen from the ground"
+        },
+        {
+          "th": "เพราะดวงอาทิตย์สร้างน้ำขึ้นอีกครั้งหนึ่งเพิ่มเติมจากที่ดวงจันทร์สร้างไว้",
+          "en": "Because the Sun raises one extra high tide on top of the Moon's own"
+        },
+        {
+          "th": "เพราะคลื่นน้ำขึ้นน้ำลงสะท้อนกลับจากชายฝั่งตรงข้ามของมหาสมุทรแต่ละแห่ง",
+          "en": "Because the tidal wave reflects back from the opposite shore of each ocean"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "th": "ด้านที่หันเข้าหาดวงจันทร์ถูกดึงแรงกว่าจุดศูนย์กลางโลก จึงยืดออกไปหาดวงจันทร์ ส่วนด้านตรงข้ามถูกดึงน้อยกว่าจุดศูนย์กลาง จึงถูก ทิ้งไว้ข้างหลัง และยืดออกไปอีกทาง ผลคือส่วนนูนสองด้านที่สมมาตรกัน จุดหนึ่งบนโลกจึงผ่านส่วนนูนสองครั้งต่อหนึ่งวันจันทรคติ 24 ชั่วโมง 49 นาที ได้คาบ M2 เท่ากับ 12 ชั่วโมง 25 นาที",
+        "en": "The side facing the Moon is pulled harder than the Earth's centre and stretches towards it, while the far side is pulled less than the centre and is left behind, stretching the other way. The result is two symmetrical bulges, so a point passes two of them per 24 h 49 min lunar day, giving the M2 period of 12 h 25 min."
+      }
+    },
+    {
+      "q": {
+        "th": "เขื่อนกั้นน้ำมีอ่างพื้นที่ 30 km² และช่วงต่างระดับเฉลี่ย 6 เมตร พลังงานต่อรอบน้ำเป็นเท่าไร",
+        "en": "A barrage impounds 30 km² with a mean range of 6 m. What is the energy per tidal cycle?"
+      },
+      "choices": [
+        {
+          "th": "ประมาณ 1,510 MWh",
+          "en": "About 1,510 MWh"
+        },
+        {
+          "th": "ประมาณ 3,020 MWh",
+          "en": "About 3,020 MWh"
+        },
+        {
+          "th": "ประมาณ 755 MWh",
+          "en": "About 755 MWh"
+        },
+        {
+          "th": "ประมาณ 251 MWh",
+          "en": "About 251 MWh"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "th": "E = ½ρgAR² = 0.5 × 1025 × 9.81 × 3×10⁷ × 36 = 5.43×10¹² J ซึ่งหารด้วย 3.6×10⁹ ได้ 1,510 MWh ตัวเลือก 3,020 MWh มาจากการลืมตัวประกอบครึ่งหนึ่ง ซึ่งมาจากข้อเท็จจริงว่าน้ำที่เก็บไว้ตกลงมาเฉลี่ยเพียง R/2 ไม่ใช่ R ส่วน 251 MWh มาจากการลืมยกกำลังสองของช่วงต่างระดับ ซึ่งเป็นข้อผิดพลาดที่ทำให้คำตอบผิดไปหกเท่า",
+        "en": "E = ½ρgAR² = 0.5 × 1025 × 9.81 × 3×10⁷ × 36 = 5.43×10¹² J, which divided by 3.6×10⁹ gives 1,510 MWh. The 3,020 MWh option comes from omitting the half, which exists because the impounded water falls on average only R/2 rather than R. The 251 MWh option comes from forgetting to square the range — an error that is wrong by a factor of six."
+      }
+    },
+    {
+      "q": {
+        "th": "ช่วงต่างระดับน้ำที่สูงถึง 16 เมตรในอ่าวฟันดีเกิดจากสาเหตุใด",
+        "en": "What produces the 16 m tidal range in the Bay of Fundy?"
+      },
+      "choices": [
+        {
+          "th": "ความลึกของอ่าวที่มากกว่าอ่าวอื่นทำให้คลื่นน้ำขึ้นน้ำลงเดินทางได้เร็วกว่า",
+          "en": "A greater depth than other bays, letting the tidal wave travel faster"
+        },
+        {
+          "th": "ตำแหน่งละติจูดสูงทำให้อยู่ใกล้แนววงโคจรของดวงจันทร์มากกว่าที่อื่น",
+          "en": "A high latitude placing it closer to the Moon's orbital plane than elsewhere"
+        },
+        {
+          "th": "ความยาวอ่าว 270 กม. ตรงกับเงื่อนไขสั่นพ้องหนึ่งในสี่ความยาวคลื่นเกือบพอดี",
+          "en": "Its 270 km length nearly matching the quarter-wavelength resonance condition"
+        },
+        {
+          "th": "กระแสน้ำอุ่นกัลฟ์สตรีมที่ไหลผ่านปากอ่าวช่วยผลักมวลน้ำเข้าสู่อ่าว",
+          "en": "The Gulf Stream passing its mouth and driving water into the bay"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "ที่ความลึกเฉลี่ย 60 เมตร ความเร็วคลื่นน้ำตื้นคือ √(9.81×60) = 24.3 m/s และความยาวอ่าวที่สั่นพ้องกับ M2 คือ 44,714 × 24.3/4 = 272 กิโลเมตร ซึ่งตรงกับความยาวจริงของอ่าวฟันดี 270 กิโลเมตรเกือบพอดี คลื่นที่สะท้อนจากก้นอ่าวจึงกลับมาเสริมกับคลื่นที่เข้ามา ข้อสำคัญคือมหาสมุทรเปิดมีช่วงต่างระดับเพียง 0.5 เมตร ส่วนที่เหลือทั้งหมดคือการขยายในอ่าว",
+        "en": "At a mean depth of 60 m the shallow-water wave speed is √(9.81×60) = 24.3 m/s, and the length resonating with M2 is 44,714 × 24.3/4 = 272 km — almost exactly Fundy's actual 270 km. The wave reflected from the head returns in step with the incoming one. The key point is that the open ocean has a range of only 0.5 m; all the rest is basin amplification."
+      }
+    },
+    {
+      "q": {
+        "th": "กระแสน้ำลดลงจาก 3.0 เหลือ 2.0 m/s กำลังที่ได้เหลือเท่าใดของเดิม",
+        "en": "A current falls from 3.0 to 2.0 m/s. What fraction of the power remains?"
+      },
+      "choices": [
+        {
+          "th": "ราว 67% ตามสัดส่วนของความเร็วที่ลดลง",
+          "en": "About 67%, in proportion to the drop in speed"
+        },
+        {
+          "th": "ราว 44% ตามกำลังสองของความเร็ว",
+          "en": "About 44%, following the square of the speed"
+        },
+        {
+          "th": "ราว 20% ตามกำลังสี่ของความเร็ว",
+          "en": "About 20%, following the fourth power of the speed"
+        },
+        {
+          "th": "ราว 30% ตามกำลังสามของความเร็ว",
+          "en": "About 30%, following the cube of the speed"
+        }
+      ],
+      "answer": 3,
+      "why": {
+        "th": "P ∝ v³ ดังนั้น (2.0/3.0)³ = 0.296 หรือราว 30% กฎกำลังสามนี้มีผลรุนแรงมากและเป็นเหตุผลที่โครงการกังหันกระแสน้ำต้องไปหาช่องแคบที่น้ำไหลเร็วเกิน 2.5 m/s การขยายขนาดใบพัดแก้ปัญหานี้ไม่ได้ เพราะพื้นที่เพิ่มตามกำลังสองของเส้นผ่านศูนย์กลางเท่านั้น ขณะที่ความเร็วที่หายไปถูกยกกำลังสาม",
+        "en": "P ∝ v³, so (2.0/3.0)³ = 0.296, about 30%. The cube law bites hard and is why stream projects must seek channels above 2.5 m/s. Enlarging the rotor cannot compensate, since area grows only as the square of the diameter while the lost speed is cubed."
+      }
+    },
+    {
+      "q": {
+        "th": "เหตุใดการคูณพื้นที่หน้าตัดช่องแคบด้วย ½ρv³ จึงไม่ใช่ศักยภาพที่ถูกต้อง",
+        "en": "Why is multiplying a channel's cross-section by ½ρv³ not a valid potential?"
+      },
+      "choices": [
+        {
+          "th": "เพราะการสกัดพลังงานทำให้กระแสน้ำช้าลงเอง สกัดได้จริงเพียง 20–25%",
+          "en": "Because extraction slows the current itself; only 20–25% is extractable"
+        },
+        {
+          "th": "เพราะสมการนั้นใช้ได้กับอากาศเท่านั้น ไม่ได้ออกแบบมาสำหรับของไหลหนาแน่น",
+          "en": "Because that equation suits air alone and was never meant for a dense fluid"
+        },
+        {
+          "th": "เพราะพื้นที่หน้าตัดของช่องแคบเปลี่ยนไปตามระดับน้ำขึ้นน้ำลงอยู่เสมอ",
+          "en": "Because the channel cross-section itself shifts with the tidal level"
+        },
+        {
+          "th": "เพราะต้องหักขีดจำกัดเบ็ตซ์ออกก่อนจึงจะได้ตัวเลขที่ใช้งานได้จริง",
+          "en": "Because the Betz limit must be deducted first to reach a usable figure"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "th": "ถ้าวางกังหันเต็มหน้าตัด การไหลจะถูกปิดกั้นจนไม่มีน้ำผ่าน และกำลังที่ได้จะเป็นศูนย์ ไม่ใช่ค่าสูงสุด Garrett และ Cummins แสดงว่ากำลังสูงสุดที่สกัดได้ขึ้นกับความต่างระดับที่ขับการไหลและความต้านทานของช่อง ไม่ใช่กับพลังงานจลน์ที่ไหลผ่าน และมีค่าราว 20–25% ของฟลักซ์ที่ยังไม่ถูกรบกวน ขีดจำกัดเบ็ตซ์เป็นเรื่องของกังหันตัวเดียว ไม่ใช่ของช่องแคบทั้งช่อง",
+        "en": "Filling the cross-section with turbines would block the flow entirely and the power obtained would be zero, not maximal. Garrett and Cummins showed the maximum depends on the head driving the flow and the channel's resistance rather than on the kinetic energy passing, and is about 20–25% of the undisturbed flux. The Betz limit concerns a single rotor, not a whole channel."
+      }
+    },
+    {
+      "q": {
+        "th": "เหตุใดกังหันกระแสน้ำจึงหมุนช้ากว่ากังหันลมอย่างมาก",
+        "en": "Why do tidal turbines turn so much more slowly than wind turbines?"
+      },
+      "choices": [
+        {
+          "th": "เพราะน้ำมีความหนืดสูงกว่าอากาศจึงต้านการหมุนของใบพัดไว้มากกว่า",
+          "en": "Because water is more viscous than air and resists the rotation more"
+        },
+        {
+          "th": "เพราะเครื่องกำเนิดไฟฟ้าใต้น้ำทำงานได้เฉพาะที่ความเร็วรอบต่ำเท่านั้น",
+          "en": "Because underwater generators work only at low rotational speeds"
+        },
+        {
+          "th": "เพราะความเร็วปลายใบพัดที่สูงจะทำให้เกิดคาวิเทชันตามกลไกในหัวข้อ 5.6",
+          "en": "Because a high tip speed would cause cavitation by the mechanism of §5.6"
+        },
+        {
+          "th": "เพราะใบพัดใต้น้ำต้องหนากว่ามากจึงมีมวลเฉื่อยสูงเกินกว่าจะหมุนเร็วได้",
+          "en": "Because underwater blades must be far thicker and are too massive to spin fast"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "ปลายใบพัดเคลื่อนที่เร็วกว่ากระแสน้ำหลายเท่า และถ้าความดันด้านหลังใบพัดตกถึงความดันไออิ่มตัวจะเกิดฟองไอที่ยุบตัวอย่างรุนแรงและกัดกร่อนผิวโลหะ ซึ่งเป็นปรากฏการณ์เดียวกับที่กังหันน้ำในบทที่ 5 ต้องหลีกเลี่ยง ข้อจำกัดนี้ทำให้อัตราส่วนความเร็วปลายใบพัดอยู่ที่ 4–6 เทียบกับ 7–9 ของกังหันลม และปลายใบพัดเคลื่อนที่ราว 10–14 m/s เทียบกับ 80 m/s",
+        "en": "The tip moves several times faster than the current, and if the pressure behind the blade reaches saturation vapour pressure, bubbles form and collapse violently, pitting the metal — the same phenomenon the water turbines of Chapter 5 must avoid. The limit holds tip speed ratios to 4–6 against 7–9 for wind, with tip speeds near 10–14 m/s rather than 80."
+      }
+    },
+    {
+      "q": {
+        "th": "ข้อใดอธิบายข้อได้เปรียบของพลังงานน้ำขึ้นน้ำลงต่อผู้ควบคุมระบบไฟฟ้าได้ถูกต้อง",
+        "en": "Which correctly states tidal energy's advantage to a system operator?"
+      },
+      "choices": [
+        {
+          "th": "ผลิตพลังงานได้ต่อเนื่องสม่ำเสมอจึงใช้เป็นกำลังผลิตฐานแทนโรงไฟฟ้าถ่านหินได้",
+          "en": "It generates steadily and can serve as baseload in place of a coal plant"
+        },
+        {
+          "th": "มีตัวประกอบกำลังผลิตสูงกว่าพลังงานลมนอกชายฝั่งอย่างมีนัยสำคัญเสมอ",
+          "en": "Its capacity factor is always significantly above that of offshore wind"
+        },
+        {
+          "th": "ผันผวนแต่ไม่ไม่แน่นอน จึงต้องจัดตารางให้ถูกแต่ไม่ต้องสำรองกำลังเพิ่ม",
+          "en": "It is variable but not uncertain, so it needs scheduling but no extra reserve"
+        },
+        {
+          "th": "สามารถสั่งเดินเครื่องเพิ่มหรือลดได้ตามความต้องการไฟฟ้าในแต่ละชั่วโมง",
+          "en": "Its output can be raised or lowered on demand to follow the hourly load"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "ตัวประกอบกำลังผลิตของกระแสน้ำอยู่ที่ราว 30–40% ซึ่งใกล้เคียงกับลมนอกชายฝั่ง และกระแสน้ำหยุดสี่ครั้งต่อวันจึงไม่ใช่กำลังผลิตฐานและสั่งเดินตามโหลดไม่ได้ สิ่งที่ไม่มีใครเทียบได้คือความแน่นอน ระบบไฟฟ้าต้องสำรองกำลังไว้รองรับความ ไม่แน่นอน ไม่ใช่ความ ผันผวน และตารางน้ำที่คำนวณล่วงหน้าได้นับสิบปีทำให้ไม่ต้องสำรองเพื่อความไม่แน่นอนเลย",
+        "en": "Tidal stream capacity factors are about 30–40%, close to offshore wind, and the current stops four times a day, so it is neither baseload nor dispatchable. What is unmatched is certainty: a grid holds reserve against uncertainty rather than variability, and a tide table computed decades ahead removes the need for any uncertainty reserve."
+      }
+    },
+    {
+      "q": {
+        "th": "เหตุใดกังหันกระแสน้ำเชิงพาณิชย์จึงมีกำลังพิกัดต่ำกว่าความเร็วสูงสุดของแหล่ง",
+        "en": "Why is a commercial tidal turbine rated below its site's peak current?"
+      },
+      "choices": [
+        {
+          "th": "เพราะกฎหมายกำหนดเพดานกำลังผลิตสูงสุดต่อกังหันหนึ่งตัวในน่านน้ำไทย",
+          "en": "Because regulation caps the output permitted per turbine in these waters"
+        },
+        {
+          "th": "เพราะความเร็วสูงสุดช่วงน้ำเกิดกินเวลาน้อย การตัดยอดทิ้งจึงคุ้มกว่า",
+          "en": "Because spring peaks are brief, so clipping them is the better bargain"
+        },
+        {
+          "th": "เพราะกังหันจะเกิดคาวิเทชันทันทีหากเดินที่ความเร็วกระแสสูงสุดของแหล่ง",
+          "en": "Because the rotor would cavitate at once at the site's peak current"
+        },
+        {
+          "th": "เพราะสายไฟใต้น้ำรับกำลังได้จำกัดจึงเป็นตัวกำหนดกำลังพิกัดของกังหัน",
+          "en": "Because the subsea cable's limited rating is what dictates the turbine's"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "เพราะกำลังแปรผันกับ v³ ความเร็วสูงสุดช่วงน้ำเกิดจึงให้กำลังสูงมากแต่กินเวลาน้อย การตั้งกำลังพิกัดไว้ราว 70–80% ของความเร็วน้ำเกิดทำให้เสียพลังงานเพียงไม่กี่เปอร์เซ็นต์ แต่ลดขนาดเครื่องกำเนิดไฟฟ้า สายไฟ และหม้อแปลงลงได้มาก นี่เป็นการตัดสินใจเดียวกับการเลือกอัตราการไหลออกแบบจากเส้นโค้งระยะเวลาการไหลในหัวข้อ 5.3",
+        "en": "Because power goes as v³, the spring peaks deliver a great deal of power for very little time. Rating at about 70–80% of the spring speed sacrifices only a few per cent of the energy while substantially shrinking the generator, cable and transformer — the same decision as choosing a design flow from the duration curve in §5.3."
+      }
+    },
+    {
+      "q": {
+        "th": "ข้อใดเปรียบเทียบผลกระทบของเขื่อนกั้นน้ำกับกังหันกระแสน้ำได้ถูกต้อง",
+        "en": "Which correctly compares the impacts of a barrage and a stream turbine?"
+      },
+      "choices": [
+        {
+          "th": "ทั้งสองแนวทางมีผลกระทบใกล้เคียงกันเพราะอยู่ในสภาพแวดล้อมทางทะเลเหมือนกัน",
+          "en": "Both have much the same impact, sharing the same marine environment"
+        },
+        {
+          "th": "กังหันกระแสน้ำกระทบมากกว่าเพราะใบพัดที่หมุนเป็นอันตรายต่อสัตว์น้ำทุกชนิด",
+          "en": "The stream turbine is worse, its spinning blades endangering all marine life"
+        },
+        {
+          "th": "เขื่อนกั้นน้ำเปลี่ยนปากแม่น้ำอย่างถาวร ส่วนกังหันยกออกได้และกระทบเฉพาะที่",
+          "en": "A barrage alters the estuary for good; a turbine lifts out and acts locally"
+        },
+        {
+          "th": "เขื่อนกั้นน้ำกระทบน้อยกว่าเพราะอยู่ในอ่างที่ปิดและไม่รบกวนทะเลเปิดเลย",
+          "en": "The barrage is gentler, confined to a closed basin well away from open sea"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "เขื่อนกั้นน้ำทำให้สูญเสียพื้นที่หาดเลนและชายเลนถาวร 20–50% ขวางการอพยพของปลาทั้งหมด ดักตะกอน และเปลี่ยนคุณภาพน้ำในอ่าง ส่วนกังหันกระแสน้ำไม่เปลี่ยนระดับน้ำเลย สัตว์น้ำว่ายผ่านระหว่างกังหันได้ และผลกระทบจำกัดอยู่รอบฐาน ความไม่สมมาตรนี้คือเหตุผลที่การลงทุนวิจัยทั่วโลกย้ายจากเขื่อนกั้นน้ำไปสู่กังหันกระแสน้ำเกือบทั้งหมดตั้งแต่ราวปี 2000",
+        "en": "A barrage permanently removes 20–50% of the intertidal zone, blocks fish migration entirely, traps sediment and alters water quality inside the basin. A stream turbine changes water levels not at all, animals swim between the machines, and the effects stay around the foundations. That asymmetry is why research investment moved almost entirely from barrages to stream turbines after about 2000."
+      }
+    },
+    {
+      "q": {
+        "th": "ข้อใดเป็นการประเมินบทบาทของพลังงานน้ำขึ้นน้ำลงในประเทศไทยที่ถูกต้องที่สุด",
+        "en": "Which is the soundest assessment of tidal energy's role in Thailand?"
+      },
+      "choices": [
+        {
+          "th": "ควรสร้างเขื่อนกั้นน้ำในอ่าวไทยตอนบนเพราะมีช่วงต่างระดับและพื้นที่กว้างพอ",
+          "en": "A barrage suits the upper Gulf, whose range and area are both sufficient"
+        },
+        {
+          "th": "ผลิตไฟฟ้าไม่คุ้มทั้งสองแนวทาง แต่หัวน้ำขึ้นน้ำลงใช้แลกเปลี่ยนน้ำในบ่อได้",
+          "en": "Neither route pays for power, but tidal head does pay for pond exchange"
+        },
+        {
+          "th": "ควรเร่งติดตั้งกังหันกระแสน้ำในช่องแคบระหว่างเกาะเพราะต้นทุนลดลงมากแล้ว",
+          "en": "Stream turbines belong in the island channels, now that costs have fallen"
+        },
+        {
+          "th": "ไม่มีประโยชน์ใด ๆ เลยเพราะอ่าวไทยมีช่วงต่างระดับและกระแสน้ำต่ำเกินไป",
+          "en": "There is no use at all, the Gulf being too weak in range and in current"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "ช่องแคบในอ่าวไทยที่กระแส 1 m/s ให้ความหนาแน่นกำลัง 0.51 kW/m² เทียบกับเพนต์แลนด์เฟิร์ธที่ 64.1 kW/m² หรือน้อยกว่า 125 เท่า ซึ่งเป็นข้อจำกัดทางฟิสิกส์ที่เทคโนโลยีแก้ไม่ได้ และช่วงต่างระดับ 2.5–3 เมตรต่ำกว่าเกณฑ์ 5 เมตรของเขื่อนกั้นน้ำทุกแห่งในโลก แต่ประตูระบายน้ำที่อาศัยแรงโน้มถ่วงประหยัดพลังงานสูบน้ำได้ราว 99 MWh ต่อปีต่อฟาร์ม 10 เฮกตาร์ ซึ่งเป็นพลังงานที่ไม่ต้องใช้และมีมูลค่าเท่ากับพลังงานที่ผลิตได้",
+        "en": "A Gulf channel at 1 m/s gives 0.51 kW/m² against the Pentland Firth's 64.1 — 125 times less, a limit of physics that technology cannot remove — and a 2.5–3 m range falls below the 5 m threshold of every barrage in the world. But gravity-fed sluices save some 99 MWh a year of pumping on a 10 hectare farm: energy not needed, worth exactly as much as energy generated."
+      }
+    }
+  ]
+}
+        </script>
+      </section>
+
+      <!-- ============ chapter nav ============ -->
+      <nav class="chapter-nav">
+        <a href="06-wave.html">
+          <span class="dir"><span class="th">บทก่อนหน้า</span><span class="en">Previous</span></span>
+          <span class="ttl">
+            <span class="th">บทที่ 6 · พลังงานคลื่น</span>
+            <span class="en">Chapter 6 · Wave Energy</span>
+          </span>
+        </a>
+        <a class="next" href="08-solar.html">
+          <span class="dir"><span class="th">บทต่อไป</span><span class="en">Next</span></span>
+          <span class="ttl">
+            <span class="th">บทที่ 8 · พลังงานแสงอาทิตย์</span>
+            <span class="en">Chapter 8 · Solar Energy</span>
+          </span>
+        </a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <strong>
+          <span class="th">พลังงานหมุนเวียนสำหรับวิศวกรรมเกษตรอัจฉริยะ</span>
+          <span class="en">Renewable Energy for Agri-Intelligence Engineering</span>
+        </strong>
+        <p class="small">
+          <span class="th">บทที่ 7 · พลังงานน้ำขึ้นน้ำลง</span>
+          <span class="en">Chapter 7 · Tidal Energy</span>
+        </p>
+      </div>
+      <div class="small">
+        <span class="th">ตัวเลขในบทนี้เป็นค่าโดยประมาณเพื่อการเรียนการสอน ดูรายการอ้างอิงท้ายบทและตรวจสอบแหล่งข้อมูลปฐมภูมิที่เป็นปัจจุบันก่อนนำไปใช้</span>
+        <span class="en">Figures here are approximate teaching values. See the reference list at the end of the chapter and check current primary sources before citing.</span>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <span class="copyright__authors">2026 Prepared by Jedsada Saijai &amp; Wanphut Saechua</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/vendor/katex/katex.min.js"></script>
+<script src="../assets/vendor/katex/contrib/auto-render.min.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/math.js"></script>
+</body>
+</html>

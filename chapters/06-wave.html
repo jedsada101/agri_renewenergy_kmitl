@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html lang="th" data-lang="th" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>บทที่ 6 · พลังงานคลื่น</title>
+<meta name="description" content="พลังงานคลื่น — การเกิดคลื่นจากลม ทฤษฎีคลื่นเชิงเส้น กำลังคลื่นต่อความยาวหน้าคลื่นหนึ่งเมตร การประเมินทรัพยากรด้วยแผนภาพกระจาย เทคโนโลยีแปลงพลังงานห้าตระกูล ความกว้างการจับพลังงาน ปัญหาการอยู่รอด และบทบาทที่เป็นจริงในอ่าวไทย">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Thai+Looped:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/vendor/katex/katex.min.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/anim.css">
+<script src="../assets/js/boot.js"></script>
+</head>
+<body data-chapter="06">
+
+<a class="skip" href="#main"><span class="th">ข้ามไปเนื้อหาหลัก</span><span class="en">Skip to main content</span></a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="topbar__brand" href="../index.html">
+    <span class="mark">RE</span>
+    <span class="name">
+      <span class="th">พลังงานหมุนเวียน</span>
+      <span class="en">Renewable Energy</span>
+    </span>
+  </a>
+  <span class="topbar__spacer"></span>
+  <span class="topbar__crumb">
+    <span class="th">บทที่ 6 · พลังงานคลื่น</span>
+    <span class="en">Chapter 6 · Wave Energy</span>
+  </span>
+  <button class="btn-toggle" data-lang-btn="th" aria-pressed="true">ไทย</button>
+  <button class="btn-toggle" data-lang-btn="en" aria-pressed="false">EN</button>
+  <button class="btn-toggle" data-theme-toggle aria-label="Switch theme"><span class="icon">☀</span></button>
+</header>
+
+<div class="wrap">
+  <div class="layout">
+
+    <!-- ============ sidebar ============ -->
+    <aside class="sidebar">
+      <h2><span class="th">ในบทนี้</span><span class="en">In this chapter</span></h2>
+      <ol>
+        <li><a href="#pretest"><span class="th">แบบทดสอบก่อนเรียน</span><span class="en">Pre-test</span></a></li>
+        <li><a href="#s1"><span class="th">6.1 ลมสร้างคลื่นอย่างไร</span><span class="en">6.1 How wind makes waves</span></a></li>
+        <li><a href="#s2"><span class="th">6.2 ทฤษฎีคลื่นเชิงเส้น</span><span class="en">6.2 Linear wave theory</span></a></li>
+        <li><a href="#s3"><span class="th">6.3 พลังงานและกำลังของคลื่น</span><span class="en">6.3 Wave energy and power</span></a></li>
+        <li><a href="#s4"><span class="th">6.4 การประเมินทรัพยากร</span><span class="en">6.4 Assessing the resource</span></a></li>
+        <li><a href="#s5"><span class="th">6.5 เทคโนโลยีห้าตระกูล</span><span class="en">6.5 Five families of device</span></a></li>
+        <li><a href="#s6"><span class="th">6.6 ความกว้างการจับพลังงาน</span><span class="en">6.6 Capture width</span></a></li>
+        <li><a href="#s7"><span class="th">6.7 ปัญหาการอยู่รอด</span><span class="en">6.7 The survivability problem</span></a></li>
+        <li><a href="#s8"><span class="th">6.8 ต้นทุนและสถานะเทคโนโลยี</span><span class="en">6.8 Cost and maturity</span></a></li>
+        <li><a href="#s9"><span class="th">6.9 อ่าวไทยและชายฝั่งไทย</span><span class="en">6.9 The Gulf and Thai coasts</span></a></li>
+        <li><a href="#summary"><span class="th">สรุปและคำศัพท์</span><span class="en">Summary and glossary</span></a></li>
+        <li><a href="#references"><span class="th">เอกสารอ้างอิง</span><span class="en">References</span></a></li>
+        <li><a href="#posttest"><span class="th">แบบทดสอบหลังเรียน</span><span class="en">Post-test</span></a></li>
+      </ol>
+    </aside>
+
+    <!-- ============ main ============ -->
+    <main id="main">
+
+      <header class="chapter-head">
+        <span class="chapter-head__num">
+          <span class="th">บทที่ 6</span><span class="en">Chapter 6</span>
+        </span>
+        <h1>
+          <span class="th">พลังงานคลื่น</span>
+          <span class="en">Wave Energy</span>
+        </h1>
+        <p class="lead">
+          <span class="th">บทที่ 5 จบลงที่น้ำซึ่งไหลลงตามแรงโน้มถ่วงในทิศทางเดียว บทนี้เป็นเรื่องของน้ำที่ <em>แกว่งไปมา</em> โดยไม่ไปไหนเลย คลื่นทะเลคือพลังงานลมที่ถูกเก็บสะสมและอัดแน่นขึ้นหลายสิบเท่า เดินทางข้ามมหาสมุทรได้นับพันกิโลเมตรโดยแทบไม่สูญเสีย และมาถึงชายฝั่งอย่างสม่ำเสมอกว่าลมที่สร้างมันขึ้นมา นี่คือคำสัญญาของพลังงานคลื่น ส่วนบทนี้จะเล่าด้วยว่าเหตุใดคำสัญญานั้นจึงยังไม่เป็นจริงหลังผ่านไปกว่าห้าสิบปี</span>
+          <span class="en">Chapter 5 ended with water running downhill in one direction. This chapter is about water that <em>oscillates</em> while going nowhere at all. Ocean waves are wind energy gathered and concentrated tens of times over, able to cross thousands of kilometres of ocean with little loss, and arriving at the coast more steadily than the wind that made them. That is the promise of wave energy. This chapter also explains why, after more than fifty years, the promise remains unkept.</span>
+        </p>
+        <div class="chapter-head__facts">
+          <span class="chip"><span class="th">ต่อจากบทที่ 5</span><span class="en">Builds on Chapter 5</span></span>
+          <span class="chip"><span class="th">เวลาเรียน ~100 นาที</span><span class="en">~100 min</span></span>
+          <span class="chip"><span class="th">9 หัวข้อ</span><span class="en">9 sections</span></span>
+          <span class="chip"><span class="th">ตัวอย่างคำนวณ 8 ข้อ</span><span class="en">8 worked examples</span></span>
+          <span class="chip"><span class="th">ภาพจำลอง 3 ชุด</span><span class="en">3 interactive models</span></span>
+          <span class="chip"><span class="th">Pre-test 5 ข้อ · Post-test 10 ข้อ</span><span class="en">Pre-test 5 · Post-test 10</span></span>
+        </div>
+      </header>
+
+      <div class="objectives">
+        <h2><span class="th">จุดประสงค์การเรียนรู้</span><span class="en">Learning objectives</span></h2>
+        <ul>
+          <li>
+            <span class="th">อธิบายกลไกที่ลมถ่ายโอนพลังงานให้คลื่น และระบุตัวแปรสามตัวที่กำหนดขนาดคลื่นสูงสุดที่เกิดขึ้นได้</span>
+            <span class="en">Explain how wind transfers energy to waves, and name the three variables that limit the sea state that can develop.</span>
+          </li>
+          <li>
+            <span class="th">ใช้ความสัมพันธ์การกระจายของคลื่นคำนวณความยาวคลื่น ความเร็วเฟส และความเร็วกลุ่ม พร้อมจำแนกน้ำลึก น้ำปานกลาง และน้ำตื้น</span>
+            <span class="en">Use the dispersion relation to compute wavelength, phase speed and group velocity, and classify water as deep, intermediate or shallow.</span>
+          </li>
+          <li>
+            <span class="th">อธิบายว่าเหตุใดการเคลื่อนที่ของอนุภาคน้ำจึงลดลงตามความลึก และผลที่ตามมาต่อการวางตำแหน่งอุปกรณ์</span>
+            <span class="en">Explain why water-particle motion decays with depth, and what that implies for where a device must be placed.</span>
+          </li>
+          <li>
+            <span class="th">คำนวณกำลังของคลื่นต่อความยาวหน้าคลื่นหนึ่งเมตร ทั้งจากคลื่นสม่ำเสมอและจากทะเลจริงที่ระบุด้วย \(H_{s}\) และ \(T_{e}\)</span>
+            <span class="en">Compute wave power per metre of crest, both for regular waves and for a real sea described by \(H_{s}\) and \(T_{e}\).</span>
+          </li>
+          <li>
+            <span class="th">อ่านแผนภาพกระจาย (scatter diagram) แล้วประเมินพลังงานรายปีที่อุปกรณ์หนึ่งจะผลิตได้จริง</span>
+            <span class="en">Read a scatter diagram and estimate the annual energy a given device would actually produce.</span>
+          </li>
+          <li>
+            <span class="th">จำแนกเทคโนโลยีแปลงพลังงานคลื่นห้าตระกูลตามหลักการทำงาน และระบุข้อดีข้อเสียของแต่ละตระกูล</span>
+            <span class="en">Classify the five families of wave energy converter by operating principle and state the merits of each.</span>
+          </li>
+          <li>
+            <span class="th">คำนวณความกว้างการจับพลังงาน (capture width) และอธิบายว่าเหตุใดทุ่นขนาดเล็กจึงดูดพลังงานจากหน้าคลื่นที่กว้างกว่าตัวมันเองได้</span>
+            <span class="en">Calculate capture width and explain why a small buoy can absorb energy from a wavefront wider than itself.</span>
+          </li>
+          <li>
+            <span class="th">อธิบายความขัดแย้งพื้นฐานระหว่างการผลิตพลังงานกับการอยู่รอด และคำนวณอัตราส่วนระหว่างภาระใช้งานกับภาระสุดขีด</span>
+            <span class="en">Explain the fundamental conflict between producing power and surviving, and compute the ratio of extreme to operational loading.</span>
+          </li>
+          <li>
+            <span class="th">ประเมินศักยภาพคลื่นของอ่าวไทยและทะเลอันดามันอย่างตรงไปตรงมา และเลือกการประยุกต์ใช้ที่สมเหตุสมผลในบริบทชายฝั่งไทย</span>
+            <span class="en">Assess the wave resource of the Gulf of Thailand and the Andaman Sea honestly, and choose applications that make sense on Thai coasts.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ============ PRE-TEST ============ -->
+      <section class="quiz quiz--pre" id="pretest" data-quiz="pre" data-pass="0.6">
+        <script type="application/json" class="quiz-data">
+{
+  "questions": [
+    {
+      "q": {
+        "th": "คลื่นทะเลที่ใช้ผลิตพลังงานได้มีต้นกำเนิดมาจากอะไร",
+        "en": "Where do the ocean waves used for energy come from?"
+      },
+      "choices": [
+        {
+          "th": "แรงโน้มถ่วงของดวงจันทร์ที่ดึงมวลน้ำทะเลขึ้นลงเป็นจังหวะ",
+          "en": "The Moon's gravity drawing the sea up and down in rhythm"
+        },
+        {
+          "th": "ลมที่พัดผ่านผิวทะเลและถ่ายโอนพลังงานให้ผิวน้ำ",
+          "en": "Wind blowing over the sea surface and feeding energy into it"
+        },
+        {
+          "th": "กระแสน้ำอุ่นและน้ำเย็นที่ไหลวนอยู่ในมหาสมุทรลึก",
+          "en": "Warm and cold currents circulating through the deep ocean"
+        },
+        {
+          "th": "การหมุนของโลกที่เหวี่ยงน้ำทะเลให้กระเพื่อมเป็นระลอก",
+          "en": "The Earth's rotation flinging the sea into a rippling motion"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "คลื่นทะเลคือพลังงานลมที่ถูกสะสมไว้ ลมพัดผ่านผิวน้ำแล้วถ่ายโอนพลังงานผ่านความเค้นเฉือนและความแตกต่างของความดัน ทำให้คลื่นโตขึ้นเรื่อย ๆ ตามระยะทางและเวลาที่ลมพัด เมื่อคลื่นออกจากบริเวณที่ลมสร้างมันแล้วจะกลายเป็น swell ซึ่งเดินทางได้ไกลนับพันกิโลเมตรโดยแทบไม่สูญเสียพลังงาน ส่วนแรงโน้มถ่วงของดวงจันทร์เป็นต้นกำเนิดของน้ำขึ้นน้ำลงในบทที่ 7 ซึ่งเป็นคนละปรากฏการณ์กัน",
+        "en": "Ocean waves are stored wind energy. Wind passing over the surface transfers energy through shear stress and pressure differences, and the waves grow with the distance and duration of that wind. Once they leave the generating area they become swell, which can travel thousands of kilometres with very little loss. The Moon's gravity drives the tides of Chapter 7, which are an entirely separate phenomenon."
+      }
+    },
+    {
+      "q": {
+        "th": "กำลังของคลื่นต่อความยาวหน้าคลื่นหนึ่งเมตรแปรผันกับความสูงคลื่นอย่างไร",
+        "en": "How does wave power per metre of crest vary with wave height?"
+      },
+      "choices": [
+        {
+          "th": "แปรผันตรงกับความสูงคลื่น",
+          "en": "In direct proportion to the height"
+        },
+        {
+          "th": "แปรผันกับรากที่สองของความสูงคลื่น",
+          "en": "With the square root of the height"
+        },
+        {
+          "th": "แปรผันกับกำลังสองของความสูงคลื่น",
+          "en": "With the square of the height"
+        },
+        {
+          "th": "แปรผันกับกำลังสามของความสูงคลื่น",
+          "en": "With the cube of the height"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "พลังงานต่อพื้นที่ผิวของคลื่นแปรผันกับ H² เพราะเป็นผลรวมของพลังงานศักย์และพลังงานจลน์ซึ่งต่างก็ขึ้นกับการกระจัดยกกำลังสอง เมื่อคูณด้วยความเร็วกลุ่มซึ่งแปรผันกับคาบ จึงได้กำลังต่อเมตรที่แปรผันกับ H²T ผลที่ตามมาคือคลื่นสูง 2 เมตรให้พลังงานมากกว่าคลื่นสูง 1 เมตรถึงสี่เท่า ซึ่งเป็นเหตุผลที่แหล่งคลื่นดี ๆ กระจุกตัวอยู่ในเขตละติจูดสูงที่มีพายุ",
+        "en": "Energy per unit of sea surface varies as H², being the sum of potential and kinetic terms that each depend on the square of the displacement. Multiplying by the group velocity, which scales with period, gives power per metre proportional to H²T. A two-metre wave therefore carries four times the power of a one-metre wave — which is why the good resources cluster in the stormy high latitudes."
+      }
+    },
+    {
+      "q": {
+        "th": "อนุภาคน้ำในคลื่นน้ำลึกเคลื่อนที่อย่างไร",
+        "en": "How does a water particle move in a deep-water wave?"
+      },
+      "choices": [
+        {
+          "th": "เคลื่อนที่ไปข้างหน้าพร้อมกับคลื่นด้วยความเร็วเท่ากับความเร็วของคลื่นเอง",
+          "en": "It travels forward with the wave, at the same speed as the wave itself"
+        },
+        {
+          "th": "เคลื่อนที่ขึ้นลงในแนวดิ่งเท่านั้น โดยไม่มีการเคลื่อนที่ในแนวราบเลย",
+          "en": "It moves only up and down, with no horizontal component whatever"
+        },
+        {
+          "th": "เคลื่อนที่เป็นวงโดยแทบไม่ไปไหน และวงเล็กลงตามความลึก",
+          "en": "It moves in circles going almost nowhere, shrinking with depth"
+        },
+        {
+          "th": "เคลื่อนที่เป็นเส้นตรงเฉียงลงสู่พื้นทะเลตามทิศทางที่คลื่นเดินทาง",
+          "en": "It runs in a straight line down towards the seabed along the wave direction"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "สิ่งที่เดินทางไปกับคลื่นคือรูปร่างและพลังงาน ไม่ใช่ตัวน้ำ อนุภาคน้ำเคลื่อนที่เป็นวงกลมในน้ำลึกและเป็นวงรีในน้ำตื้น โดยขนาดของวงลดลงแบบเอกซ์โพเนนเชียลตามความลึก ที่ความลึกครึ่งหนึ่งของความยาวคลื่น การเคลื่อนที่เหลือเพียงราว 4% ของที่ผิว ข้อเท็จจริงนี้กำหนดว่าอุปกรณ์แปลงพลังงานคลื่นต้องอยู่ใกล้ผิวน้ำ และเป็นเหตุผลว่าทำไมเรือดำน้ำจึงหลบพายุด้วยการดำลง",
+        "en": "What travels with a wave is its shape and its energy, not the water. Particles move in circles in deep water and ellipses in shallow, and the orbits shrink exponentially with depth: at half a wavelength down, the motion is only about 4% of that at the surface. This fact dictates that a wave energy converter must sit near the surface, and it is why a submarine escapes a storm by diving."
+      }
+    },
+    {
+      "q": {
+        "th": "ทะเลจริงถูกอธิบายด้วยค่าใดเป็นหลักในงานวิศวกรรมพลังงานคลื่น",
+        "en": "Which quantities describe a real sea in wave energy engineering?"
+      },
+      "choices": [
+        {
+          "th": "ความสูงคลื่นนัยสำคัญและคาบพลังงาน",
+          "en": "Significant wave height and energy period"
+        },
+        {
+          "th": "ความสูงสูงสุดและความเร็วลมที่ผิวน้ำ",
+          "en": "Maximum height and the wind speed at the surface"
+        },
+        {
+          "th": "ความลึกของน้ำและอุณหภูมิผิวน้ำทะเล",
+          "en": "The water depth and the sea surface temperature"
+        },
+        {
+          "th": "ความเค็มและความหนาแน่นของน้ำทะเล",
+          "en": "The salinity and the density of the seawater"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "th": "ทะเลจริงไม่ได้ประกอบด้วยคลื่นลูกเดียวที่สม่ำเสมอ แต่เป็นการซ้อนทับของคลื่นหลายความถี่ จึงต้องอธิบายด้วยค่าทางสถิติ ความสูงคลื่นนัยสำคัญ Hs คือค่าเฉลี่ยของคลื่นสูงหนึ่งในสามที่สูงที่สุด และใกล้เคียงกับที่ผู้สังเกตประเมินด้วยตา ส่วนคาบพลังงาน Te เป็นคาบถ่วงน้ำหนักด้วยพลังงานในสเปกตรัม ทั้งสองค่านี้รวมกันให้กำลังคลื่นได้โดยตรง",
+        "en": "A real sea is not one regular wave but the superposition of many frequencies, so it must be described statistically. The significant wave height Hs is the mean of the highest third of the waves and is close to what an observer estimates by eye, while the energy period Te is the spectrum's energy-weighted period. Together the two give the wave power directly."
+      }
+    },
+    {
+      "q": {
+        "th": "เหตุใดพลังงานคลื่นจึงยังไม่ถูกนำมาใช้เชิงพาณิชย์อย่างแพร่หลาย ทั้งที่มีการวิจัยมากว่าห้าสิบปี",
+        "en": "Why is wave energy still not in widespread commercial use after fifty years of research?"
+      },
+      "choices": [
+        {
+          "th": "เพราะพลังงานคลื่นทั่วโลกมีน้อยเกินกว่าจะมีนัยสำคัญต่อระบบไฟฟ้าใด",
+          "en": "Because the world's wave resource is far too small to matter to any grid anywhere"
+        },
+        {
+          "th": "เพราะกฎหมายทางทะเลระหว่างประเทศห้ามติดตั้งอุปกรณ์ในทะเลเปิด",
+          "en": "Because international maritime law forbids installing devices in open water"
+        },
+        {
+          "th": "เพราะยังไม่มีใครคิดค้นวิธีแปลงการเคลื่อนที่ของคลื่นให้เป็นไฟฟ้าได้",
+          "en": "Because nobody has yet devised any way of turning wave motion into electricity"
+        },
+        {
+          "th": "เพราะอุปกรณ์ต้องทนคลื่นพายุที่รุนแรงกว่าคลื่นใช้งานหลายสิบเท่า",
+          "en": "Because devices must survive storms many times more violent than working seas"
+        }
+      ],
+      "answer": 3,
+      "why": {
+        "th": "นี่คือความขัดแย้งพื้นฐานของพลังงานคลื่น อุปกรณ์ต้องออกแบบให้ไวต่อคลื่นเล็กเพื่อเก็บพลังงานให้ได้มากที่สุด แต่ก็ต้องรอดจากคลื่นพายุที่สร้างแรงกระทำมากกว่าสภาวะใช้งานปกติได้ถึงห้าสิบถึงหนึ่งร้อยเท่า กังหันลมยังหลบลมแรงได้ด้วยการปรับมุมใบพัด แต่อุปกรณ์คลื่นหลบทะเลไม่ได้ ปัญหาไม่ใช่เรื่องวิธีแปลงพลังงาน ซึ่งมีคนคิดไว้แล้วนับพันแบบ แต่เป็นเรื่องการอยู่รอดและต้นทุนการบำรุงรักษาในทะเล",
+        "en": "This is wave energy's fundamental conflict. A device must be responsive to small waves to harvest much energy, yet survive storm waves that impose fifty to a hundred times the loading of normal operation. A wind turbine can feather its blades to shed a gale; a wave device cannot dodge the sea. The problem is not how to convert the motion — a thousand schemes exist — but survival and the cost of maintaining machinery offshore."
+      }
+    }
+  ]
+}
+        </script>
+      </section>
+
+      <!-- ============ 6.1 ============ -->
+      <section class="section" id="s1">
+        <h2><span class="num">6.1</span>
+          <span><span class="th">ลมสร้างคลื่นอย่างไร และทำไมคลื่นจึงดีกว่าลม</span>
+          <span class="en">How wind makes waves, and why waves beat wind</span></span>
+        </h2>
+
+        <p>
+          <span class="th">เมื่อลมพัดผ่านผิวน้ำที่เรียบ ความปั่นป่วนในชั้นอากาศใกล้ผิวสร้างความแตกต่างของความดันเล็ก ๆ ที่ทำให้ผิวน้ำยกตัวขึ้นเป็นระลอกเล็กจิ๋ว เมื่อมีระลอกแล้ว ลมก็มี &ldquo;ที่จับ&rdquo; — ด้านหน้าของระลอกรับความดันสูงกว่าด้านหลัง และความเค้นเฉือนก็ทำงานได้ดีขึ้น คลื่นจึงโตเร็วขึ้นเรื่อย ๆ กระบวนการป้อนกลับเชิงบวกนี้คือเหตุผลที่ทะเลเปลี่ยนจากผิวเรียบเป็นคลื่นสูงหลายเมตรได้ภายในไม่กี่ชั่วโมง</span>
+          <span class="en">When wind blows across a smooth surface, turbulence in the air layer just above it creates small pressure differences that lift the water into tiny ripples. Once ripples exist the wind has something to push against — the windward face sees higher pressure than the lee, and shear stress bites better — so the waves grow faster still. This positive feedback is why a sea can go from glassy to several metres within hours.</span>
+        </p>
+
+        <p>
+          <span class="th">ขนาดของคลื่นที่เกิดขึ้นได้สูงสุดถูกจำกัดด้วยตัวแปรสามตัวเท่านั้น และตัวที่ <em>เล็กที่สุด</em> เป็นตัวกำหนด — <strong>ความเร็วลม</strong> ซึ่งกำหนดเพดานสูงสุดทางทฤษฎี · <strong>ระยะทางที่ลมพัดผ่านผิวน้ำต่อเนื่อง (fetch)</strong> และ <strong>ระยะเวลาที่ลมพัดด้วยความเร็วนั้น</strong> ถ้าลมแรงมากแต่พัดผ่านทะเลแคบ ๆ เพียง 50 กิโลเมตร คลื่นก็โตได้เท่าที่ระยะนั้นอนุญาต ข้อเท็จจริงนี้อธิบายภูมิศาสตร์ของพลังงานคลื่นทั้งหมด และอธิบายด้วยว่าทำไมอ่าวไทยจึงมีคลื่นเล็ก</span>
+          <span class="en">The sea state that can develop is limited by just three variables, and the <em>smallest</em> of them governs — <strong>wind speed</strong>, which sets the theoretical ceiling; <strong>fetch</strong>, the distance the wind blows uninterrupted over water; and <strong>duration</strong>, how long it blows at that speed. A fierce wind crossing only 50 km of water builds only what that distance allows. This single fact explains the entire geography of wave energy — and why the Gulf of Thailand has small waves.</span>
+        </p>
+
+        <div class="callout callout--key">
+          <div class="callout__title">
+            <span class="th">คลื่นคือพลังงานลมที่ถูกอัดแน่นขึ้นหลายสิบเท่า</span>
+            <span class="en">A wave is wind energy concentrated tens of times over</span>
+          </div>
+          <p>
+            <span class="th">ลมที่ดีมากพัดผ่านพื้นที่หนึ่งตารางเมตรในแนวตั้งให้กำลังราว 0.5&ndash;1 กิโลวัตต์ ส่วนคลื่นที่ดีมากให้กำลังราว 50&ndash;70 กิโลวัตต์ต่อหน้าคลื่นหนึ่งเมตร ซึ่งความลึกที่มีพลังงานอยู่จริงคือราว 10&ndash;20 เมตรจากผิวลงไป ความหนาแน่นพลังงานต่อพื้นที่หน้าตัดจึงสูงกว่าลมราว 5&ndash;10 เท่า และสูงกว่าแสงอาทิตย์หลายสิบเท่า</span>
+            <span class="en">A very good wind delivers roughly 0.5&ndash;1 kW through a square metre of vertical area. A very good wave delivers 50&ndash;70 kW per metre of crest, with the energy residing in perhaps the top 10&ndash;20 metres of water. The power density through a cross-section is therefore some five to ten times that of wind, and tens of times that of sunlight.</span>
+          </p>
+          <p>
+            <span class="th">คลื่นยังมีข้อได้เปรียบอีกสามข้อเหนือลมที่สร้างมันขึ้นมา หนึ่ง — <strong>ความสม่ำเสมอ</strong> ทะเลมีความเฉื่อยสูง จึงไม่ได้สงบลงทันทีที่ลมหยุด สอง — <strong>คาดการณ์ได้ล่วงหน้า</strong> คลื่น swell เดินทางด้วยความเร็วที่คำนวณได้ จึงพยากรณ์ล่วงหน้าได้แม่นยำหลายวัน ต่างจากลมที่พยากรณ์ได้ไม่กี่ชั่วโมง และสาม — <strong>เข้มข้นขึ้นเองตามเส้นทาง</strong> คลื่นที่เกิดในพายุกลางมหาสมุทรเดินทางมาถึงชายฝั่งได้หลายพันกิโลเมตรโดยสูญเสียพลังงานน้อยมาก</span>
+            <span class="en">Waves hold three further advantages over the wind that made them. First, <strong>steadiness</strong>: the sea has great inertia and does not fall calm the moment the wind stops. Second, <strong>predictability</strong>: swell travels at a calculable speed, so it can be forecast accurately days ahead, where wind can be forecast only hours ahead. Third, <strong>concentration along the way</strong>: waves raised by a mid-ocean storm reach the coast thousands of kilometres later having lost very little.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 6.2 ============ -->
+      <section class="section" id="s2">
+        <h2><span class="num">6.2</span>
+          <span><span class="th">ทฤษฎีคลื่นเชิงเส้น: สิ่งที่เดินทางคือรูปร่าง ไม่ใช่น้ำ</span>
+          <span class="en">Linear wave theory: the shape travels, the water does not</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ทฤษฎีคลื่นเชิงเส้น (หรือทฤษฎีของ Airy) สมมติว่าคลื่นมีแอมพลิจูดเล็กเมื่อเทียบกับความยาวคลื่นและความลึก ซึ่งฟังดูเหมือนข้อสมมติที่หยาบ แต่ในทางปฏิบัติมันให้คำตอบที่แม่นยำพอสำหรับงานวิศวกรรมพลังงานคลื่นเกือบทั้งหมด ผลลัพธ์กลางของทฤษฎีนี้คือ <strong>ความสัมพันธ์การกระจาย (dispersion relation)</strong> ซึ่งผูกความถี่เข้ากับความยาวคลื่นและความลึก</span>
+          <span class="en">Linear, or Airy, wave theory assumes the amplitude is small compared with both wavelength and depth. That sounds crude, yet in practice it is accurate enough for nearly all wave energy engineering. Its central result is the <strong>dispersion relation</strong>, which ties frequency to wavelength and depth.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ \omega^{2} = g\,k \tanh(kd) \qquad\quad \omega = \frac{2\pi}{T} \qquad\quad k = \frac{2\pi}{L} \]</div>
+            <span class="formula__num">(6.1)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(\omega\) = ความถี่เชิงมุม (rad/s) · \(k\) = เลขคลื่น (rad/m) · \(d\) = ความลึกน้ำ (m) · \(T\) = คาบคลื่น (s) · \(L\) = ความยาวคลื่น (m) · สมการนี้แก้หา \(L\) โดยตรงไม่ได้เพราะ \(L\) อยู่ทั้งสองข้าง ต้องแก้ด้วยการวนซ้ำ ยกเว้นในกรณีขีดจำกัดสองกรณีซึ่งเป็นกรณีที่ใช้งานจริงเกือบทั้งหมด</span>
+            <span class="en">\(\omega\) is angular frequency (rad/s) · \(k\) the wavenumber (rad/m) · \(d\) the water depth (m) · \(T\) the period (s) · \(L\) the wavelength (m). The equation cannot be solved for \(L\) directly, since \(L\) appears on both sides; it needs iteration — except in two limiting cases, which cover nearly all practical work.</span>
+          </div>
+        </div>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ \underbrace{L_{0} = \frac{gT^{2}}{2\pi} \approx 1.56\,T^{2}}_{\textstyle d > L/2} \qquad\qquad \underbrace{L = T\sqrt{gd}}_{\textstyle d < L/20} \]</div>
+            <span class="formula__num">(6.2)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">ซ้าย — <strong>น้ำลึก</strong> เมื่อความลึกเกินครึ่งหนึ่งของความยาวคลื่น คลื่นไม่ &ldquo;รู้สึก&rdquo; ถึงพื้นทะเลเลย ความยาวคลื่นขึ้นกับคาบเท่านั้น · ขวา — <strong>น้ำตื้น</strong> เมื่อความลึกน้อยกว่าหนึ่งในยี่สิบของความยาวคลื่น ความเร็วขึ้นกับความลึกเท่านั้น ไม่ขึ้นกับคาบ · ระหว่างสองขอบเขตนี้คือ <strong>น้ำปานกลาง</strong> ซึ่งต้องใช้สมการ (6.1) เต็มรูป</span>
+            <span class="en">Left — <strong>deep water</strong>, where the depth exceeds half a wavelength: the wave never feels the seabed and its length depends on period alone. Right — <strong>shallow water</strong>, where the depth is under a twentieth of a wavelength: speed depends on depth alone, not on period. Between the two lies <strong>intermediate water</strong>, which requires the full form of equation (6.1).</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 6.1 · คลื่นเดียวกันในน้ำลึกและน้ำตื้น</span>
+            <span class="en">Worked example 6.1 · The same wave in deep and shallow water</span>
+          </div>
+          <p>
+            <span class="th">คลื่น swell คาบ 10 วินาทีเดินทางจากทะเลเปิดเข้าสู่ชายฝั่ง จงหาความยาวคลื่นและความเร็วเฟสเมื่ออยู่ในน้ำลึก 200 เมตร และเมื่อเข้าสู่น้ำตื้น 3 เมตร</span>
+            <span class="en">A 10-second swell travels from open sea towards the shore. Find its wavelength and phase speed in 200 m of water, and then in 3 m of water.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">น้ำลึก: \(L_{0} = 1.56 \times 10^{2} = \mathbf{156\ m}\) ตรวจสอบเงื่อนไข \(d = 200 > L/2 = 78\) ✓ ใช้สูตรน้ำลึกได้</span>
+              <span class="en">Deep water: \(L_{0} = 1.56 \times 10^{2} = \mathbf{156\ m}\). Check the condition: \(d = 200 > L/2 = 78\) ✓, so the deep-water form applies.</span>
+            </li>
+            <li>
+              <span class="th">ความเร็วเฟส: \(c = L/T = 156/10 = \mathbf{15.6\ m/s}\) หรือราว 56 กม./ชม.</span>
+              <span class="en">Phase speed: \(c = L/T = 156/10 = \mathbf{15.6\ m/s}\), about 56 km/h.</span>
+            </li>
+            <li>
+              <span class="th">น้ำตื้น: \(c = \sqrt{9.81 \times 3} = \mathbf{5.42\ m/s}\) และ \(L = 5.42 \times 10 = \mathbf{54.2\ m}\) ตรวจสอบ \(d = 3 < L/20 = 2.7\) — ยังไม่เข้าเกณฑ์น้ำตื้นพอดี จึงเป็นน้ำปานกลางที่ใกล้เคียงน้ำตื้น ค่าที่ได้ใช้เป็นค่าประมาณได้</span>
+              <span class="en">Shallow water: \(c = \sqrt{9.81 \times 3} = \mathbf{5.42\ m/s}\) and \(L = 5.42 \times 10 = \mathbf{54.2\ m}\). Check: \(d = 3\) against \(L/20 = 2.7\) — not quite shallow, so this is intermediate water near the shallow limit, and the values serve as an approximation.</span>
+            </li>
+            <li>
+              <span class="th">คลื่นช้าลงจาก 15.6 เหลือ 5.4 m/s และสั้นลงจาก 156 เหลือ 54 เมตร แต่ <em>คาบไม่เปลี่ยน</em> เพราะจำนวนยอดคลื่นที่ผ่านจุดหนึ่งต่อวินาทีต้องคงเดิม คาบจึงเป็นคุณสมบัติที่ติดตัวคลื่นไปตลอดทาง ในขณะที่ความยาวคลื่นและความเร็วเปลี่ยนตามความลึก</span>
+              <span class="en">The wave slows from 15.6 to 5.4 m/s and shortens from 156 to 54 m — but its <em>period does not change</em>, because the number of crests passing a point each second must stay the same. Period is the property a wave carries with it, while wavelength and speed change with depth.</span>
+            </li>
+            <li>
+              <span class="th">ผลที่ตามมา: เมื่อความเร็วลดลงแต่ฟลักซ์พลังงานต้องคงที่ ความสูงคลื่นจึงต้องเพิ่มขึ้น (shoaling) และเมื่อความชันถึงขีดจำกัดราว \(H/L = 1/7\) คลื่นจะแตกตัว นี่คือเหตุผลที่คลื่นสูงขึ้นและแตกใกล้ชายฝั่ง</span>
+              <span class="en">The consequence: as speed drops while the energy flux must be conserved, wave height rises — shoaling — and once the steepness reaches about \(H/L = 1/7\) the wave breaks. That is why waves grow and break as they approach the shore.</span>
+            </li>
+          </ol>
+        </div>
+
+        <h3><span class="th">การเคลื่อนที่ของอนุภาคน้ำและการลดลงตามความลึก</span><span class="en">Particle motion and its decay with depth</span></h3>
+
+        <p>
+          <span class="th">ข้อเท็จจริงที่ขัดกับสัญชาตญาณที่สุดของคลื่นคือ <strong>น้ำไม่ได้เดินทางไปกับคลื่น</strong> สิ่งที่เดินทางคือรูปร่างและพลังงาน ส่วนอนุภาคน้ำเคลื่อนที่เป็นวงกลมปิดในน้ำลึก และเป็นวงรีที่แบนลงเรื่อย ๆ เมื่อเข้าใกล้พื้นทะเล ทุ่นที่ลอยอยู่จึงขยับขึ้นลงและไปหน้าถอยหลัง แต่ไม่ได้ถูกพัดพาไปไหน</span>
+          <span class="en">The most counter-intuitive fact about waves is that <strong>the water does not travel with them</strong>. What travels is the shape and the energy. Particles move in closed circles in deep water, flattening into ellipses as the seabed nears. A floating buoy therefore rises, falls and surges back and forth, but is not carried anywhere.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ r(z) \;=\; \frac{H}{2}\, e^{kz} \qquad\quad z \le 0 \]</div>
+            <span class="formula__num">(6.3)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(r(z)\) = รัศมีของวงโคจรที่ความลึก \(z\) ใต้ผิวน้ำ (m) โดย \(z\) เป็นค่าลบ · \(H\) = ความสูงคลื่น (m) · \(k = 2\pi/L\) · สมการนี้ใช้กับน้ำลึก · ผลที่สำคัญที่สุดคือที่ความลึก \(z = -L/2\) จะได้ \(e^{-\pi} = 0.043\) หรือเหลือการเคลื่อนที่เพียง <strong>4.3%</strong> ของที่ผิวน้ำ</span>
+            <span class="en">\(r(z)\) is the orbital radius at depth \(z\) below the surface (m), with \(z\) negative · \(H\) the wave height (m) · \(k = 2\pi/L\). The form applies in deep water. Its most important consequence is that at \(z = -L/2\), \(e^{-\pi} = 0.043\) — only <strong>4.3%</strong> of the surface motion remains.</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 6.2 · ต้องวางอุปกรณ์ลึกแค่ไหนจึงยังได้พลังงาน</span>
+            <span class="en">Worked example 6.2 · How deep a device may sit and still collect</span>
+          </div>
+          <p>
+            <span class="th">คลื่นสูง 2 เมตร คาบ 8 วินาที ในน้ำลึก จงหารัศมีวงโคจรที่ผิวน้ำ ที่ความลึก 10 เมตร และที่ความลึก 50 เมตร</span>
+            <span class="en">A 2 m wave of 8 s period in deep water. Find the orbital radius at the surface, at 10 m depth, and at 50 m depth.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">\(L_{0} = 1.56 \times 64 = 99.8\ \mathrm{m}\) จึงได้ \(k = 2\pi/99.8 = 0.0630\ \mathrm{rad/m}\)</span>
+              <span class="en">\(L_{0} = 1.56 \times 64 = 99.8\ \mathrm{m}\), so \(k = 2\pi/99.8 = 0.0630\ \mathrm{rad/m}\)</span>
+            </li>
+            <li>
+              <span class="th">ที่ผิวน้ำ: \(r = H/2 = \mathbf{1.0\ m}\) (เส้นผ่านศูนย์กลางวงโคจร 2 เมตร เท่ากับความสูงคลื่นพอดี)</span>
+              <span class="en">At the surface: \(r = H/2 = \mathbf{1.0\ m}\) — an orbit 2 m across, exactly the wave height.</span>
+            </li>
+            <li>
+              <span class="th">ที่ความลึก 10 ม.: \(r = 1.0 \times e^{-0.0630 \times 10} = 1.0 \times e^{-0.630} = \mathbf{0.53\ m}\) เหลือ 53%</span>
+              <span class="en">At 10 m: \(r = 1.0 \times e^{-0.0630 \times 10} = 1.0 \times e^{-0.630} = \mathbf{0.53\ m}\) — 53% remains.</span>
+            </li>
+            <li>
+              <span class="th">ที่ความลึก 50 ม.: \(r = 1.0 \times e^{-3.15} = \mathbf{0.043\ m}\) เหลือเพียง 4.3% หรือ 4 เซนติเมตร</span>
+              <span class="en">At 50 m: \(r = 1.0 \times e^{-3.15} = \mathbf{0.043\ m}\) — just 4.3%, four centimetres.</span>
+            </li>
+            <li>
+              <span class="th">ข้อสรุปทางวิศวกรรมที่ชัดเจน: อุปกรณ์แปลงพลังงานคลื่นต้อง <em>อยู่ที่ผิวน้ำหรือใกล้ผิวน้ำเท่านั้น</em> ไม่มีทางเลือกที่จะวางไว้ลึกเพื่อหลบพายุแล้วยังผลิตพลังงานได้ — สองสิ่งนี้ขัดกันโดยธรรมชาติ และความขัดแย้งนี้จะกลับมาอีกครั้งในหัวข้อ 6.7</span>
+              <span class="en">The engineering conclusion is unambiguous: a wave energy converter must sit <em>at or very near the surface</em>. There is no option of placing it deep to escape storms while still generating — the two are naturally opposed, and that conflict returns in §6.7.</span>
+            </li>
+          </ol>
+        </div>
+
+        <figure class="figure" data-reveal>
+          <div class="figure__body">
+            <svg viewBox="0 0 760 360" width="760" role="img" aria-labelledby="fig61-title fig61-desc">
+              <title id="fig61-title">Wave anatomy and the decay of orbital motion with depth</title>
+              <desc id="fig61-desc">A sinusoidal wave profile with crest, trough, wavelength and height marked. Beneath it, circular particle orbits are drawn at four depths, shrinking rapidly downward: full size at the surface, about half at a tenth of a wavelength, and almost nothing at half a wavelength, where the motion is 4.3 percent of the surface value. To the right, the same wave in shallow water shows flattened elliptical orbits reaching the seabed.</desc>
+
+              <defs>
+                <marker id="wa1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                  <path d="M 0 1 L 9 5 L 0 9" fill="none" class="dg-accent-s" stroke-width="1.6"/>
+                </marker>
+              </defs>
+
+              <!-- deep water panel -->
+              <rect x="20" y="30" width="430" height="290" rx="4" class="dg-fill-2 dg-rule" stroke-width="1.2" opacity="0.5"/>
+              <text x="235" y="22" text-anchor="middle" class="dg-label th">น้ำลึก · วงโคจรเป็นวงกลม</text>
+              <text x="235" y="22" text-anchor="middle" class="dg-label en">DEEP WATER · CIRCULAR ORBITS</text>
+
+              <!-- still water line -->
+              <line x1="32" y1="92" x2="438" y2="92" class="dg-line" stroke-width="1" stroke-dasharray="4 4"/>
+              <text x="36" y="86" class="dg-label th">ระดับน้ำนิ่ง</text>
+              <text x="36" y="86" class="dg-label en">STILL WATER LEVEL</text>
+
+              <!-- wave profile -->
+              <path d="M 32 92 Q 67 52 102 92 Q 137 132 172 92 Q 207 52 242 92 Q 277 132 312 92 Q 347 52 382 92 Q 417 132 438 106"
+                    fill="none" class="dg-accent" stroke-width="2.6"/>
+
+              <!-- wavelength -->
+              <line x1="67" y1="44" x2="207" y2="44" class="dg-accent-s" stroke-width="1.4" marker-start="url(#wa1)" marker-end="url(#wa1)"/>
+              <text x="137" y="38" text-anchor="middle" class="dg-label th">ความยาวคลื่น L</text>
+              <text x="137" y="38" text-anchor="middle" class="dg-label en">WAVELENGTH L</text>
+
+              <!-- height -->
+              <line x1="290" y1="52" x2="290" y2="132" class="dg-accent-s" stroke-width="1.4" marker-start="url(#wa1)" marker-end="url(#wa1)"/>
+              <text x="297" y="96" class="dg-label th">ความสูง H</text>
+              <text x="297" y="96" class="dg-label en">HEIGHT H</text>
+
+              <text x="207" y="48" class="dg-label th">ยอดคลื่น</text>
+              <text x="207" y="48" class="dg-label en">CREST</text>
+              <text x="242" y="148" class="dg-label th">ท้องคลื่น</text>
+              <text x="242" y="148" class="dg-label en">TROUGH</text>
+
+              <!-- orbits, shrinking -->
+              <circle cx="137" cy="112" r="20" fill="none" class="dg-accent-s" stroke-width="2"/>
+              <text x="166" y="116" class="dg-label">100%</text>
+              <circle cx="137" cy="172" r="10.6" fill="none" class="dg-accent-s" stroke-width="1.8"/>
+              <text x="156" y="176" class="dg-label">53%</text>
+              <circle cx="137" cy="226" r="5.6" fill="none" class="dg-accent-s" stroke-width="1.5"/>
+              <text x="150" y="230" class="dg-label">28%</text>
+              <circle cx="137" cy="280" r="1.7" fill="none" class="dg-accent-s" stroke-width="1.2"/>
+              <text x="146" y="284" class="dg-label">4.3%</text>
+
+              <line x1="112" y1="112" x2="112" y2="280" class="dg-line" stroke-width="1" stroke-dasharray="3 3"/>
+              <text x="40" y="284" class="dg-label th">ความลึก L/2</text>
+              <text x="40" y="284" class="dg-label en">DEPTH L/2</text>
+
+              <text x="200" y="300" class="dg-text th">การเคลื่อนที่ลดลงแบบเอกซ์โพเนนเชียล</text>
+              <text x="200" y="300" class="dg-text en">Motion decays exponentially</text>
+              <text x="200" y="316" class="dg-label th">ที่ความลึกครึ่งหนึ่งของความยาวคลื่น เหลือเพียง 4.3%</text>
+              <text x="200" y="316" class="dg-label en">AT HALF A WAVELENGTH DOWN, ONLY 4.3% IS LEFT</text>
+
+              <!-- shallow water panel -->
+              <rect x="470" y="30" width="270" height="290" rx="4" class="dg-fill-2 dg-rule" stroke-width="1.2" opacity="0.5"/>
+              <text x="605" y="22" text-anchor="middle" class="dg-label th">น้ำตื้น · วงโคจรแบนเป็นวงรี</text>
+              <text x="605" y="22" text-anchor="middle" class="dg-label en">SHALLOW · FLATTENED ELLIPSES</text>
+
+              <line x1="482" y1="110" x2="728" y2="110" class="dg-line" stroke-width="1" stroke-dasharray="4 4"/>
+              <path d="M 482 110 Q 512 74 542 110 Q 572 146 602 110 Q 632 74 662 110 Q 692 146 722 110"
+                    fill="none" class="dg-accent" stroke-width="2.6"/>
+
+              <ellipse cx="602" cy="132" rx="22" ry="15" fill="none" class="dg-accent-s" stroke-width="2"/>
+              <ellipse cx="602" cy="184" rx="22" ry="8" fill="none" class="dg-accent-s" stroke-width="1.8"/>
+              <ellipse cx="602" cy="228" rx="22" ry="2.5" fill="none" class="dg-accent-s" stroke-width="1.5"/>
+
+              <line x1="482" y1="240" x2="728" y2="240" class="dg-rule" stroke-width="2.5"/>
+              <path d="M 482 240 L 728 240 L 728 262 L 482 262 Z" class="dg-fill dg-rule" stroke-width="1"/>
+              <text x="605" y="256" text-anchor="middle" class="dg-label th">พื้นทะเล</text>
+              <text x="605" y="256" text-anchor="middle" class="dg-label en">SEABED</text>
+
+              <text x="482" y="288" class="dg-label th">การเคลื่อนที่ในแนวราบยังเหลืออยู่ที่พื้นทะเล</text>
+              <text x="482" y="288" class="dg-label en">HORIZONTAL MOTION SURVIVES AT THE BED</text>
+              <text x="482" y="306" class="dg-label th">จึงเป็นที่มาของอุปกรณ์แบบแผ่นโยกที่ยึดกับพื้น</text>
+              <text x="482" y="306" class="dg-label en">WHICH IS WHY BOTTOM-HINGED FLAPS WORK HERE</text>
+
+              <text x="20" y="352" class="dg-label th">คาบคลื่นไม่เปลี่ยนตลอดเส้นทาง แต่ความยาวคลื่นและความเร็วลดลงเมื่อน้ำตื้นขึ้น ทำให้คลื่นสูงขึ้นจนแตกที่ความชันราว 1/7</text>
+              <text x="20" y="352" class="dg-label en">PERIOD IS CONSERVED ALL THE WAY IN, BUT LENGTH AND SPEED FALL IN SHALLOWING WATER, RAISING THE WAVE UNTIL IT BREAKS NEAR 1/7 STEEPNESS</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label"><span class="th">รูปที่ 6.1</span><span class="en">Figure 6.1</span></span>
+            <span class="th">แผงซ้ายอธิบายข้อจำกัดที่กำหนดการออกแบบอุปกรณ์ทั้งหมด — พลังงานอยู่ที่ผิวน้ำ จึงไม่มีทางหลบพายุด้วยการดำลึกแล้วยังผลิตไฟฟ้าได้ แผงขวาอธิบายข้อยกเว้นที่น่าสนใจ เพราะในน้ำตื้นการเคลื่อนที่ในแนวราบยังเหลืออยู่จนถึงพื้นทะเล จึงเปิดทางให้อุปกรณ์แบบแผ่นโยกที่ยึดกับพื้นทะเลทำงานได้ ซึ่งมีข้อดีคือโครงสร้างมั่นคงกว่าและหลบแรงกระแทกที่ผิวน้ำได้บางส่วน</span>
+            <span class="en">The left panel states the constraint that governs every device design: the energy is at the surface, so there is no way to dive beneath a storm and still generate. The right panel shows the interesting exception — in shallow water the horizontal motion persists all the way to the bed, which is what allows bottom-hinged flap devices to work, with the advantages of a firmer structure and partial shelter from surface slamming.</span>
+          </figcaption>
+        </figure>
+
+        <div class="demo" data-demo="wave-depth" data-reveal>
+          <div class="demo__head">
+            <span class="demo__label"><span class="th">ลองเล่นดู</span><span class="en">Try it</span></span>
+            <span class="demo__title">
+              <span class="th">คาบและความลึก: คลื่นรู้สึกถึงพื้นทะเลเมื่อใด</span>
+              <span class="en">Period and depth: when does a wave feel the seabed?</span>
+            </span>
+            <span class="demo__sub">
+              <span class="th">สมการ (6.1) แก้ด้วยการวนซ้ำ จึงใช้ได้ทั้งสามย่านความลึก · สังเกตว่าคลื่นคาบยาวรู้สึกถึงพื้นทะเลที่ความลึกมากกว่าคลื่นคาบสั้นเสมอ นี่คือเหตุผลที่คลื่น swell เริ่มเปลี่ยนรูปตั้งแต่ยังห่างฝั่งหลายกิโลเมตร</span>
+              <span class="en">Equation (6.1) solved by iteration, so it holds across all three depth regimes. Notice that a long-period wave feels the bed in much deeper water than a short one — which is why swell begins to change shape kilometres from shore.</span>
+            </span>
+          </div>
+
+          <div class="demo__stage" style="min-width:0">
+            <div class="tscale">
+              <div class="tscale__band tscale__band--a"><span class="th">น้ำตื้น</span><span class="en">Shallow</span></div>
+              <div class="tscale__band tscale__band--c"><span class="th">น้ำปานกลาง</span><span class="en">Intermediate</span></div>
+              <div class="tscale__band tscale__band--d"><span class="th">น้ำลึก</span><span class="en">Deep</span></div>
+              <div class="tscale__mark" data-wd-mark style="left:60%"></div>
+            </div>
+            <div class="sbar-scale">
+              <span>d/L = 0.002</span>
+              <span>d/L = 0.05</span>
+              <span>d/L = 1.0</span>
+            </div>
+          </div>
+
+          <div class="readouts">
+            <div class="readout readout--accent">
+              <span class="readout__label"><span class="th">ความยาวคลื่น</span><span class="en">Wavelength</span></span>
+              <span class="readout__value"><span data-wd-len>156</span><span class="readout__unit">m</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">ความเร็วเฟส</span><span class="en">Phase speed</span></span>
+              <span class="readout__value"><span data-wd-c>15.6</span><span class="readout__unit">m/s</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">ความเร็วกลุ่ม</span><span class="en">Group velocity</span></span>
+              <span class="readout__value"><span data-wd-cg>7.8</span><span class="readout__unit">m/s</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">การเคลื่อนที่แนวราบที่พื้นทะเล</span><span class="en">Horizontal motion at the seabed</span></span>
+              <span class="readout__value"><span data-wd-orb>0</span><span class="readout__unit">%</span></span>
+            </div>
+          </div>
+
+          <div class="demo__controls">
+            <label class="demo__field">
+              <span class="th">คาบคลื่น T (s)</span><span class="en">Wave period T (s)</span>
+              <input type="range" min="2" max="18" step="0.5" value="10" data-wd-period aria-label="Wave period in seconds">
+            </label>
+            <label class="demo__field">
+              <span class="th">ความลึกน้ำ d (m)</span><span class="en">Water depth d (m)</span>
+              <input type="range" min="1" max="200" step="1" value="200" data-wd-depth aria-label="Water depth in metres">
+            </label>
+            <div class="preset-row">
+              <button type="button" class="preset" data-wd-preset="10|200"><span class="th">swell ทะเลเปิด</span><span class="en">Open-ocean swell</span></button>
+              <button type="button" class="preset" data-wd-preset="10|30"><span class="th">ใกล้ฝั่ง 30 ม.</span><span class="en">Nearshore, 30 m</span></button>
+              <button type="button" class="preset" data-wd-preset="10|3"><span class="th">น้ำตื้น 3 ม. (ตัวอย่าง 6.1)</span><span class="en">Shallow, 3 m (Ex 6.1)</span></button>
+              <button type="button" class="preset" data-wd-preset="4.5|25"><span class="th">คลื่นลมอ่าวไทย</span><span class="en">Gulf of Thailand sea</span></button>
+            </div>
+          </div>
+
+          <div class="demo__warn" data-wd-warn hidden>
+            <span class="th">ที่ความลึกนี้คลื่นเข้าสู่ย่านน้ำตื้นแล้ว ความเร็วขึ้นกับความลึกเพียงอย่างเดียว ความเร็วกลุ่มเท่ากับความเร็วเฟส และคลื่นจะเริ่มสูงชันขึ้นจนแตกตัว พลังงานส่วนหนึ่งจึงสูญไปกับความปั่นป่วนก่อนถึงอุปกรณ์ การวางอุปกรณ์ในย่านนี้ต้องแลกพลังงานที่ลดลงกับการเข้าถึงที่ง่ายขึ้นและโครงสร้างที่ถูกลง</span>
+            <span class="en">At this depth the wave has entered the shallow-water regime: speed depends on depth alone, group velocity equals phase velocity, and the wave steepens towards breaking, losing part of its energy to turbulence before reaching any device. Siting here trades reduced energy for easier access and cheaper structures.</span>
+          </div>
+
+          <div class="demo__note">
+            <p>
+              <span class="th">ลองทำสิ่งนี้: ตั้งความลึกไว้ที่ 30 เมตรแล้วเลื่อนคาบจาก 4 ไปถึง 16 วินาที จะเห็นว่าคลื่นคาบสั้นยังอยู่ในย่านน้ำลึก ส่วนคลื่นคาบยาวเข้าสู่ย่านน้ำปานกลางแล้ว ทั้งที่ความลึกเท่ากัน คำว่า &ldquo;น้ำลึก&rdquo; ในวิชาคลื่นจึงไม่ได้หมายถึงความลึกเป็นเมตร แต่หมายถึง <em>ความลึกเทียบกับความยาวคลื่น</em> เสมอ</span>
+              <span class="en">Try this: hold the depth at 30 m and sweep the period from 4 to 16 s. The short waves remain in deep water while the long ones enter the intermediate regime, at the very same depth. In wave mechanics &ldquo;deep water&rdquo; never means a depth in metres — it always means <em>depth relative to wavelength</em>.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 6.3 ============ -->
+      <section class="section" id="s3">
+        <h2><span class="num">6.3</span>
+          <span><span class="th">พลังงานและกำลังของคลื่น</span>
+          <span class="en">Wave energy and wave power</span></span>
+        </h2>
+
+        <p>
+          <span class="th">พลังงานในคลื่นแบ่งเป็นสองส่วนเท่า ๆ กันเสมอ — <strong>พลังงานศักย์</strong> จากน้ำที่ถูกยกขึ้นเหนือระดับนิ่ง และ <strong>พลังงานจลน์</strong> จากอนุภาคน้ำที่เคลื่อนที่เป็นวงโคจร ความเท่ากันนี้เป็นผลโดยตรงจากทฤษฎีเชิงเส้น และรวมกันได้เป็นพลังงานต่อหนึ่งตารางเมตรของผิวทะเล</span>
+          <span class="en">The energy in a wave divides into two always-equal halves — <strong>potential energy</strong> from water lifted above the still level, and <strong>kinetic energy</strong> from particles moving round their orbits. That equality follows directly from linear theory, and the two together give the energy per square metre of sea surface.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ E \;=\; \tfrac{1}{8}\rho g H^{2} \qquad\quad c_{g} = \tfrac{1}{2}c = \frac{gT}{4\pi} \qquad\quad P = E\,c_{g} \]</div>
+            <span class="formula__num">(6.4)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(E\) = พลังงานต่อพื้นที่ผิวทะเล (J/m²) · \(\rho = 1025\ \mathrm{kg/m^3}\) สำหรับน้ำทะเล · \(H\) = ความสูงคลื่น (m) · \(c_{g}\) = ความเร็วกลุ่ม ซึ่งเป็นความเร็วที่ <em>พลังงาน</em> เดินทาง และในน้ำลึกมีค่าเพียงครึ่งหนึ่งของความเร็วเฟส · \(P\) = กำลังต่อความยาวหน้าคลื่นหนึ่งเมตร (W/m)</span>
+            <span class="en">\(E\) is energy per square metre of sea surface (J/m²) · \(\rho = 1025\ \mathrm{kg/m^3}\) for seawater · \(H\) the wave height (m) · \(c_{g}\) the group velocity, the speed at which <em>energy</em> travels, which in deep water is only half the phase speed · \(P\) the power per metre of wave crest (W/m).</span>
+          </div>
+        </div>
+
+        <div class="callout callout--key">
+          <div class="callout__title">
+            <span class="th">พลังงานเดินทางช้ากว่ายอดคลื่นครึ่งหนึ่ง</span>
+            <span class="en">Energy travels at half the speed of the crests</span>
+          </div>
+          <p>
+            <span class="th">ถ้าเฝ้าดูกลุ่มคลื่นในน้ำลึกอย่างตั้งใจ จะเห็นปรากฏการณ์ที่แปลกประหลาด — ยอดคลื่นแต่ละยอดเกิดขึ้นที่ท้ายกลุ่ม วิ่งผ่านกลุ่มไปข้างหน้า แล้วหายไปที่หัวกลุ่ม ตัวกลุ่มเองเคลื่อนที่ช้ากว่ายอดคลื่นครึ่งหนึ่งพอดี และ <em>พลังงานเดินทางไปกับกลุ่ม ไม่ใช่กับยอด</em> การใช้ \(c\) แทน \(c_{g}\) ในการคำนวณกำลังคลื่นจึงให้คำตอบที่มากเกินจริงเป็นสองเท่า ซึ่งเป็นข้อผิดพลาดที่พบบ่อยที่สุดข้อหนึ่งในงานนักศึกษา</span>
+            <span class="en">Watch a group of deep-water waves closely and something strange appears: individual crests are born at the back of the group, run forward through it, and vanish at the front. The group itself moves at exactly half the speed of the crests — and <em>the energy travels with the group, not with the crests</em>. Using \(c\) instead of \(c_{g}\) therefore overstates wave power by a factor of two, one of the commonest errors in student work.</span>
+          </p>
+        </div>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ P_{regular} = \frac{\rho g^{2} H^{2} T}{32\pi} \approx 0.98\,H^{2}T \qquad\quad P_{sea} = \frac{\rho g^{2} H_{s}^{2} T_{e}}{64\pi} \approx 0.49\,H_{s}^{2}T_{e} \]</div>
+            <span class="formula__num">(6.5)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">ทั้งสองให้ผลเป็น kW ต่อความยาวหน้าคลื่นหนึ่งเมตร เมื่อใส่ \(H\) เป็นเมตรและ \(T\) เป็นวินาที · ซ้ายใช้กับ <strong>คลื่นสม่ำเสมอ</strong> ในห้องทดลอง · ขวาใช้กับ <strong>ทะเลจริง</strong> ที่ระบุด้วยความสูงคลื่นนัยสำคัญ \(H_{s}\) และคาบพลังงาน \(T_{e}\) · <strong>สังเกตตัวหารที่ต่างกันสองเท่า</strong> — นี่ไม่ใช่ความบังเอิญ แต่มาจากนิยามของ \(H_{s}\) ที่เป็นค่าเฉลี่ยของคลื่นสูงหนึ่งในสาม การใช้สูตรผิดตัวทำให้คำตอบผิดไปสองเท่าทันที</span>
+            <span class="en">Both give kilowatts per metre of crest with \(H\) in metres and \(T\) in seconds. The left applies to <strong>regular waves</strong> in a laboratory flume; the right to a <strong>real sea</strong> described by significant wave height \(H_{s}\) and energy period \(T_{e}\). <strong>Note the factor of two between the denominators</strong> — not a coincidence but a consequence of how \(H_{s}\) is defined, as the mean of the highest third. Using the wrong one is instantly a factor-of-two error.</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 6.3 · กำลังคลื่นในสามทะเลของโลก</span>
+            <span class="en">Worked example 6.3 · Wave power in three of the world&rsquo;s seas</span>
+          </div>
+          <p>
+            <span class="th">จงเปรียบเทียบกำลังคลื่นต่อเมตรของ (ก) ทะเลนอกชายฝั่งตะวันตกของไอร์แลนด์ \(H_{s} = 3.0\ \mathrm{m}\), \(T_{e} = 9.0\ \mathrm{s}\) (ข) ทะเลเมดิเตอร์เรเนียน \(H_{s} = 1.2\ \mathrm{m}\), \(T_{e} = 5.5\ \mathrm{s}\) และ (ค) อ่าวไทย \(H_{s} = 0.8\ \mathrm{m}\), \(T_{e} = 4.5\ \mathrm{s}\)</span>
+            <span class="en">Compare the wave power per metre for (a) the sea west of Ireland at \(H_{s} = 3.0\ \mathrm{m}\), \(T_{e} = 9.0\ \mathrm{s}\); (b) the Mediterranean at \(H_{s} = 1.2\ \mathrm{m}\), \(T_{e} = 5.5\ \mathrm{s}\); and (c) the Gulf of Thailand at \(H_{s} = 0.8\ \mathrm{m}\), \(T_{e} = 4.5\ \mathrm{s}\).</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">(ก) ไอร์แลนด์: \(P = 0.49 \times 3.0^{2} \times 9.0 = 0.49 \times 9 \times 9 = \mathbf{39.7\ kW/m}\)</span>
+              <span class="en">(a) Ireland: \(P = 0.49 \times 3.0^{2} \times 9.0 = 0.49 \times 9 \times 9 = \mathbf{39.7\ kW/m}\)</span>
+            </li>
+            <li>
+              <span class="th">(ข) เมดิเตอร์เรเนียน: \(P = 0.49 \times 1.44 \times 5.5 = \mathbf{3.9\ kW/m}\)</span>
+              <span class="en">(b) Mediterranean: \(P = 0.49 \times 1.44 \times 5.5 = \mathbf{3.9\ kW/m}\)</span>
+            </li>
+            <li>
+              <span class="th">(ค) อ่าวไทย: \(P = 0.49 \times 0.64 \times 4.5 = \mathbf{1.4\ kW/m}\)</span>
+              <span class="en">(c) Gulf of Thailand: \(P = 0.49 \times 0.64 \times 4.5 = \mathbf{1.4\ kW/m}\)</span>
+            </li>
+            <li>
+              <span class="th">อัตราส่วน: ไอร์แลนด์ต่ออ่าวไทยเท่ากับ \(39.7/1.4 = \mathbf{28}\) เท่า ความสูงคลื่นต่างกันเพียง 3.75 เท่า แต่เพราะกำลังแปรผันกับ \(H^{2}\) และยังคูณด้วยคาบที่ยาวกว่าอีกสองเท่า ผลรวมจึงต่างกันเกือบสามสิบเท่า</span>
+              <span class="en">The ratio: Ireland to the Gulf is \(39.7/1.4 = \mathbf{28}\). The heights differ by only 3.75 times, but because power goes as \(H^{2}\) and is then multiplied by a period twice as long, the combined effect is nearly thirtyfold.</span>
+            </li>
+            <li>
+              <span class="th">ข้อสรุปที่ต้องจำ: <em>พลังงานคลื่นเป็นทรัพยากรที่กระจุกตัวทางภูมิศาสตร์อย่างรุนแรงที่สุดในบรรดาพลังงานหมุนเวียนทั้งหมด</em> ความต่างระหว่างแหล่งที่ดีที่สุดกับแหล่งที่แย่ที่สุดสูงถึงห้าสิบเท่า เทียบกับแสงอาทิตย์ที่ต่างกันเพียงสองถึงสามเท่าทั่วโลก</span>
+              <span class="en">The conclusion to remember: <em>wave energy is the most severely concentrated renewable resource of all, geographically</em>. Best and worst sites differ by up to fifty times, against a factor of only two or three for sunlight worldwide.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 6.4 · กับดักตัวประกอบสองเท่า</span>
+            <span class="en">Worked example 6.4 · The factor-of-two trap</span>
+          </div>
+          <p>
+            <span class="th">ในถังทดลองสร้างคลื่นสม่ำเสมอสูง 1.5 เมตร คาบ 7 วินาที นักศึกษาสองคนคำนวณกำลังคลื่นได้ 10.8 kW/m และ 5.4 kW/m ตามลำดับ ใครถูก และคนที่ผิดพลาดตรงไหน</span>
+            <span class="en">A flume generates regular waves 1.5 m high with a 7 s period. Two students compute the wave power as 10.8 kW/m and 5.4 kW/m. Which is right, and where did the other go wrong?</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">คลื่นในถังทดลองเป็นคลื่น <em>สม่ำเสมอ</em> จึงต้องใช้สูตรซ้ายของสมการ (6.5)</span>
+              <span class="en">Flume waves are <em>regular</em>, so the left-hand form of equation (6.5) applies.</span>
+            </li>
+            <li>
+              <span class="th">\(P = 0.98 \times 1.5^{2} \times 7 = 0.98 \times 2.25 \times 7 = \mathbf{15.4\ kW/m}\)</span>
+              <span class="en">\(P = 0.98 \times 1.5^{2} \times 7 = 0.98 \times 2.25 \times 7 = \mathbf{15.4\ kW/m}\)</span>
+            </li>
+            <li>
+              <span class="th">ทั้งสองคนผิด คนที่ได้ 10.8 น่าจะใช้ \(\rho = 1000\) และพลาดที่อื่นด้วย ส่วนคนที่ได้ 5.4 ใช้สูตรของทะเลจริง (0.49) กับความสูงคลื่นสม่ำเสมอ ซึ่งให้ค่าน้อยไปครึ่งหนึ่งพอดี: \(0.49 \times 2.25 \times 7 = 7.7\) — ยังไม่ตรงกับ 5.4 แสดงว่าพลาดสองจุดพร้อมกัน</span>
+              <span class="en">Both are wrong. The 10.8 figure suggests \(\rho = 1000\) plus another slip. The 5.4 figure comes from applying the real-sea form (0.49) to a regular wave height, which halves the answer: \(0.49 \times 2.25 \times 7 = 7.7\) — still not 5.4, so two mistakes compounded.</span>
+            </li>
+            <li>
+              <span class="th">บทเรียน: ก่อนใส่ตัวเลขใด ๆ ให้ถามก่อนเสมอว่า &ldquo;ความสูงที่ให้มาคือ \(H\) ของคลื่นสม่ำเสมอ หรือ \(H_{s}\) ของทะเลจริง&rdquo; ถ้าโจทย์ไม่ระบุ ให้ถือว่าค่าที่มาจากทุ่นวัดคลื่นหรือแบบจำลองสภาพอากาศคือ \(H_{s}\) เสมอ ส่วนค่าที่มาจากถังทดลองคือ \(H\)</span>
+              <span class="en">The lesson: before substituting anything, always ask whether the height given is the \(H\) of a regular wave or the \(H_{s}\) of a real sea. When unstated, a value from a wave buoy or a weather model is always \(H_{s}\); a value from a flume is \(H\).</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="demo" data-demo="wave-power" data-reveal>
+          <div class="demo__head">
+            <span class="demo__label"><span class="th">ลองเล่นดู</span><span class="en">Try it</span></span>
+            <span class="demo__title">
+              <span class="th">ยี่สิบแปดเท่า: ภูมิศาสตร์ของพลังงานคลื่น</span>
+              <span class="en">Twenty-eight times over: the geography of wave power</span>
+            </span>
+            <span class="demo__sub">
+              <span class="th">สมการ (6.5) ฝั่งทะเลจริง · เลื่อน \(H_{s}\) และ \(T_{e}\) หรือกดพรีเซ็ตเพื่อย้ายไปยังทะเลต่าง ๆ ของโลก แล้วสังเกตว่าความสูงคลื่นที่เพิ่มขึ้นเพียงเล็กน้อยเปลี่ยนกำลังไปมากเพียงใด</span>
+              <span class="en">The real-sea form of equation (6.5). Move \(H_{s}\) and \(T_{e}\), or press a preset to visit different seas, and watch how a modest change in height transforms the power.</span>
+            </span>
+          </div>
+
+          <div class="demo__stage" style="min-width:0">
+            <div class="sbar">
+              <div class="sbar__seg sbar__seg--usable" data-wp-seg="here" style="width:35%"></div>
+              <div class="sbar__seg sbar__seg--water" data-wp-seg="rest" style="width:65%"></div>
+            </div>
+            <div class="sbar-scale">
+              <span>0</span>
+              <span><span class="th">เทียบกับแหล่งชั้นดีของโลก 45 kW/m</span><span class="en">Against a world-class resource of 45 kW/m</span></span>
+            </div>
+            <div class="sbar-legend">
+              <span class="key"><i class="k-usable"></i><span class="th">กำลังคลื่นที่ทะเลนี้ให้</span><span class="en">What this sea offers</span></span>
+              <span class="key"><i class="k-water"></i><span class="th">ส่วนที่ขาดไปจากแหล่งชั้นดี</span><span class="en">The shortfall against a world-class site</span></span>
+            </div>
+          </div>
+
+          <div class="readouts">
+            <div class="readout readout--accent">
+              <span class="readout__label"><span class="th">กำลังคลื่นต่อหน้าคลื่น 1 เมตร</span><span class="en">Wave power per metre of crest</span></span>
+              <span class="readout__value"><span data-wp-power>15.7</span><span class="readout__unit">kW/m</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">พลังงานรายปีต่อเมตร</span><span class="en">Annual energy per metre</span></span>
+              <span class="readout__value"><span data-wp-energy>138</span><span class="readout__unit">MWh</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">ความยาวคลื่น</span><span class="en">Wavelength</span></span>
+              <span class="readout__value"><span data-wp-len>100</span><span class="readout__unit">m</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">เทียบกับนอกฝั่งไอร์แลนด์</span><span class="en">Against the Irish west coast</span></span>
+              <span class="readout__value"><span data-wp-ratio>40</span><span class="readout__unit">%</span></span>
+            </div>
+          </div>
+
+          <div class="demo__controls">
+            <label class="demo__field">
+              <span class="th">ความสูงคลื่นนัยสำคัญ Hs (m)</span><span class="en">Significant wave height Hs (m)</span>
+              <input type="range" min="0.2" max="6" step="0.1" value="2" data-wp-hs aria-label="Significant wave height in metres">
+            </label>
+            <label class="demo__field">
+              <span class="th">คาบพลังงาน Te (s)</span><span class="en">Energy period Te (s)</span>
+              <input type="range" min="3" max="14" step="0.5" value="8" data-wp-te aria-label="Energy period in seconds">
+            </label>
+            <div class="preset-row">
+              <button type="button" class="preset" data-wp-preset="3.0|9.0"><span class="th">นอกฝั่งไอร์แลนด์</span><span class="en">West of Ireland</span></button>
+              <button type="button" class="preset" data-wp-preset="2.0|8.0"><span class="th">ชายฝั่งโปรตุเกส</span><span class="en">Portuguese coast</span></button>
+              <button type="button" class="preset" data-wp-preset="1.2|5.5"><span class="th">เมดิเตอร์เรเนียน</span><span class="en">Mediterranean</span></button>
+              <button type="button" class="preset" data-wp-preset="0.8|4.5"><span class="th">อ่าวไทย</span><span class="en">Gulf of Thailand</span></button>
+            </div>
+          </div>
+
+          <div class="demo__warn" data-wp-warn hidden>
+            <span class="th">ต่ำกว่าราว 5 kW/m แทบไม่มีอุปกรณ์แปลงพลังงานคลื่นแบบใดที่คุ้มค่าเชิงพาณิชย์ในการผลิตไฟฟ้าเข้าระบบ เพราะต้นทุนโครงสร้าง การยึดโยง และการบำรุงรักษาในทะเลแทบไม่ลดลงตามขนาดของทรัพยากร งานที่สมเหตุสมผลในย่านนี้คืออุปกรณ์กำลังต่ำที่ทดแทนแบตเตอรี่หรือแผงโซลาร์ในทะเล ไม่ใช่โรงไฟฟ้า</span>
+            <span class="en">Below roughly 5 kW/m almost no converter pays its way generating for a grid, because structure, mooring and offshore maintenance costs barely fall as the resource shrinks. What makes sense in this band is low-power equipment displacing batteries or solar panels at sea — not a power station.</span>
+          </div>
+
+          <div class="demo__note">
+            <p>
+              <span class="th">ลองทำสิ่งนี้: เริ่มที่พรีเซ็ตอ่าวไทย แล้วเพิ่ม \(H_{s}\) จาก 0.8 เป็น 1.6 เมตร ซึ่งเป็นเพียงสองเท่า จะพบว่ากำลังเพิ่มขึ้นสี่เท่า จากนั้นเพิ่ม \(T_{e}\) จาก 4.5 เป็น 9 วินาที กำลังเพิ่มอีกสองเท่ารวมเป็นแปดเท่า นี่คือเหตุผลที่แหล่งคลื่นดี ๆ ต้องมีทั้งคลื่นสูง <em>และ</em> คาบยาว ซึ่งเกิดขึ้นได้เฉพาะเมื่อมี fetch ยาวนับพันกิโลเมตรเท่านั้น</span>
+              <span class="en">Try this: start at the Gulf of Thailand preset and raise \(H_{s}\) from 0.8 to 1.6 m — a doubling that quadruples the power. Then raise \(T_{e}\) from 4.5 to 9 s and the power doubles again, eight times over in total. This is why a good wave resource needs both tall waves <em>and</em> long periods, a combination only a fetch of thousands of kilometres can produce.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 6.4 ============ -->
+      <section class="section" id="s4">
+        <h2><span class="num">6.4</span>
+          <span><span class="th">การประเมินทรัพยากร: แผนภาพกระจาย</span>
+          <span class="en">Assessing the resource: the scatter diagram</span></span>
+        </h2>
+
+        <p>
+          <span class="th">เช่นเดียวกับที่บทที่ 5 ต้องใช้เส้นโค้งระยะเวลาการไหลแทนค่าอัตราการไหลเฉลี่ย งานพลังงานคลื่นก็ใช้ค่าเฉลี่ยของ \(H_{s}\) ไม่ได้ เพราะกำลังแปรผันกับ \(H_{s}^{2}\) ค่าเฉลี่ยของกำลังจึงไม่เท่ากับกำลังที่คำนวณจากค่าเฉลี่ย เครื่องมือมาตรฐานคือ <strong>แผนภาพกระจาย (scatter diagram)</strong> ซึ่งบอกว่าในหนึ่งปีมีกี่ชั่วโมงที่ทะเลอยู่ในแต่ละช่อง \((H_{s}, T_{e})\)</span>
+          <span class="en">Just as Chapter 5 needed a flow duration curve rather than a mean flow, wave work cannot use a mean \(H_{s}\): power goes as \(H_{s}^{2}\), so the mean of the power is not the power of the mean. The standard tool is the <strong>scatter diagram</strong>, which records how many hours a year the sea spends in each \((H_{s}, T_{e})\) cell.</span>
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">Hs (m) ↓ · Te (s) →</span><span class="en">Hs (m) ↓ · Te (s) →</span></th>
+                <th class="num">4</th>
+                <th class="num">5</th>
+                <th class="num">6</th>
+                <th class="num">7</th>
+                <th class="num"><span class="th">รวม (ชม.)</span><span class="en">Total (h)</span></th>
+                <th class="num"><span class="th">P (kW/m)</span><span class="en">P (kW/m)</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="num">0.25</td>
+                <td class="num">1,830</td><td class="num">920</td><td class="num">180</td><td class="num">0</td>
+                <td class="num">2,930</td><td class="num">0.1</td>
+              </tr>
+              <tr>
+                <td class="num">0.75</td>
+                <td class="num">960</td><td class="num">1,480</td><td class="num">640</td><td class="num">90</td>
+                <td class="num">3,170</td><td class="num">1.2</td>
+              </tr>
+              <tr>
+                <td class="num">1.25</td>
+                <td class="num">120</td><td class="num">610</td><td class="num">780</td><td class="num">230</td>
+                <td class="num">1,740</td><td class="num">3.6</td>
+              </tr>
+              <tr>
+                <td class="num">1.75</td>
+                <td class="num">0</td><td class="num">130</td><td class="num">380</td><td class="num">240</td>
+                <td class="num">750</td><td class="num">7.5</td>
+              </tr>
+              <tr>
+                <td class="num">2.25</td>
+                <td class="num">0</td><td class="num">20</td><td class="num">90</td><td class="num">60</td>
+                <td class="num">170</td><td class="num">13.2</td>
+              </tr>
+              <tr>
+                <td><span class="th"><strong>รวม</strong></span><span class="en"><strong>Total</strong></span></td>
+                <td class="num">2,910</td><td class="num">3,160</td><td class="num">2,070</td><td class="num">620</td>
+                <td class="num"><strong>8,760</strong></td><td class="num">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">
+          <span class="th">ตารางที่ 6.1 · แผนภาพกระจายเชิงสาธิตสำหรับทะเลแบบอ่าวไทย หน่วยเป็นชั่วโมงต่อปี รวมกันได้ 8,760 ชั่วโมงพอดี คอลัมน์ขวาสุดคือกำลังคลื่นที่คำนวณจาก \(H_{s}\) ของแถวนั้นกับ \(T_{e}\) เฉลี่ยถ่วงน้ำหนักของแถว ตัวเลขนี้จัดทำขึ้นเพื่อการสอน ข้อมูลจริงต้องใช้จากทุ่นวัดคลื่นหรือแบบจำลองที่ผ่านการสอบเทียบ</span>
+          <span class="en">Table 6.1 · An illustrative scatter diagram for a Gulf-of-Thailand-like sea, in hours per year, summing to exactly 8,760. The right-hand column is the wave power from that row&rsquo;s \(H_{s}\) and its weighted-mean \(T_{e}\). These are teaching figures; real work requires buoy data or a calibrated hindcast model.</span>
+        </p>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 6.5 · พลังงานรายปีจากแผนภาพกระจาย</span>
+            <span class="en">Worked example 6.5 · Annual energy from a scatter diagram</span>
+          </div>
+          <p>
+            <span class="th">จงหากำลังคลื่นเฉลี่ยรายปีจากตารางที่ 6.1 แล้วเปรียบเทียบกับค่าที่ได้จากการใช้ \(H_{s}\) เฉลี่ยเพียงค่าเดียว</span>
+            <span class="en">Find the annual mean wave power from Table 6.1, then compare it with the value obtained from a single mean \(H_{s}\).</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">คูณกำลังของแต่ละแถวด้วยชั่วโมงของแถวนั้น: \(0.1 \times 2930 = 293\) · \(1.2 \times 3170 = 3{,}804\) · \(3.6 \times 1740 = 6{,}264\) · \(7.5 \times 750 = 5{,}625\) · \(13.2 \times 170 = 2{,}244\) kWh/m</span>
+              <span class="en">Multiply each row&rsquo;s power by its hours: \(0.1 \times 2930 = 293\) · \(1.2 \times 3170 = 3{,}804\) · \(3.6 \times 1740 = 6{,}264\) · \(7.5 \times 750 = 5{,}625\) · \(13.2 \times 170 = 2{,}244\) kWh/m.</span>
+            </li>
+            <li>
+              <span class="th">รวมพลังงานรายปี: \(\mathbf{18{,}230\ kWh/m} = 18.2\ \mathrm{MWh}\) ต่อความยาวหน้าคลื่นหนึ่งเมตร</span>
+              <span class="en">Total annual energy: \(\mathbf{18{,}230\ kWh/m} = 18.2\ \mathrm{MWh}\) per metre of crest.</span>
+            </li>
+            <li>
+              <span class="th">กำลังเฉลี่ยรายปี: \(18{,}230/8760 = \mathbf{2.08\ kW/m}\)</span>
+              <span class="en">Annual mean power: \(18{,}230/8760 = \mathbf{2.08\ kW/m}\)</span>
+            </li>
+            <li>
+              <span class="th">เทียบกับวิธีลัดที่ผิด: \(H_{s}\) เฉลี่ยถ่วงน้ำหนักคือ \((0.25 \times 2930 + 0.75 \times 3170 + 1.25 \times 1740 + 1.75 \times 750 + 2.25 \times 170)/8760 = 0.80\ \mathrm{m}\) และถ้าใช้ \(T_{e} = 5\) จะได้ \(0.49 \times 0.80^{2} \times 5 = 1.56\ \mathrm{kW/m}\)</span>
+              <span class="en">Against the tempting shortcut: the weighted mean \(H_{s}\) is \((0.25 \times 2930 + 0.75 \times 3170 + 1.25 \times 1740 + 1.75 \times 750 + 2.25 \times 170)/8760 = 0.80\ \mathrm{m}\), and with \(T_{e} = 5\) that gives \(0.49 \times 0.80^{2} \times 5 = 1.56\ \mathrm{kW/m}\).</span>
+            </li>
+            <li>
+              <span class="th">วิธีลัดให้ค่าต่ำไป <strong>25%</strong> เพราะละเลยข้อเท็จจริงที่ว่าชั่วโมงส่วนน้อยที่คลื่นสูงให้พลังงานสัดส่วนมาก สังเกตว่าแถว \(H_{s} = 2.25\) กินเวลาเพียง 2% ของปี แต่ให้พลังงาน 12% ของทั้งหมด ส่วนแถวบนสุดที่กินเวลาถึง 33% ของปีกลับให้พลังงานเพียง 1.6%</span>
+              <span class="en">The shortcut is <strong>25% low</strong>, because it ignores that a small number of rough hours carries a large share of the energy. Note that the \(H_{s} = 2.25\) row occupies just 2% of the year yet supplies 12% of the energy, while the calmest row fills 33% of the year and contributes only 1.6%.</span>
+            </li>
+            <li>
+              <span class="th">บทเรียนเชิงวิธีการ: ต้องรวมพลังงานทีละช่องเสมอ ห้ามคำนวณจากค่าเฉลี่ย และนี่เป็นเหตุผลเดียวกับที่บทที่ 5 ต้องแบ่งเส้นโค้งระยะเวลาการไหลเป็นช่วง ๆ แทนการใช้อัตราการไหลเฉลี่ย</span>
+              <span class="en">The methodological lesson: always sum cell by cell, never compute from an average — the same reason Chapter 5 divided the flow duration curve into bands rather than using a mean flow.</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ 6.5 ============ -->
+      <section class="section" id="s5">
+        <h2><span class="num">6.5</span>
+          <span><span class="th">เทคโนโลยีห้าตระกูล และการไม่บรรจบกันของแบบ</span>
+          <span class="en">Five families of device, and a failure to converge</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ในบทที่ 5 เราเห็นว่ากังหันน้ำมีเพียงห้าชนิดหลักและแต่ละชนิดมีย่านการใช้งานที่ชัดเจน ในพลังงานคลื่นสถานการณ์ต่างออกไปโดยสิ้นเชิง — มีสิทธิบัตรมากกว่าหนึ่งพันฉบับและแนวคิดที่ถูกทดสอบจริงหลายร้อยแบบ โดยยังไม่มีแบบใดชนะ การจำแนกด้านล่างจึงเป็นการจัดกลุ่มตามหลักการทำงาน ไม่ใช่รายการของผลิตภัณฑ์ที่พร้อมซื้อ</span>
+          <span class="en">Chapter 5 showed that water turbines come in five main types, each with a clear operating range. Wave energy is quite different — more than a thousand patents and several hundred concepts tested at sea, with no winner yet. What follows is therefore a grouping by operating principle, not a catalogue of products you can buy.</span>
+        </p>
+
+        <figure class="figure" data-reveal>
+          <div class="figure__body">
+            <svg viewBox="0 0 760 320" width="760" role="img" aria-labelledby="fig62-title fig62-desc">
+              <title id="fig62-title">The five families of wave energy converter</title>
+              <desc id="fig62-desc">Five schematic panels. An oscillating water column is a chamber open below the waterline whose trapped air drives a bidirectional turbine. A point absorber is a small heaving buoy reacting against a seabed anchor or a submerged damper plate. An attenuator is a long chain of floating segments hinged across the wave direction. An overtopping device is a ramp that throws water into a raised reservoir which drains back through a low-head turbine. An oscillating wave surge converter is a flap hinged on the seabed that swings back and forth in shallow water.</desc>
+
+              <!-- OWC -->
+              <rect x="10" y="26" width="140" height="180" rx="3" class="dg-fill-2 dg-rule" stroke-width="1.2" opacity="0.5"/>
+              <text x="80" y="18" text-anchor="middle" class="dg-label th">คอลัมน์น้ำแกว่ง</text>
+              <text x="80" y="18" text-anchor="middle" class="dg-label en">OSC. WATER COLUMN</text>
+              <path d="M 40 60 L 40 160 L 120 160 L 120 60" fill="none" class="dg-rule" stroke-width="2.5"/>
+              <rect x="42" y="112" width="76" height="46" class="dg-fill dg-accent-s" stroke-width="0" opacity="0.55"/>
+              <path d="M 42 112 q 19 -10 38 0 q 19 10 38 0" fill="none" class="dg-accent" stroke-width="2"/>
+              <circle cx="80" cy="52" r="13" fill="none" class="dg-accent-s" stroke-width="2.4"/>
+              <text x="80" y="56" text-anchor="middle" class="dg-label">T</text>
+              <path d="M 80 96 L 80 68" class="dg-accent-s" stroke-width="1.6" fill="none"/>
+              <path d="M 80 68 L 80 96" class="dg-accent-s" stroke-width="1.6" fill="none"/>
+              <text x="14" y="182" class="dg-label th">อากาศถูกอัดและดูด</text>
+              <text x="14" y="182" class="dg-label en">AIR PUMPED IN AND OUT</text>
+              <text x="14" y="196" class="dg-label th">กังหันเวลส์หมุนทางเดียว</text>
+              <text x="14" y="196" class="dg-label en">WELLS TURBINE, ONE WAY</text>
+
+              <!-- point absorber -->
+              <rect x="160" y="26" width="140" height="180" rx="3" class="dg-fill-2 dg-rule" stroke-width="1.2" opacity="0.5"/>
+              <text x="230" y="18" text-anchor="middle" class="dg-label th">ทุ่นดูดซับจุดเดียว</text>
+              <text x="230" y="18" text-anchor="middle" class="dg-label en">POINT ABSORBER</text>
+              <path d="M 168 96 q 16 -14 31 0 q 16 14 31 0 q 16 -14 31 0 q 16 14 31 0" fill="none" class="dg-accent" stroke-width="2.2"/>
+              <circle cx="230" cy="86" r="16" class="dg-fill dg-accent-s" stroke-width="2"/>
+              <line x1="230" y1="102" x2="230" y2="168" class="dg-rule" stroke-width="2" stroke-dasharray="5 3"/>
+              <rect x="206" y="168" width="48" height="10" class="dg-fill dg-rule" stroke-width="1.5"/>
+              <g class="dg-accent-s" stroke-width="1.8" fill="none">
+                <path d="M 252 70 L 252 56"/><path d="M 252 102 L 252 116"/>
+              </g>
+              <text x="164" y="196" class="dg-label th">ขึ้นลงตามคลื่น เล็กแต่จับหน้าคลื่นกว้าง</text>
+              <text x="164" y="196" class="dg-label en">HEAVES WITH THE WAVE; SMALL BUT WIDE REACH</text>
+
+              <!-- attenuator -->
+              <rect x="310" y="26" width="150" height="180" rx="3" class="dg-fill-2 dg-rule" stroke-width="1.2" opacity="0.5"/>
+              <text x="385" y="18" text-anchor="middle" class="dg-label th">แบบลดทอน</text>
+              <text x="385" y="18" text-anchor="middle" class="dg-label en">ATTENUATOR</text>
+              <path d="M 318 110 q 18 -16 36 0 q 18 16 36 0 q 18 -16 36 0 q 9 8 18 8" fill="none" class="dg-accent" stroke-width="2.2"/>
+              <g class="dg-fill dg-accent-s" stroke-width="2">
+                <rect x="320" y="86" width="34" height="13" rx="4"/>
+                <rect x="358" y="100" width="34" height="13" rx="4"/>
+                <rect x="396" y="88" width="34" height="13" rx="4"/>
+              </g>
+              <circle cx="356" cy="93" r="3.5" class="dg-fill dg-rule" stroke-width="1.4"/>
+              <circle cx="394" cy="107" r="3.5" class="dg-fill dg-rule" stroke-width="1.4"/>
+              <text x="314" y="182" class="dg-label th">ข้อต่อดัดงอตามคลื่น ขับกระบอกไฮดรอลิก</text>
+              <text x="314" y="182" class="dg-label en">HINGES FLEX, DRIVING HYDRAULIC RAMS</text>
+              <text x="314" y="196" class="dg-label th">วางขนานทิศคลื่น รับแรงน้อยกว่า</text>
+              <text x="314" y="196" class="dg-label en">LIES ALONG THE WAVES, SEEING LESS FORCE</text>
+
+              <!-- overtopping -->
+              <rect x="470" y="26" width="140" height="180" rx="3" class="dg-fill-2 dg-rule" stroke-width="1.2" opacity="0.5"/>
+              <text x="540" y="18" text-anchor="middle" class="dg-label th">แบบน้ำล้นข้าม</text>
+              <text x="540" y="18" text-anchor="middle" class="dg-label en">OVERTOPPING</text>
+              <path d="M 478 120 q 14 -12 28 0" fill="none" class="dg-accent" stroke-width="2.2"/>
+              <path d="M 506 122 L 552 78 L 598 78 L 598 122 Z" class="dg-fill dg-rule" stroke-width="2"/>
+              <rect x="554" y="84" width="42" height="20" class="dg-fill dg-accent-s" stroke-width="0" opacity="0.6"/>
+              <text x="575" y="98" text-anchor="middle" class="dg-label th">อ่าง</text>
+              <text x="575" y="98" text-anchor="middle" class="dg-label en">RES.</text>
+              <circle cx="575" cy="132" r="10" fill="none" class="dg-accent-s" stroke-width="2.2"/>
+              <text x="575" y="136" text-anchor="middle" class="dg-label">T</text>
+              <path d="M 575 104 L 575 122" class="dg-accent-s" stroke-width="1.8" fill="none"/>
+              <text x="474" y="182" class="dg-label th">คลื่นวิ่งขึ้นทางลาดเข้าอ่างที่ยกสูง</text>
+              <text x="474" y="182" class="dg-label en">WAVES RUN UP A RAMP INTO A RAISED POND</text>
+              <text x="474" y="196" class="dg-label th">แล้วไหลกลับผ่านกังหันเฮดต่ำ</text>
+              <text x="474" y="196" class="dg-label en">AND DRAIN BACK THROUGH A LOW-HEAD TURBINE</text>
+
+              <!-- OWSC -->
+              <rect x="620" y="26" width="130" height="180" rx="3" class="dg-fill-2 dg-rule" stroke-width="1.2" opacity="0.5"/>
+              <text x="685" y="18" text-anchor="middle" class="dg-label th">แผ่นโยกยึดพื้น</text>
+              <text x="685" y="18" text-anchor="middle" class="dg-label en">SURGE FLAP</text>
+              <path d="M 628 76 q 14 -12 28 0 q 14 12 28 0 q 14 -12 28 0 q 7 6 14 6" fill="none" class="dg-accent" stroke-width="2.2"/>
+              <line x1="628" y1="168" x2="746" y2="168" class="dg-rule" stroke-width="2.5"/>
+              <rect x="628" y="168" width="118" height="14" class="dg-fill dg-rule" stroke-width="1"/>
+              <path d="M 678 166 L 678 90 L 696 90 L 696 166 Z" class="dg-fill dg-accent-s" stroke-width="2"/>
+              <circle cx="687" cy="166" r="4.5" class="dg-fill dg-rule" stroke-width="1.6"/>
+              <g class="dg-accent-s" stroke-width="1.8" fill="none">
+                <path d="M 656 118 L 670 118"/><path d="M 718 118 L 704 118"/>
+              </g>
+              <text x="624" y="196" class="dg-label th">น้ำตื้น 10–15 ม. แกว่งหน้า-หลัง</text>
+              <text x="624" y="196" class="dg-label en">SHALLOW 10–15 m, SWINGS FORE AND AFT</text>
+
+              <text x="10" y="232" class="dg-text th">ทั้งห้าแบบแก้ปัญหาเดียวกัน — เปลี่ยนการแกว่งช้าและแรงมาก ให้เป็นการหมุนเร็วและแรงน้อยที่เครื่องกำเนิดไฟฟ้าต้องการ</text>
+              <text x="10" y="232" class="dg-text en">All five solve the same problem — turning slow, high-force oscillation into the fast, low-force rotation a generator wants</text>
+              <text x="10" y="256" class="dg-label th">กังหันลมบรรจบกันที่แบบสามใบพัดแกนนอนตั้งแต่ราวปี 1990 แต่พลังงานคลื่นยังไม่บรรจบหลังผ่านมากว่าห้าสิบปี</text>
+              <text x="10" y="256" class="dg-label en">WIND CONVERGED ON THE THREE-BLADED HORIZONTAL-AXIS MACHINE AROUND 1990; WAVE ENERGY HAS NOT CONVERGED IN FIFTY YEARS</text>
+              <text x="10" y="276" class="dg-label th">สาเหตุคือคลื่นแต่ละแหล่งต่างกันมาก และไม่มีแบบใดที่เก่งทั้งการเก็บพลังงานและการอยู่รอดพร้อมกัน</text>
+              <text x="10" y="276" class="dg-label en">BECAUSE SEAS DIFFER SO WIDELY, AND NO DESIGN IS GOOD AT BOTH HARVESTING AND SURVIVING</text>
+              <text x="10" y="300" class="dg-label th">T = กังหันและเครื่องกำเนิดไฟฟ้า · เส้นประ = สายยึดโยงหรือแกนอ้างอิง</text>
+              <text x="10" y="300" class="dg-label en">T = TURBINE AND GENERATOR · DASHED = MOORING OR REACTION REFERENCE</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label"><span class="th">รูปที่ 6.2</span><span class="en">Figure 6.2</span></span>
+            <span class="th">สิ่งที่ทุกแบบต้องแก้เหมือนกันคือการจับคู่ที่ไม่ลงตัวระหว่างคลื่นกับเครื่องกำเนิดไฟฟ้า — คลื่นแกว่งด้วยคาบ 5&ndash;12 วินาที คิดเป็นราว 0.1 รอบต่อวินาที ด้วยแรงมหาศาล ส่วนเครื่องกำเนิดไฟฟ้าต้องการ 25 รอบต่อวินาทีด้วยแรงบิดน้อย ช่องว่างสองร้อยห้าสิบเท่านี้ต้องถูกปิดด้วยระบบส่งกำลัง ไม่ว่าจะเป็นอากาศอัด ไฮดรอลิก หรือกลไกเชิงกล และทุกขั้นที่เพิ่มเข้ามาก็คือจุดที่เสียหายได้เพิ่มขึ้นหนึ่งจุด</span>
+            <span class="en">What every design must solve is the mismatch between the sea and a generator: waves oscillate with periods of 5&ndash;12 seconds — around 0.1 cycles per second — at enormous force, while a generator wants 25 cycles per second at modest torque. That 250-fold gap has to be bridged by a power take-off, whether pneumatic, hydraulic or mechanical, and every stage added is one more thing that can fail at sea.</span>
+          </figcaption>
+        </figure>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">ตระกูล</span><span class="en">Family</span></th>
+                <th><span class="th">หลักการ</span><span class="en">Principle</span></th>
+                <th><span class="th">ตัวอย่างที่เดินเครื่องจริง</span><span class="en">Examples built at sea</span></th>
+                <th><span class="th">ข้อแลกเปลี่ยนหลัก</span><span class="en">The main trade-off</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th"><strong>คอลัมน์น้ำแกว่ง</strong></span><span class="en"><strong>Oscillating water column</strong></span></td>
+                <td><span class="th">ห้องที่เปิดใต้ผิวน้ำ ให้น้ำทำหน้าที่เป็นลูกสูบอัดอากาศผ่านกังหันสองทิศทาง</span><span class="en">A chamber open below the waterline; the water acts as a piston driving air through a bidirectional turbine</span></td>
+                <td>Mutriku (ES) · LIMPET (UK) · Pico (PT)</td>
+                <td><span class="th">ชิ้นส่วนเคลื่อนไหวชิ้นเดียวอยู่เหนือน้ำ บำรุงรักษาง่ายที่สุด แต่กังหันเวลส์มีประสิทธิภาพเพียง 50&ndash;60% และเสียงดัง</span><span class="en">The only moving part sits above water, easiest to maintain — but a Wells turbine is only 50&ndash;60% efficient and noisy</span></td>
+              </tr>
+              <tr>
+                <td><span class="th"><strong>ทุ่นดูดซับจุดเดียว</strong></span><span class="en"><strong>Point absorber</strong></span></td>
+                <td><span class="th">ทุ่นขนาดเล็กกว่าความยาวคลื่นมาก ขยับขึ้นลงเทียบกับจุดอ้างอิงที่นิ่ง</span><span class="en">A buoy much smaller than the wavelength, heaving against a reference that stays still</span></td>
+                <td>CorPower (SE) · PowerBuoy (US) · Wavestar (DK)</td>
+                <td><span class="th">เล็ก ผลิตเป็นชุดได้ และจับพลังงานจากหน้าคลื่นที่กว้างกว่าตัวเอง แต่ต้องมีจุดอ้างอิงที่นิ่งจริง ซึ่งทำได้ยากในทะเลลึก</span><span class="en">Small, mass-producible and able to draw from a wavefront wider than itself — but it needs a truly stationary reference, which is hard in deep water</span></td>
+              </tr>
+              <tr>
+                <td><span class="th"><strong>แบบลดทอน</strong></span><span class="en"><strong>Attenuator</strong></span></td>
+                <td><span class="th">โครงยาวหลายท่อนต่อกันด้วยข้อต่อ วางขนานกับทิศทางคลื่นและดัดงอตามคลื่น</span><span class="en">A long hinged chain of floats lying along the wave direction, flexing as waves pass</span></td>
+                <td>Pelamis (UK)</td>
+                <td><span class="th">รับแรงจากพายุน้อยกว่าเพราะวางขนานคลื่น แต่โครงสร้างยาวและข้อต่อจำนวนมากทำให้ต้นทุนและความเสี่ยงสูง</span><span class="en">Sees less storm force because it lies along the waves — but a long structure with many joints raises both cost and risk</span></td>
+              </tr>
+              <tr>
+                <td><span class="th"><strong>แบบน้ำล้นข้าม</strong></span><span class="en"><strong>Overtopping</strong></span></td>
+                <td><span class="th">ทางลาดเหวี่ยงน้ำเข้าอ่างที่ยกสูงกว่าระดับทะเล แล้วปล่อยกลับผ่านกังหันเฮดต่ำ</span><span class="en">A ramp throws water into a reservoir above sea level, which drains back through a low-head turbine</span></td>
+                <td>Wave Dragon (DK) · TAPCHAN (NO)</td>
+                <td><span class="th">ใช้กังหันคาปลันที่พิสูจน์แล้วจากบทที่ 5 และอ่างช่วยปรับให้กำลังราบเรียบ แต่ต้องมีโครงสร้างขนาดมหึมา</span><span class="en">Uses the proven Kaplan turbine of Chapter 5, and the reservoir smooths the output — but the structure must be enormous</span></td>
+              </tr>
+              <tr>
+                <td><span class="th"><strong>แผ่นโยกยึดพื้น</strong></span><span class="en"><strong>Oscillating wave surge</strong></span></td>
+                <td><span class="th">แผ่นบานพับที่พื้นทะเลในน้ำตื้น แกว่งไปมาตามการเคลื่อนที่แนวราบของน้ำ</span><span class="en">A flap hinged to the seabed in shallow water, swinging with the horizontal water motion</span></td>
+                <td>Oyster (UK) · WaveRoller (FI)</td>
+                <td><span class="th">ใช้การเคลื่อนที่แนวราบที่ยังแรงอยู่ที่พื้นในน้ำตื้น และซ่อนตัวใต้น้ำได้เมื่อพายุ แต่พลังงานในน้ำตื้นน้อยกว่าทะเลเปิด</span><span class="en">Exploits the horizontal motion that survives at the bed in shallow water and can duck under storms — but shallow seas hold less energy than open water</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">
+          <span class="th">ตารางที่ 6.2 · ควรสังเกตว่าชื่อที่มีชื่อเสียงที่สุดหลายชื่อในคอลัมน์ที่สามคือโครงการที่ <em>ปิดตัวไปแล้ว</em> — Pelamis ยุติกิจการในปี 2014 และ Oyster ในปี 2015 ทั้งที่ทั้งสองเคยติดตั้งและจ่ายไฟเข้าระบบจริง นี่เป็นข้อมูลที่ตำราพลังงานหมุนเวียนมักละไว้ แต่เป็นข้อมูลที่วิศวกรควรรู้</span>
+          <span class="en">Table 6.2 · Note that several of the best-known names in the third column are projects that have <em>closed</em> — Pelamis in 2014 and Oyster in 2015 — although both were installed and exported power to a grid. Renewable energy textbooks often omit this; engineers should know it.</span>
+        </p>
+      </section>
+
+      <!-- ============ 6.6 ============ -->
+      <section class="section" id="s6">
+        <h2><span class="num">6.6</span>
+          <span><span class="th">ความกว้างการจับพลังงาน: ทำไมทุ่นเล็กจึงดูดคลื่นกว้างได้</span>
+          <span class="en">Capture width: how a small buoy drinks from a wide sea</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ในบทที่ 5 เราวัดสมรรถนะของกังหันด้วยประสิทธิภาพ แต่พลังงานคลื่นวัดไม่ได้แบบนั้น เพราะคลื่นไม่ได้ไหลผ่าน &ldquo;พื้นที่หน้าตัด&rdquo; ที่นิยามชัดเจน ตัวชี้วัดที่ใช้แทนคือ <strong>ความกว้างการจับพลังงาน (capture width)</strong> ซึ่งมีหน่วยเป็น <em>เมตร</em> และตอบคำถามว่า &ldquo;อุปกรณ์นี้ดูดพลังงานได้เท่ากับหน้าคลื่นกว้างกี่เมตร&rdquo;</span>
+          <span class="en">Chapter 5 judged a turbine by its efficiency. Wave energy cannot be judged that way, because waves do not flow through any well-defined cross-section. The measure used instead is <strong>capture width</strong>, quoted in <em>metres</em>, answering the question: how many metres of wavefront does this device drink dry?</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ L_{c} = \frac{P_{absorbed}}{P_{wave}} \qquad\quad \mathrm{CWR} = \frac{L_{c}}{B} \qquad\quad L_{c,max} = \frac{\lambda}{2\pi}\ \text{(heave)} \]</div>
+            <span class="formula__num">(6.6)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(L_{c}\) = ความกว้างการจับพลังงาน (m) · \(P_{absorbed}\) = กำลังที่อุปกรณ์ดูดได้ (kW) · \(P_{wave}\) = กำลังคลื่นต่อเมตร (kW/m) · \(\mathrm{CWR}\) = อัตราส่วนความกว้างการจับต่อความกว้างจริงของอุปกรณ์ \(B\) · \(L_{c,max}\) = ขีดจำกัดทางทฤษฎีสำหรับวัตถุสมมาตรรอบแกนที่ขยับขึ้นลงอย่างเดียว ซึ่งเท่ากับ \(\lambda/2\pi\) และเป็น \(\lambda/\pi\) หากขยับในแนวราบได้ด้วย</span>
+            <span class="en">\(L_{c}\) is the capture width (m) · \(P_{absorbed}\) the power the device takes (kW) · \(P_{wave}\) the wave power per metre (kW/m) · \(\mathrm{CWR}\) the ratio of capture width to the device&rsquo;s actual width \(B\) · \(L_{c,max}\) the theoretical ceiling for an axisymmetric body heaving alone, equal to \(\lambda/2\pi\) — and \(\lambda/\pi\) if it can also surge.</span>
+          </div>
+        </div>
+
+        <div class="callout callout--key">
+          <div class="callout__title">
+            <span class="th">ทุ่นที่ดูดพลังงานได้กว้างกว่าตัวมันเอง — และไม่ได้ผิดกฎอะไรเลย</span>
+            <span class="en">A buoy that absorbs more than its own width breaks no law</span>
+          </div>
+          <p>
+            <span class="th">เมื่อทุ่นขยับขึ้นลง มันสร้างคลื่นของตัวเองแผ่ออกไปรอบทิศ คลื่นที่ทุ่นสร้างนี้ไป <em>แทรกสอดแบบหักล้าง</em> กับคลื่นที่วิ่งเข้ามา พลังงานที่ถูกดูดออกจากทะเลจึงไม่ใช่พลังงานที่ตกกระทบตัวทุ่นเท่านั้น แต่รวมถึงพลังงานจากหน้าคลื่นที่กว้างกว่าตัวทุ่นมาก ปรากฏการณ์นี้คล้ายกับที่เสาอากาศวิทยุขนาดเล็กรับคลื่นจากพื้นที่ที่ใหญ่กว่าตัวเองมาก จึงมักเรียกกันว่า <strong>ผลของเสาอากาศ (antenna effect)</strong></span>
+            <span class="en">As a buoy heaves it radiates waves of its own in all directions, and those radiated waves <em>interfere destructively</em> with the incoming ones. The energy removed from the sea is therefore not merely what strikes the buoy, but energy drawn from a much wider front. The phenomenon parallels a small radio aerial receiving from an area far larger than itself, and is usually called the <strong>antenna effect</strong>.</span>
+          </p>
+          <p>
+            <span class="th">ผลที่ตามมาทางวิศวกรรมมีความสำคัญมาก — <strong>อุปกรณ์แบบทุ่นสามารถมีค่า CWR มากกว่า 1 ได้</strong> ซึ่งหมายความว่าไม่จำเป็นต้องสร้างอุปกรณ์ขนาดใหญ่เพื่อจับพลังงานมาก ในทางปฏิบัติ CWR ของทุ่นที่ออกแบบดีอยู่ที่ราว 1.5&ndash;3 ส่วนแบบลดทอนและแบบน้ำล้นข้ามซึ่งมีความกว้างจริงมาก มักมี CWR เพียง 0.1&ndash;0.3</span>
+            <span class="en">The engineering consequence is substantial: <strong>a buoy-type device can have a CWR above 1</strong>, meaning size is not the route to capturing more. In practice a well-designed point absorber achieves a CWR of about 1.5&ndash;3, while attenuators and overtopping devices, being physically wide, typically manage only 0.1&ndash;0.3.</span>
+          </p>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 6.6 · ทุ่นห้าเมตรในทะเลโปรตุเกส</span>
+            <span class="en">Worked example 6.6 · A five-metre buoy off Portugal</span>
+          </div>
+          <p>
+            <span class="th">ทุ่นดูดซับเส้นผ่านศูนย์กลาง 5 เมตร ทำงานในทะเลที่ \(H_{s} = 2.0\ \mathrm{m}\), \(T_{e} = 8.0\ \mathrm{s}\) และผลิตไฟฟ้าเฉลี่ย 32 kW จงหาความกว้างการจับพลังงาน ค่า CWR และเปรียบเทียบกับขีดจำกัดทางทฤษฎี</span>
+            <span class="en">A 5 m diameter point absorber works in a sea of \(H_{s} = 2.0\ \mathrm{m}\), \(T_{e} = 8.0\ \mathrm{s}\), and averages 32 kW of electrical output. Find its capture width, its CWR, and compare with the theoretical ceiling.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">กำลังคลื่น: \(P_{wave} = 0.49 \times 2.0^{2} \times 8.0 = 15.7\ \mathrm{kW/m}\)</span>
+              <span class="en">Wave power: \(P_{wave} = 0.49 \times 2.0^{2} \times 8.0 = 15.7\ \mathrm{kW/m}\)</span>
+            </li>
+            <li>
+              <span class="th">ความกว้างการจับพลังงาน: \(L_{c} = 32/15.7 = \mathbf{2.04\ m}\)</span>
+              <span class="en">Capture width: \(L_{c} = 32/15.7 = \mathbf{2.04\ m}\)</span>
+            </li>
+            <li>
+              <span class="th">\(\mathrm{CWR} = 2.04/5 = \mathbf{0.41}\) ซึ่งดูเหมือนต่ำ แต่ต้องจำว่า 32 kW นี้เป็นกำลัง <em>ไฟฟ้า</em> ที่ผ่านระบบส่งกำลังและเครื่องกำเนิดไฟฟ้ามาแล้ว</span>
+              <span class="en">\(\mathrm{CWR} = 2.04/5 = \mathbf{0.41}\), which looks low — but remember that the 32 kW is <em>electrical</em> output, already through the power take-off and generator.</span>
+            </li>
+            <li>
+              <span class="th">ขีดจำกัดทางทฤษฎี: \(\lambda = 1.56 \times 8^{2} = 99.8\ \mathrm{m}\) จึงได้ \(L_{c,max} = 99.8/(2\pi) = \mathbf{15.9\ m}\)</span>
+              <span class="en">The theoretical ceiling: \(\lambda = 1.56 \times 8^{2} = 99.8\ \mathrm{m}\), so \(L_{c,max} = 99.8/(2\pi) = \mathbf{15.9\ m}\)</span>
+            </li>
+            <li>
+              <span class="th">ทุ่นนี้ทำได้เพียง \(2.04/15.9 = 13\%\) ของขีดจำกัด ซึ่งฟังดูน่าผิดหวัง แต่เป็นค่าที่พบได้จริงในอุปกรณ์เชิงพาณิชย์ สาเหตุคือขีดจำกัด \(\lambda/2\pi\) จะทำได้ก็ต่อเมื่อทุ่นสั่นพ้อง (resonance) กับคลื่นพอดีและควบคุมเฟสได้สมบูรณ์ ซึ่งในทะเลจริงที่มีคลื่นหลายความถี่ปนกันทำได้ยากมาก</span>
+              <span class="en">This buoy reaches only \(2.04/15.9 = 13\%\) of the ceiling, which sounds disappointing but is realistic for a commercial machine. The \(\lambda/2\pi\) bound is attainable only in perfect resonance with full phase control, which is very hard in a real sea containing many frequencies at once.</span>
+            </li>
+            <li>
+              <span class="th">ข้อสังเกตสำคัญ: ขีดจำกัด 15.9 เมตรนั้น <em>กว้างกว่าตัวทุ่นสามเท่า</em> นี่คือเหตุผลที่การวิจัยพลังงานคลื่นยุคหลังทุ่มเทไปกับ <strong>การควบคุมเฟส</strong> มากกว่าการเพิ่มขนาดอุปกรณ์ — พื้นที่ที่ยังเหลือให้พัฒนาอยู่ที่การควบคุม ไม่ใช่ที่เหล็ก</span>
+              <span class="en">The point to notice: that 15.9 m ceiling is <em>three times the buoy&rsquo;s own width</em>. It is why recent wave energy research concentrates on <strong>phase control</strong> rather than on building bigger — the headroom that remains lies in control, not in steel.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="demo" data-demo="wave-capture" data-reveal>
+          <div class="demo__head">
+            <span class="demo__label"><span class="th">ลองเล่นดู</span><span class="en">Try it</span></span>
+            <span class="demo__title">
+              <span class="th">ความกว้างการจับพลังงานเทียบกับขนาดจริงของอุปกรณ์</span>
+              <span class="en">Capture width against the size of the machine</span>
+            </span>
+            <span class="demo__sub">
+              <span class="th">สมการ (6.6) กับทะเลที่เลือกได้ · แถบด้านล่างเทียบความกว้างการจับพลังงานกับความกว้างจริงของอุปกรณ์และกับขีดจำกัดทางทฤษฎี \(\lambda/2\pi\)</span>
+              <span class="en">Equation (6.6) on a sea you choose. The bar below compares capture width with the device&rsquo;s real width and with the theoretical \(\lambda/2\pi\) ceiling.</span>
+            </span>
+          </div>
+
+          <div class="demo__stage" style="min-width:0">
+            <div class="sbar">
+              <div class="sbar__seg sbar__seg--usable" data-wc-seg="captured" style="width:13%"></div>
+              <div class="sbar__seg sbar__seg--water" data-wc-seg="headroom" style="width:87%"></div>
+            </div>
+            <div class="sbar-scale">
+              <span>0</span>
+              <span><span class="th">ขีดจำกัดทางทฤษฎี λ/2π</span><span class="en">The theoretical ceiling λ/2π</span></span>
+            </div>
+            <div class="sbar-legend">
+              <span class="key"><i class="k-usable"></i><span class="th">ความกว้างที่จับได้จริง</span><span class="en">Capture width achieved</span></span>
+              <span class="key"><i class="k-water"></i><span class="th">ส่วนที่เหลือให้การควบคุมเฟสไปพัฒนาต่อ</span><span class="en">Headroom left for phase control</span></span>
+            </div>
+          </div>
+
+          <div class="readouts">
+            <div class="readout readout--accent">
+              <span class="readout__label"><span class="th">กำลังไฟฟ้าเฉลี่ย</span><span class="en">Mean electrical output</span></span>
+              <span class="readout__value"><span data-wc-power>32</span><span class="readout__unit">kW</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">ความกว้างการจับพลังงาน</span><span class="en">Capture width</span></span>
+              <span class="readout__value"><span data-wc-lc>2.0</span><span class="readout__unit">m</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">CWR เทียบขนาดอุปกรณ์</span><span class="en">CWR against device width</span></span>
+              <span class="readout__value"><span data-wc-cwr>0.41</span></span>
+            </div>
+            <div class="readout">
+              <span class="readout__label"><span class="th">ขีดจำกัดทางทฤษฎี λ/2π</span><span class="en">Ceiling λ/2π</span></span>
+              <span class="readout__value"><span data-wc-max>15.9</span><span class="readout__unit">m</span></span>
+            </div>
+          </div>
+
+          <div class="demo__controls">
+            <label class="demo__field">
+              <span class="th">เส้นผ่านศูนย์กลางทุ่น B (m)</span><span class="en">Buoy diameter B (m)</span>
+              <input type="range" min="2" max="20" step="0.5" value="5" data-wc-width aria-label="Buoy diameter in metres">
+            </label>
+            <label class="demo__field">
+              <span class="th">สัดส่วนของขีดจำกัดที่ทำได้จริง (%)</span><span class="en">Share of the ceiling achieved (%)</span>
+              <input type="range" min="2" max="60" step="1" value="13" data-wc-eff aria-label="Percentage of the theoretical ceiling achieved">
+            </label>
+            <label class="demo__field">
+              <span class="th">คาบพลังงาน Te (s)</span><span class="en">Energy period Te (s)</span>
+              <input type="range" min="3" max="14" step="0.5" value="8" data-wc-te aria-label="Energy period in seconds">
+            </label>
+            <div class="preset-row">
+              <button type="button" class="preset" data-wc-preset="5|13|8"><span class="th">ตัวอย่างที่ 6.6</span><span class="en">Worked example 6.6</span></button>
+              <button type="button" class="preset" data-wc-preset="8|30|9"><span class="th">ทุ่นที่ควบคุมเฟสได้</span><span class="en">Phase-controlled buoy</span></button>
+              <button type="button" class="preset" data-wc-preset="3|10|4.5"><span class="th">ทุ่นเล็กในอ่าวไทย</span><span class="en">Small buoy, Gulf of Thailand</span></button>
+            </div>
+          </div>
+
+          <div class="demo__warn" data-wc-warn hidden>
+            <span class="th">ค่า CWR ที่ได้สูงกว่า 1 ซึ่งหมายความว่าทุ่นกำลังดูดพลังงานจากหน้าคลื่นที่กว้างกว่าตัวมันเอง นี่ไม่ใช่ความผิดพลาดและไม่ขัดกับกฎอนุรักษ์พลังงาน แต่เป็นผลของเสาอากาศที่อธิบายไว้ข้างต้น — คลื่นที่ทุ่นแผ่ออกไปหักล้างกับคลื่นที่วิ่งเข้ามาในบริเวณกว้าง</span>
+            <span class="en">The CWR now exceeds 1, meaning the buoy is drawing from a wavefront wider than itself. This is neither an error nor a breach of energy conservation, but the antenna effect described above — the waves the buoy radiates cancel the incoming waves over a broad area.</span>
+          </div>
+
+          <div class="demo__note">
+            <p>
+              <span class="th">ลองทำสิ่งนี้: ตั้งเส้นผ่านศูนย์กลางไว้ที่ 5 เมตรแล้วเลื่อนคาบพลังงานจาก 4 ไปถึง 12 วินาที จะเห็นว่าขีดจำกัดทางทฤษฎีโตขึ้นตาม \(T^{2}\) เพราะ \(\lambda = 1.56T^{2}\) ทะเลที่มีคาบยาวจึงไม่เพียงให้พลังงานมากกว่า แต่ยังเปิดโอกาสให้อุปกรณ์ขนาดเท่าเดิมจับพลังงานได้กว้างกว่าด้วย นี่เป็นเหตุผลที่สองที่ทำให้ทะเลคาบสั้นอย่างอ่าวไทยเสียเปรียบซ้ำซ้อน</span>
+              <span class="en">Try this: hold the diameter at 5 m and sweep the energy period from 4 to 12 s. The theoretical ceiling grows as \(T^{2}\), because \(\lambda = 1.56T^{2}\). A long-period sea therefore not only carries more power but also lets a device of unchanged size reach across a wider front — a second reason why a short-period sea such as the Gulf of Thailand is doubly disadvantaged.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 6.7 ============ -->
+      <section class="section" id="s7">
+        <h2><span class="num">6.7</span>
+          <span><span class="th">ปัญหาการอยู่รอด: เหตุผลที่แท้จริงที่พลังงานคลื่นยังไม่สำเร็จ</span>
+          <span class="en">The survivability problem: why wave energy has not arrived</span></span>
+        </h2>
+
+        <p>
+          <span class="th">ถ้าถามว่าอะไรคืออุปสรรคที่แท้จริงของพลังงานคลื่น คำตอบไม่ใช่ประสิทธิภาพ ไม่ใช่ทรัพยากร และไม่ใช่การขาดแนวคิด เพราะทั้งสามข้อนี้มีคำตอบที่ดีพอแล้ว อุปสรรคคือความขัดแย้งที่ฝังอยู่ในธรรมชาติของงาน — <strong>อุปกรณ์ต้องไวต่อคลื่นเล็กเพื่อเก็บพลังงาน แต่ต้องแข็งแรงพอจะรอดจากคลื่นใหญ่ที่ไม่เคยผลิตพลังงานให้เลย</strong></span>
+          <span class="en">Ask what genuinely blocks wave energy and the answer is not efficiency, not the resource, and not a shortage of ideas — all three have adequate answers. The obstacle is a conflict built into the task itself: <strong>a device must be responsive to small waves in order to harvest, yet strong enough to survive large waves that never generate a watt</strong>.</span>
+        </p>
+
+        <div class="formula">
+          <div class="formula__row">
+            <div class="formula__eq">\[ \frac{F_{extreme}}{F_{operating}} \;\approx\; \left(\frac{H_{s,100}}{H_{s,op}}\right)^{2} \]</div>
+            <span class="formula__num">(6.7)</span>
+          </div>
+          <div class="formula__where">
+            <span class="th">\(H_{s,100}\) = ความสูงคลื่นนัยสำคัญของคาบการเกิดซ้ำ 100 ปี ซึ่งเป็นสภาวะที่โครงสร้างต้องรอด · \(H_{s,op}\) = ความสูงคลื่นที่อุปกรณ์ทำงานอยู่โดยทั่วไป · แรงจากคลื่นแปรผันกับกำลังสองของความสูงในย่านที่แรงลากและแรงเฉื่อยครอบงำ เช่นเดียวกับพลังงาน ความสัมพันธ์นี้จึงเป็นการประมาณที่ใช้เปรียบเทียบได้ดีแม้จะไม่แม่นยำในทุกกรณี</span>
+            <span class="en">\(H_{s,100}\) is the significant wave height of the 100-year return period, the condition the structure must survive · \(H_{s,op}\) the height at which the device normally works. Wave force scales with the square of height in the drag- and inertia-dominated range, just as energy does, so this relation compares well even where it is not exact.</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 6.7 · ช่องว่างระหว่างการทำงานกับการอยู่รอด</span>
+            <span class="en">Worked example 6.7 · The gap between working and surviving</span>
+          </div>
+          <p>
+            <span class="th">อุปกรณ์แห่งหนึ่งนอกชายฝั่งสกอตแลนด์ทำงานที่ \(H_{s} = 2.5\ \mathrm{m}\) เป็นส่วนใหญ่ และต้องรอดจากคลื่นคาบการเกิดซ้ำ 100 ปีที่ \(H_{s,100} = 12\ \mathrm{m}\) จงประเมินอัตราส่วนภาระ และเปรียบเทียบกับกังหันลมที่ทำงานที่ลม 10 m/s และต้องรอดลม 50 m/s</span>
+            <span class="en">A device off Scotland works mostly at \(H_{s} = 2.5\ \mathrm{m}\) and must survive a 100-year sea of \(H_{s,100} = 12\ \mathrm{m}\). Estimate the load ratio, and compare with a wind turbine that works at 10 m/s and must survive 50 m/s.</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">อัตราส่วนความสูงคลื่น: \(12/2.5 = 4.8\) เท่า</span>
+              <span class="en">Height ratio: \(12/2.5 = 4.8\).</span>
+            </li>
+            <li>
+              <span class="th">อัตราส่วนแรง: \(4.8^{2} = \mathbf{23}\) เท่า โครงสร้างจึงต้องแข็งแรงพอรับแรงยี่สิบสามเท่าของแรงที่พบในวันทำงานปกติ</span>
+              <span class="en">Force ratio: \(4.8^{2} = \mathbf{23}\). The structure must therefore withstand twenty-three times the force it meets on an ordinary working day.</span>
+            </li>
+            <li>
+              <span class="th">กังหันลม: อัตราส่วนความเร็ว \(50/10 = 5\) และแรงลากแปรผันกับ \(v^{2}\) จึงได้ \(5^{2} = 25\) เท่า ซึ่ง <em>ดูเหมือนแย่พอ ๆ กัน</em></span>
+              <span class="en">Wind turbine: speed ratio \(50/10 = 5\), and drag scales with \(v^{2}\), giving \(5^{2} = 25\) — which <em>looks just as bad</em>.</span>
+            </li>
+            <li>
+              <span class="th">แต่กังหันลม <strong>ปรับมุมใบพัด (feather) ได้</strong> เมื่อลมแรงเกิน ใบพัดหมุนให้ขนานกับทิศลม พื้นที่รับแรงลดลงเหลือไม่ถึงหนึ่งในสิบ แรงจริงที่โครงสร้างรับจึงเหลือราว 2&ndash;3 เท่าของภาวะทำงานปกติเท่านั้น</span>
+              <span class="en">But a wind turbine can <strong>feather</strong>. Above the cut-out speed its blades turn edge-on to the wind, cutting the exposed area to under a tenth, so the structure actually sees only about two or three times its normal load.</span>
+            </li>
+            <li>
+              <span class="th">อุปกรณ์คลื่นทำแบบนั้นไม่ได้ เพราะ <em>ตัวมันเองคือพื้นที่รับแรง</em> มันลอยอยู่ในน้ำ ไม่มีอะไรให้ปรับมุมหลบ ทางเลือกที่มีคือจมตัวลง ปลดสายยึดบางเส้น หรือเปิดวาล์วให้น้ำผ่าน ซึ่งทั้งหมดเป็นกลไกที่ต้องทำงานได้อย่างแน่นอนในสภาวะที่เลวร้ายที่สุด</span>
+              <span class="en">A wave device cannot do this, because <em>it is itself the exposed area</em>. It floats in the water with nothing to turn edge-on. Its options are to submerge, to slacken some moorings, or to open valves and let water through — all mechanisms that must work without fail in the worst conditions there are.</span>
+            </li>
+            <li>
+              <span class="th">ผลทางเศรษฐศาสตร์: โครงสร้างถูกกำหนดขนาดโดยสภาวะที่ <em>ไม่เคยผลิตพลังงาน</em> ต้นทุนวัสดุส่วนใหญ่จึงไม่ได้สร้างรายได้เลย นี่คือความต่างเชิงโครงสร้างระหว่างพลังงานคลื่นกับพลังงานลม และเป็นเหตุผลหลักที่ LCOE ยังสูง</span>
+              <span class="en">The economic consequence: the structure is sized by a condition that <em>never generates</em>, so most of the material cost earns nothing. This is the structural difference between wave and wind energy, and the principal reason the levelised cost remains high.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">ปัญหาในการเดินระบบ</span><span class="en">Operating problem</span></th>
+                <th><span class="th">เหตุใดในทะเลจึงหนักกว่าบนบก</span><span class="en">Why the sea makes it worse</span></th>
+                <th><span class="th">แนวทางจัดการ</span><span class="en">How it is managed</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th">ภาระสุดขีดจากคลื่นพายุ</span><span class="en">Extreme storm loading</span></td>
+                <td><span class="th">แรงสูงกว่าสภาวะทำงานได้ 20&ndash;100 เท่า และหลบไม่ได้เหมือนการปรับมุมใบพัด</span><span class="en">Forces 20&ndash;100 times operational, with no way to feather them away</span></td>
+                <td><span class="th">โหมดอยู่รอดด้วยการจมตัว ปลดสายยึด หรือปล่อยให้น้ำผ่าน และการออกแบบให้ยอมเสียหายบางส่วนอย่างควบคุมได้</span><span class="en">Survival modes — submerging, slackening moorings, letting water through — and designing for controlled partial failure</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">การกัดกร่อนและเพรียงเกาะ</span><span class="en">Corrosion and biofouling</span></td>
+                <td><span class="th">น้ำเค็มกัดกร่อนตลอดเวลา และเพรียงเพิ่มมวลกับแรงลากจนเปลี่ยนพฤติกรรมการสั่นพ้อง</span><span class="en">Salt water attacks constantly, and fouling adds mass and drag enough to shift the resonant behaviour</span></td>
+                <td><span class="th">เหล็กกล้าไร้สนิมดูเพล็กซ์ การป้องกันแคโทดิก สีกันเพรียง และการทำความสะอาดตามรอบ</span><span class="en">Duplex stainless steel, cathodic protection, antifouling coatings and scheduled cleaning</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">การเข้าถึงเพื่อบำรุงรักษา</span><span class="en">Access for maintenance</span></td>
+                <td><span class="th">เรือทำงานเข้าถึงได้เฉพาะเมื่อ \(H_{s}\) ต่ำกว่าราว 1.5 ม. ซึ่งในแหล่งคลื่นดี ๆ เกิดขึ้นเพียงบางส่วนของปีเท่านั้น</span><span class="en">A workboat can reach the site only below about 1.5 m \(H_{s}\), which at a good wave site happens only part of the year</span></td>
+                <td><span class="th">ออกแบบให้ลากกลับเข้าฝั่งได้ทั้งตัว ใช้ระบบตรวจสภาพระยะไกล และวางแผนซ่อมตามหน้าต่างอากาศ</span><span class="en">Designing the whole unit to be towed ashore, remote condition monitoring, and planning around weather windows</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">การยึดโยงและสายไฟใต้น้ำ</span><span class="en">Moorings and the export cable</span></td>
+                <td><span class="th">สายยึดต้องรับแรงกระชากซ้ำ ๆ นับล้านรอบ และสายไฟใต้น้ำเป็นจุดเสียหายที่พบบ่อยที่สุดของโครงการพลังงานทะเล</span><span class="en">Moorings take millions of snatch loads, and the subsea cable is the commonest single point of failure in marine energy projects</span></td>
+                <td><span class="th">สายยึดแบบยืดหยุ่นที่ดูดซับแรงกระชาก ข้อต่อหมุนได้ และการป้องกันสายไฟช่วงที่ขึ้นสู่ผิวน้ำ</span><span class="en">Compliant moorings that absorb snatch, swivel connections, and protection where the cable rises to the device</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ความหนาแน่นพลังงานที่ผันผวนรุนแรง</span><span class="en">Violently variable power</span></td>
+                <td><span class="th">กำลังชั่วขณะแกว่งจากศูนย์ถึงค่าสูงสุดภายในไม่กี่วินาที และมีค่าสูงสุดต่อค่าเฉลี่ยราว 5&ndash;10 เท่า</span><span class="en">Instantaneous power swings from zero to peak within seconds, with a peak-to-mean ratio of 5&ndash;10</span></td>
+                <td><span class="th">อุปกรณ์สะสมพลังงานระยะสั้น เช่น ตัวสะสมไฮดรอลิก ล้อตุนกำลัง หรือซูเปอร์คาปาซิเตอร์ ก่อนเข้าอินเวอร์เตอร์</span><span class="en">Short-term storage — hydraulic accumulators, flywheels or supercapacitors — ahead of the inverter</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">
+          <span class="th">ตารางที่ 6.3 · เปรียบเทียบกับตารางที่ 4.5 ของบทที่ 4 จะเห็นความต่างที่ชัดเจน — ปัญหาของความร้อนใต้พิภพเป็นเรื่องเคมีของของไหลซึ่งจัดการได้ด้วยการออกแบบกระบวนการ ส่วนปัญหาของพลังงานคลื่นเป็นเรื่องแรงทางกลและการเข้าถึง ซึ่งแก้ได้ยากกว่ามากเพราะทะเลไม่ยอมให้ต่อรอง</span>
+          <span class="en">Table 6.3 · Set beside Table 4.5 of Chapter 4 the contrast is plain: geothermal&rsquo;s problems are fluid chemistry, manageable by process design, while wave energy&rsquo;s are mechanical force and access — far harder, because the sea does not negotiate.</span>
+        </p>
+      </section>
+
+      <!-- ============ 6.8 ============ -->
+      <section class="section" id="s8">
+        <h2><span class="num">6.8</span>
+          <span><span class="th">ต้นทุนและสถานะของเทคโนโลยี</span>
+          <span class="en">Cost and technological maturity</span></span>
+        </h2>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th><span class="th">เทคโนโลยี</span><span class="en">Technology</span></th>
+                <th class="num"><span class="th">กำลังติดตั้งทั่วโลก</span><span class="en">Installed worldwide</span></th>
+                <th class="num"><span class="th">LCOE โดยประมาณ</span><span class="en">Indicative LCOE</span></th>
+                <th><span class="th">สถานะ</span><span class="en">Status</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="th">พลังงานแสงอาทิตย์</span><span class="en">Solar PV</span></td>
+                <td class="num">~1,600 GW</td>
+                <td class="num">30–60 USD/MWh</td>
+                <td><span class="th">เติบโตเต็มที่ ราคาลดลงต่อเนื่องกว่าสามสิบปี</span><span class="en">Mature, with three decades of falling prices</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ลมนอกชายฝั่ง</span><span class="en">Offshore wind</span></td>
+                <td class="num">~75 GW</td>
+                <td class="num">60–110 USD/MWh</td>
+                <td><span class="th">เชิงพาณิชย์เต็มรูป แบบของเครื่องบรรจบกันแล้ว</span><span class="en">Fully commercial, with a converged design</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">ความร้อนใต้พิภพ</span><span class="en">Geothermal</span></td>
+                <td class="num">~16 GW</td>
+                <td class="num">50–100 USD/MWh</td>
+                <td><span class="th">เชิงพาณิชย์ แต่จำกัดด้วยธรณีวิทยา (บทที่ 4)</span><span class="en">Commercial but geologically constrained (Chapter 4)</span></td>
+              </tr>
+              <tr>
+                <td><span class="th">น้ำขึ้นน้ำลง</span><span class="en">Tidal stream</span></td>
+                <td class="num">~30 MW</td>
+                <td class="num">150–300 USD/MWh</td>
+                <td><span class="th">สาธิตก่อนเชิงพาณิชย์ แบบเริ่มบรรจบ (บทที่ 7)</span><span class="en">Pre-commercial demonstration, designs converging (Chapter 7)</span></td>
+              </tr>
+              <tr>
+                <td><span class="th"><strong>คลื่น</strong></span><span class="en"><strong>Wave</strong></span></td>
+                <td class="num">&lt; 5 MW</td>
+                <td class="num">300–700 USD/MWh</td>
+                <td><span class="th">ยังอยู่ในขั้นสาธิต แบบยังไม่บรรจบ</span><span class="en">Still at demonstration stage, with no convergence</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">
+          <span class="th">ตารางที่ 6.4 · ค่า LCOE เป็นช่วงโดยประมาณและเปลี่ยนแปลงเร็ว ควรตรวจสอบกับรายงานล่าสุดของ IRENA หรือ IEA-OES ก่อนอ้างอิง สิ่งที่ควรสังเกตไม่ใช่ตัวเลขแต่ละตัว แต่คือ <em>ลำดับความแตกต่าง</em> — กำลังติดตั้งของพลังงานคลื่นทั่วโลกยังน้อยกว่าโซลาร์ราวสามแสนเท่า</span>
+          <span class="en">Table 6.4 · These LCOE ranges are indicative and move quickly; check the latest IRENA or IEA-OES reporting before citing. What matters is not any single figure but the <em>orders of magnitude</em> — the world&rsquo;s installed wave capacity is some three hundred thousand times smaller than its solar capacity.</span>
+        </p>
+
+        <div class="callout callout--warn">
+          <div class="callout__title">
+            <span class="th">บทเรียนจาก Pelamis และ Oyster</span>
+            <span class="en">The lesson of Pelamis and Oyster</span>
+          </div>
+          <p>
+            <span class="th">ทั้งสองโครงการเป็นความสำเร็จทางวิศวกรรมที่แท้จริง — Pelamis เป็นอุปกรณ์คลื่นนอกชายฝั่งเครื่องแรกของโลกที่จ่ายไฟเข้าระบบจำหน่ายในปี 2004 และ Oyster ก็เดินเครื่องที่ศูนย์ทดสอบ EMEC ในหมู่เกาะออร์กนีย์ได้จริง แต่ทั้งสองบริษัทปิดตัวลงในปี 2014 และ 2015 ตามลำดับ สาเหตุไม่ใช่เพราะเทคโนโลยีไม่ทำงาน แต่เพราะ <em>ต้นทุนต่อหน่วยพลังงานไม่ลดลงเร็วพอที่จะดึงเงินลงทุนรอบถัดไปได้</em></span>
+            <span class="en">Both were genuine engineering successes — Pelamis was the world&rsquo;s first offshore wave device to export power to a grid, in 2004, and Oyster ran at the EMEC test centre in Orkney. Yet both companies closed, in 2014 and 2015. The cause was not that the technology failed to work, but that <em>cost per unit of energy did not fall fast enough to attract the next round of investment</em>.</span>
+          </p>
+          <p>
+            <span class="th">บทเรียนสำหรับวิศวกรมีสองข้อ ข้อแรก — การพิสูจน์ว่าอุปกรณ์ <em>ทำงานได้</em> เป็นเพียงจุดเริ่มต้น ไม่ใช่เส้นชัย ข้อที่สอง — เทคโนโลยีที่ต้องสร้างอุปกรณ์ขนาดใหญ่ทีละชิ้นเพื่อทดสอบจะเรียนรู้ช้ากว่าเทคโนโลยีที่ผลิตเป็นชุดจำนวนมากเสมอ โซลาร์เซลล์ลดราคาได้เพราะผลิตทีละล้านแผ่น ส่วนอุปกรณ์คลื่นแต่ละตัวยังเป็นงานสั่งทำเฉพาะ นี่เป็นเหตุผลที่แนวทางทุ่นขนาดเล็กที่ผลิตเป็นชุดได้จึงน่าสนใจกว่าอุปกรณ์เดี่ยวขนาดยักษ์ในเชิงกลยุทธ์</span>
+            <span class="en">Two lessons for an engineer. First, proving that a device <em>works</em> is the beginning, not the finish. Second, a technology that must build one large unit at a time to learn anything will always learn more slowly than one made in volume: solar cells fell in price because they are produced by the million, while each wave device is still bespoke. Strategically, this is why small mass-producible buoys look more promising than single giant machines.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 6.9 ============ -->
+      <section class="section" id="s9">
+        <h2><span class="num">6.9</span>
+          <span><span class="th">อ่าวไทยและชายฝั่งไทย: ประเมินอย่างตรงไปตรงมา</span>
+          <span class="en">The Gulf and the Thai coasts: an honest assessment</span></span>
+        </h2>
+
+        <p>
+          <span class="th">อ่าวไทยเป็นทะเลกึ่งปิดที่ตื้นมาก ความลึกเฉลี่ยราว 45 เมตร และลึกที่สุดไม่เกินราว 80 เมตร ระยะที่ลมพัดผ่านผิวน้ำต่อเนื่อง (fetch) ถูกจำกัดด้วยรูปร่างของอ่าวเองให้อยู่ในระดับไม่กี่ร้อยกิโลเมตร เทียบกับมหาสมุทรแอตแลนติกเหนือที่มี fetch นับพันกิโลเมตร ผลที่ตามมาตามกลไกในหัวข้อ 6.1 คือคลื่นที่เตี้ยและคาบสั้น</span>
+          <span class="en">The Gulf of Thailand is a shallow, semi-enclosed sea: mean depth around 45 m and nowhere much beyond 80 m. Its own shape limits the fetch to a few hundred kilometres, against the thousands available in the North Atlantic. By the mechanism of §6.1 the consequence is waves that are short both in height and in period.</span>
+        </p>
+
+        <div class="example">
+          <div class="example__label">
+            <span class="th">ตัวอย่างที่ 6.8 · อ่าวไทยเทียบกับแหล่งชั้นดีของโลก</span>
+            <span class="en">Worked example 6.8 · The Gulf against a world-class resource</span>
+          </div>
+          <p>
+            <span class="th">จากตัวอย่างที่ 6.5 อ่าวไทยให้พลังงานคลื่นราว 18.2 MWh ต่อความยาวหน้าคลื่นหนึ่งเมตรต่อปี ถ้าต้องการผลิตไฟฟ้า 1 GWh ต่อปี (เท่ากับความต้องการของสถานีสูบน้ำขนาดกลางไม่กี่แห่ง) ต้องใช้แนวอุปกรณ์ยาวเท่าไร โดยสมมติว่าแปลงพลังงานได้ 25% ของพลังงานคลื่นที่ผ่านแนวนั้น</span>
+            <span class="en">From worked example 6.5 the Gulf delivers about 18.2 MWh per metre of crest per year. To generate 1 GWh a year — the demand of a few medium pumping stations — how long an array is needed, assuming 25% of the wave energy crossing the line is converted?</span>
+          </p>
+          <ol>
+            <li>
+              <span class="th">พลังงานไฟฟ้าต่อเมตรต่อปี: \(18.2 \times 0.25 = 4.55\ \mathrm{MWh/m}\)</span>
+              <span class="en">Electrical energy per metre per year: \(18.2 \times 0.25 = 4.55\ \mathrm{MWh/m}\)</span>
+            </li>
+            <li>
+              <span class="th">ความยาวแนวที่ต้องใช้: \(1{,}000/4.55 = \mathbf{220\ m}\)</span>
+              <span class="en">Array length required: \(1{,}000/4.55 = \mathbf{220\ m}\)</span>
+            </li>
+            <li>
+              <span class="th">เทียบกับนอกฝั่งไอร์แลนด์ที่ราว 350 MWh/m/ปี: \(350 \times 0.25 = 87.5\) จึงต้องใช้แนวยาวเพียง \(1{,}000/87.5 = \mathbf{11.4\ m}\) หรือสั้นกว่ากันถึง <strong>19 เท่า</strong></span>
+              <span class="en">Against the Irish west coast at roughly 350 MWh/m/yr: \(350 \times 0.25 = 87.5\), needing only \(1{,}000/87.5 = \mathbf{11.4\ m}\) — a line <strong>nineteen times shorter</strong>.</span>
+            </li>
+            <li>
+              <span class="th">อ่านผลให้ถูก: 220 เมตรฟังดูไม่มาก แต่หมายถึงอุปกรณ์ โครงสร้าง สายยึดโยง และงานบำรุงรักษาที่มากกว่าถึงสิบเก้าเท่าเพื่อพลังงานเท่ากัน เนื่องจากต้นทุนเกือบทั้งหมดของพลังงานคลื่นแปรผันตามความยาวแนวอุปกรณ์ ไม่ใช่ตามพลังงานที่ผลิตได้ ต้นทุนต่อหน่วยพลังงานในอ่าวไทยจึงสูงกว่าราวสิบเก้าเท่าเช่นกัน</span>
+              <span class="en">Read it correctly: 220 m does not sound much, but it means nineteen times the equipment, structure, mooring and maintenance for the same energy. Since nearly all of wave energy&rsquo;s cost scales with array length rather than with energy produced, the cost per unit in the Gulf is higher by much the same nineteen times.</span>
+            </li>
+            <li>
+              <span class="th">ข้อสรุป: การผลิตไฟฟ้าจากคลื่นเข้าระบบจำหน่ายในอ่าวไทย <em>ไม่มีทางแข่งขันได้</em> ไม่ว่าเทคโนโลยีจะพัฒนาไปเพียงใด เพราะข้อเสียเปรียบอยู่ที่ทรัพยากร ไม่ใช่ที่อุปกรณ์ ถ้าเทคโนโลยีถูกลงสิบเท่า แหล่งในไอร์แลนด์ก็ถูกลงสิบเท่าเช่นกัน ช่องว่างสิบเก้าเท่ายังคงอยู่</span>
+              <span class="en">The conclusion: grid-scale wave generation in the Gulf of Thailand <em>cannot be made competitive</em>, however far the technology advances, because the disadvantage lies in the resource rather than in the machine. If devices become ten times cheaper, they become ten times cheaper in Ireland too, and the nineteenfold gap remains.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="callout callout--key">
+          <div class="callout__title">
+            <span class="th">คำถามที่ถูกต้องคือกิโลวัตต์ ไม่ใช่เมกะวัตต์</span>
+            <span class="en">The right question is kilowatts, not megawatts</span>
+          </div>
+          <p>
+            <span class="th">ตัวอย่างที่ 6.8 ปิดประตูของการผลิตไฟฟ้าเข้าระบบ แต่ไม่ได้ปิดประตูทั้งหมด เพราะยังมีงานอีกประเภทหนึ่งที่ต่างออกไปโดยสิ้นเชิง — งานที่ต้องการกำลังเพียงไม่กี่สิบหรือไม่กี่ร้อยวัตต์ <em>ในตำแหน่งที่การลากสายไฟไปถึงมีต้นทุนสูงกว่ามาก</em> ในบริบทนั้นคู่แข่งไม่ใช่ไฟฟ้าจากระบบจำหน่ายที่หน่วยละไม่กี่บาท แต่เป็นแบตเตอรี่ที่ต้องเปลี่ยนทุกไม่กี่เดือน หรือเรือที่ต้องแล่นออกไปเติมน้ำมันให้เครื่องปั่นไฟ</span>
+            <span class="en">Worked example 6.8 closes the door on grid generation, but not every door. A quite different class of work remains — tasks needing only tens or hundreds of watts <em>somewhere a cable would cost far more to lay</em>. There the competition is not grid electricity at a few baht a unit, but batteries that must be replaced every few months, or a boat that has to go out and refuel a generator.</span>
+          </p>
+          <p>
+            <span class="th">นี่เป็นตรรกะเดียวกับที่บทที่ 5 ใช้กับอาคารน้ำตกในคลองชลประทาน — <em>เปลี่ยนคำถามจาก &ldquo;แข่งกับโรงไฟฟ้าได้ไหม&rdquo; เป็น &ldquo;แข่งกับทางเลือกที่มีอยู่จริงในตำแหน่งนั้นได้ไหม&rdquo;</em></span>
+            <span class="en">This is the same logic Chapter 5 applied to irrigation drop structures — <em>change the question from &ldquo;can it beat a power station?&rdquo; to &ldquo;can it beat the alternative that actually exists at that spot?&rdquo;</em></span>
+          </p>
+        </div>
+
+        <h3><span class="th">สี่การประยุกต์ที่สมเหตุสมผลในบริบทไทย</span><span class="en">Four applications that make sense in Thailand</span></h3>
+
+        <p>
+          <span class="th"><strong>หนึ่ง · ทุ่นวัดข้อมูลและทุ่นนำร่อง</strong> ทุ่นสมุทรศาสตร์ ทุ่นเตือนภัย และทุ่นไฟนำร่องต้องการกำลังเพียง 5&ndash;50 วัตต์ต่อเนื่อง ปัจจุบันใช้โซลาร์เซลล์กับแบตเตอรี่ซึ่งมีปัญหาเรื่องมูลนกและเพรียงบังแผง ทุ่นเก็บพลังงานคลื่นขนาดเล็กทำงานได้ตลอดคืนและในวันที่ฟ้าปิด จึงใช้ร่วมกับโซลาร์เป็นระบบผสมได้ดี นี่เป็นการประยุกต์ที่มีสินค้าเชิงพาณิชย์อยู่แล้วทั่วโลก</span>
+          <span class="en"><strong>One · data and navigation buoys.</strong> Oceanographic, warning and navigation buoys need only 5&ndash;50 W continuously. Today they use solar panels and batteries, which suffer from bird droppings and fouling shading the cells. A small wave harvester works through the night and on overcast days, so it pairs well with solar in a hybrid. Commercial products for this already exist worldwide.</span>
+        </p>
+
+        <p>
+          <span class="th"><strong>สอง · การเพาะเลี้ยงสัตว์น้ำนอกชายฝั่ง</strong> กระชังปลาในทะเลต้องการพลังงานสำหรับเครื่องให้อาหารอัตโนมัติ เซนเซอร์ออกซิเจนละลาย กล้องตรวจสอบ และระบบสื่อสาร รวมกันราว 100&ndash;500 วัตต์ ฟาร์มที่อยู่ห่างฝั่งหลายกิโลเมตรไม่มีสายไฟ จึงต้องพึ่งเครื่องปั่นไฟดีเซลบนแพหรือแบตเตอรี่ที่ขนไปเปลี่ยน การเก็บพลังงานจากคลื่นที่กระชังลอยอยู่แล้วตอบโจทย์นี้ได้ตรงตัว และกระชังเองก็ทำหน้าที่เป็นโครงสร้างรองรับอยู่แล้ว</span>
+          <span class="en"><strong>Two · offshore aquaculture.</strong> Sea cages need power for automatic feeders, dissolved-oxygen sensors, inspection cameras and communications — perhaps 100&ndash;500 W in total. A farm several kilometres out has no cable and depends on a diesel set on a raft or on batteries ferried out for replacement. Harvesting from the waves the cage is already floating in answers the need directly, and the cage itself provides the supporting structure.</span>
+        </p>
+
+        <p>
+          <span class="th"><strong>สาม · เขื่อนกันคลื่นที่ผลิตพลังงานด้วย</strong> ชายฝั่งไทยหลายแห่งกำลังถูกกัดเซาะและต้องสร้างเขื่อนกันคลื่นอยู่แล้ว การฝังห้องคอลัมน์น้ำแกว่งไว้ในโครงสร้างเขื่อนตั้งแต่ตอนออกแบบ ทำให้ต้นทุนโยธาซึ่งเป็นก้อนใหญ่ที่สุดถูกจ่ายไปเพื่อจุดประสงค์อื่นอยู่แล้ว เหลือเพียงต้นทุนของกังหันและเครื่องกำเนิดไฟฟ้า ท่าเรือ Mutriku ในสเปนคือตัวอย่างที่เดินเครื่องมาตั้งแต่ปี 2011 ด้วยกำลัง 296 กิโลวัตต์จากกังหัน 16 ตัวที่ฝังอยู่ในเขื่อนกันคลื่น</span>
+          <span class="en"><strong>Three · breakwaters that also generate.</strong> Many Thai coasts are eroding and need breakwaters regardless. Building oscillating water column chambers into the structure from the design stage means the civil cost — much the largest item — is already being paid for another purpose, leaving only the turbines and generators. Mutriku harbour in Spain is the working example, running since 2011 at 296 kW from sixteen turbines set into its breakwater.</span>
+        </p>
+
+        <p>
+          <span class="th"><strong>สี่ · การผลิตน้ำจืดบนเกาะด้วยแรงกลโดยตรง</strong> เกาะเล็ก ๆ หลายแห่งในอ่าวไทยและทะเลอันดามันขาดแคลนน้ำจืดในฤดูแล้ง การนำการเคลื่อนไหวของคลื่นไปขับปั๊มความดันสูงของระบบออสโมซิสผันกลับ <em>โดยไม่ผ่านการแปลงเป็นไฟฟ้าเลย</em> หลีกเลี่ยงการสูญเสียสองขั้น (กล→ไฟฟ้า→กล) และตัดอุปกรณ์อิเล็กทรอนิกส์ที่เสียหายง่ายในทะเลออกไปทั้งหมด ระบบแบบนี้ยังยอมรับกำลังที่ผันผวนได้ดีกว่า เพราะอัตราการผลิตน้ำที่แกว่งไปมาไม่ใช่ปัญหาตราบใดที่มีถังเก็บ</span>
+          <span class="en"><strong>Four · island freshwater by direct mechanical drive.</strong> Small islands in both the Gulf and the Andaman Sea run short of fresh water in the dry season. Using wave motion to drive the high-pressure pump of a reverse-osmosis unit <em>without converting to electricity at all</em> avoids two conversion losses (mechanical to electrical and back) and removes the electronics most vulnerable at sea. Such a system also tolerates variable power far better, since a fluctuating production rate matters little once there is a storage tank.</span>
+        </p>
+
+        <div class="callout callout--warn">
+          <div class="callout__title">
+            <span class="th">ข้อควรระวังในการอ่านรายงานศักยภาพ</span>
+            <span class="en">A caution when reading potential studies</span>
+          </div>
+          <p>
+            <span class="th">รายงานศักยภาพพลังงานคลื่นระดับประเทศมักรายงานตัวเลข &ldquo;ศักยภาพเชิงทฤษฎี&rdquo; ที่ได้จากการคูณกำลังคลื่นเฉลี่ยด้วยความยาวชายฝั่งทั้งหมด ซึ่งให้ตัวเลขระดับหลายร้อยเมกะวัตต์และฟังดูน่าสนใจมาก แต่ตัวเลขนั้นไม่มีความหมายทางวิศวกรรม เพราะไม่ได้หักพื้นที่ที่ติดตั้งไม่ได้ (เส้นทางเดินเรือ แหล่งประมง พื้นที่อนุรักษ์ แหล่งท่องเที่ยว) ไม่ได้หักประสิทธิภาพการแปลง และไม่ได้พิจารณาว่าต้นทุนต่อหน่วยคุ้มหรือไม่ เมื่ออ่านรายงานใด ให้มองหาคำว่า <em>ศักยภาพเชิงเทคนิค</em> และ <em>ศักยภาพเชิงเศรษฐศาสตร์</em> เสมอ ซึ่งมักมีค่าเพียงไม่กี่เปอร์เซ็นต์ของตัวเลขเชิงทฤษฎี</span>
+            <span class="en">National wave potential studies usually lead with a &ldquo;theoretical potential&rdquo; obtained by multiplying mean wave power by the entire length of coastline. The result runs to hundreds of megawatts and sounds most encouraging, but it carries no engineering meaning: it deducts nothing for water that cannot be used (shipping lanes, fishing grounds, protected areas, tourist beaches), nothing for conversion efficiency, and says nothing about whether the cost per unit makes sense. When reading any such study, look for the <em>technical</em> and <em>economic</em> potential, which are usually a few per cent of the theoretical figure.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ SUMMARY ============ -->
+      <section class="section" id="summary">
+        <h2><span class="num">✦</span>
+          <span><span class="th">สรุปและคำศัพท์</span><span class="en">Summary and glossary</span></span>
+        </h2>
+
+        <div class="takeaways" data-reveal>
+          <h2><span class="th">ประเด็นสำคัญที่ต้องจำ</span><span class="en">Key takeaways</span></h2>
+          <ol data-reveal-stagger>
+            <li>
+              <span class="th"><strong>คลื่นคือพลังงานลมที่ถูกอัดแน่นและเก็บไว้</strong> ขนาดคลื่นถูกจำกัดด้วยความเร็วลม ระยะ fetch และระยะเวลา โดยตัวที่เล็กที่สุดเป็นตัวกำหนด คลื่นมีความหนาแน่นพลังงานสูงกว่าลม 5&ndash;10 เท่า สม่ำเสมอกว่า และพยากรณ์ล่วงหน้าได้หลายวัน</span>
+              <span class="en"><strong>A wave is wind energy concentrated and stored.</strong> Its size is limited by wind speed, fetch and duration, whichever binds first. Waves carry five to ten times the power density of wind, are steadier, and can be forecast days ahead.</span>
+            </li>
+            <li>
+              <span class="th"><strong>สิ่งที่เดินทางคือรูปร่างและพลังงาน ไม่ใช่น้ำ</strong> อนุภาคน้ำเคลื่อนที่เป็นวงปิด และขนาดวงลดลงแบบเอกซ์โพเนนเชียลตามความลึก เหลือเพียง 4.3% ที่ความลึกครึ่งหนึ่งของความยาวคลื่น อุปกรณ์จึงต้องอยู่ใกล้ผิวน้ำเสมอ</span>
+              <span class="en"><strong>The shape and the energy travel; the water does not.</strong> Particles move in closed orbits that shrink exponentially with depth, to just 4.3% at half a wavelength down. A device must therefore always sit near the surface.</span>
+            </li>
+            <li>
+              <span class="th"><strong>&ldquo;น้ำลึก&rdquo; ไม่ได้วัดเป็นเมตร แต่วัดเทียบกับความยาวคลื่น</strong> น้ำลึกคือ \(d > L/2\) ซึ่งให้ \(L = 1.56T^{2}\) ส่วนน้ำตื้นคือ \(d < L/20\) ซึ่งความเร็วขึ้นกับความลึกเพียงอย่างเดียว คลื่นคาบยาวจึงรู้สึกถึงพื้นทะเลที่ความลึกมากกว่าคลื่นคาบสั้นเสมอ</span>
+              <span class="en"><strong>&ldquo;Deep water&rdquo; is never measured in metres but relative to wavelength.</strong> Deep means \(d > L/2\), giving \(L = 1.56T^{2}\); shallow means \(d < L/20\), where speed depends on depth alone. A long-period wave always feels the bed in deeper water than a short one.</span>
+            </li>
+            <li>
+              <span class="th"><strong>พลังงานเดินทางด้วยความเร็วกลุ่ม ซึ่งในน้ำลึกช้ากว่ายอดคลื่นครึ่งหนึ่ง</strong> การใช้ความเร็วเฟสแทนความเร็วกลุ่มทำให้คำตอบมากเกินจริงสองเท่า และเป็นข้อผิดพลาดที่พบบ่อยที่สุดข้อหนึ่ง</span>
+              <span class="en"><strong>Energy travels at the group velocity, half the crest speed in deep water.</strong> Using phase speed instead overstates the answer by a factor of two — one of the commonest errors there is.</span>
+            </li>
+            <li>
+              <span class="th"><strong>กำลังคลื่นแปรผันกับ \(H^{2}T\)</strong> ใช้ \(P \approx 0.98H^{2}T\) สำหรับคลื่นสม่ำเสมอ และ \(P \approx 0.49H_{s}^{2}T_{e}\) สำหรับทะเลจริง ตัวหารที่ต่างกันสองเท่านี้มาจากนิยามของ \(H_{s}\) และการใช้สูตรผิดตัวทำให้คำตอบผิดสองเท่าทันที</span>
+              <span class="en"><strong>Wave power scales as \(H^{2}T\).</strong> Use \(P \approx 0.98H^{2}T\) for regular waves and \(P \approx 0.49H_{s}^{2}T_{e}\) for a real sea. The factor of two between them follows from how \(H_{s}\) is defined, and using the wrong form is instantly a twofold error.</span>
+            </li>
+            <li>
+              <span class="th"><strong>พลังงานคลื่นกระจุกตัวทางภูมิศาสตร์รุนแรงที่สุดในบรรดาพลังงานหมุนเวียน</strong> ความต่างระหว่างแหล่งดีที่สุดกับแย่ที่สุดสูงถึงห้าสิบเท่า เทียบกับแสงอาทิตย์ที่ต่างกันเพียงสองถึงสามเท่า และต้องประเมินด้วยแผนภาพกระจายทีละช่องเสมอ เพราะค่าเฉลี่ยของ \(H_{s}\) ให้คำตอบต่ำไปราว 25%</span>
+              <span class="en"><strong>Wave energy is the most geographically concentrated renewable there is</strong>, with a fiftyfold spread between best and worst sites against two or three for sunlight. It must be assessed cell by cell from a scatter diagram, because working from a mean \(H_{s}\) reads about 25% low.</span>
+            </li>
+            <li>
+              <span class="th"><strong>เทคโนโลยียังไม่บรรจบกันหลังผ่านมาห้าสิบปี</strong> ทั้งห้าตระกูลต้องแก้ปัญหาเดียวกันคือการเชื่อมการแกว่งช้าแรงมากที่ 0.1 Hz เข้ากับเครื่องกำเนิดไฟฟ้าที่ต้องการ 25 Hz ซึ่งเป็นช่องว่างสองร้อยห้าสิบเท่า</span>
+              <span class="en"><strong>The technology has not converged in fifty years.</strong> All five families face the same problem: bridging slow, high-force oscillation at 0.1 Hz to a generator wanting 25 Hz — a gap of 250 times.</span>
+            </li>
+            <li>
+              <span class="th"><strong>ทุ่นเล็กดูดพลังงานจากหน้าคลื่นที่กว้างกว่าตัวมันเองได้</strong> เพราะคลื่นที่ทุ่นแผ่ออกไปหักล้างคลื่นที่วิ่งเข้ามา ขีดจำกัดทางทฤษฎีคือ \(\lambda/2\pi\) ซึ่งกว้างกว่าทุ่นทั่วไปหลายเท่า ช่องว่างที่เหลือให้พัฒนาจึงอยู่ที่การควบคุมเฟส ไม่ใช่ที่ขนาด</span>
+              <span class="en"><strong>A small buoy absorbs from a wavefront wider than itself</strong>, because the waves it radiates cancel those coming in. The theoretical ceiling is \(\lambda/2\pi\), several times a typical buoy&rsquo;s width, so the remaining headroom lies in phase control rather than in size.</span>
+            </li>
+            <li>
+              <span class="th"><strong>ความขัดแย้งระหว่างการเก็บพลังงานกับการอยู่รอดคืออุปสรรคที่แท้จริง</strong> อุปกรณ์ต้องรับแรงจากคลื่นพายุมากกว่าสภาวะทำงานปกติ 20&ndash;100 เท่า และหลบไม่ได้แบบที่กังหันลมปรับมุมใบพัด โครงสร้างส่วนใหญ่จึงถูกกำหนดขนาดโดยสภาวะที่ไม่เคยผลิตพลังงานเลย</span>
+              <span class="en"><strong>The conflict between harvesting and surviving is the real obstacle.</strong> A device meets storm loads 20&ndash;100 times its working load and cannot feather them away as a wind turbine does, so most of its structure is sized by a condition that never generates.</span>
+            </li>
+            <li>
+              <span class="th"><strong>สำหรับอ่าวไทย การผลิตไฟฟ้าเข้าระบบไม่มีทางคุ้ม</strong> เพราะต้องใช้แนวอุปกรณ์ยาวกว่าแหล่งชั้นดีถึงสิบเก้าเท่าเพื่อพลังงานเท่ากัน แต่งานระดับสิบถึงหลายร้อยวัตต์ยังสมเหตุสมผล — ทุ่นวัดข้อมูล ฟาร์มกระชังนอกชายฝั่ง เขื่อนกันคลื่นที่ผลิตพลังงานด้วย และการผลิตน้ำจืดบนเกาะด้วยแรงกลโดยตรง</span>
+              <span class="en"><strong>For the Gulf of Thailand, grid generation cannot pay</strong>, needing an array nineteen times longer than a world-class site for the same energy. But work at the scale of tens to hundreds of watts still makes sense — data buoys, offshore cage farms, breakwaters that also generate, and island freshwater by direct mechanical drive.</span>
+            </li>
+          </ol>
+        </div>
+
+        <dl class="glossary">
+          <dt><span class="th">ระยะ fetch</span><span class="en">Fetch</span></dt>
+          <dd>
+            <span class="th">ระยะทางที่ลมพัดผ่านผิวน้ำอย่างต่อเนื่องโดยไม่มีแผ่นดินขวาง เป็นหนึ่งในสามตัวแปรที่จำกัดขนาดคลื่น และเป็นตัวที่จำกัดคลื่นในอ่าวไทย</span>
+            <span class="en">The uninterrupted distance the wind blows over water. One of the three limits on wave size, and the one that binds in the Gulf of Thailand.</span>
+          </dd>
+
+          <dt><span class="th">คลื่นลมและคลื่นเกลื่อน</span><span class="en">Sea and swell</span></dt>
+          <dd>
+            <span class="th">คลื่นลม (sea) คือคลื่นที่ยังอยู่ในบริเวณที่ลมสร้างมัน มีรูปร่างไม่เป็นระเบียบและคาบสั้น ส่วนคลื่นเกลื่อน (swell) คือคลื่นที่เดินทางออกมาแล้ว มีคาบยาวกว่าและเป็นระเบียบกว่ามาก</span>
+            <span class="en">Sea is wave still inside the area generating it: disordered and short-period. Swell has travelled out of that area and is far longer in period and more orderly.</span>
+          </dd>
+
+          <dt><span class="th">ความสัมพันธ์การกระจาย</span><span class="en">Dispersion relation</span></dt>
+          <dd>
+            <span class="th">\(\omega^{2} = gk\tanh(kd)\) ซึ่งผูกความถี่เข้ากับความยาวคลื่นและความลึก คำว่า &ldquo;การกระจาย&rdquo; หมายถึงคลื่นคาบต่างกันเดินทางด้วยความเร็วต่างกัน ทำให้คลื่นจากพายุเดียวกันแยกตัวออกจากกันระหว่างเดินทาง</span>
+            <span class="en">\(\omega^{2} = gk\tanh(kd)\), tying frequency to wavelength and depth. &ldquo;Dispersion&rdquo; means waves of different period travel at different speeds, so waves from one storm sort themselves out along the way.</span>
+          </dd>
+
+          <dt><span class="th">ความเร็วกลุ่ม</span><span class="en">Group velocity</span> <span class="term-en">c<sub>g</sub></span></dt>
+          <dd>
+            <span class="th">ความเร็วที่พลังงานของคลื่นเดินทาง ในน้ำลึกมีค่าครึ่งหนึ่งของความเร็วเฟส และในน้ำตื้นเท่ากับความเร็วเฟส ต้องใช้ค่านี้เสมอในการคำนวณกำลังคลื่น</span>
+            <span class="en">The speed at which wave energy travels: half the phase speed in deep water and equal to it in shallow. It is always the value to use when computing wave power.</span>
+          </dd>
+
+          <dt><span class="th">ความสูงคลื่นนัยสำคัญ</span><span class="en">Significant wave height</span> <span class="term-en">H<sub>s</sub></span></dt>
+          <dd>
+            <span class="th">ค่าเฉลี่ยของความสูงคลื่นหนึ่งในสามที่สูงที่สุดในช่วงบันทึกหนึ่ง ใกล้เคียงกับที่ผู้สังเกตประเมินด้วยตา และเป็นค่าที่ทุ่นวัดคลื่นกับแบบจำลองสภาพอากาศรายงานเสมอ</span>
+            <span class="en">The mean height of the highest third of the waves in a record. It is close to what an observer estimates by eye, and it is what buoys and weather models always report.</span>
+          </dd>
+
+          <dt><span class="th">คาบพลังงาน</span><span class="en">Energy period</span> <span class="term-en">T<sub>e</sub></span></dt>
+          <dd>
+            <span class="th">คาบถ่วงน้ำหนักด้วยพลังงานของสเปกตรัมคลื่น ใช้คู่กับ \(H_{s}\) ในการคำนวณกำลัง ต่างจากคาบยอดคลื่น \(T_{p}\) ซึ่งเป็นคาบที่มีพลังงานหนาแน่นที่สุด โดยทั่วไป \(T_{e} \approx 0.86\,T_{p}\)</span>
+            <span class="en">The energy-weighted period of the wave spectrum, used with \(H_{s}\) to compute power. It differs from the peak period \(T_{p}\), where the spectrum is densest; typically \(T_{e} \approx 0.86\,T_{p}\).</span>
+          </dd>
+
+          <dt><span class="th">แผนภาพกระจาย</span><span class="en">Scatter diagram</span></dt>
+          <dd>
+            <span class="th">ตารางที่บอกจำนวนชั่วโมงต่อปีที่ทะเลอยู่ในแต่ละช่องของ \(H_{s}\) และ \(T_{e}\) เป็นเครื่องมือหลักในการประเมินทรัพยากร และทำหน้าที่เดียวกับเส้นโค้งระยะเวลาการไหลในบทที่ 5</span>
+            <span class="en">A table of hours per year spent in each \(H_{s}\)&ndash;\(T_{e}\) cell. It is the main resource-assessment tool, serving the same purpose as the flow duration curve of Chapter 5.</span>
+          </dd>
+
+          <dt><span class="th">ความกว้างการจับพลังงาน</span><span class="en">Capture width</span> <span class="term-en">L<sub>c</sub></span></dt>
+          <dd>
+            <span class="th">กำลังที่อุปกรณ์ดูดได้ หารด้วยกำลังคลื่นต่อเมตร มีหน่วยเป็นเมตร และตอบว่าอุปกรณ์ดูดพลังงานเทียบเท่าหน้าคลื่นกว้างกี่เมตร</span>
+            <span class="en">The power a device absorbs divided by the wave power per metre. It has units of metres and states how wide a strip of wavefront the device effectively drinks dry.</span>
+          </dd>
+
+          <dt><span class="th">ผลของเสาอากาศ</span><span class="en">Antenna effect</span></dt>
+          <dd>
+            <span class="th">ปรากฏการณ์ที่ทุ่นดูดพลังงานจากหน้าคลื่นที่กว้างกว่าตัวมันเอง เพราะคลื่นที่ทุ่นแผ่ออกไปแทรกสอดหักล้างกับคลื่นที่เข้ามา ทำให้ค่า CWR เกิน 1 ได้โดยไม่ขัดกฎอนุรักษ์พลังงาน</span>
+            <span class="en">The phenomenon by which a buoy absorbs from a wavefront wider than itself, because the waves it radiates interfere destructively with those arriving. It allows a CWR above 1 without breaching energy conservation.</span>
+          </dd>
+
+          <dt><span class="th">คอลัมน์น้ำแกว่ง</span><span class="en">Oscillating water column</span> <span class="term-en">OWC</span></dt>
+          <dd>
+            <span class="th">ห้องที่เปิดใต้ผิวน้ำ ให้ผิวน้ำภายในทำหน้าที่เป็นลูกสูบอัดอากาศผ่านกังหันสองทิศทาง ชิ้นส่วนเคลื่อนไหวจึงอยู่เหนือน้ำทั้งหมด ซึ่งเป็นข้อได้เปรียบด้านการบำรุงรักษา</span>
+            <span class="en">A chamber open below the waterline whose internal water surface acts as a piston, driving air through a bidirectional turbine. All moving parts sit above the water, which is a maintenance advantage.</span>
+          </dd>
+
+          <dt><span class="th">ระบบส่งกำลัง</span><span class="en">Power take-off</span> <span class="term-en">PTO</span></dt>
+          <dd>
+            <span class="th">ระบบที่เปลี่ยนการเคลื่อนที่ช้าและแรงมากของคลื่นให้เป็นการหมุนเร็วที่เครื่องกำเนิดไฟฟ้าต้องการ อาจเป็นแบบอากาศ ไฮดรอลิก หรือเชิงกล และทุกขั้นที่เพิ่มคือจุดเสียหายที่เพิ่มขึ้นหนึ่งจุด</span>
+            <span class="en">The system that turns the sea&rsquo;s slow, high-force motion into the fast rotation a generator needs — pneumatic, hydraulic or mechanical. Every stage added is one more point of failure.</span>
+          </dd>
+
+          <dt><span class="th">โหมดอยู่รอด</span><span class="en">Survival mode</span></dt>
+          <dd>
+            <span class="th">สภาวะที่อุปกรณ์หยุดผลิตพลังงานและปรับตัวเพื่อลดแรงที่รับ เช่น จมตัวลง ปลดสายยึดบางเส้น หรือเปิดให้น้ำไหลผ่าน กลไกเหล่านี้ต้องทำงานได้แน่นอนในสภาวะที่เลวร้ายที่สุด</span>
+            <span class="en">The state in which a device stops generating and reconfigures to shed load — submerging, slackening moorings, or letting water through. These mechanisms must work without fail in the worst conditions there are.</span>
+          </dd>
+        </dl>
+      </section>
+
+      <!-- ============ REFERENCES ============ -->
+      <section class="section" id="references">
+        <h2><span class="num">§</span>
+          <span><span class="th">เอกสารอ้างอิงและอ่านเพิ่มเติม</span><span class="en">References and further reading</span></span>
+        </h2>
+
+        <div class="references">
+          <h3><span class="th">ตำราหลัก</span><span class="en">Core textbooks</span></h3>
+          <ol>
+            <li><span>Falnes, J. and Kurniawan, A. (2020). <cite>Ocean Waves and Oscillating Systems: Linear Interactions Including Wave-Energy Extraction</cite>, 2nd ed. Cambridge: Cambridge University Press.
+              <span class="src"><span class="th">ตำราอ้างอิงมาตรฐานของทฤษฎีการดูดซับพลังงานคลื่น — ที่มาของขีดจำกัด \(\lambda/2\pi\) และผลของเสาอากาศในหัวข้อ 6.6</span><span class="en">The standard reference for wave absorption theory — source of the \(\lambda/2\pi\) bound and the antenna effect of §6.6</span></span></span></li>
+            <li><span>Pecher, A. and Kofoed, J. P. (eds.) (2017). <cite>Handbook of Ocean Wave Energy</cite>. Cham: Springer (open access).
+              <span class="src"><span class="th">เผยแพร่แบบเปิด ครอบคลุมการประเมินทรัพยากร การจำแนกอุปกรณ์ และการทดสอบในแท็งก์อย่างครบถ้วน</span><span class="en">Open access, covering resource assessment, device classification and tank testing thoroughly</span></span></span></li>
+            <li><span>Holthuijsen, L. H. (2007). <cite>Waves in Oceanic and Coastal Waters</cite>. Cambridge: Cambridge University Press.
+              <span class="src"><span class="th">ที่มาของทฤษฎีคลื่นเชิงเส้นและสเปกตรัมคลื่นในหัวข้อ 6.2 ถึง 6.4</span><span class="en">Source of the linear wave theory and spectral material of §6.2 to §6.4</span></span></span></li>
+            <li><span>Dean, R. G. and Dalrymple, R. A. (1991). <cite>Water Wave Mechanics for Engineers and Scientists</cite>. Singapore: World Scientific.
+              <span class="src"><span class="th">ตำราคลาสสิกด้านกลศาสตร์คลื่นน้ำ อธิบายวงโคจรของอนุภาคและการแปรรูปในน้ำตื้นอย่างละเอียด</span><span class="en">The classic on water wave mechanics, thorough on particle orbits and shoaling</span></span></span></li>
+            <li><span>Cruz, J. (ed.) (2008). <cite>Ocean Wave Energy: Current Status and Future Perspectives</cite>. Berlin: Springer.</span></li>
+          </ol>
+
+          <h3><span class="th">บทความวิชาการและรายงาน</span><span class="en">Journal articles and reports</span></h3>
+          <ol start="6">
+            <li><span>Budal, K. and Falnes, J. (1975). &lsquo;A resonant point absorber of ocean-wave power&rsquo;, <cite>Nature</cite>, 256, pp. 478&ndash;479.
+              <span class="src"><span class="th">บทความที่วางรากฐานทฤษฎีทุ่นดูดซับจุดเดียวและการควบคุมเฟส</span><span class="en">The paper that founded point absorber theory and phase control</span></span></span></li>
+            <li><span>Salter, S. H. (1974). &lsquo;Wave power&rsquo;, <cite>Nature</cite>, 249, pp. 720&ndash;724.
+              <span class="src"><span class="th">บทความที่เปิดยุคการวิจัยพลังงานคลื่นสมัยใหม่ ที่มาของอุปกรณ์ที่เรียกกันว่า Salter duck</span><span class="en">The paper that opened the modern era of wave energy research and introduced the Salter duck</span></span></span></li>
+            <li><span>Babarit, A. (2015). &lsquo;A database of capture width ratio of wave energy converters&rsquo;, <cite>Renewable Energy</cite>, 80, pp. 610&ndash;628.
+              <span class="src"><span class="th">ฐานข้อมูลเปรียบเทียบค่า CWR ของอุปกรณ์จริงหลายสิบแบบ ใช้ตรวจสอบตัวเลขในหัวข้อ 6.6</span><span class="en">A comparative database of CWR for dozens of real devices, useful for checking the figures of §6.6</span></span></span></li>
+            <li><span>Gunn, K. and Stock-Williams, C. (2012). &lsquo;Quantifying the global wave power resource&rsquo;, <cite>Renewable Energy</cite>, 44, pp. 296&ndash;304.
+              <span class="src"><span class="th">การประเมินทรัพยากรคลื่นระดับโลก ที่มาของการเปรียบเทียบภูมิภาคในหัวข้อ 6.3</span><span class="en">The global resource assessment behind the regional comparisons of §6.3</span></span></span></li>
+            <li><span>Guanche, R. <em>et al.</em> (2015). &lsquo;Uncertainty analysis of wave energy farms financial indicators&rsquo;, <cite>Renewable Energy</cite>, 68, pp. 570&ndash;580.
+              <span class="src"><span class="th">อธิบายว่าเหตุใดต้นทุนการเข้าถึงและหน้าต่างอากาศจึงครอบงำเศรษฐศาสตร์ของโครงการ</span><span class="en">Explains why access costs and weather windows dominate project economics</span></span></span></li>
+            <li><span>Falcão, A. F. O. (2010). &lsquo;Wave energy utilization: a review of the technologies&rsquo;, <cite>Renewable and Sustainable Energy Reviews</cite>, 14(3), pp. 899&ndash;918.
+              <span class="src"><span class="th">บทปริทัศน์ที่ถูกอ้างถึงมากที่สุดเรื่องการจำแนกเทคโนโลยีในหัวข้อ 6.5</span><span class="en">The most-cited review behind the technology classification of §6.5</span></span></span></li>
+          </ol>
+
+          <h3><span class="th">มาตรฐานและแหล่งข้อมูลระหว่างประเทศ</span><span class="en">Standards and international sources</span></h3>
+          <ol start="12">
+            <li><span>IEC TS 62600-100, <cite>Marine energy — Wave, tidal and other water current converters — Part 100: Electricity producing wave energy converters, power performance assessment</cite>. Geneva: IEC.
+              <span class="src"><span class="th">มาตรฐานสากลสำหรับการรายงานสมรรถนะ ซึ่งกำหนดวิธีคำนวณความกว้างการจับพลังงานให้เปรียบเทียบกันได้</span><span class="en">The international standard for performance reporting, which fixes how capture width is computed so devices can be compared</span></span></span></li>
+            <li><span>IEC TS 62600-101, <cite>Wave energy resource assessment and characterization</cite>. Geneva: IEC.</span></li>
+            <li><span>IEA-OES (Ocean Energy Systems). <cite>Annual Report</cite> and the <cite>International Levelised Cost of Energy for Ocean Energy Technologies</cite> series.
+              <span class="src">ocean-energy-systems.org</span></span></li>
+            <li><span>European Marine Energy Centre (EMEC), Orkney. <cite>Test site data and device developer records</cite>.
+              <span class="src"><span class="th">ศูนย์ทดสอบที่มีบันทึกการเดินเครื่องจริงของอุปกรณ์หลายแบบรวมถึงที่เลิกกิจการไปแล้ว · emec.org.uk</span><span class="en">The test centre holding real operating records for many devices, including those whose developers have since closed · emec.org.uk</span></span></span></li>
+          </ol>
+
+          <h3><span class="th">แหล่งข้อมูลของประเทศไทยและภูมิภาค</span><span class="en">Thai and regional sources</span></h3>
+          <ol start="16">
+            <li><span><span class="th">กรมอุทกศาสตร์ กองทัพเรือ — ข้อมูลคลื่น ลม และระดับน้ำจากสถานีตรวจวัดตามชายฝั่งและทุ่นในอ่าวไทย</span><span class="en">Hydrographic Department, Royal Thai Navy — wave, wind and water level records from coastal stations and Gulf buoys</span>
+              <span class="src">hydro.navy.mi.th</span></span></li>
+            <li><span><span class="th">กรมอุตุนิยมวิทยา — ข้อมูลลมผิวพื้นและการพยากรณ์คลื่นในอ่าวไทยและทะเลอันดามัน สำหรับสร้างแผนภาพกระจายในหัวข้อ 6.4</span><span class="en">Thai Meteorological Department — surface wind data and wave forecasts for the Gulf and the Andaman Sea, for building the scatter diagrams of §6.4</span>
+              <span class="src">tmd.go.th</span></span></li>
+            <li><span><span class="th">กรมทรัพยากรทางทะเลและชายฝั่ง — ข้อมูลการกัดเซาะชายฝั่งและแผนงานโครงสร้างป้องกัน ซึ่งเป็นจุดตั้งต้นของแนวทางเขื่อนกันคลื่นที่ผลิตพลังงานในหัวข้อ 6.9</span><span class="en">Department of Marine and Coastal Resources — coastal erosion data and protection programmes, the starting point for the generating-breakwater approach of §6.9</span>
+              <span class="src">dmcr.go.th</span></span></li>
+            <li><span><span class="th">กรมพัฒนาพลังงานทดแทนและอนุรักษ์พลังงาน (พพ.) — รายงานศักยภาพพลังงานจากทะเลของประเทศไทย ควรอ่านโดยแยกศักยภาพเชิงทฤษฎีออกจากเชิงเทคนิคตามคำเตือนท้ายหัวข้อ 6.9</span><span class="en">DEDE — Thailand's marine energy potential studies, to be read separating theoretical from technical potential as cautioned at the end of §6.9</span>
+              <span class="src">dede.go.th</span></span></li>
+            <li><span>ERIA (Economic Research Institute for ASEAN and East Asia). <cite>Ocean energy resource assessment studies for Southeast Asia</cite>.
+              <span class="src"><span class="th">การประเมินศักยภาพพลังงานทะเลระดับภูมิภาคอาเซียน ซึ่งครอบคลุมอ่าวไทยและทะเลอันดามัน</span><span class="en">Regional ASEAN ocean energy assessments covering the Gulf of Thailand and the Andaman Sea</span></span></span></li>
+          </ol>
+        </div>
+
+        <div class="callout callout--warn">
+          <div class="callout__title">
+            <span class="th">ก่อนนำไปอ้างอิง</span><span class="en">Before you cite</span>
+          </div>
+          <p>
+            <span class="th">ตัวเลขกำลังคลื่นที่ตีพิมพ์ต้องตรวจสอบเสมอว่ามาจาก \(H_{s}\) หรือ \(H\) ของคลื่นสม่ำเสมอ และใช้ \(T_{e}\), \(T_{p}\) หรือ \(T_{z}\) เพราะแต่ละคู่ให้ผลต่างกันได้ถึงสองเท่า ส่วนค่า LCOE และกำลังติดตั้งของพลังงานคลื่นเปลี่ยนแปลงเร็วและมีความไม่แน่นอนสูง ควรอ้างอิงรายงานล่าสุดของ IEA-OES โดยตรง สำหรับข้อมูลคลื่นในน่านน้ำไทย ควรใช้ข้อมูลตรวจวัดจากกรมอุทกศาสตร์ร่วมกับแบบจำลองย้อนหลังที่ผ่านการสอบเทียบ ไม่ใช่ค่าจากแบบจำลองระดับโลกซึ่งมีความละเอียดหยาบเกินไปสำหรับทะเลกึ่งปิดที่ตื้นอย่างอ่าวไทย</span>
+            <span class="en">Always check whether a published wave power figure derives from \(H_{s}\) or from a regular-wave \(H\), and whether the period is \(T_{e}\), \(T_{p}\) or \(T_{z}\) — the combinations differ by up to a factor of two. LCOE and installed capacity figures for wave energy move quickly and carry wide uncertainty, so cite the latest IEA-OES reporting directly. For Thai waters, use Hydrographic Department measurements together with a calibrated hindcast, not global model output, whose resolution is too coarse for a shallow semi-enclosed sea like the Gulf.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ POST-TEST ============ -->
+      <section class="quiz quiz--post" id="posttest" data-quiz="post" data-pass="0.7">
+        <script type="application/json" class="quiz-data">
+{
+  "questions": [
+    {
+      "q": {
+        "th": "คลื่นคาบ 12 วินาทีในน้ำลึก มีความยาวคลื่นและความเร็วเฟสเท่าไร",
+        "en": "A 12-second wave in deep water: what are its wavelength and phase speed?"
+      },
+      "choices": [
+        {
+          "th": "L = 18.7 m และ c = 1.6 m/s",
+          "en": "L = 18.7 m and c = 1.6 m/s"
+        },
+        {
+          "th": "L = 112 m และ c = 9.4 m/s",
+          "en": "L = 112 m and c = 9.4 m/s"
+        },
+        {
+          "th": "L = 225 m และ c = 18.7 m/s",
+          "en": "L = 225 m and c = 18.7 m/s"
+        },
+        {
+          "th": "L = 337 m และ c = 28.1 m/s",
+          "en": "L = 337 m and c = 28.1 m/s"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "L = 1.56 T² = 1.56 × 144 = 225 m และ c = L/T = 225/12 = 18.7 m/s ข้อผิดพลาดที่พบบ่อยคือใช้ 1.56 T แทน 1.56 T² ซึ่งให้ 18.7 m หรือลืมยกกำลังสองแล้วได้ค่าเล็กเกินไปสิบเท่า สังเกตว่าคลื่นคาบยาวเดินทางเร็วมาก ซึ่งเป็นเหตุผลที่ swell จากพายุกลางมหาสมุทรมาถึงชายฝั่งก่อนตัวพายุหลายวัน",
+        "en": "L = 1.56 T² = 1.56 × 144 = 225 m, and c = L/T = 225/12 = 18.7 m/s. The usual slip is using 1.56 T instead of 1.56 T², which gives 18.7 m, or forgetting the square altogether. Note how fast long waves travel — which is why swell from a mid-ocean storm reaches the coast days ahead of the storm itself."
+      }
+    },
+    {
+      "q": {
+        "th": "ทะเลมี Hs = 2.5 m และ Te = 7 s กำลังคลื่นต่อความยาวหน้าคลื่นหนึ่งเมตรเป็นเท่าไร",
+        "en": "A sea has Hs = 2.5 m and Te = 7 s. What is the wave power per metre of crest?"
+      },
+      "choices": [
+        {
+          "th": "ประมาณ 8.6 kW/m",
+          "en": "About 8.6 kW/m"
+        },
+        {
+          "th": "ประมาณ 21.4 kW/m",
+          "en": "About 21.4 kW/m"
+        },
+        {
+          "th": "ประมาณ 42.9 kW/m",
+          "en": "About 42.9 kW/m"
+        },
+        {
+          "th": "ประมาณ 85.8 kW/m",
+          "en": "About 85.8 kW/m"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "ทะเลจริงระบุด้วย Hs และ Te จึงต้องใช้ P = 0.49 Hs² Te = 0.49 × 6.25 × 7 = 21.4 kW/m คำตอบ 42.9 kW/m มาจากการใช้สูตรคลื่นสม่ำเสมอ (0.98) ผิดที่ ซึ่งให้ค่ามากเกินไปสองเท่าพอดี นี่คือกับดักที่อธิบายไว้ในตัวอย่างที่ 6.4",
+        "en": "A real sea is given by Hs and Te, so P = 0.49 Hs² Te = 0.49 × 6.25 × 7 = 21.4 kW/m. The 42.9 kW/m answer comes from misapplying the regular-wave form (0.98), overstating the result by exactly two — the trap described in worked example 6.4."
+      }
+    },
+    {
+      "q": {
+        "th": "เหตุใดการคำนวณกำลังคลื่นจึงต้องใช้ความเร็วกลุ่มแทนความเร็วเฟส",
+        "en": "Why must wave power be computed with group velocity rather than phase speed?"
+      },
+      "choices": [
+        {
+          "th": "เพราะความเร็วกลุ่มวัดได้ง่ายกว่าความเร็วเฟสมากในการสำรวจทะเลจริง",
+          "en": "Because group velocity is much easier to measure at sea than phase speed is"
+        },
+        {
+          "th": "เพราะพลังงานเดินทางไปกับกลุ่มคลื่น ซึ่งในน้ำลึกช้ากว่ายอดคลื่นครึ่งหนึ่ง",
+          "en": "Because energy travels with the group, at half the crest speed in deep water"
+        },
+        {
+          "th": "เพราะความเร็วเฟสใช้ได้เฉพาะกับคลื่นที่อยู่ในย่านน้ำตื้นเท่านั้น",
+          "en": "Because phase speed is valid only for waves within the shallow-water regime"
+        },
+        {
+          "th": "เพราะความเร็วกลุ่มได้รวมผลของลมที่ยังพัดอยู่เหนือผิวน้ำเข้าไว้ด้วย",
+          "en": "Because group velocity also folds in the wind still blowing over the surface"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "ในกลุ่มคลื่นน้ำลึก ยอดคลื่นแต่ละยอดเกิดที่ท้ายกลุ่ม วิ่งผ่านกลุ่ม แล้วหายไปที่หัวกลุ่ม ตัวกลุ่มเคลื่อนที่ช้ากว่ายอดครึ่งหนึ่งพอดี และพลังงานเดินทางไปกับกลุ่ม ไม่ใช่กับยอด การใช้ c แทน cg จึงให้คำตอบมากเกินจริงสองเท่า ในน้ำตื้น cg เท่ากับ c จึงไม่เกิดปัญหานี้",
+        "en": "In a deep-water group each crest is born at the back, runs through the group, and disappears at the front. The group moves at exactly half the crest speed, and the energy goes with the group, not the crests. Using c in place of cg therefore doubles the answer. In shallow water cg equals c, so the issue does not arise."
+      }
+    },
+    {
+      "q": {
+        "th": "ที่ความลึกครึ่งหนึ่งของความยาวคลื่น การเคลื่อนที่ของอนุภาคน้ำเหลืออยู่เท่าใดของที่ผิวน้ำ",
+        "en": "At half a wavelength below the surface, what fraction of the surface particle motion remains?"
+      },
+      "choices": [
+        {
+          "th": "ราว 50% เพราะลดลงเป็นเส้นตรงตามความลึก",
+          "en": "About 50%, since it falls linearly with depth"
+        },
+        {
+          "th": "ราว 25% เพราะลดลงตามกำลังสองของความลึก",
+          "en": "About 25%, since it falls with the square of depth"
+        },
+        {
+          "th": "ราว 0% เพราะไม่มีการเคลื่อนที่ใต้ระดับหนึ่งเลย",
+          "en": "About 0%, since there is no motion at all below a certain level"
+        },
+        {
+          "th": "ราว 4% เพราะลดลงแบบเอกซ์โพเนนเชียล",
+          "en": "About 4%, since it decays exponentially"
+        }
+      ],
+      "answer": 3,
+      "why": {
+        "th": "รัศมีวงโคจรลดลงตาม e^(kz) เมื่อ k = 2π/L ที่ z = −L/2 จะได้ e^(−π) = 0.043 หรือ 4.3% ผลที่ตามมาทางวิศวกรรมคืออุปกรณ์แปลงพลังงานคลื่นต้องอยู่ใกล้ผิวน้ำเสมอ ไม่มีทางวางไว้ลึกเพื่อหลบพายุแล้วยังผลิตพลังงานได้ ความขัดแย้งนี้เป็นรากของปัญหาการอยู่รอดในหัวข้อ 6.7",
+        "en": "The orbital radius decays as e^(kz) with k = 2π/L, so at z = −L/2 it is e^(−π) = 0.043, or 4.3%. The engineering consequence is that a converter must sit near the surface: there is no option of placing it deep to escape storms while still generating, and that conflict is the root of the survivability problem of §6.7."
+      }
+    },
+    {
+      "q": {
+        "th": "เหตุใดการประเมินพลังงานรายปีจากค่าเฉลี่ยของ Hs จึงให้คำตอบที่ต่ำเกินไป",
+        "en": "Why does estimating annual energy from a mean Hs give an answer that is too low?"
+      },
+      "choices": [
+        {
+          "th": "เพราะกำลังแปรผันกับ Hs² ชั่วโมงส่วนน้อยที่คลื่นสูงจึงให้พลังงานสัดส่วนมาก",
+          "en": "Because power goes as Hs², so a few rough hours carry a large share of the energy"
+        },
+        {
+          "th": "เพราะค่าเฉลี่ยของ Hs มักวัดได้ต่ำกว่าความเป็นจริงจากข้อจำกัดของทุ่นวัดคลื่น",
+          "en": "Because a mean Hs is usually under-measured owing to the limits of wave buoys"
+        },
+        {
+          "th": "เพราะคาบพลังงานไม่ได้ถูกนำมาคิดในค่าเฉลี่ยของ Hs เลย",
+          "en": "Because the energy period is not accounted for in a mean Hs at all"
+        },
+        {
+          "th": "เพราะการเฉลี่ยทำให้ข้อมูลช่วงที่ทะเลสงบหายไปจากการคำนวณ",
+          "en": "Because averaging removes the calm periods from the calculation entirely"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "th": "ค่าเฉลี่ยของกำลังไม่เท่ากับกำลังที่คำนวณจากค่าเฉลี่ย เมื่อความสัมพันธ์ไม่เป็นเชิงเส้น ในตัวอย่างที่ 6.5 วิธีลัดให้ค่าต่ำไป 25% เพราะแถวที่ Hs สูงสุดกินเวลาเพียง 2% ของปีแต่ให้พลังงานถึง 12% ของทั้งหมด วิธีที่ถูกคือรวมพลังงานทีละช่องจากแผนภาพกระจาย ซึ่งเป็นเหตุผลเดียวกับที่บทที่ 5 ต้องแบ่งเส้นโค้งระยะเวลาการไหลเป็นช่วง",
+        "en": "The mean of the power is not the power of the mean when the relation is non-linear. In worked example 6.5 the shortcut reads 25% low, because the roughest row occupies just 2% of the year yet supplies 12% of the energy. The correct method sums cell by cell from the scatter diagram — the same reason Chapter 5 banded its flow duration curve."
+      }
+    },
+    {
+      "q": {
+        "th": "อุปกรณ์แบบคอลัมน์น้ำแกว่ง (OWC) มีข้อได้เปรียบหลักในข้อใด",
+        "en": "What is the principal advantage of an oscillating water column?"
+      },
+      "choices": [
+        {
+          "th": "มีประสิทธิภาพการแปลงพลังงานสูงที่สุดในบรรดาอุปกรณ์คลื่นทุกแบบที่มี",
+          "en": "It has the highest conversion efficiency of any wave device type in existence"
+        },
+        {
+          "th": "ชิ้นส่วนเคลื่อนไหวอยู่เหนือน้ำทั้งหมด จึงเข้าถึงและซ่อมได้ง่ายกว่า",
+          "en": "All moving parts sit above water, so access and repair are far easier"
+        },
+        {
+          "th": "ติดตั้งในน้ำลึกกว่าอุปกรณ์แบบอื่นได้ จึงเข้าถึงพลังงานที่มากกว่ามาก",
+          "en": "It can be sited deeper than other types and so reach considerably more energy"
+        },
+        {
+          "th": "ไม่ต้องใช้กังหันหรือเครื่องกำเนิดไฟฟ้าในการผลิตกระแสไฟฟ้าเลยแม้แต่น้อย",
+          "en": "It needs neither a turbine nor a generator to produce electric current at all"
+        }
+      ],
+      "answer": 1,
+      "why": {
+        "th": "OWC ใช้ผิวน้ำในห้องเป็นลูกสูบอัดอากาศผ่านกังหันสองทิศทาง กังหันและเครื่องกำเนิดไฟฟ้าจึงอยู่เหนือน้ำและเข้าถึงได้โดยไม่ต้องใช้นักประดาน้ำ ซึ่งสำคัญมากเมื่อพิจารณาว่าการเข้าถึงเป็นต้นทุนหลักของงานในทะเล ข้อเสียคือกังหันเวลส์มีประสิทธิภาพเพียง 50–60% และมีเสียงดัง จึงไม่ใช่แบบที่มีประสิทธิภาพสูงที่สุด",
+        "en": "An OWC uses the water surface inside its chamber as a piston driving air through a bidirectional turbine, so the turbine and generator stay above water and can be reached without divers — which matters greatly when access dominates offshore costs. The drawback is that a Wells turbine is only 50–60% efficient and noisy, so this is not the most efficient family."
+      }
+    },
+    {
+      "q": {
+        "th": "ทุ่นดูดซับที่มี CWR เท่ากับ 2 หมายความว่าอย่างไร",
+        "en": "What does it mean for a point absorber to have a CWR of 2?"
+      },
+      "choices": [
+        {
+          "th": "อุปกรณ์มีประสิทธิภาพ 200% ซึ่งเป็นไปไม่ได้ จึงต้องมีการวัดที่ผิดพลาด",
+          "en": "The device is 200% efficient, which is impossible, so something was measured wrong"
+        },
+        {
+          "th": "อุปกรณ์ผลิตพลังงานได้เป็นสองเท่าของที่ออกแบบไว้ในตอนแรก",
+          "en": "The device produces twice the power for which it was originally designed"
+        },
+        {
+          "th": "อุปกรณ์ดูดพลังงานเทียบเท่าหน้าคลื่นที่กว้างเป็นสองเท่าของตัวมันเอง",
+          "en": "It absorbs energy equivalent to a wavefront twice its own width"
+        },
+        {
+          "th": "อุปกรณ์ต้องใช้พื้นที่ทะเลเป็นสองเท่าของขนาดตัวเองในการติดตั้ง",
+          "en": "It requires twice its own size in sea area in order to be installed"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "CWR คืออัตราส่วนระหว่างความกว้างการจับพลังงานกับความกว้างจริงของอุปกรณ์ ค่าเกิน 1 เป็นไปได้จริงและไม่ขัดกฎอนุรักษ์พลังงาน เพราะทุ่นที่ขยับขึ้นลงจะแผ่คลื่นของตัวเองออกไปหักล้างกับคลื่นที่วิ่งเข้ามาในบริเวณที่กว้างกว่าตัวทุ่นมาก ปรากฏการณ์นี้เรียกว่าผลของเสาอากาศ และมีขีดจำกัดทางทฤษฎีที่ λ/2π",
+        "en": "CWR is the ratio of capture width to the device's actual width. A value above 1 is real and breaches no conservation law, because a heaving buoy radiates waves of its own that cancel the incoming ones over a front much wider than itself. This is the antenna effect, bounded theoretically at λ/2π."
+      }
+    },
+    {
+      "q": {
+        "th": "เหตุใดกังหันลมจึงรับมือกับลมพายุได้ดีกว่าที่อุปกรณ์คลื่นรับมือกับคลื่นพายุ",
+        "en": "Why does a wind turbine cope with a gale better than a wave device copes with a storm sea?"
+      },
+      "choices": [
+        {
+          "th": "เพราะลมพายุสร้างแรงกระทำน้อยกว่าคลื่นพายุอย่างมีนัยสำคัญเสมอไป",
+          "en": "Because a gale always imposes significantly less force than a storm sea does"
+        },
+        {
+          "th": "เพราะกังหันลมตั้งอยู่บนบกจึงเข้าถึงเพื่อซ่อมบำรุงได้ตลอดเวลาทุกฤดู",
+          "en": "Because turbines stand on land and can be reached for repair in any season"
+        },
+        {
+          "th": "เพราะกังหันลมมีโครงสร้างที่แข็งแรงกว่าอุปกรณ์คลื่นโดยธรรมชาติอยู่แล้ว",
+          "en": "Because a wind turbine is by nature a far stronger structure than a wave device"
+        },
+        {
+          "th": "เพราะกังหันลมปรับมุมใบพัดหลบลมได้ แต่อุปกรณ์คลื่นคือตัวรับแรงเอง",
+          "en": "Because a turbine can feather, while a wave device is itself the exposed area"
+        }
+      ],
+      "answer": 3,
+      "why": {
+        "th": "อัตราส่วนแรงดิบใกล้เคียงกัน — ลม 50 ต่อ 10 m/s ให้ 25 เท่า และคลื่น 12 ต่อ 2.5 m ให้ 23 เท่า แต่กังหันลมหมุนใบพัดให้ขนานทิศลมได้ พื้นที่รับแรงจึงลดลงเหลือไม่ถึงหนึ่งในสิบ ส่วนอุปกรณ์คลื่นลอยอยู่ในน้ำและตัวมันเองคือพื้นที่รับแรง จึงหลบไม่ได้ ผลคือโครงสร้างถูกกำหนดขนาดโดยสภาวะที่ไม่เคยผลิตพลังงานเลย",
+        "en": "The raw ratios are similar — 50 against 10 m/s of wind gives 25 times, and 12 against 2.5 m of wave gives 23. But a turbine turns its blades edge-on, cutting the exposed area below a tenth, whereas a wave device floats in the water and is itself the exposed area, with nowhere to hide. The result is a structure sized by a condition that never generates."
+      }
+    },
+    {
+      "q": {
+        "th": "เหตุใดกำลังติดตั้งของพลังงานคลื่นทั่วโลกจึงยังน้อยกว่า 5 MW",
+        "en": "Why does the world's installed wave energy capacity remain under 5 MW?"
+      },
+      "choices": [
+        {
+          "th": "เพราะต้นทุนต่อหน่วยยังไม่ลดลงเร็วพอ และอุปกรณ์แต่ละตัวยังเป็นงานสั่งทำเฉพาะ",
+          "en": "Because cost per unit has not fallen fast enough and each device is still bespoke"
+        },
+        {
+          "th": "เพราะยังไม่มีอุปกรณ์แบบใดที่พิสูจน์ได้ว่าจ่ายไฟเข้าระบบจำหน่ายได้จริง",
+          "en": "Because no device has yet been shown capable of exporting power to a grid"
+        },
+        {
+          "th": "เพราะทรัพยากรคลื่นของโลกมีน้อยเกินกว่าจะรองรับกำลังติดตั้งที่มากกว่านี้",
+          "en": "Because the world's wave resource is too small to support more capacity than this"
+        },
+        {
+          "th": "เพราะข้อกำหนดด้านสิ่งแวดล้อมระหว่างประเทศจำกัดจำนวนอุปกรณ์ที่ติดตั้งได้",
+          "en": "Because international environmental rules cap the number of devices allowed"
+        }
+      ],
+      "answer": 0,
+      "why": {
+        "th": "Pelamis จ่ายไฟเข้าระบบได้ตั้งแต่ปี 2004 และ Oyster เดินเครื่องที่ EMEC ได้จริง แต่ทั้งสองบริษัทปิดตัวในปี 2014 และ 2015 เพราะต้นทุนต่อหน่วยพลังงานไม่ลดลงเร็วพอที่จะดึงเงินลงทุนรอบถัดไป ปัญหาเชิงโครงสร้างคือเทคโนโลยีที่ต้องสร้างอุปกรณ์ขนาดใหญ่ทีละชิ้นเพื่อเรียนรู้ จะเรียนรู้ช้ากว่าเทคโนโลยีที่ผลิตเป็นชุดจำนวนมากอย่างโซลาร์เซลล์เสมอ",
+        "en": "Pelamis exported power to a grid as early as 2004 and Oyster ran at EMEC, yet both companies closed in 2014 and 2015 because cost per unit did not fall fast enough to attract the next investment round. The structural difficulty is that a technology which must build one large unit at a time to learn anything will always learn more slowly than one made in volume, as solar cells are."
+      }
+    },
+    {
+      "q": {
+        "th": "ข้อใดเป็นการประเมินบทบาทของพลังงานคลื่นในอ่าวไทยที่ถูกต้องที่สุด",
+        "en": "Which is the soundest assessment of wave energy's role in the Gulf of Thailand?"
+      },
+      "choices": [
+        {
+          "th": "ไม่มีประโยชน์ใด ๆ เลย เพราะอ่าวไทยแทบไม่มีคลื่นตลอดทั้งปีทุกฤดูกาล",
+          "en": "It has no use whatever, since the Gulf has virtually no waves in any season"
+        },
+        {
+          "th": "ควรเร่งลงทุนผลิตไฟฟ้าเข้าระบบ เพราะชายฝั่งยาวพอชดเชยคลื่นที่เตี้ยได้",
+          "en": "Grid generation deserves investment, as the long coast offsets the low waves"
+        },
+        {
+          "th": "ผลิตไฟฟ้าเข้าระบบไม่คุ้ม แต่งานระดับสิบถึงหลายร้อยวัตต์ยังสมเหตุสมผล",
+          "en": "Grid generation cannot pay, but tens-to-hundreds-of-watts work still makes sense"
+        },
+        {
+          "th": "คุ้มค่าเมื่อเทคโนโลยีถูกลงสิบเท่า ซึ่งคาดว่าจะเกิดขึ้นในอีกไม่กี่ปีนี้",
+          "en": "It becomes viable once devices are ten times cheaper, expected within a few years"
+        }
+      ],
+      "answer": 2,
+      "why": {
+        "th": "อ่าวไทยให้ราว 1.4 kW/m เทียบกับนอกฝั่งไอร์แลนด์ที่ 39.7 kW/m จึงต้องใช้แนวอุปกรณ์ยาวกว่าสิบเก้าเท่าเพื่อพลังงานเท่ากัน และเนื่องจากต้นทุนแปรผันตามความยาวแนว ไม่ใช่ตามพลังงาน ต้นทุนต่อหน่วยจึงสูงกว่าราวสิบเก้าเท่า ข้อสำคัญคือถ้าเทคโนโลยีถูกลงสิบเท่า แหล่งในไอร์แลนด์ก็ถูกลงสิบเท่าเช่นกัน ช่องว่างจึงไม่หายไป แต่การใช้งานระดับวัตต์ยังสมเหตุสมผล เพราะคู่แข่งคือแบตเตอรี่และเรือเติมน้ำมัน ไม่ใช่ไฟจากระบบจำหน่าย",
+        "en": "The Gulf offers about 1.4 kW/m against 39.7 kW/m west of Ireland, needing an array nineteen times longer for the same energy — and since cost scales with array length rather than energy, cost per unit is higher by much the same factor. Crucially, if devices become ten times cheaper they do so in Ireland too, so the gap persists. Watt-scale uses remain sensible, because there the competition is batteries and refuelling trips, not grid electricity."
+      }
+    }
+  ]
+}
+        </script>
+      </section>
+
+      <!-- ============ chapter nav ============ -->
+      <nav class="chapter-nav">
+        <a href="05-hydro.html">
+          <span class="dir"><span class="th">บทก่อนหน้า</span><span class="en">Previous</span></span>
+          <span class="ttl">
+            <span class="th">บทที่ 5 · พลังงานน้ำ</span>
+            <span class="en">Chapter 5 · Hydro Energy</span>
+          </span>
+        </a>
+        <a class="next" href="07-tidal.html">
+          <span class="dir"><span class="th">บทต่อไป</span><span class="en">Next</span></span>
+          <span class="ttl">
+            <span class="th">บทที่ 7 · พลังงานน้ำขึ้นน้ำลง</span>
+            <span class="en">Chapter 7 · Tidal Energy</span>
+          </span>
+        </a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <strong>
+          <span class="th">พลังงานหมุนเวียนสำหรับวิศวกรรมเกษตรอัจฉริยะ</span>
+          <span class="en">Renewable Energy for Agri-Intelligence Engineering</span>
+        </strong>
+        <p class="small">
+          <span class="th">บทที่ 6 · พลังงานคลื่น</span>
+          <span class="en">Chapter 6 · Wave Energy</span>
+        </p>
+      </div>
+      <div class="small">
+        <span class="th">ตัวเลขในบทนี้เป็นค่าโดยประมาณเพื่อการเรียนการสอน ดูรายการอ้างอิงท้ายบทและตรวจสอบแหล่งข้อมูลปฐมภูมิที่เป็นปัจจุบันก่อนนำไปใช้</span>
+        <span class="en">Figures here are approximate teaching values. See the reference list at the end of the chapter and check current primary sources before citing.</span>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <span class="copyright__authors">2026 Prepared by Jedsada Saijai &amp; Wanphut Saechua</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/vendor/katex/katex.min.js"></script>
+<script src="../assets/vendor/katex/contrib/auto-render.min.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/math.js"></script>
+</body>
+</html>
