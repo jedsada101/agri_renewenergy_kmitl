@@ -659,7 +659,7 @@
     render();
   })();
   /* ============================================================
-     10. Demo J — geothermal gradient and what it unlocks  (chapter 4)
+     10. Demo J — geothermal gradient and what it unlocks  (chapter 5)
 
      Equation (4.1) plus the drilling-cost rule of thumb. The point
      the sliders make is that depth is set by geology: at an average
@@ -743,7 +743,7 @@
   })();
 
   /* ============================================================
-     11. Demo K — flash separator pressure  (chapter 4)
+     11. Demo K — flash separator pressure  (chapter 5)
 
      Equation (4.6) and the turbine expansion together. Flash
      fraction rises as pressure falls while work per kilogram falls;
@@ -866,7 +866,7 @@
   })();
 
   /* ============================================================
-     12. Demo L — ground-source heat pump in a hot climate  (chapter 4)
+     12. Demo L — ground-source heat pump in a hot climate  (chapter 5)
 
      Equation (4.10) run on the cooling side, which is the side that
      matters in Thailand. The ground sits still; the air does not.
@@ -940,7 +940,7 @@
   })();
 
   /* ============================================================
-     13. Demo M — head against flow  (chapter 5)
+     13. Demo M — head against flow  (chapter 4)
 
      Equation (5.1). The power readout is almost beside the point;
      the pipe diameter is what carries the lesson, because it is
@@ -1010,7 +1010,7 @@
   })();
 
   /* ============================================================
-     14. Demo N — penstock diameter  (chapter 5)
+     14. Demo N — penstock diameter  (chapter 4)
 
      Darcy-Weisbach, equation (5.2), on the site of worked example
      5.2. The fifth-power dependence is not stated here; it is left
@@ -1077,7 +1077,7 @@
   })();
 
   /* ============================================================
-     15. Demo O — turbine selection  (chapter 5)
+     15. Demo O — turbine selection  (chapter 4)
 
      Equations (5.1) and (5.3). Running speed is restricted to the
      values a 50 Hz generator can actually hold, because that is the
